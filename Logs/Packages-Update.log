@@ -1,0 +1,17 @@
+
+=== Tue Jan 17 15:50:23 2023
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.ai.navigation@1.1.1
+The following packages were updated:
+  com.unity.collab-proxy from version 1.15.17 to 1.17.7
+  com.unity.ide.rider from version 3.0.14 to 3.0.16
+  com.unity.ide.visualstudio from version 2.0.15 to 2.0.16
+  com.unity.render-pipelines.universal from version 13.1.8 to 14.0.4
+  com.unity.test-framework from version 1.1.31 to 1.1.33
+  com.unity.timeline from version 1.7.1 to 1.7.2
+  com.unity.xr.interaction.toolkit from version 2.0.4 to 2.1.1
+  com.unity.xr.openxr from version 1.4.2 to 1.5.3
