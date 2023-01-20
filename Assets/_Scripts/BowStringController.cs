@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class BowStringController : MonoBehaviour
@@ -17,6 +18,12 @@ public class BowStringController : MonoBehaviour
     private float bowStringStretchLimit = 0.3f;
 
     private Transform interactor;
+
+    private float strength;
+
+    public UnityEvent OnBowPulled;
+    public UnityEvent<float> OnBowReleased;
+
     private void Awake()
     {
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
@@ -30,16 +37,22 @@ public class BowStringController : MonoBehaviour
 
     private void ResetBowString(SelectExitEventArgs arg0)
     {
+        OnBowReleased?.Invoke(strength);
+        strength = 0;
+
+
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
         midPointVisualObject.localPosition = Vector3.zero;
         bowStringRenderer.CreateString(null);
+
 
     }
 
     private void PrepareBowString(SelectEnterEventArgs arg0)
     {
         interactor = arg0.interactorObject.transform;
+        OnBowPulled?.Invoke();
     }
 
     private void Update()
@@ -67,6 +80,7 @@ public class BowStringController : MonoBehaviour
     {
         if (midPointLocalSpace.z >= 0)
         {
+            strength = 0;
             midPointVisualObject.localPosition = Vector3.zero;
         }
     }
@@ -76,6 +90,7 @@ public class BowStringController : MonoBehaviour
         //We specify max pulling limit for the string. We don't allow the string to go any farther than "bowStringStretchLimit"
         if (midPointLocalSpace.z < 0 && midPointLocalZAbs >= bowStringStretchLimit)
         {
+            strength = 1;
             //Vector3 direction = midPointParent.TransformDirection(new Vector3(0, 0, midPointLocalSpace.z));
             midPointVisualObject.localPosition = new Vector3(0, 0, -bowStringStretchLimit);
         }
@@ -86,8 +101,14 @@ public class BowStringController : MonoBehaviour
         //what happens when we are between point 0 and the string pull limit
         if (midPointLocalSpace.z < 0 && midPointLocalZAbs < bowStringStretchLimit)
         {
+            strength = Remap(midPointLocalZAbs, 0, bowStringStretchLimit, 0, 1);
             midPointVisualObject.localPosition = new Vector3(0, 0, midPointLocalSpace.z);
         }
+    }
+
+    private float Remap(float value, int fromMin, float fromMax, int toMin, int toMax)
+    {
+        return (value - fromMin) / (fromMax - fromMin) * (toMax - toMin) + toMin;
     }
 
 }
