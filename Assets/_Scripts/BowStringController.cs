@@ -19,7 +19,13 @@ public class BowStringController : MonoBehaviour
 
     private Transform interactor;
 
-    private float strength;
+    private float strength, previousStrength;
+
+    [SerializeField]
+    private float stringSoundThreshold = 0.001f;
+
+    [SerializeField]
+    private AudioSource audioSource;
 
     public UnityEvent OnBowPulled;
     public UnityEvent<float> OnBowReleased;
@@ -39,7 +45,9 @@ public class BowStringController : MonoBehaviour
     {
         OnBowReleased?.Invoke(strength);
         strength = 0;
-
+        previousStrength = 0;
+        audioSource.pitch = 1;
+        audioSource.Stop();
 
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
@@ -66,6 +74,8 @@ public class BowStringController : MonoBehaviour
             //get the offset
             float midPointLocalZAbs = Mathf.Abs(midPointLocalSpace.z);
 
+            previousStrength = strength;
+
             HandleStringPushedBackToStart(midPointLocalSpace);
 
             HandleStringPulledBackTolimit(midPointLocalZAbs, midPointLocalSpace);
@@ -80,6 +90,8 @@ public class BowStringController : MonoBehaviour
     {
         if (midPointLocalSpace.z >= 0)
         {
+            audioSource.pitch = 1;
+            audioSource.Stop();
             strength = 0;
             midPointVisualObject.localPosition = Vector3.zero;
         }
@@ -90,6 +102,7 @@ public class BowStringController : MonoBehaviour
         //We specify max pulling limit for the string. We don't allow the string to go any farther than "bowStringStretchLimit"
         if (midPointLocalSpace.z < 0 && midPointLocalZAbs >= bowStringStretchLimit)
         {
+            audioSource.Pause();
             strength = 1;
             //Vector3 direction = midPointParent.TransformDirection(new Vector3(0, 0, midPointLocalSpace.z));
             midPointVisualObject.localPosition = new Vector3(0, 0, -bowStringStretchLimit);
@@ -101,14 +114,46 @@ public class BowStringController : MonoBehaviour
         //what happens when we are between point 0 and the string pull limit
         if (midPointLocalSpace.z < 0 && midPointLocalZAbs < bowStringStretchLimit)
         {
+            if (audioSource.isPlaying == false && strength <= 0.01f)
+            {
+                audioSource.Play();
+            }
+
             strength = Remap(midPointLocalZAbs, 0, bowStringStretchLimit, 0, 1);
             midPointVisualObject.localPosition = new Vector3(0, 0, midPointLocalSpace.z);
+
+            PlayStringPullinSound();
         }
     }
 
     private float Remap(float value, int fromMin, float fromMax, int toMin, int toMax)
     {
         return (value - fromMin) / (fromMax - fromMin) * (toMax - toMin) + toMin;
+    }
+
+    private void PlayStringPullinSound()
+    {
+        //Check if we have moved the string enought to play the sound unpause it
+        if (Mathf.Abs(strength - previousStrength) > stringSoundThreshold)
+        {
+            if (strength < previousStrength)
+            {
+                //Play string sound in reverse if we are pusing the string towards the bow
+                audioSource.pitch = -1;
+            }
+            else
+            {
+                //Play the sound normally
+                audioSource.pitch = 1;
+            }
+            audioSource.UnPause();
+        }
+        else
+        {
+            //if we stop moving Pause the sounds
+            audioSource.Pause();
+        }
+
     }
 
 }
