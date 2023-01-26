@@ -68,7 +68,9 @@
     <Compile Include="Assets\_Scripts\ArrowController.cs" />
     <Compile Include="Assets\_Scripts\StickingArrowToSurface.cs" />
     <Compile Include="Assets\Samples\OpenXR Plugin\1.4.2\Meshing Subsystem Feature\MeshingBehaviour.cs" />
+    <Compile Include="Assets\_Scripts\MainTarget.cs" />
     <Compile Include="Assets\Samples\OpenXR Plugin\1.4.2\Intercept Feature\InterceptCreateSessionFeature.cs" />
+    <Compile Include="Assets\_Scripts\KeyControllers.cs" />
     <Compile Include="Assets\_Content\VR_Hands_FBX\Scripts\AssignTriggers.cs" />
     <Compile Include="Assets\_Scripts\BowString.cs" />
   </ItemGroup>
