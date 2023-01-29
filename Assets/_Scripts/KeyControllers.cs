@@ -9,7 +9,7 @@ public class KeyControllers : MonoBehaviour
     [SerializeField]
     public InputActionProperty targetSoundTrigger;
 
-    private MainTarget target; 
+    private MainTarget target;
 
     // Start is called before the first frame update
     void Start()

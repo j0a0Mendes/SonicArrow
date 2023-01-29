@@ -10,6 +10,9 @@ public class MainTarget : MonoBehaviour
     [SerializeField]
     private AudioSource hitSound;
 
+    [SerializeField]
+    private AudioSource targetLocation;
+
     void Start()
     {   
     }
@@ -17,13 +20,9 @@ public class MainTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sounding)
+        if (sounding & !targetLocation.isPlaying)
         {
-            
-        }
-        else
-        {
-            
+            targetLocation.Play();       
         }
     }
 
