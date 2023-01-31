@@ -30,6 +30,13 @@ public class BowStringController : MonoBehaviour
     public UnityEvent OnBowPulled;
     public UnityEvent<float> OnBowReleased;
 
+    //HAPTICS
+
+    private XRController controller;
+
+    [Range(0, 1)]
+    public float intensity;
+
     private void Awake()
     {
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
@@ -37,6 +44,8 @@ public class BowStringController : MonoBehaviour
 
     private void Start()
     {
+        controller = (XRController)GameObject.FindObjectOfType(typeof(XRController));
+
         interactable.selectEntered.AddListener(PrepareBowString);
         interactable.selectExited.AddListener(ResetBowString);
     }
@@ -67,6 +76,7 @@ public class BowStringController : MonoBehaviour
     {
         if (interactor != null)
         {
+
             //convert bow string mid point position to the local space of the MidPoint
             Vector3 midPointLocalSpace =
                 midPointParent.InverseTransformPoint(midPointGrabObject.position); // localPosition

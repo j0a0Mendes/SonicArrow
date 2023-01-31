@@ -12,8 +12,28 @@ public class StickingArrowToSurface : MonoBehaviour
     [SerializeField]
     private GameObject stickingArrow;
 
+    [SerializeField]
+    private AudioSource windNavigatingSound;
+
+    //private bool notFlying = false;
+
+    private void Start() 
+    { 
+        windNavigatingSound.Play();  
+    }
+
+    //private void Update() 
+    //{ 
+    //    if (notFlying)
+    //
+    //        windNavigatingSound.Stop();
+    //    }   
+    //}
+
     private void OnCollisionEnter(Collision collision)
     {
+        windNavigatingSound.Stop();
+
         rb.isKinematic = true;
         myCollider.isTrigger = true;
 
