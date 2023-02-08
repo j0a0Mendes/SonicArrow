@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Samples\OpenXR Plugin\1.4.2\Meshing Subsystem Feature\MeshingTeapotFeature.cs" />
     <Compile Include="Assets\_Scripts\ArrowRotation.cs" />
+    <Compile Include="Assets\_Scripts\ButtonChange.cs" />
     <Compile Include="Assets\Samples\OpenXR Plugin\1.4.2\Intercept Feature\InterceptMessageHandler.cs" />
     <Compile Include="Assets\_Scripts\BowStringController.cs" />
     <Compile Include="Assets\_Scripts\MovingTarget.cs" />
