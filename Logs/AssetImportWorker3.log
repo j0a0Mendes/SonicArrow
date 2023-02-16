@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2022.2/release' branch; Version is '2022.2.0f1 (35dcd44975df) revision 3529940'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'pt' Physical Memory: 16340 MB
+OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'pt' Physical Memory: 8108 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-D:\Unity\2022.2.0f1\Editor\Unity.exe
+D:\UnityEditor\2022.2.0f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker3
 -projectPath
-D:/GitHub/SonicArrow
+D:/Sonic Arrow/SonicArrow
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-64145
-Successfully changed project path to: D:/GitHub/SonicArrow
-D:/GitHub/SonicArrow
+50904
+Successfully changed project path to: D:/Sonic Arrow/SonicArrow
+D:/Sonic Arrow/SonicArrow
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,61 +47,64 @@ D:/GitHub/SonicArrow
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19340] Host "[IP] 192.168.1.72 [Port] 0 [Flags] 2 [Guid] 129394610 [EditorId] 129394610 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-BB2CHVQ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [5040] Host "[IP] 192.168.0.30 [Port] 0 [Flags] 2 [Guid] 3043127608 [EditorId] 3043127608 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q30CT1P) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [19340] Host "[IP] 192.168.1.72 [Port] 0 [Flags] 2 [Guid] 129394610 [EditorId] 129394610 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-BB2CHVQ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [5040] Host "[IP] 192.168.0.30 [Port] 0 [Flags] 2 [Guid] 3043127608 [EditorId] 3043127608 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q30CT1P) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 41.85 ms, found 10 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
+Refreshing native plugins compatible for Editor in 46.48 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.81 ms.
 Initialize engine version: 2022.2.0f1 (35dcd44975df)
-[Subsystems] Discovering subsystems at path D:/Unity/2022.2.0f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/GitHub/SonicArrow/Assets
+[Subsystems] Discovering subsystems at path D:/UnityEditor/2022.2.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Sonic Arrow/SonicArrow/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c60)
-    Vendor:   NVIDIA
-    VRAM:     6043 MB
-    Driver:   31.0.15.2698
+    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
+    Vendor:   Intel
+    VRAM:     4054 MB
+    Driver:   27.20.100.8681
 Initialize mono
-Mono path[0] = 'D:/Unity/2022.2.0f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Unity/2022.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'D:/Unity/2022.2.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56340
+Mono path[0] = 'D:/UnityEditor/2022.2.0f1/Editor/Data/Managed'
+Mono path[1] = 'D:/UnityEditor/2022.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/UnityEditor/2022.2.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56132
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Unity/2022.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006515 seconds.
-- Loaded All Assemblies, in  0.453 seconds
+Register platform support module: D:/UnityEditor/2022.2.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/UnityEditor/2022.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.011284 seconds.
+- Loaded All Assemblies, in  1.091 seconds
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 293 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.389 seconds
+- Finished resetting the current domain, in  0.775 seconds
 Domain Reload Profiling:
-	ReloadAssembly (259ms)
-		BeginReloadAssembly (99ms)
+	ReloadAssembly (802ms)
+		BeginReloadAssembly (593ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
+			CreateAndSetChildDomain (2ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (98ms)
+			LoadAssemblies (589ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (190ms)
-				TypeCache.Initialize (189ms)
-					TypeCache.ScanAssembly (187ms)
+			SetupTypeCache (281ms)
+				TypeCache.Initialize (280ms)
+					TypeCache.ScanAssembly (277ms)
 				ResolveRequiredComponents (1ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (307ms)
+			SetupLoadedEditorAssemblies (686ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (12ms)
+				InitializePlatformSupportModulesInManaged (414ms)
+				SetLoadedEditorAssemblies (7ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (208ms)
-				ProcessInitializeOnLoadMethodAttributes (74ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (173ms)
+				ProcessInitializeOnLoadMethodAttributes (89ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -109,15 +112,31 @@ Domain Reload Profiling:
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\GitHub\SonicArrow\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\GitHub\SonicArrow\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.045 seconds
-Refreshing native plugins compatible for Editor in 9.99 ms, found 10 plugins.
+Symbol file LoadedFromMemory doesn't match image D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in 47.247 seconds
+Refreshing native plugins compatible for Editor in 784.92 ms, found 13 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.xr.oculus@3.2.1\Runtime\OculusLoader.cs:296 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.xr.oculus@3.2.1\Runtime\OculusLoader.cs:281 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <8f06425e63004caf99a79845675f751e>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <8f06425e63004caf99a79845675f751e>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <8f06425e63004caf99a79845675f751e>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <a62328349c154758b537cb55981f61df>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
 Mono: successfully reloaded assembly
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
@@ -125,47 +144,69 @@ Mono: successfully reloaded assembly
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.975 seconds
+- Finished resetting the current domain, in  8.722 seconds
 Domain Reload Profiling:
-	ReloadAssembly (287ms)
-		BeginReloadAssembly (163ms)
+	ReloadAssembly (14065ms)
+		BeginReloadAssembly (13546ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (14ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		LoadAllAssembliesAndSetupDomain (757ms)
-			LoadAssemblies (123ms)
+			CreateAndSetChildDomain (72ms)
+		LoadAllAssembliesAndSetupDomain (33152ms)
+			LoadAssemblies (44540ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (704ms)
-				TypeCache.Initialize (426ms)
-					TypeCache.ScanAssembly (421ms)
-				ResolveRequiredComponents (18ms)
+			SetupTypeCache (1939ms)
+				TypeCache.Initialize (1197ms)
+					TypeCache.ScanAssembly (1184ms)
+				ResolveRequiredComponents (35ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (732ms)
+			SetupLoadedEditorAssemblies (8227ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (9ms)
+				InitializePlatformSupportModulesInManaged (1327ms)
+				SetLoadedEditorAssemblies (21ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (102ms)
-				ProcessInitializeOnLoadAttributes (484ms)
-				ProcessInitializeOnLoadMethodAttributes (126ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
+				BeforeProcessingInitializeOnLoad (556ms)
+				ProcessInitializeOnLoadAttributes (1506ms)
+				ProcessInitializeOnLoadMethodAttributes (4808ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 9.83 ms, found 10 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6088 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 62 unused Assets / (380.9 KB). Loaded Objects now: 6535.
+			AwakeInstancesAfterBackupRestoration (18ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 571.75 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.31 ms.
+Unloading 6119 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (90.9 KB). Loaded Objects now: 6580.
 Memory consumption went from 0.92 GB to 0.92 GB.
-Total: 6.266800 ms (FindLiveObjects: 0.796300 ms CreateObjectMapping: 1.293200 ms MarkObjects: 3.923700 ms  DeleteObjects: 0.252600 ms)
+Total: 12.712800 ms (FindLiveObjects: 1.127400 ms CreateObjectMapping: 1.561500 ms MarkObjects: 9.451800 ms  DeleteObjects: 0.569700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 48.30 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.19 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6580.
+Memory consumption went from 102.2 MB to 102.2 MB.
+Total: 11.143400 ms (FindLiveObjects: 1.215500 ms CreateObjectMapping: 1.436400 ms MarkObjects: 8.434300 ms  DeleteObjects: 0.055000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
@@ -177,132 +218,220 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 44558.202835 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/narrowBlock.fbx
-  artifactKey: Guid(7adcb45e3ec3a0a4d9127f880d3b0453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 503651.392466 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/flag_red.fbx
+  artifactKey: Guid(d2905d78ac02b3d4586a1c6fef162a4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/narrowBlock.fbx using Guid(7adcb45e3ec3a0a4d9127f880d3b0453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd35ec7e8952be513b4ac3fc10b320474') in 0.661730 seconds 
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/flag_red.fbx using Guid(d2905d78ac02b3d4586a1c6fef162a4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9a3b0aebdbab52287ffa6d524ddb1a8') in 4.052861 seconds 
 Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
-  Time since last request: 3.449808 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/obstacleDiamond.fbx
-  artifactKey: Guid(f3874f0216ccb9b48b60f7ec50a22aac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000430 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/rampD.fbx
+  artifactKey: Guid(c057f05721e23a541b36c8770610a04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/obstacleDiamond.fbx using Guid(f3874f0216ccb9b48b60f7ec50a22aac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3e7137b3159091b2cf55ad48d2375f3') in 0.064363 seconds 
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/rampD.fbx using Guid(c057f05721e23a541b36c8770610a04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6066d965623fa65a9f38cddfc6ee00d6') in 0.207995 seconds 
 Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000141 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/roundLargeCornerOpen.fbx
-  artifactKey: Guid(babdd01154cd9914aa0a8fc1bf687917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000053 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/holeRound.fbx
+  artifactKey: Guid(1ac23cc0c1a134a42ac3a2fdfcd72ba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/roundLargeCornerOpen.fbx using Guid(babdd01154cd9914aa0a8fc1bf687917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66d30ab2160b1a8830da20acec6f2245') in 0.053413 seconds 
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/rampSquare.fbx
-  artifactKey: Guid(31f3b49150945e442abfe738aaf8cbbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/rampSquare.fbx using Guid(31f3b49150945e442abfe738aaf8cbbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4863ee89b323fc8c8f3c2eff7dbca9b7') in 0.051431 seconds 
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time since last request: 0.603970 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/skewLargeCornerOpen.fbx
-  artifactKey: Guid(8f7fc492f528a394fb464251d44a07cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/skewLargeCornerOpen.fbx using Guid(8f7fc492f528a394fb464251d44a07cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa41a2057759ce14cbf438a36ba69446') in 0.072598 seconds 
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/crest.fbx
-  artifactKey: Guid(eef6acb76b036244da62f95d2a37164e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/crest.fbx using Guid(eef6acb76b036244da62f95d2a37164e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97f008d875e0bba1489e5589c3c9134c') in 0.047541 seconds 
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time since last request: 0.000088 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/skewLargeCorner.fbx
-  artifactKey: Guid(daadba541b09a6f4d920d28b4895b963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/skewLargeCorner.fbx using Guid(daadba541b09a6f4d920d28b4895b963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a5ca230b2330ed8f95d2b4208be7bb') in 0.042517 seconds 
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/corner.fbx
-  artifactKey: Guid(99ae8faa67349024e8fdb8dc2105945a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/corner.fbx using Guid(99ae8faa67349024e8fdb8dc2105945a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64a8cfa13646abf29c23a74b89698670') in 0.045256 seconds 
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/ball_red.fbx
-  artifactKey: Guid(2d7d7611c829f824dbf13a542c5ff138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/ball_red.fbx using Guid(2d7d7611c829f824dbf13a542c5ff138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c194a42fc2d2b24a9b7c9c0b3aff81b') in 0.040733 seconds 
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/roundLargeCorner.fbx
-  artifactKey: Guid(0a27c0c37dd8026488d0fcd0db938f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/roundLargeCorner.fbx using Guid(0a27c0c37dd8026488d0fcd0db938f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9cda5eabb0ac3b78f52ba90f4651ebc') in 0.043427 seconds 
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time since last request: 0.000108 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/castle.fbx
-  artifactKey: Guid(91a5f60ae52ec76478cc2c1c6a763c24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/castle.fbx using Guid(91a5f60ae52ec76478cc2c1c6a763c24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6b00b536d6ecb5050f3d5e958fbf526') in 0.053816 seconds 
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/holeRound.fbx using Guid(1ac23cc0c1a134a42ac3a2fdfcd72ba4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '466d5b1bc9c41fa16a7702c1ba42a6b3') in 0.246384 seconds 
 Number of asset objects unloaded after import = 11
 ========================================================================
 Received Import Request.
-  Time since last request: 0.169905 seconds.
-  path: Assets/_Content/Kenney/Golf/Models/FBX format/gap.fbx
-  artifactKey: Guid(44034b0058cf73c439513a30126a6381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000073 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/corner.fbx
+  artifactKey: Guid(99ae8faa67349024e8fdb8dc2105945a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/_Content/Kenney/Golf/Models/FBX format/gap.fbx using Guid(44034b0058cf73c439513a30126a6381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c1c307cf5497d3c6ea2bd64fde6393c') in 0.052110 seconds 
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/corner.fbx using Guid(99ae8faa67349024e8fdb8dc2105945a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eed1d98d71076a97d10b8759ab7798e3') in 0.256344 seconds 
 Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
-  Time since last request: 4.523509 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpatialMappingOcclusion.mat
-  artifactKey: Guid(b51db210fe78df745a372851b3db949e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000043 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/skewCorner.fbx
+  artifactKey: Guid(8cd0f76e4a0bb724896f635d5a79a65a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpatialMappingOcclusion.mat using Guid(b51db210fe78df745a372851b3db949e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51a0422c5afa5f0122c46cd6da14e5c') in 0.051925 seconds 
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/skewCorner.fbx using Guid(8cd0f76e4a0bb724896f635d5a79a65a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9df512ab9718f85cc0e9e72fecad6bad') in 0.342141 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/_Content/Quaternious/Blends/Materials/LightWood.mat
+  artifactKey: Guid(96217803444a92240a3df374a035e5b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Quaternious/Blends/Materials/LightWood.mat using Guid(96217803444a92240a3df374a035e5b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8e3a483691418c627267e2e8241d840') in 0.281356 seconds 
 Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/innerCorner.fbx
+  artifactKey: Guid(262a1a116ccfd8243929eb5f256145e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/innerCorner.fbx using Guid(262a1a116ccfd8243929eb5f256145e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '712a6fe711bb8c5605acd498d0c3ec8a') in 0.557554 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/open.fbx
+  artifactKey: Guid(0796de3fcb10f2f4d8f8360ef7142e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/open.fbx using Guid(0796de3fcb10f2f4d8f8360ef7142e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd37c5291b6560fab419ebd82b2052906') in 0.215942 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/rampLarge.fbx
+  artifactKey: Guid(78b53e61e2c329743b2d3582f80eb8cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/rampLarge.fbx using Guid(78b53e61e2c329743b2d3582f80eb8cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53d6cc40e9348c3347f8a133e5149c51') in 0.227554 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/_Materials/LineMaterial.mat
+  artifactKey: Guid(56711ac3db767f249b28a53d7b9c87c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Materials/LineMaterial.mat using Guid(56711ac3db767f249b28a53d7b9c87c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c1d49c9f37ca8130be2ce1489a20a9e') in 0.274240 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/rampA.fbx
+  artifactKey: Guid(aac83dfcbb3f5b8459f0c6631c120af5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/rampA.fbx using Guid(aac83dfcbb3f5b8459f0c6631c120af5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d77bb4e2e9a397b9aaf1f9bdd12d397') in 0.329114 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/_Content/Quaternious/Blends/Materials/Black.mat
+  artifactKey: Guid(4f6f665a9a521c343b63c57f73cc16a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Quaternious/Blends/Materials/Black.mat using Guid(4f6f665a9a521c343b63c57f73cc16a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc0bc11a8fd520065f7fafc77acf14e6') in 0.335079 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/rampC.fbx
+  artifactKey: Guid(41bf4b122dc4a9b4282d08cf52c0b5c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/rampC.fbx using Guid(41bf4b122dc4a9b4282d08cf52c0b5c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5b8b5daa63e4c4c745bc6316e2d728b') in 0.528019 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/narrowRound.fbx
+  artifactKey: Guid(76b403963b4a48842a1c3328ab2a50ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/narrowRound.fbx using Guid(76b403963b4a48842a1c3328ab2a50ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56c9065bb720db2166b4224dd92b7a97') in 0.482623 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/_Content/Kenney/Blaster kit/FBX format/targetA.fbx
+  artifactKey: Guid(f1f72e197f7d35c4d84056373587a078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Blaster kit/FBX format/targetA.fbx using Guid(f1f72e197f7d35c4d84056373587a078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3d659d8062d21fda4f6bc9b46d71f6e') in 0.517534 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/hillRound.fbx
+  artifactKey: Guid(7eed0ebac2cd93848a585a86c3267e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/hillRound.fbx using Guid(7eed0ebac2cd93848a585a86c3267e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '674c8e1fe190f95e281f62f4649b7207') in 0.567329 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000106 seconds.
+  path: Assets/Samples/OpenXR Plugin/1.4.2/Controller/Materials/Blue.mat
+  artifactKey: Guid(d3293c07c46938149bd6b68f6f5ab4d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Samples/OpenXR Plugin/1.4.2/Controller/Materials/Blue.mat using Guid(d3293c07c46938149bd6b68f6f5ab4d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80a3c09f64a1a2e68222120477639691') in 0.274197 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/roundCornerA.fbx
+  artifactKey: Guid(c8f36bcb692ff1c45af87130c71d8065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/roundCornerA.fbx using Guid(c8f36bcb692ff1c45af87130c71d8065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2a6ab337b4b490ebd12d0afb6666341') in 0.271043 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/hillCorner.fbx
+  artifactKey: Guid(e50698fcb24d3734dbbffe79caf7201e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/hillCorner.fbx using Guid(e50698fcb24d3734dbbffe79caf7201e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a1ddb078e412f256047e8107071c5a9') in 0.341939 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 27.041378 seconds.
+  path: Assets/_Content/VR_Hands_FBX/Materials/default3.mat
+  artifactKey: Guid(887f8204b0b8c7b4f8c2b8cabe785fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/VR_Hands_FBX/Materials/default3.mat using Guid(887f8204b0b8c7b4f8c2b8cabe785fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e92fd86591fc60cd13124c98064e038') in 0.083725 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.602137 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Thin.ttf
+  artifactKey: Guid(19a9abb883540be48b75b951a927ae03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Thin.ttf using Guid(19a9abb883540be48b75b951a927ae03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7407b77729effc4c6fca37f20258da79') in 0.231597 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Bold.ttf
+  artifactKey: Guid(3750c318f40cab44a97d3a81beaefeb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Bold.ttf using Guid(3750c318f40cab44a97d3a81beaefeb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27b6c64fcdac47b668846258431d3f30') in 0.066729 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-ThinItalic.ttf
+  artifactKey: Guid(b2ea3b3f1765e544b9eb5bd1a93a91ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-ThinItalic.ttf using Guid(b2ea3b3f1765e544b9eb5bd1a93a91ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d294d1a79325b2bc04e15fea03dd2b7') in 0.123099 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Regular.ttf
+  artifactKey: Guid(30dc370b164eefc43b95744fc796dad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Regular.ttf using Guid(30dc370b164eefc43b95744fc796dad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4bea6acc4e1e4515a6d19283fa7f48b') in 0.179484 seconds 
+Number of asset objects unloaded after import = 5
 ========================================================================
 Received Import Request.
   Time since last request: 0.000058 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpatialMappingWireframe.mat
-  artifactKey: Guid(9875a245ac49007498213638a307faa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf
+  artifactKey: Guid(2a29e27936eb547458f646f71125b264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpatialMappingWireframe.mat using Guid(9875a245ac49007498213638a307faa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c8127a2ba5c214732b1cb629b5691e2') in 0.029650 seconds 
-Number of asset objects unloaded after import = 2
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf using Guid(2a29e27936eb547458f646f71125b264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb392bf6e6cfa9ab430d5472042ae0e8') in 0.127480 seconds 
+Number of asset objects unloaded after import = 5
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat
-  artifactKey: Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 1.358142 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Medium.ttf
+  artifactKey: Guid(a51a3aebb43ac044989270407476b208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat using Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50ffc41413ba4980ef5d3dc9fb3f254f') in 0.020292 seconds 
-Number of asset objects unloaded after import = 2
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Medium.ttf using Guid(a51a3aebb43ac044989270407476b208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1990af4ccc3ce08dc5abecce62ba8e75') in 0.075234 seconds 
+Number of asset objects unloaded after import = 5
 ========================================================================
 Received Import Request.
-  Time since last request: 2.742123 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpriteMask-Default.mat
-  artifactKey: Guid(15d0c3709176029428a0da2f8cecf0b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000056 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Black.ttf
+  artifactKey: Guid(1062c701058745940ae5dca6219c64c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpriteMask-Default.mat using Guid(15d0c3709176029428a0da2f8cecf0b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '789c69c3274d688877f5fb333db5246d') in 0.036963 seconds 
-Number of asset objects unloaded after import = 2
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Black.ttf using Guid(1062c701058745940ae5dca6219c64c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '226212eebac2a5af3dc698b2800034cf') in 0.136550 seconds 
+Number of asset objects unloaded after import = 5
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação.
 AssetImportWorker is now disconnected from the server
