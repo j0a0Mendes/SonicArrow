@@ -166,4 +166,13 @@ public class BowStringController : MonoBehaviour
 
     }
 
+    //REPLAY MECHANISM
+    
+    private List<ActionReplayRecord> actionReplayRecords = new List<ActionReplayRecord>();
+
+    private void FixedUpdate()
+    {
+        actionReplayRecords.Add(new ActionReplayRecord { position = transform.position, rotation = transform.rotation });
+    }
+
 }

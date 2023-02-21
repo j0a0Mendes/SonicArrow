@@ -10,6 +10,9 @@ public class KeyControllers : MonoBehaviour
     public InputActionProperty targetSoundTrigger;
 
     [SerializeField]
+    public InputActionProperty replayPerspective;
+
+    [SerializeField]
     public InputActionProperty replayTrigger;
 
     private MainTarget target;
@@ -31,9 +34,12 @@ public class KeyControllers : MonoBehaviour
         float buttonATriggered = targetSoundTrigger.action.ReadValue<float>();
 
         //button X in the left controller
-        float buttonXTriggered = replayTrigger.action.ReadValue<float>();
+        float buttonXTriggered = replayPerspective.action.ReadValue<float>();
 
-        if(target != null)
+        //button Y in the left controller
+        float buttonYTriggered = replayTrigger.action.ReadValue<float>();
+
+        if (target != null)
         {
             if(buttonXTriggered == 1){
                 controller.changePerspective();

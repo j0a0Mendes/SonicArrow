@@ -287,6 +287,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ReplayTrigger",
+                    "type": "Button",
+                    "id": "83bf6878-a627-4917-87e1-0da0e67cb0e0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -474,6 +483,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ReplayShot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0e456ff0-e813-4f8c-8242-b0bb0b21d359",
+                    "path": "<XRSimulatedController>/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReplayTrigger",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
