@@ -13,10 +13,7 @@ public class MainTarget : MonoBehaviour
     [SerializeField]
     private AudioSource targetLocation;
 
-    void Start()
-    {   
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -42,5 +39,4 @@ public class MainTarget : MonoBehaviour
             hitSound.Play();    
         }
     }
-
 }

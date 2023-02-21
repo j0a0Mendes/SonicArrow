@@ -1,0 +1,1180 @@
+Using pre-set license
+Built from '2022.2/release' branch; Version is '2022.2.0f1 (35dcd44975df) revision 3529940'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'pt' Physical Memory: 8108 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\UnityEditor\2022.2.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+D:/Sonic Arrow/SonicArrow
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+50904
+Successfully changed project path to: D:/Sonic Arrow/SonicArrow
+D:/Sonic Arrow/SonicArrow
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [13816] Host "[IP] 192.168.0.30 [Port] 0 [Flags] 2 [Guid] 2401921838 [EditorId] 2401921838 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q30CT1P) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [13816] Host "[IP] 192.168.0.30 [Port] 0 [Flags] 2 [Guid] 2401921838 [EditorId] 2401921838 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q30CT1P) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 4112.22 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 2.23 ms.
+Initialize engine version: 2022.2.0f1 (35dcd44975df)
+[Subsystems] Discovering subsystems at path D:/UnityEditor/2022.2.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Sonic Arrow/SonicArrow/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
+    Vendor:   Intel
+    VRAM:     4054 MB
+    Driver:   27.20.100.8681
+Initialize mono
+Mono path[0] = 'D:/UnityEditor/2022.2.0f1/Editor/Data/Managed'
+Mono path[1] = 'D:/UnityEditor/2022.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/UnityEditor/2022.2.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56836
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/UnityEditor/2022.2.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/UnityEditor/2022.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.693876 seconds.
+- Loaded All Assemblies, in 12.855 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 946 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.988 seconds
+Domain Reload Profiling:
+	ReloadAssembly (10785ms)
+		BeginReloadAssembly (9749ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (3ms)
+		LoadAllAssembliesAndSetupDomain (0ms)
+			LoadAssemblies (9743ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (2042ms)
+				TypeCache.Initialize (2037ms)
+					TypeCache.ScanAssembly (2028ms)
+				ResolveRequiredComponents (2ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (2626ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (1560ms)
+				SetLoadedEditorAssemblies (29ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (10ms)
+				ProcessInitializeOnLoadAttributes (798ms)
+				ProcessInitializeOnLoadMethodAttributes (225ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (4ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in 64.762 seconds
+Refreshing native plugins compatible for Editor in 167.55 ms, found 13 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.xr.oculus@3.2.1\Runtime\OculusLoader.cs:296 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.xr.oculus@3.2.1\Runtime\OculusLoader.cs:281 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <8f06425e63004caf99a79845675f751e>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <8f06425e63004caf99a79845675f751e>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <8f06425e63004caf99a79845675f751e>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <a62328349c154758b537cb55981f61df>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  6.509 seconds
+Domain Reload Profiling:
+	ReloadAssembly (22203ms)
+		BeginReloadAssembly (21423ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (15ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (94ms)
+		LoadAllAssembliesAndSetupDomain (42519ms)
+			LoadAssemblies (62662ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (954ms)
+				TypeCache.Initialize (580ms)
+					TypeCache.ScanAssembly (571ms)
+				ResolveRequiredComponents (19ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (6182ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (806ms)
+				SetLoadedEditorAssemblies (10ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (462ms)
+				ProcessInitializeOnLoadAttributes (1476ms)
+				ProcessInitializeOnLoadMethodAttributes (3402ms)
+				AfterProcessingInitializeOnLoad (21ms)
+				EditorAssembliesLoaded (5ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 27.69 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 6.71 ms.
+Unloading 6119 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (90.7 KB). Loaded Objects now: 6578.
+Memory consumption went from 0.92 GB to 0.92 GB.
+Total: 7.621800 ms (FindLiveObjects: 0.989900 ms CreateObjectMapping: 1.358500 ms MarkObjects: 5.008100 ms  DeleteObjects: 0.263800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 491652.831994 seconds.
+  path: Assets/_Scripts/ChangePerspectiveController.cs
+  artifactKey: Guid(0ce47318f0d80b6458de19674388a8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Scripts/ChangePerspectiveController.cs using Guid(0ce47318f0d80b6458de19674388a8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a555ae64ae51a789579135b640c87f2') in 0.194604 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 416.67 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.21 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6578.
+Memory consumption went from 101.9 MB to 101.9 MB.
+Total: 12.880300 ms (FindLiveObjects: 1.325000 ms CreateObjectMapping: 1.485600 ms MarkObjects: 10.011800 ms  DeleteObjects: 0.055700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1294.459478 seconds.
+  path: Assets/Settings/URP-HighFidelity.asset
+  artifactKey: Guid(7b7fd9122c28c4d15b667c7040e3b3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Settings/URP-HighFidelity.asset using Guid(7b7fd9122c28c4d15b667c7040e3b3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74780397a1d5ec73016f980d7e1a7f55') in 1.426364 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.003972 seconds.
+  path: Assets/Settings/URP-Performant.asset
+  artifactKey: Guid(d0e2fc18fe036412f8223b3b3d9ad574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Settings/URP-Performant.asset using Guid(d0e2fc18fe036412f8223b3b3d9ad574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9980d6bf0f894b755b3c78d2476579d7') in 0.230128 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 35.18 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 10.18 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (7.6 KB). Loaded Objects now: 6580.
+Memory consumption went from 102.0 MB to 102.0 MB.
+Total: 128.754400 ms (FindLiveObjects: 1.263300 ms CreateObjectMapping: 1.298400 ms MarkObjects: 115.373600 ms  DeleteObjects: 10.816900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 55.61 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 2.59 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6580.
+Memory consumption went from 101.9 MB to 101.9 MB.
+Total: 73.828500 ms (FindLiveObjects: 4.199300 ms CreateObjectMapping: 2.395600 ms MarkObjects: 66.800000 ms  DeleteObjects: 0.428200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  colorSpace: 0 -> 1
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:graphics/active-color-space: 02000000000000000000000000000000 -> 03000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 37.83 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (329.1 KB). Loaded Objects now: 6580.
+Memory consumption went from 102.2 MB to 101.9 MB.
+Total: 11.648600 ms (FindLiveObjects: 1.039500 ms CreateObjectMapping: 1.592400 ms MarkObjects: 8.898400 ms  DeleteObjects: 0.117000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  colorSpace: 0 -> 1
+  graphicsApiMask: 2099200 -> 2048
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:graphics/active-color-space: 02000000000000000000000000000000 -> 03000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 18.87 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6580.
+Memory consumption went from 101.9 MB to 101.9 MB.
+Total: 8.895100 ms (FindLiveObjects: 0.804100 ms CreateObjectMapping: 1.199700 ms MarkObjects: 6.849300 ms  DeleteObjects: 0.040200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  colorSpace: 0 -> 1
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:graphics/active-color-space: 02000000000000000000000000000000 -> 03000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 27.13 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (329.1 KB). Loaded Objects now: 6580.
+Memory consumption went from 102.2 MB to 101.9 MB.
+Total: 12.081300 ms (FindLiveObjects: 0.879000 ms CreateObjectMapping: 1.263700 ms MarkObjects: 9.733300 ms  DeleteObjects: 0.202900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  colorSpace: 0 -> 1
+  graphicsApiMask: 2099200 -> 2048
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:graphics/active-color-space: 02000000000000000000000000000000 -> 03000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 18.05 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6580.
+Memory consumption went from 101.9 MB to 101.9 MB.
+Total: 7.381800 ms (FindLiveObjects: 0.859800 ms CreateObjectMapping: 1.251200 ms MarkObjects: 5.233000 ms  DeleteObjects: 0.036600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  colorSpace: 0 -> 1
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:graphics/active-color-space: 02000000000000000000000000000000 -> 03000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 17.61 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6580.
+Memory consumption went from 101.9 MB to 101.9 MB.
+Total: 7.805900 ms (FindLiveObjects: 0.715700 ms CreateObjectMapping: 1.040600 ms MarkObjects: 6.007000 ms  DeleteObjects: 0.041000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  3.302 seconds
+Refreshing native plugins compatible for Editor in 18.20 ms, found 13 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.xr.oculus@3.2.1\Runtime\OculusLoader.cs:296 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in D:\Sonic Arrow\SonicArrow\Library\PackageCache\com.unity.xr.oculus@3.2.1\Runtime\OculusLoader.cs:281 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <8f06425e63004caf99a79845675f751e>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <8f06425e63004caf99a79845675f751e>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <8f06425e63004caf99a79845675f751e>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <a62328349c154758b537cb55981f61df>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in 44.880 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2153ms)
+		BeginReloadAssembly (1992ms)
+			ExecutionOrderSort (1ms)
+			DisableScriptedObjects (79ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1342ms)
+		LoadAllAssembliesAndSetupDomain (1139ms)
+			LoadAssemblies (286ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1077ms)
+				TypeCache.Initialize (632ms)
+					TypeCache.ScanAssembly (590ms)
+				ResolveRequiredComponents (29ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (6472ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (62ms)
+				SetLoadedEditorAssemblies (13ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (310ms)
+				ProcessInitializeOnLoadAttributes (1985ms)
+				ProcessInitializeOnLoadMethodAttributes (4087ms)
+				AfterProcessingInitializeOnLoad (15ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (33ms)
+Refreshing native plugins compatible for Editor in 31.12 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Unloading 5952 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 56 unused Assets / (53.2 KB). Loaded Objects now: 6585.
+Memory consumption went from 0.89 GB to 0.89 GB.
+Total: 9.254700 ms (FindLiveObjects: 0.688200 ms CreateObjectMapping: 0.906000 ms MarkObjects: 7.473000 ms  DeleteObjects: 0.185900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 19.65 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.5 KB). Loaded Objects now: 6585.
+Memory consumption went from 101.7 MB to 101.7 MB.
+Total: 6.242700 ms (FindLiveObjects: 0.648900 ms CreateObjectMapping: 0.867200 ms MarkObjects: 4.686700 ms  DeleteObjects: 0.038400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2919.712247 seconds.
+  path: Assets/_Content/Kenney/Blaster kit/FBX format/targetB.fbx
+  artifactKey: Guid(5517b996a78e0d14989ea7279b4a863d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Blaster kit/FBX format/targetB.fbx using Guid(5517b996a78e0d14989ea7279b4a863d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c8bc555d642988851c5208b6b25338d') in 5.620903 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/_Materials/StringMaterial.mat
+  artifactKey: Guid(ffa8eb53db0c25140abc94b2f125460d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Materials/StringMaterial.mat using Guid(ffa8eb53db0c25140abc94b2f125460d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c074e6365b508eb56c81781498b8674f') in 3.045789 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/_Content/Quaternious/Blends/Bow_Golden.blend
+  artifactKey: Guid(df62ac2d0e2795247a886fc6f5ca1640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Quaternious/Blends/Bow_Golden.blend using Guid(df62ac2d0e2795247a886fc6f5ca1640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '704f875310fd161d8fd85ec0dba9a308') in 0.272093 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/windmill.fbx
+  artifactKey: Guid(3b3471abbec66934abdc62c5d5c14a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/windmill.fbx using Guid(3b3471abbec66934abdc62c5d5c14a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3d88479c4846b175ec3cbd8a3c140f5') in 0.360965 seconds 
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/_Materials/Red.mat
+  artifactKey: Guid(2365ddd276285a340b1936200314b019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Materials/Red.mat using Guid(2365ddd276285a340b1936200314b019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cda514a03c95c3318e339228fdacedef') in 0.171075 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Samples/OpenXR Plugin/1.4.2/Controller/Materials/White.mat
+  artifactKey: Guid(5daffd924f4d0494c83ce461ca913878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Samples/OpenXR Plugin/1.4.2/Controller/Materials/White.mat using Guid(5daffd924f4d0494c83ce461ca913878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9aafaa66ca4e02c71be010cbecf25ad') in 0.220049 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/_Content/Quaternious/Blends/Bow_Wooden.blend
+  artifactKey: Guid(008593c1a5ddcfb4e86516b08ba742d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Quaternious/Blends/Bow_Wooden.blend using Guid(008593c1a5ddcfb4e86516b08ba742d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a7708facf78c26930052493043fa593') in 0.386844 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/_Content/Quaternious/Blends/Bow_Wooden2.blend
+  artifactKey: Guid(5f21d05603404f0459c5c502ad971211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Quaternious/Blends/Bow_Wooden2.blend using Guid(5f21d05603404f0459c5c502ad971211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8380e86d8c246310b4eeecdd568d992') in 0.620225 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/Samples/OpenXR Plugin/1.4.2/Controller/Models/Cone.fbx
+  artifactKey: Guid(fa14a214e9ffb1a42850851e0ad9db52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Samples/OpenXR Plugin/1.4.2/Controller/Models/Cone.fbx using Guid(fa14a214e9ffb1a42850851e0ad9db52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b1512d44df6c0faafc6c157d88923da') in 0.376238 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/castle.fbx
+  artifactKey: Guid(91a5f60ae52ec76478cc2c1c6a763c24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/castle.fbx using Guid(91a5f60ae52ec76478cc2c1c6a763c24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e13c6acce93ccf9bdfc768edc0fa8d4') in 0.540097 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000106 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/tunnelNarrow.fbx
+  artifactKey: Guid(54c495100011eb14dbc6e057f61da5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/tunnelNarrow.fbx using Guid(54c495100011eb14dbc6e057f61da5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8259518777cf0a524ba3840aa46f1120') in 0.389496 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/_Materials/Ground/SidesSpecular.mat
+  artifactKey: Guid(f72bf6c1f1cf29c44a4576939d8f27d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Materials/Ground/SidesSpecular.mat using Guid(f72bf6c1f1cf29c44a4576939d8f27d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d517b50e2d3ac839300776646ebf371') in 1.194644 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 27.711295 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/flag_blue.fbx
+  artifactKey: Guid(a3ab7ce0ba9726442945b6c2835d8d88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/flag_blue.fbx using Guid(a3ab7ce0ba9726442945b6c2835d8d88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70cf973f81976b9d230d29180d6679c3') in 0.259522 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 28.849376 seconds.
+  path: Assets/_Materials/Ground/GrassSpecular.mat
+  artifactKey: Guid(0cb3fef84b67b8a489d120fbae530947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Materials/Ground/GrassSpecular.mat using Guid(0cb3fef84b67b8a489d120fbae530947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcc27570b8b945037bcb8e1b8581ccdb') in 0.729436 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/squareCornerA.fbx
+  artifactKey: Guid(9770116f0e948af4193e3552b737133a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/squareCornerA.fbx using Guid(9770116f0e948af4193e3552b737133a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c071691f7a84355c2c1198af4483475a') in 0.542300 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/bumpDownWalls.fbx
+  artifactKey: Guid(74937737117f31946a771a3a8b32437f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/bumpDownWalls.fbx using Guid(74937737117f31946a771a3a8b32437f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ecfe359f81e0dc0ef4d0c4e1b6e08b6') in 0.516132 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 22.90 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 1.00 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (5.5 KB). Loaded Objects now: 6715.
+Memory consumption went from 107.9 MB to 107.9 MB.
+Total: 69.392600 ms (FindLiveObjects: 1.236500 ms CreateObjectMapping: 0.942400 ms MarkObjects: 67.092200 ms  DeleteObjects: 0.119700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 7708.814995 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/club_blue.fbx
+  artifactKey: Guid(7307dca0a69ab0d4ba5869be5b339f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/club_blue.fbx using Guid(7307dca0a69ab0d4ba5869be5b339f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d5bac7493ed74302c2bb75befb2f8bd') in 1.759953 seconds 
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.002136 seconds.
+  path: Assets/_Content/Quaternious/Blends/Materials/LightSteel.mat
+  artifactKey: Guid(75c5b0515e1a6e24e95f052f32583e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Quaternious/Blends/Materials/LightSteel.mat using Guid(75c5b0515e1a6e24e95f052f32583e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dc4a0003d6c066b2918b2d4e4193617') in 0.099968 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/skewLargeCorner.fbx
+  artifactKey: Guid(daadba541b09a6f4d920d28b4895b963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/skewLargeCorner.fbx using Guid(daadba541b09a6f4d920d28b4895b963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93d4a48f42ac447be46602dccec968f9') in 0.259608 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/rampLargeSide.fbx
+  artifactKey: Guid(42f2699a6a354e3429d24ec00933b4eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/rampLargeSide.fbx using Guid(42f2699a6a354e3429d24ec00933b4eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a4c220ed711e56ad45690dd55e09b7b') in 0.264180 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/roundLargeCornerOpen.fbx
+  artifactKey: Guid(babdd01154cd9914aa0a8fc1bf687917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/roundLargeCornerOpen.fbx using Guid(babdd01154cd9914aa0a8fc1bf687917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae7929a59f31c37ceb3bb227f5dadcf0') in 0.433401 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/hillSquare.fbx
+  artifactKey: Guid(d7a9822114ad18244bb2ec6372f02b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/hillSquare.fbx using Guid(d7a9822114ad18244bb2ec6372f02b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '999e1236d8d3ac5c40c4f43bf71fb4bd') in 0.619694 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/ramp.fbx
+  artifactKey: Guid(db96f680437d9f644829df8fef789bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/ramp.fbx using Guid(db96f680437d9f644829df8fef789bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb04fa28fec51d8cb5d26ed99e9d16dd') in 0.200595 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/obstacleDiamond.fbx
+  artifactKey: Guid(f3874f0216ccb9b48b60f7ec50a22aac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/obstacleDiamond.fbx using Guid(f3874f0216ccb9b48b60f7ec50a22aac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '488dc53d4bf0cc5dd957ee5078eb7654') in 0.228613 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/roundCornerC.fbx
+  artifactKey: Guid(9a08b4af5df08ad44ab1596e4ca6ebf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/roundCornerC.fbx using Guid(9a08b4af5df08ad44ab1596e4ca6ebf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca01e905b0800330de99382ac7bb9010') in 0.265878 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/flag_green.fbx
+  artifactKey: Guid(01cf00ea2af2a2249ae58e75e67047ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/flag_green.fbx using Guid(01cf00ea2af2a2249ae58e75e67047ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd88b0fa2a7f81d23d971d32644a95643') in 0.361462 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/side.fbx
+  artifactKey: Guid(86aa5a8a064bc21499113e0b4dc40d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/side.fbx using Guid(86aa5a8a064bc21499113e0b4dc40d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81b6b1e4a36b2c1476b2807777b25f4f') in 0.289591 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/rampSharp.fbx
+  artifactKey: Guid(edd39a9c79334dd4cb322d50b2d8e938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/rampSharp.fbx using Guid(edd39a9c79334dd4cb322d50b2d8e938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cd69d0ace2369e2485fdc973934e236') in 0.751183 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/rampSide.fbx
+  artifactKey: Guid(fddeb5df59f87a941ba3ee0374be1dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/rampSide.fbx using Guid(fddeb5df59f87a941ba3ee0374be1dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1806951956831745f4fd911d4fb7fcd8') in 0.251544 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/holeSquare.fbx
+  artifactKey: Guid(8dc1b009c21609948b1c0bda2213ff0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/holeSquare.fbx using Guid(8dc1b009c21609948b1c0bda2213ff0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3126227cdbd970ca83da6119a00bbad6') in 0.484194 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/ball_blue.fbx
+  artifactKey: Guid(87587c95ed720284e88fe825b12c9886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/ball_blue.fbx using Guid(87587c95ed720284e88fe825b12c9886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87299bc1381e0720865d1791480f2455') in 0.436798 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000095 seconds.
+  path: Assets/_Materials/Black.mat
+  artifactKey: Guid(fe3523aee81011547ab1bbb411e9eba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Materials/Black.mat using Guid(fe3523aee81011547ab1bbb411e9eba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94d9ce606827c0cd1c862de05537aaca') in 0.105057 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/roundCornerB.fbx
+  artifactKey: Guid(dc9d233ad055b074e84825b0d1ce90d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/roundCornerB.fbx using Guid(dc9d233ad055b074e84825b0d1ce90d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44d9065ae652bf598cf14d5063571334') in 0.470807 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/narrowBlock.fbx
+  artifactKey: Guid(7adcb45e3ec3a0a4d9127f880d3b0453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/narrowBlock.fbx using Guid(7adcb45e3ec3a0a4d9127f880d3b0453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3099f9162438734cf68b624ace487ba1') in 0.690824 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/rampSquare.fbx
+  artifactKey: Guid(31f3b49150945e442abfe738aaf8cbbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/rampSquare.fbx using Guid(31f3b49150945e442abfe738aaf8cbbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa57fbe633875eaa9913eed91caef5b8') in 0.262534 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/obstacleTriangle.fbx
+  artifactKey: Guid(6cd60682b5ec99d4399e24b9dcb1f56e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/obstacleTriangle.fbx using Guid(6cd60682b5ec99d4399e24b9dcb1f56e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08c0c47aa8e88ca91f104f81ae06fc61') in 0.545493 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/narrowSquare.fbx
+  artifactKey: Guid(66282cad63d11ec49834cf08bae73a84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/narrowSquare.fbx using Guid(66282cad63d11ec49834cf08bae73a84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc2c913ef7ac3e3f8197acdcd95f8624') in 0.287401 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/holeOpen.fbx
+  artifactKey: Guid(18d079f28f5724d4983c54eccc4a7f30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/holeOpen.fbx using Guid(18d079f28f5724d4983c54eccc4a7f30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '759f72e5ab7b01f092093832cbf01e44') in 0.282694 seconds 
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/obstacleBlock.fbx
+  artifactKey: Guid(52c3b5f3c15d176439f083f9ab70235d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/obstacleBlock.fbx using Guid(52c3b5f3c15d176439f083f9ab70235d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d5d9ae13bb4bd174299cc74b56e813') in 0.275753 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/skewLargeCornerOpen.fbx
+  artifactKey: Guid(8f7fc492f528a394fb464251d44a07cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/skewLargeCornerOpen.fbx using Guid(8f7fc492f528a394fb464251d44a07cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '555478088cd67c66079ee11ed36b0f8a') in 0.268785 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 26.761702 seconds.
+  path: Assets/_Content/VR_Hands_FBX/Materials/default1.mat
+  artifactKey: Guid(92bea6e6e6980904ea05de1c406b8c64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/VR_Hands_FBX/Materials/default1.mat using Guid(92bea6e6e6980904ea05de1c406b8c64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ab5e74b7696d74de0c477ce340dff91') in 0.089563 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/_Materials/Ground/DirtSpecular.mat
+  artifactKey: Guid(60368e9304828e3458a6f8537a1cc451) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Materials/Ground/DirtSpecular.mat using Guid(60368e9304828e3458a6f8537a1cc451) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe4a1cc78819ce7c52e5b2a5a385a9ee') in 0.126157 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.444967 seconds.
+  path: Assets/_Content/VR_Hands_FBX/Materials/Floor.mat
+  artifactKey: Guid(8d2a45267e5651d45b6c83d51d80ddf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/VR_Hands_FBX/Materials/Floor.mat using Guid(8d2a45267e5651d45b6c83d51d80ddf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93ce6bd1510b0be9e6a1266d00d10762') in 0.086839 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.013955 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Italic.ttf
+  artifactKey: Guid(c839255fc8f6b4b4d90bf8c1af9f9bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Italic.ttf using Guid(c839255fc8f6b4b4d90bf8c1af9f9bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2194729be7bde0955e96be7be9b6e71b') in 0.626561 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-LightItalic.ttf
+  artifactKey: Guid(5e63515167650a541b309ba3bfd4db3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-LightItalic.ttf using Guid(5e63515167650a541b309ba3bfd4db3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f139f7de0b3dc38856c2ef171081bfc') in 0.115422 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 1.319616 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BlackItalic.ttf
+  artifactKey: Guid(f95147a9bab9fe649b8070170fa7ebd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BlackItalic.ttf using Guid(f95147a9bab9fe649b8070170fa7ebd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcb5f8ef9495913b1f64701db026dffd') in 0.068377 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-MediumItalic.ttf
+  artifactKey: Guid(d93c1bc57fdf1ac4dad1bf04fac05464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-MediumItalic.ttf using Guid(d93c1bc57fdf1ac4dad1bf04fac05464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bcbf1f2b858113181e9107782a0a3b0') in 0.157764 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BoldItalic.ttf
+  artifactKey: Guid(dfb97a9307a577a41bcacba34b9a7e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BoldItalic.ttf using Guid(dfb97a9307a577a41bcacba34b9a7e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c152d45bb206277719957a2b1684fc4') in 2.925623 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 17.15 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 193.25 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.5 KB). Loaded Objects now: 6719.
+Memory consumption went from 108.4 MB to 108.4 MB.
+Total: 98.660900 ms (FindLiveObjects: 4.967500 ms CreateObjectMapping: 1.961300 ms MarkObjects: 91.642000 ms  DeleteObjects: 0.076000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 953.543652 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/roundLargeCorner.fbx
+  artifactKey: Guid(0a27c0c37dd8026488d0fcd0db938f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/roundLargeCorner.fbx using Guid(0a27c0c37dd8026488d0fcd0db938f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24e72d258a7da8b26e1b053112e19474') in 1.390295 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000959 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/gap.fbx
+  artifactKey: Guid(44034b0058cf73c439513a30126a6381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/gap.fbx using Guid(44034b0058cf73c439513a30126a6381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7621b720f8d9c521b6b58e1ce505eade') in 0.248792 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.866751 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/end.fbx
+  artifactKey: Guid(69e919a73394d3b4fbb649facc86d90d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/end.fbx using Guid(69e919a73394d3b4fbb649facc86d90d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8672fcb07c4044dcb7d0495c6c0c552c') in 0.248637 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/split.fbx
+  artifactKey: Guid(82adee20228d19c40917c63fcd71e50c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/split.fbx using Guid(82adee20228d19c40917c63fcd71e50c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '357c0322390fcbf8ba7c5745ba0e4aa0') in 0.191431 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.208981 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/crest.fbx
+  artifactKey: Guid(eef6acb76b036244da62f95d2a37164e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/crest.fbx using Guid(eef6acb76b036244da62f95d2a37164e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4dcde4518674da3ae1ed49eea5d061b') in 0.208952 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.177129 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/wallsToOpen.fbx
+  artifactKey: Guid(0a870cb4f3f87b44ba8ad2e606222e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/wallsToOpen.fbx using Guid(0a870cb4f3f87b44ba8ad2e606222e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '888b2a2bad9160bb9418345a97b58297') in 0.118901 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/bumpDown.fbx
+  artifactKey: Guid(0c0dfd7758beebe4aaf33597cd5f42ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/bumpDown.fbx using Guid(0c0dfd7758beebe4aaf33597cd5f42ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac9d3660177202c1f2fbafd4b26c11d') in 0.177266 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/wallLeft.fbx
+  artifactKey: Guid(b127fbae51d10b74db4f0813ffcc2976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/wallLeft.fbx using Guid(b127fbae51d10b74db4f0813ffcc2976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79779ef6a2d52b766ab869addb255544') in 0.192044 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/start.fbx
+  artifactKey: Guid(79aee4989a80ca348ac53e6acdf071b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/start.fbx using Guid(79aee4989a80ca348ac53e6acdf071b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aab22ee9c4a50ac41c7e6d10d706b61') in 0.218081 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/Samples/OpenXR Plugin/1.4.2/Controller/Materials/Green.mat
+  artifactKey: Guid(be5bedb9f42770549af7600305d316fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Samples/OpenXR Plugin/1.4.2/Controller/Materials/Green.mat using Guid(be5bedb9f42770549af7600305d316fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73fc1382cb10b58dc98cf3bfb8bcca27') in 0.153830 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/splitStart.fbx
+  artifactKey: Guid(c17c12ed509eae643bcdeba15b8f79d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/splitStart.fbx using Guid(c17c12ed509eae643bcdeba15b8f79d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73ae7b15964935bbca9de21469d9dcfd') in 0.160981 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/bump.fbx
+  artifactKey: Guid(db51ad75b13510649b89884babff89bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/bump.fbx using Guid(db51ad75b13510649b89884babff89bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc4e3eee19d217e1ed32322b19d6f768') in 0.625119 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/_Content/Kenney/Golf/Models/FBX format/wallRight.fbx
+  artifactKey: Guid(cf36248453bc4b049a7c05435b340582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/_Content/Kenney/Golf/Models/FBX format/wallRight.fbx using Guid(cf36248453bc4b049a7c05435b340582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74b240dbded7eb4f81e32e07d9f65824') in 1.293138 seconds 
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 40.99 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 1.69 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6719.
+Memory consumption went from 108.6 MB to 108.6 MB.
+Total: 122.207600 ms (FindLiveObjects: 1.082200 ms CreateObjectMapping: 1.174500 ms MarkObjects: 119.872700 ms  DeleteObjects: 0.075500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 24.59 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 1.40 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6719.
+Memory consumption went from 108.6 MB to 108.6 MB.
+Total: 244.252300 ms (FindLiveObjects: 8.554000 ms CreateObjectMapping: 0.963000 ms MarkObjects: 234.581500 ms  DeleteObjects: 0.148300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 46.00 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 1.62 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6719.
+Memory consumption went from 108.6 MB to 108.6 MB.
+Total: 162.076400 ms (FindLiveObjects: 1.704500 ms CreateObjectMapping: 0.952500 ms MarkObjects: 159.337600 ms  DeleteObjects: 0.074800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 75.01 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.17 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6719.
+Memory consumption went from 108.6 MB to 108.6 MB.
+Total: 15.188700 ms (FindLiveObjects: 2.130700 ms CreateObjectMapping: 1.295700 ms MarkObjects: 11.699000 ms  DeleteObjects: 0.061300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 24.21 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 0.16 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.5 KB). Loaded Objects now: 6719.
+Memory consumption went from 108.6 MB to 108.6 MB.
+Total: 13.934400 ms (FindLiveObjects: 1.110600 ms CreateObjectMapping: 1.068200 ms MarkObjects: 11.702600 ms  DeleteObjects: 0.051300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 41.36 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 1.15 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6719.
+Memory consumption went from 108.6 MB to 108.6 MB.
+Total: 18.916200 ms (FindLiveObjects: 6.448100 ms CreateObjectMapping: 1.290300 ms MarkObjects: 10.409800 ms  DeleteObjects: 0.765500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 39.20 ms, found 13 plugins.
+Preloading 1 native plugins for Editor in 1.13 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (5.4 KB). Loaded Objects now: 6719.
+Memory consumption went from 108.6 MB to 108.6 MB.
+Total: 66.344900 ms (FindLiveObjects: 3.456200 ms CreateObjectMapping: 1.241700 ms MarkObjects: 60.250000 ms  DeleteObjects: 1.390900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
