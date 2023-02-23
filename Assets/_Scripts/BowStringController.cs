@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
+
 public class BowStringController : MonoBehaviour
 {
     [SerializeField]
@@ -30,9 +31,16 @@ public class BowStringController : MonoBehaviour
     public UnityEvent OnBowPulled;
     public UnityEvent<float> OnBowReleased;
 
+    private bool positioned = false;
+
     //HAPTICS
 
-    private XRController controller;
+    public XRController leftHandController;
+    private GameObject leftHandObject;
+
+    //RELOCATE_BOW
+    [SerializeField]
+    public GameObject leftHand;
 
     [Range(0, 1)]
     public float intensity;
@@ -44,10 +52,44 @@ public class BowStringController : MonoBehaviour
 
     private void Start()
     {
-        controller = (XRController)GameObject.FindObjectOfType(typeof(XRController));
-
+        //controller = (XRController)GameObject.FindObjectOfType(typeof(XRController));
         interactable.selectEntered.AddListener(PrepareBowString);
         interactable.selectExited.AddListener(ResetBowString);
+
+    }
+
+    private void Update()
+    {
+
+        if (!positioned & leftHand != null)
+        {
+            Transform leftHandTransform = leftHand.transform;
+            transform.position = leftHandTransform.position;
+            positioned = true;
+            
+        }
+
+
+        if (interactor != null)
+        {
+
+            //convert bow string mid point position to the local space of the MidPoint
+            Vector3 midPointLocalSpace =
+                midPointParent.InverseTransformPoint(midPointGrabObject.position); // localPosition
+
+            //get the offset
+            float midPointLocalZAbs = Mathf.Abs(midPointLocalSpace.z);
+
+            previousStrength = strength;
+
+            HandleStringPushedBackToStart(midPointLocalSpace);
+
+            HandleStringPulledBackTolimit(midPointLocalZAbs, midPointLocalSpace);
+
+            HandlePullingString(midPointLocalZAbs, midPointLocalSpace);
+
+            bowStringRenderer.CreateString(midPointVisualObject.position);
+        }
     }
 
     private void ResetBowString(SelectExitEventArgs arg0)
@@ -72,29 +114,7 @@ public class BowStringController : MonoBehaviour
         OnBowPulled?.Invoke();
     }
 
-    private void Update()
-    {
-        if (interactor != null)
-        {
-
-            //convert bow string mid point position to the local space of the MidPoint
-            Vector3 midPointLocalSpace =
-                midPointParent.InverseTransformPoint(midPointGrabObject.position); // localPosition
-
-            //get the offset
-            float midPointLocalZAbs = Mathf.Abs(midPointLocalSpace.z);
-
-            previousStrength = strength;
-
-            HandleStringPushedBackToStart(midPointLocalSpace);
-
-            HandleStringPulledBackTolimit(midPointLocalZAbs, midPointLocalSpace);
-
-            HandlePullingString(midPointLocalZAbs, midPointLocalSpace);
-
-            bowStringRenderer.CreateString(midPointVisualObject.position);
-        }
-    }
+    
 
     private void HandleStringPushedBackToStart(Vector3 midPointLocalSpace)
     {

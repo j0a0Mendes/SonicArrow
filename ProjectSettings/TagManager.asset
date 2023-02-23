@@ -7,6 +7,7 @@ TagManager:
   - Arrow
   - Target
   - Wall
+  - LeftHand
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Arrow
   - Hands
   - Interactive
-  - 
+  - LeftHand
   - 
   - 
   - 
