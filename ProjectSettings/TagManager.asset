@@ -8,6 +8,7 @@ TagManager:
   - Target
   - Wall
   - LeftHand
+  - MainBow
   layers:
   - Default
   - TransparentFX

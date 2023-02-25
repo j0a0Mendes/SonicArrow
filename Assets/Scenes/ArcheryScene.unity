@@ -1062,6 +1062,12 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 210679312790044094, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+--- !u!1 &576398363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8986255506551857916, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7580245839231598721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &589551386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,10 +2727,10 @@ MonoBehaviour:
   replayPerspective:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Replay Perspective
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 7cd40494-1633-44f1-8fb5-bea0fdbbe720
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2733,10 +2739,10 @@ MonoBehaviour:
   replayTrigger:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Replay Trigger
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 3bb0d84c-2e12-4da0-ba62-6f927c47bc7e
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2755,9 +2761,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1357068079}
     - target: {fileID: 1436649814, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436649814, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436649814, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1357068079}
+    - target: {fileID: 1436649815, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436649815, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1436649819, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
       propertyPath: audioSource
       value: 
@@ -2766,6 +2788,11 @@ PrefabInstance:
       propertyPath: bowReleaseAudioSource
       value: 
       objectReference: {fileID: 1642846208}
+    - target: {fileID: 1609578776175747884, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2691508198873870724, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
         type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
@@ -2843,7 +2870,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8986255506551857916, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1642846210}
+      addedObject: {fileID: 1642846221}
   m_SourcePrefab: {fileID: 100100000, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
 --- !u!1 &1642846207 stripped
 GameObject:
@@ -2863,7 +2890,7 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 1642846206}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1642846210
+--- !u!114 &1642846221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2872,7 +2899,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1642846207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccd7fb0647a121c4eabefbd811db2d21, type: 3}
+  m_Script: {fileID: 11500000, guid: 220e92cd203dd1e48b88beba84530bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1643171164
@@ -3417,6 +3444,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7580245839231598721}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2019271716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576398363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd7fb0647a121c4eabefbd811db2d21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2127858857
 GameObject:
   m_ObjectHideFlags: 0
@@ -3667,8 +3706,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bow_Evil (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8986255506551857916, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+        type: 3}
+      propertyPath: m_TagString
+      value: MainBow
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8986255506551857916, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2019271716}
   m_SourcePrefab: {fileID: 100100000, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}

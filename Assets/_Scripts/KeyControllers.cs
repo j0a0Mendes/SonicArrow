@@ -18,14 +18,24 @@ public class KeyControllers : MonoBehaviour
     private MainTarget target;
 
     private ChangePerspectiveController controller;
-    
+
+    private ActionReplay actionReplay;
+
+    private bool yButtonEnabled;
+    private bool startYCount;
+    private int yCount = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindObjectOfType<MainTarget>();
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
-    }
+        actionReplay = GameObject.FindObjectOfType<ActionReplay>();
+
+        //REPLAY
+        yButtonEnabled = true;
+}
 
     // Update is called once per frame
     void Update()
@@ -47,6 +57,7 @@ public class KeyControllers : MonoBehaviour
 
             if (buttonATriggered == 1)
             {
+                Debug.Log("A PRESSED");
                 //trigger the sound from the target
                 target.turnOnTargetSound();
                 controller.enableChange();
@@ -56,9 +67,36 @@ public class KeyControllers : MonoBehaviour
                 target.turnOffTargetSound();
             }
 
+            if(buttonYTriggered == 1)
+            {
+                Debug.Log("Y PRESSED");
+                if (yButtonEnabled) 
+                {
+                    yButtonEnabled = false;
+                    startYCount = true;
+                    actionReplay.triggerReplayMode();
+                }
+                
+            }
+            
             //if(buttonTriggered == 2){
             //    changeController.changePerspective();
             //}
         }   
+    }
+
+    private void FixedUpdate()
+    {
+        if (startYCount)
+        {
+            yCount++;
+            if(yCount == 100)
+            {
+                startYCount = false;
+                yCount = 0;
+                yButtonEnabled = true;
+
+            }
+        }
     }
 }

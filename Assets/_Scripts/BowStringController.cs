@@ -65,6 +65,7 @@ public class BowStringController : MonoBehaviour
         {
             Transform leftHandTransform = leftHand.transform;
             transform.position = leftHandTransform.position;
+
             positioned = true;
             
         }
@@ -193,6 +194,12 @@ public class BowStringController : MonoBehaviour
     private void FixedUpdate()
     {
         actionReplayRecords.Add(new ActionReplayRecord { position = transform.position, rotation = transform.rotation });
+    }
+
+    public void disableBowGrab()
+    {
+        XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
+        grabInteractable.enabled = false;
     }
 
 }

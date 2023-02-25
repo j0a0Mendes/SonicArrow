@@ -8,9 +8,12 @@ public class AssignTriggers : MonoBehaviour
     public XRBaseController controller;
     public HandAnimation handAnimation;
 
+    GameObject mainBow;
+
     private void Start()
     {
         handAnimation = GetComponentInChildren<HandAnimation>();
+        mainBow = GameObject.FindWithTag("MainBow");
     }
 
     // Update is called once per frame
