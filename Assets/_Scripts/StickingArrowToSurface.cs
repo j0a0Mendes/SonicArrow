@@ -48,7 +48,7 @@ public class StickingArrowToSurface : MonoBehaviour
 
         collision.collider.GetComponent<IHittable>()?.GetHit();
 
-        Destroy(gameObject);
+        //Destroy(gameObject);
 
     }
 }

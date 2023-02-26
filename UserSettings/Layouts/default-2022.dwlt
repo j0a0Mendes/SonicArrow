@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 150}
   m_MaxSize: {x: 24288, y: 24288}
   vertical: 0
-  controlID: 27
+  controlID: 51
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -832,9 +832,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.847416, y: -10.56688, z: -12.978586}
+    m_Target: {x: -1.5169125, y: -7.554573, z: -6.404771}
     speed: 2
-    m_Value: {x: -2.847416, y: -10.56688, z: -12.978586}
+    m_Value: {x: -1.5169125, y: -7.554573, z: -6.404771}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -880,13 +880,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.21972387, y: -0.66921806, z: 0.21761419, w: -0.6756762}
+    m_Target: {x: -0.29118297, y: -0.64878654, z: 0.29628804, w: -0.63759804}
     speed: 2
-    m_Value: {x: -0.21972106, y: -0.66920954, z: 0.21761142, w: -0.6756676}
+    m_Value: {x: -0.2911787, y: -0.648777, z: 0.2962837, w: -0.6375887}
   m_Size:
-    m_Target: 16.539516
+    m_Target: 22.817444
     speed: 2
-    m_Value: 16.539516
+    m_Value: 22.817444
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -947,7 +947,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 29520
+  m_LastSelectedObjectID: 29442
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -985,9 +985,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 50730000
-      m_LastClickedID: 29520
-      m_ExpandedIDs: 24fbffff0273000054730000aa730000ce730000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: fcfaffff10fbffff24fbffff027300001073000054730000aa730000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1058,22 +1058,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Scripts
+    - Assets/_Sounds
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/_Scripts
+  - Assets/_Sounds
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\GitHub\SonicArrow
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c0780000
-    m_LastClickedID: 30912
+    m_SelectedIDs: c4780000
+    m_LastClickedID: 30916
     m_ExpandedIDs: 0000000006770000087700000a7700000c7700000e77000010770000127700001477000016770000187700001a7700001c7700001e7700002077000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1133,18 +1133,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 306c0000946300000000000020630000024f0000f8f2000000f30000faf20000e2910000d46e000056940000008e0000d08d0000167900002478000060730000e8730000f4730000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: ActionReplayArrow
+      m_OriginalName: ActionReplayArrow
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 31054
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
@@ -1154,7 +1154,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 70}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 177

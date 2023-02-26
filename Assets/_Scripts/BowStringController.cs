@@ -45,6 +45,9 @@ public class BowStringController : MonoBehaviour
     [Range(0, 1)]
     public float intensity;
 
+
+    float midPointLocalZAbs;
+
     private void Awake()
     {
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
@@ -79,7 +82,7 @@ public class BowStringController : MonoBehaviour
                 midPointParent.InverseTransformPoint(midPointGrabObject.position); // localPosition
 
             //get the offset
-            float midPointLocalZAbs = Mathf.Abs(midPointLocalSpace.z);
+            midPointLocalZAbs = Mathf.Abs(midPointLocalSpace.z);
 
             previousStrength = strength;
 
@@ -200,6 +203,13 @@ public class BowStringController : MonoBehaviour
     {
         XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.enabled = false;
+    }
+
+
+    //ELIMINAR
+    public float getShotState()
+    {
+        return midPointLocalZAbs;
     }
 
 }

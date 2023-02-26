@@ -21,6 +21,8 @@ public class KeyControllers : MonoBehaviour
 
     private ActionReplay actionReplay;
 
+    private ActionReplayArrow actionReplayArrow;
+
     private bool yButtonEnabled;
     private bool startYCount;
     private int yCount = 0;
@@ -31,7 +33,8 @@ public class KeyControllers : MonoBehaviour
     {
         target = GameObject.FindObjectOfType<MainTarget>();
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
-        actionReplay = GameObject.FindObjectOfType<ActionReplay>();
+        //actionReplay = GameObject.FindObjectOfType<ActionReplay>();
+        //actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
 
         //REPLAY
         yButtonEnabled = true;
@@ -74,7 +77,12 @@ public class KeyControllers : MonoBehaviour
                 {
                     yButtonEnabled = false;
                     startYCount = true;
-                    actionReplay.triggerReplayMode();
+                    //actionReplay.triggerReplayMode();
+
+                    actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
+                    actionReplayArrow.triggerReplayMode();
+
+
                 }
                 
             }

@@ -1062,12 +1062,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 210679312790044094, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
---- !u!1 &576398363 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8986255506551857916, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7580245839231598721}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &589551386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,7 +1819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1314992947
 Transform:
   m_ObjectHideFlags: 0
@@ -2863,6 +2857,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bow_Evil_Clone
       objectReference: {fileID: 0}
+    - target: {fileID: 8986255506551857916, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3444,18 +3443,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7580245839231598721}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2019271716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576398363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccd7fb0647a121c4eabefbd811db2d21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2127858857
 GameObject:
   m_ObjectHideFlags: 0
@@ -3595,6 +3582,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 540063309}
     m_Modifications:
+    - target: {fileID: 25523446, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 463417395, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -3714,9 +3705,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8986255506551857916, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2019271716}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
