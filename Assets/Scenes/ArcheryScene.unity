@@ -1183,6 +1183,7 @@ MonoBehaviour:
   firstPerspective: 0
   xrorigin: {fileID: 1701807433}
   controllerStand: {fileID: 0}
+  midPointGrabObject: {fileID: 1305830390}
 --- !u!1 &643724478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,6 +1802,12 @@ Transform:
   m_Father: {fileID: 1701807433}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1305830390 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 463417394, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7580245839231598721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1314992946
 GameObject:
   m_ObjectHideFlags: 0

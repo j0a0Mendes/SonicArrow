@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ChangePerspectiveController : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class ChangePerspectiveController : MonoBehaviour
     [SerializeField]
     public GameObject controllerStand;
 
+    [SerializeField]
+    public Transform midPointGrabObject;
+
+    XRGrabInteractable interactable;
+
     private bool changePerspectiveTrigger;
 
     private bool changeEnabled;
@@ -25,11 +31,15 @@ public class ChangePerspectiveController : MonoBehaviour
         changeEnabled = true;
     }
 
+    private void Awake()
+    {
+        interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
+    }
+
     void Update(){
         if (changePerspectiveTrigger & firstPerspective)
         {
             changePerspectiveTrigger = false;
-            //controllerStand.transform.position = new Vector3(9.5f,-0.3f,-5.5f);
             xrorigin.position = new Vector3(9.5f,-0.3f,-5.5f);
             firstPerspective = false;
         }
@@ -37,10 +47,11 @@ public class ChangePerspectiveController : MonoBehaviour
         {
             if(changePerspectiveTrigger & !firstPerspective){
                 changePerspectiveTrigger = false;
-                //controllerStand.transform.position = new Vector3(-9.5f,0.3f,5.5f);
-                //xrorigin.position = new Vector3(-15f,-1.28f,-5.42f);
-                xrorigin.position = new Vector3(-15.273f, 0.082f, -5.23f);
-                //xrorigin.Rotate(0f, 89.989f, 0f);
+                 xrorigin.position = new Vector3(-15.273f, 0.082f, -5.23f);
+
+                //ACTIVATE BOW
+                interactable.enabled = true;
+
                 firstPerspective = true;
             }
         }

@@ -33,6 +33,11 @@ public class BowStringController : MonoBehaviour
 
     private bool positioned = false;
 
+    //PERSPECTIVE CONTROLLER
+    private bool alreadyShot;
+    //public XRGrabInteractable bowStringInteractable;
+
+
     //HAPTICS
 
     public XRController leftHandController;
@@ -108,6 +113,10 @@ public class BowStringController : MonoBehaviour
         midPointGrabObject.localPosition = Vector3.zero;
         midPointVisualObject.localPosition = Vector3.zero;
         bowStringRenderer.CreateString(null);
+
+        
+        //DISABLE STRING PULL
+        interactable.enabled= false;
 
 
     }
@@ -210,6 +219,11 @@ public class BowStringController : MonoBehaviour
     public float getShotState()
     {
         return midPointLocalZAbs;
+    }
+
+    public void canShotAgain()
+    {
+        interactable.enabled = true;
     }
 
 }
