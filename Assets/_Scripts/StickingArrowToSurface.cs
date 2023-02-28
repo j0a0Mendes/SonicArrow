@@ -38,7 +38,8 @@ public class StickingArrowToSurface : MonoBehaviour
 
         //REPLAY PORPUSE
         actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
-        actionReplayArrow.endReplayRecord();
+        //actionReplayArrow.endReplayRecord();
+        actionReplayArrow.alreadyHitTrigger();
 
         rb.isKinematic = true;
         myCollider.isTrigger = true;

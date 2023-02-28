@@ -73,6 +73,7 @@ public class BowStringController : MonoBehaviour
         {
             Transform leftHandTransform = leftHand.transform;
             transform.position = leftHandTransform.position;
+            //transform.position = new Vector3(-0.01f, -0.03f, -0.06f);
 
             positioned = true;
             

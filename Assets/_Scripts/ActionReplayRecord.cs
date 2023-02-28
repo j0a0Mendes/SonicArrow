@@ -8,5 +8,5 @@ public class ActionReplayRecord
 
     public Quaternion rotation;
 
-    public string state;
+    public bool alreadyHit;
 }

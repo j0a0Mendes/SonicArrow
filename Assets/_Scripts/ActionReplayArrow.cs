@@ -11,12 +11,18 @@ public class ActionReplayArrow : MonoBehaviour
 
     private bool endReplayRecordVar;
 
+    private bool alreadyHit = false;
+    private bool lastFrameRecorded = false;
 
     private bool audioPlaying;
     private bool endSoundPlayed;
 
     [SerializeField]
     private AudioSource windNavigatingSound;
+
+    //[SerializeField]
+    //private AudioSource arrowHitSound;
+    private bool playedHitSound;
 
 
     private List<ActionReplayRecord> actionReplayRecords = new List<ActionReplayRecord>();
@@ -62,11 +68,10 @@ public class ActionReplayArrow : MonoBehaviour
     {
         if (isInReplayMode == false)
         {
-            actionReplayRecords.Add(new ActionReplayRecord { position = transform.position, rotation = transform.rotation });  
+            actionReplayRecords.Add(new ActionReplayRecord { position = transform.position, rotation = transform.rotation, alreadyHit = alreadyHit });    
         }
         else
         {
-            
             int nextIndex = currentReplayIndex + 1;
             
             if (nextIndex < actionReplayRecords.Count)
@@ -95,6 +100,21 @@ public class ActionReplayArrow : MonoBehaviour
 
         transform.position = actionReplayRecord.position;
         transform.rotation = actionReplayRecord.rotation;
+
+        if (actionReplayRecord.alreadyHit)
+        {
+            if (audioPlaying)
+            {
+                audioPlaying = false;
+                windNavigatingSound.Stop();
+                if (!playedHitSound)
+                {
+                    //arrowHitSound.Play();
+                    Debug.Log("HIT SOUND");
+                    playedHitSound = true;
+                }
+            }    
+        }
     }
 
     public void CleanReplay()
@@ -106,5 +126,10 @@ public class ActionReplayArrow : MonoBehaviour
     public void endReplayRecord()
     {
         endReplayRecordVar = true;
+    }
+
+    public void alreadyHitTrigger()
+    {
+        alreadyHit = true;
     }
 }
