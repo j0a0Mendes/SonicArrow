@@ -7,13 +7,19 @@ using UnityEngine.InputSystem;
 public class KeyControllers : MonoBehaviour
 {
     [SerializeField]
-    public InputActionProperty targetSoundTrigger;
+    public InputActionProperty targetSoundTrigger;  //target sound trigger (B)
 
     [SerializeField]
-    public InputActionProperty replayPerspective;
+    public InputActionProperty replayPerspective; //change to activate replay (X)
 
     [SerializeField]
-    public InputActionProperty replayTrigger;
+    public InputActionProperty replayTrigger;   //future change for the white noise (Y)
+
+    [SerializeField]
+    public InputActionProperty changePerspective;   //future change for the white noise (A)
+
+
+
 
     private MainTarget target;
 
@@ -23,7 +29,7 @@ public class KeyControllers : MonoBehaviour
 
     private ActionReplayArrow actionReplayArrow;
 
-    private bool yButtonEnabled;
+    private bool xButtonEnabled;
     private bool startYCount;
     private int yCount = 0;
 
@@ -37,14 +43,17 @@ public class KeyControllers : MonoBehaviour
         //actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
 
         //REPLAY
-        yButtonEnabled = true;
+        xButtonEnabled = true;
 }
 
     // Update is called once per frame
     void Update()
     {
         //button A in the right controller
-        float buttonATriggered = targetSoundTrigger.action.ReadValue<float>();
+        float buttonATriggered = changePerspective.action.ReadValue<float>();
+
+        //button B in the right controller
+        float buttonBTriggered = targetSoundTrigger.action.ReadValue<float>();
 
         //button X in the left controller
         float buttonXTriggered = replayPerspective.action.ReadValue<float>();
@@ -54,13 +63,13 @@ public class KeyControllers : MonoBehaviour
 
         if (target != null)
         {
-            if(buttonXTriggered == 1){
+            if(buttonATriggered == 1){
                 controller.changePerspective();
             }
 
-            if (buttonATriggered == 1)
+            if (buttonBTriggered == 1)
             {
-                Debug.Log("A PRESSED");
+                Debug.Log("B PRESSED");
                 //trigger the sound from the target
                 target.turnOnTargetSound();
                 controller.enableChange();
@@ -70,12 +79,12 @@ public class KeyControllers : MonoBehaviour
                 target.turnOffTargetSound();
             }
 
-            if(buttonYTriggered == 1)
+            if(buttonXTriggered == 1)
             {
-                Debug.Log("Y PRESSED");
-                if (yButtonEnabled) 
+                Debug.Log("X PRESSED");
+                if (xButtonEnabled) 
                 {
-                    yButtonEnabled = false;
+                    xButtonEnabled = false;
                     startYCount = true;
                     //actionReplay.triggerReplayMode();
 
@@ -102,7 +111,7 @@ public class KeyControllers : MonoBehaviour
             {
                 startYCount = false;
                 yCount = 0;
-                yButtonEnabled = true;
+                xButtonEnabled = true;
 
             }
         }

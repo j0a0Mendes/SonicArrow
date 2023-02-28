@@ -1063,6 +1063,18 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 210679312790044094, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+  changePerspective:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &589551386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,6 +2873,19 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
+  changePerspective:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Change Perspective
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 88844032-2737-45bf-ba6b-0e3b349ef053
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5288849988404895793, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!1001 &1642846206
 PrefabInstance:
   m_ObjectHideFlags: 0
