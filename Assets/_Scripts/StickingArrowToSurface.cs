@@ -17,6 +17,8 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private ActionReplayArrow actionReplayArrow;
 
+    private KeyControllers keyControllers;
+
     //private bool notFlying = false;
 
     private void Start() 
@@ -40,6 +42,10 @@ public class StickingArrowToSurface : MonoBehaviour
         actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
         //actionReplayArrow.endReplayRecord();
         actionReplayArrow.alreadyHitTrigger();
+
+        keyControllers = GameObject.FindObjectOfType<KeyControllers>();
+        keyControllers.enableButtonX();
+        //keyControllers.enableButtonA();
 
         rb.isKinematic = true;
         myCollider.isTrigger = true;

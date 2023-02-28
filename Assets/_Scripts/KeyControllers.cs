@@ -18,8 +18,11 @@ public class KeyControllers : MonoBehaviour
     [SerializeField]
     public InputActionProperty changePerspective;   //future change for the white noise (A)
 
-
-
+    //MANAGE WHEN YOU CAN PRESS KEYS
+    private bool buttonAEnabled;
+    private bool buttonBEnabled;
+    private bool buttonXEnabled;
+    private bool buttonYEnabled;
 
     private MainTarget target;
 
@@ -79,20 +82,18 @@ public class KeyControllers : MonoBehaviour
                 target.turnOffTargetSound();
             }
 
-            if(buttonXTriggered == 1)
+            if(buttonXTriggered == 1 && buttonXEnabled == true)
             {
                 Debug.Log("X PRESSED");
-                if (xButtonEnabled) 
-                {
-                    xButtonEnabled = false;
-                    startYCount = true;
-                    //actionReplay.triggerReplayMode();
+                buttonXEnabled = false;
+                startYCount = true;
+                //actionReplay.triggerReplayMode();
 
-                    actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
-                    actionReplayArrow.triggerReplayMode();
+                actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
+                actionReplayArrow.triggerReplayMode();
 
 
-                }
+                
                 
             }
             
@@ -111,9 +112,49 @@ public class KeyControllers : MonoBehaviour
             {
                 startYCount = false;
                 yCount = 0;
-                xButtonEnabled = true;
-
+                enableButtonX(); 
+        
             }
         }
+    }
+
+    public void enableButtonA()
+    {
+        buttonAEnabled= true;
+    }
+
+    public void disableButtonA()
+    {
+        buttonAEnabled = false;
+    }
+
+    public void enableButtonB()
+    {
+        buttonBEnabled = true;
+    }
+
+    public void disableButtonB()
+    {
+        buttonBEnabled = false;
+    }
+
+    public void enableButtonX()
+    {
+        buttonXEnabled = true;
+    }
+
+    public void disableButtonX()
+    {
+        buttonXEnabled = false;
+    }
+
+    public void enableButtonY()
+    {
+        buttonYEnabled = true;
+    }
+
+    public void disableButtonY()
+    {
+        buttonYEnabled = false;
     }
 }

@@ -24,6 +24,8 @@ public class ActionReplayArrow : MonoBehaviour
     //private AudioSource arrowHitSound;
     private bool playedHitSound;
 
+    //KeyControllers keyControllers;
+
 
     private List<ActionReplayRecord> actionReplayRecords = new List<ActionReplayRecord>();
     // Start is called before the first frame update
@@ -80,6 +82,9 @@ public class ActionReplayArrow : MonoBehaviour
             }
             else
             {
+                //keyControllers = GameObject.FindObjectOfType<KeyControllers>();
+                //keyControllers.enableButtonX();
+                Debug.Log("END OF REPLAY");
                 Destroy(gameObject);
             }
         }
@@ -110,6 +115,8 @@ public class ActionReplayArrow : MonoBehaviour
                 if (!playedHitSound)
                 {
                     //arrowHitSound.Play();
+                    //KeyControllers keyControllers = GameObject.FindObjectOfType<KeyControllers>();
+                    //keyControllers.enableButtonX();
                     Debug.Log("HIT SOUND");
                     playedHitSound = true;
                 }
