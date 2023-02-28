@@ -52,6 +52,13 @@ public class ChangePerspectiveController : MonoBehaviour
                 //ACTIVATE BOW
                 interactable.enabled = true;
 
+                //CLEAR FIELD
+                GameObject[] allObjects = GameObject.FindGameObjectsWithTag("Arrow");
+                foreach (GameObject obj in allObjects)
+                {
+                    Destroy(obj);
+                }
+
                 firstPerspective = true;
             }
         }

@@ -16,6 +16,7 @@ public class ActionReplay : MonoBehaviour
     {
         triggerIsReplayMode = false;
         actionReplayClone = GameObject.FindObjectOfType<ActionReplayClone>();
+
     }
 
     // Update is called once per frame

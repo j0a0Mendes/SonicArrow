@@ -8,10 +8,15 @@ public class ActionReplayArrow : MonoBehaviour
     private int currentReplayIndex;
     private bool isInReplayMode = false;
     private bool triggerIsReplayMode;
-    public string state;
+
+    private bool endReplayRecordVar;
 
 
     private bool audioPlaying;
+    private bool endSoundPlayed;
+
+    [SerializeField]
+    private AudioSource windNavigatingSound;
 
 
     private List<ActionReplayRecord> actionReplayRecords = new List<ActionReplayRecord>();
@@ -30,6 +35,7 @@ public class ActionReplayArrow : MonoBehaviour
         {
             if (!audioPlaying)
             {
+                windNavigatingSound.Play();
                 audioPlaying = true;
                 //ArrowParent.windNavigatingSound.Play();
             }
@@ -56,7 +62,7 @@ public class ActionReplayArrow : MonoBehaviour
     {
         if (isInReplayMode == false)
         {
-            actionReplayRecords.Add(new ActionReplayRecord { position = transform.position, rotation = transform.rotation });
+            actionReplayRecords.Add(new ActionReplayRecord { position = transform.position, rotation = transform.rotation });  
         }
         else
         {
@@ -67,7 +73,13 @@ public class ActionReplayArrow : MonoBehaviour
             {
                 SetTransform(nextIndex);
             }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
+
+        //ADICIONAR UM PARAMETRO AO RECORD
     }
 
     public void triggerReplayMode()
@@ -91,13 +103,8 @@ public class ActionReplayArrow : MonoBehaviour
         actionReplayRecords = new List<ActionReplayRecord>();
     }
 
-    public string getState()
+    public void endReplayRecord()
     {
-        return state;
-    }
-
-    public void changeState(string stateGiven)
-    {
-        state = stateGiven;
+        endReplayRecordVar = true;
     }
 }

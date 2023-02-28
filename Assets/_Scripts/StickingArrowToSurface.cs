@@ -15,6 +15,8 @@ public class StickingArrowToSurface : MonoBehaviour
     [SerializeField]
     private AudioSource windNavigatingSound;
 
+    private ActionReplayArrow actionReplayArrow;
+
     //private bool notFlying = false;
 
     private void Start() 
@@ -33,6 +35,10 @@ public class StickingArrowToSurface : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         windNavigatingSound.Stop();
+
+        //REPLAY PORPUSE
+        actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
+        actionReplayArrow.endReplayRecord();
 
         rb.isKinematic = true;
         myCollider.isTrigger = true;
