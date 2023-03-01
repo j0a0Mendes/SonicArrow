@@ -23,6 +23,9 @@ public class ChangePerspectiveController : MonoBehaviour
     private bool changePerspectiveTrigger;
 
     private bool changeEnabled;
+
+    //SYSTEMC CONTROLLER
+    public int numberOfTurns; //Turn is defined by two states, according to each perspective
     
     void Start()
     {
@@ -59,6 +62,7 @@ public class ChangePerspectiveController : MonoBehaviour
                     Destroy(obj);
                 }
 
+                numberOfTurns += 1;
                 firstPerspective = true;
             }
         }

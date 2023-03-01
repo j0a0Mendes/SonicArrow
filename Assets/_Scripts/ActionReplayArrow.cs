@@ -24,7 +24,11 @@ public class ActionReplayArrow : MonoBehaviour
     //private AudioSource arrowHitSound;
     private bool playedHitSound;
 
-    //KeyControllers keyControllers;
+    KeyControllers keyControllers;
+
+    private int replayEndTwoSeconds;
+
+    private ChangePerspectiveController controller;
 
 
     private List<ActionReplayRecord> actionReplayRecords = new List<ActionReplayRecord>();
@@ -32,6 +36,7 @@ public class ActionReplayArrow : MonoBehaviour
     void Start()
     {
         triggerIsReplayMode = false;
+        controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
     }
 
     // Update is called once per frame
@@ -56,7 +61,7 @@ public class ActionReplayArrow : MonoBehaviour
             if (isInReplayMode)
             {
                 SetTransform(0);
-                
+               
             }
             else
             {
@@ -68,6 +73,12 @@ public class ActionReplayArrow : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        if (playedHitSound)
+        {
+            replayEndTwoSeconds += 1;
+        }
+
         if (isInReplayMode == false)
         {
             actionReplayRecords.Add(new ActionReplayRecord { position = transform.position, rotation = transform.rotation, alreadyHit = alreadyHit });    
@@ -76,16 +87,22 @@ public class ActionReplayArrow : MonoBehaviour
         {
             int nextIndex = currentReplayIndex + 1;
             
-            if (nextIndex < actionReplayRecords.Count)
+            if (nextIndex < actionReplayRecords.Count && replayEndTwoSeconds < 200)
             {
                 SetTransform(nextIndex);
             }
             else
             {
-                //keyControllers = GameObject.FindObjectOfType<KeyControllers>();
-                //keyControllers.enableButtonX();
+                keyControllers = GameObject.FindObjectOfType<KeyControllers>();
+                keyControllers.enableButtonA();
                 Debug.Log("END OF REPLAY");
+                
+                //changePerspective
+                controller.enableChange();
+                controller.changePerspective();
+                
                 Destroy(gameObject);
+                replayEndTwoSeconds = 0;
             }
         }
 
@@ -116,7 +133,9 @@ public class ActionReplayArrow : MonoBehaviour
                 {
                     //arrowHitSound.Play();
                     //KeyControllers keyControllers = GameObject.FindObjectOfType<KeyControllers>();
-                    //keyControllers.enableButtonX();
+                    //keyControllers.enableButtonA();
+                    //keyControllers.enableButtonX(); 
+
                     Debug.Log("HIT SOUND");
                     playedHitSound = true;
                 }
@@ -139,4 +158,6 @@ public class ActionReplayArrow : MonoBehaviour
     {
         alreadyHit = true;
     }
+
+
 }

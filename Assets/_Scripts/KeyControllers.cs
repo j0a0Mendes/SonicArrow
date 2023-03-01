@@ -45,9 +45,13 @@ public class KeyControllers : MonoBehaviour
         //actionReplay = GameObject.FindObjectOfType<ActionReplay>();
         //actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
 
-        //REPLAY
+        //REPLAY BUTTON
         xButtonEnabled = true;
-}
+        buttonAEnabled = false;
+        buttonBEnabled = false;
+        buttonYEnabled = false;
+        buttonXEnabled = false;
+    }   
 
     // Update is called once per frame
     void Update()
@@ -66,16 +70,20 @@ public class KeyControllers : MonoBehaviour
 
         if (target != null)
         {
-            if(buttonATriggered == 1){
+            if(buttonATriggered == 1 && buttonAEnabled == true){
+                Debug.Log("A PRESSED");
+                controller.enableChange();
                 controller.changePerspective();
+
             }
 
             if (buttonBTriggered == 1)
             {
                 Debug.Log("B PRESSED");
+                Debug.Log(buttonAEnabled);
                 //trigger the sound from the target
                 target.turnOnTargetSound();
-                controller.enableChange();
+                //controller.enableChange();
             }
             else
             {
@@ -84,9 +92,10 @@ public class KeyControllers : MonoBehaviour
 
             if(buttonXTriggered == 1 && buttonXEnabled == true)
             {
+                disableButtonX();
                 Debug.Log("X PRESSED");
                 buttonXEnabled = false;
-                startYCount = true;
+                //startYCount = true;
                 //actionReplay.triggerReplayMode();
 
                 actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
@@ -105,9 +114,9 @@ public class KeyControllers : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (startYCount)
+        /**if (startYCount)
         {
-            yCount++;
+            /yCount++;
             if(yCount == 100)
             {
                 startYCount = false;
@@ -115,12 +124,13 @@ public class KeyControllers : MonoBehaviour
                 enableButtonX(); 
         
             }
-        }
+        }**/
     }
 
     public void enableButtonA()
     {
         buttonAEnabled= true;
+        controller.enableChange();
     }
 
     public void disableButtonA()

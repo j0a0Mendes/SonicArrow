@@ -15,6 +15,12 @@ public class StickingArrowToSurface : MonoBehaviour
     [SerializeField]
     private AudioSource windNavigatingSound;
 
+    private ChangePerspectiveController controller;
+    //[SerializeField]
+    //GameObject rightHand;
+
+    //KeyControllers keyControllers;
+
     private ActionReplayArrow actionReplayArrow;
 
     private KeyControllers keyControllers;
@@ -23,7 +29,8 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private void Start() 
     { 
-        windNavigatingSound.Play();  
+        windNavigatingSound.Play();
+        controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
     }
 
     //private void Update() 
@@ -46,6 +53,9 @@ public class StickingArrowToSurface : MonoBehaviour
         keyControllers = GameObject.FindObjectOfType<KeyControllers>();
         keyControllers.enableButtonX();
         //keyControllers.enableButtonA();
+
+        controller.enableChange();
+        controller.changePerspective();
 
         rb.isKinematic = true;
         myCollider.isTrigger = true;
