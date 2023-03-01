@@ -348,7 +348,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windNavigatingSound: {fileID: 1042803885603108265}
-  arrowHitSound: {fileID: 0}
+  stickingArrow: {fileID: 6932036676620923788, guid: 693c3cab400f5e546828cab1c6ef75e9,
+    type: 3}
 --- !u!1001 &4545825367615972982
 PrefabInstance:
   m_ObjectHideFlags: 0

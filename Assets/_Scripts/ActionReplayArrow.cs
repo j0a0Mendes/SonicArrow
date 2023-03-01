@@ -30,6 +30,8 @@ public class ActionReplayArrow : MonoBehaviour
 
     private ChangePerspectiveController controller;
 
+    [SerializeField]
+    private GameObject stickingArrow;
 
     private List<ActionReplayRecord> actionReplayRecords = new List<ActionReplayRecord>();
     // Start is called before the first frame update
@@ -135,6 +137,10 @@ public class ActionReplayArrow : MonoBehaviour
                     //KeyControllers keyControllers = GameObject.FindObjectOfType<KeyControllers>();
                     //keyControllers.enableButtonA();
                     //keyControllers.enableButtonX(); 
+
+                    GameObject arrow = Instantiate(stickingArrow);
+                    arrow.transform.position = transform.position;
+                    arrow.transform.forward = transform.forward;
 
                     Debug.Log("HIT SOUND");
                     playedHitSound = true;

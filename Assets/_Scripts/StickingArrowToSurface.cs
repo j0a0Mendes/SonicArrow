@@ -25,6 +25,8 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private KeyControllers keyControllers;
 
+    private int changePerspectiveCounter;
+    private bool changePerspectiveCounterTrigger;
     //private bool notFlying = false;
 
     private void Start() 
@@ -54,8 +56,10 @@ public class StickingArrowToSurface : MonoBehaviour
         keyControllers.enableButtonX();
         //keyControllers.enableButtonA();
 
-        controller.enableChange();
-        controller.changePerspective();
+        //controller.enableChange();
+        //controller.changePerspective();
+
+        changePerspectiveCounterTrigger = true;
 
         rb.isKinematic = true;
         myCollider.isTrigger = true;
@@ -73,5 +77,21 @@ public class StickingArrowToSurface : MonoBehaviour
 
         //Destroy(gameObject);
 
+    }
+
+    private void FixedUpdate()
+    {
+        if (changePerspectiveCounterTrigger)
+        {
+            changePerspectiveCounter += 1;
+            if(changePerspectiveCounter == 100)
+            {
+                controller.enableChange();
+                controller.changePerspective();
+
+                changePerspectiveCounter= 0;
+                changePerspectiveCounterTrigger = false;
+            }
+        }
     }
 }
