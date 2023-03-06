@@ -83,13 +83,17 @@ public class ActionReplayArrow : MonoBehaviour
 
         if (isInReplayMode == false)
         {
+            //MAYBE??
+            currentReplayIndex = 0;
+
             actionReplayRecords.Add(new ActionReplayRecord { position = transform.position, rotation = transform.rotation, alreadyHit = alreadyHit });    
         }
         else
         {
             int nextIndex = currentReplayIndex + 1;
-            
-            if (nextIndex < actionReplayRecords.Count && replayEndTwoSeconds < 200)
+
+            //if (nextIndex < actionReplayRecords.Count && replayEndTwoSeconds < 200)
+            if (nextIndex < actionReplayRecords.Count)
             {
                 SetTransform(nextIndex);
             }
@@ -99,11 +103,13 @@ public class ActionReplayArrow : MonoBehaviour
                 keyControllers.enableButtonA();
                 Debug.Log("END OF REPLAY");
                 
-                //changePerspective
-                controller.enableChange();
-                controller.changePerspective();
+                //changePerspective (ERASE TO GO TO OLD VERSION)
+                //controller.enableChange();
+                //controller.changePerspective();
                 
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                
+                
                 replayEndTwoSeconds = 0;
             }
         }

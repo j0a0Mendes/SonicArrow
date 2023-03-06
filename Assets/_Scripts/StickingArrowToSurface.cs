@@ -49,17 +49,15 @@ public class StickingArrowToSurface : MonoBehaviour
 
         //REPLAY PORPUSE
         actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
-        //actionReplayArrow.endReplayRecord();
+       
         actionReplayArrow.alreadyHitTrigger();
 
         keyControllers = GameObject.FindObjectOfType<KeyControllers>();
         keyControllers.enableButtonX();
-        //keyControllers.enableButtonA();
+        
 
-        //controller.enableChange();
-        //controller.changePerspective();
-
-        changePerspectiveCounterTrigger = true;
+        //CHANGE PERSPECTIVEEE (REMOVE TO GET ORIGINAL VERSION)
+        //changePerspectiveCounterTrigger = true;
 
         rb.isKinematic = true;
         myCollider.isTrigger = true;
