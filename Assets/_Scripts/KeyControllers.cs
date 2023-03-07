@@ -18,6 +18,12 @@ public class KeyControllers : MonoBehaviour
     [SerializeField]
     public InputActionProperty changePerspective;   //future change for the white noise (A)
 
+    [SerializeField]
+    public InputActionProperty loadCrossbowButton;   //load the crossbow
+
+    [SerializeField]
+    public InputActionProperty shootCrossbowButton;   //shoot the crossbow
+
     //MANAGE WHEN YOU CAN PRESS KEYS
     private bool buttonAEnabled;
     private bool buttonBEnabled;
@@ -68,9 +74,27 @@ public class KeyControllers : MonoBehaviour
         //button Y in the left controller
         float buttonYTriggered = replayTrigger.action.ReadValue<float>();
 
+        //button grip from the right controller
+        float buttonLoadCrossbow = loadCrossbowButton.action.ReadValue<float>();
+
+        //button shoot from the right controller
+        float buttonShootCrossbow = shootCrossbowButton.action.ReadValue<float>();
+
         if (target != null)
         {
-            if(buttonATriggered == 1 && buttonAEnabled == true){
+
+            if(buttonLoadCrossbow == 1)
+            {
+                Debug.Log("CROSSBOW PREPARED");
+            }
+
+            if (buttonShootCrossbow == 1)
+            {
+                Debug.Log("CROSSBOW SHOT");
+            }
+
+
+            if (buttonATriggered == 1 && buttonAEnabled == true){
                 Debug.Log("A PRESSED");
                 controller.enableChange();
                 controller.changePerspective();

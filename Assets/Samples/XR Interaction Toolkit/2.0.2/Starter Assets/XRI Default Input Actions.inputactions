@@ -854,6 +854,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "LoadCrossbow",
+                    "type": "Button",
+                    "id": "a979d6ee-1ba3-44e9-b921-9de0142912b7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShootCrossbow",
+                    "type": "Button",
+                    "id": "dc7a4803-8081-483b-b62a-3adcb6bab0d9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1052,6 +1070,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a754ac69-077d-41ab-87d7-081ba8ba08b2",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LoadCrossbow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f4b42d3c-bcb6-4b3d-8caa-6d7a51e7f448",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootCrossbow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -611,7 +611,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142366493}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 0
@@ -1718,6 +1718,18 @@ MonoBehaviour:
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 14dccfd8-ca22-4f27-93da-6b86b91d0a57
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  loadCrossbowButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4653,6 +4665,19 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -5288849988404895793, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+  loadCrossbowButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Load Crossbow Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: c855359e-aa66-487a-97dc-953a8ca07029
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5345788101282958788, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!1 &1563379437
 GameObject:
   m_ObjectHideFlags: 0
@@ -6654,6 +6679,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 25523446, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463417395, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 463417395, guid: 26dfe3176a7e9ac4296e41c568e53fa9, type: 3}
