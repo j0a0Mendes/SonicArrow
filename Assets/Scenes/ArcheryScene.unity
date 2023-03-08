@@ -1735,6 +1735,18 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
+  shootCrossbowButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &589551386
 GameObject:
   m_ObjectHideFlags: 0
@@ -4677,6 +4689,19 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -5345788101282958788, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  shootCrossbowButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Shoot Crossbow Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 937c4f54-543d-446d-ae8d-3dd60654ea55
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -2405056927684170282, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
 --- !u!1 &1563379437
 GameObject:

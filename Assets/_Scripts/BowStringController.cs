@@ -69,7 +69,8 @@ public class BowStringController : MonoBehaviour
         interactable.selectEntered.AddListener(PrepareBowString);
         interactable.selectExited.AddListener(ResetBowString);
 
-        zAxisPull= -0.3f;
+        //zAxisPull= -0.3f;
+        zAxisPull = 1;
 
     }
 
@@ -109,17 +110,18 @@ public class BowStringController : MonoBehaviour
         if (midPointLocalSpace.z < 0)
         {
             Debug.Log("PUULLIINIGGGG");
-            prepareCrossBow();
             OnBowPulled?.Invoke();
         }
-        else
+        else if(midPointLocalSpace.z == 0)
         {
             Debug.Log("RELEASEEEED");
             //shootCrossBow();
             
             ResetBowString();
-            prepareCrossBow();
+            //prepareCrossBow();
+            zAxisPull= 1;
         }
+        
 
         previousStrength = strength;
 

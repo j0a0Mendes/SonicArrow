@@ -38,6 +38,10 @@ public class KeyControllers : MonoBehaviour
 
     private ActionReplayArrow actionReplayArrow;
 
+    private BowStringController bowStringController;
+
+    private bool readyToShoot;
+
     private bool xButtonEnabled;
     private bool startYCount;
     private int yCount = 0;
@@ -48,6 +52,7 @@ public class KeyControllers : MonoBehaviour
     {
         target = GameObject.FindObjectOfType<MainTarget>();
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
+        bowStringController = GameObject.FindObjectOfType<BowStringController>();
         //actionReplay = GameObject.FindObjectOfType<ActionReplay>();
         //actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
 
@@ -83,13 +88,17 @@ public class KeyControllers : MonoBehaviour
         if (target != null)
         {
 
-            if(buttonLoadCrossbow == 1)
+            if(buttonLoadCrossbow == 1 && readyToShoot == false)
             {
+                readyToShoot = true;
+                bowStringController.prepareCrossBow();
                 Debug.Log("CROSSBOW PREPARED");
             }
 
-            if (buttonShootCrossbow == 1)
+            if (buttonShootCrossbow == 1 && readyToShoot == true)
             {
+                readyToShoot = false;
+                bowStringController.shootCrossBow();
                 Debug.Log("CROSSBOW SHOT");
             }
 
