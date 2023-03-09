@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -40,7 +41,10 @@ public class BowStringController : MonoBehaviour
     private bool alreadyShot;
 
     private bool theresArrow;
-    
+
+    private bool crossbowed;
+
+    private bool stringPulled;
 
 
     //HAPTICS
@@ -50,7 +54,7 @@ public class BowStringController : MonoBehaviour
 
     //RELOCATE_BOW
     [SerializeField]
-    public GameObject leftHand;
+    public GameObject rightHand;
 
     [Range(0, 1)]
     public float intensity;
@@ -72,19 +76,44 @@ public class BowStringController : MonoBehaviour
         //zAxisPull= -0.3f;
         zAxisPull = 1;
 
+        if (!positioned & rightHand != null)
+        {
+            Transform rightHandTransform = rightHand.transform;
+            Vector3 currentPosition = rightHandTransform.position;
+            Vector3 crossbowAdjustment = new Vector3(-0.046f, 0.026f, 0.436f);
+            Vector3 minorAdjust = new Vector3(0.7f, 0.1f, -0.5f);
+            //transform.position = new Vector3(-0.046f, 0.026f, 0.436f);
+
+            transform.position = currentPosition + crossbowAdjustment + minorAdjust;
+            
+            //(357.147f, -21.846f, 7.2480016f);
+            transform.rotation = Quaternion.Euler(357.147f, 3f, 6f);
+            positioned = true;
+
+        }
+
     }
 
     private void Update()
     {
 
-        if (!positioned & leftHand != null)
+        /**if (!positioned & rightHand != null)
         {
-            Transform leftHandTransform = leftHand.transform;
-            transform.position = leftHandTransform.position;
-            //transform.position = new Vector3(-0.01f, -0.03f, -0.06f);
+            Transform rightHandTransform = rightHand.transform;
+            transform.position = rightHandTransform.position;
+
+            //transform.position = new Vector3(-0.046f, 0.026f, 0.436f);
 
             positioned = true;
             
+        }**/
+
+        if (!crossbowed && positioned == true)
+        {
+            crossbowed = true;
+
+            //transform.position = new Vector3(170f, -98.53101f, 6f);
+            //transform.position = new Vector3(6f, -98.53101f, 170f);
         }
 
         Vector3 midPointLocalSpace = new Vector3(0, 0, zAxisPull);
@@ -107,18 +136,19 @@ public class BowStringController : MonoBehaviour
             //get the offset
         midPointLocalZAbs = Mathf.Abs(midPointLocalSpace.z);
 
-        if (midPointLocalSpace.z < 0)
+        if (midPointLocalSpace.z < 0 && stringPulled == false)
         {
             Debug.Log("PUULLIINIGGGG");
+            stringPulled = true;
             OnBowPulled?.Invoke();
         }
-        else if(midPointLocalSpace.z == 0)
+        else if (midPointLocalSpace.z == 0 && stringPulled == true)
         {
             Debug.Log("RELEASEEEED");
-            //shootCrossBow();
             
+            stringPulled= false;
             ResetBowString();
-            //prepareCrossBow();
+            
             zAxisPull= 1;
         }
         
