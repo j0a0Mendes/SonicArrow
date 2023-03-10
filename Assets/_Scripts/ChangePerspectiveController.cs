@@ -24,47 +24,69 @@ public class ChangePerspectiveController : MonoBehaviour
 
     private bool changeEnabled;
 
-    //SYSTEMC CONTROLLER
-    public int numberOfTurns; //Turn is defined by two states, according to each perspective
+    private GameObject playerCamera;
+
+    private BowStringController bowStringController;
+
+    private int numberOfTurns = 0;
+    private int points = 0;
+
+
+    //TARGET REGIONS
+    [SerializeField]
+    GameObject targetFirstRegion;
+
+    //SYSTEM CONTROLLER
+    //public int numberOfTurns; //Turn is defined by two states, according to each perspective
     
     void Start()
     {
         firstPerspective = true;
+        changeEnabled = false;
         changePerspectiveTrigger = false;
-        changeEnabled = true;
+        bowStringController = GameObject.FindObjectOfType<BowStringController>();
+        //targetFirstRegion = GameObject.FindGameObjectWithTag("TargetFirstRegion");
     }
 
     private void Awake()
     {
+        //playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
     }
 
     void Update(){
-        if (changePerspectiveTrigger & firstPerspective)
+        if (changePerspectiveTrigger && firstPerspective)
         {
             changePerspectiveTrigger = false;
-            xrorigin.position = new Vector3(9.5f,-0.3f,-5.5f);
+            
+            xrorigin.position = targetFirstRegion.transform.position;
+            //playerCamera.transform.position = targetFirstRegion.transform.position;
             firstPerspective = false;
+
         }
-        else
+        else if(changePerspectiveTrigger && !firstPerspective)
         {
-            if(changePerspectiveTrigger & !firstPerspective){
-                changePerspectiveTrigger = false;
-                 xrorigin.position = new Vector3(-15.273f, 0.082f, -5.23f);
+            
+            changePerspectiveTrigger = false;
+            xrorigin.position = new Vector3(-15.273f, 0.082f, -5.23f);
 
-                //ACTIVATE BOW
-                interactable.enabled = true;
+            //playerCamera.transform.position = new Vector3(1.39f,0,-0.22f);
 
-                //CLEAR FIELD
-                GameObject[] allObjects = GameObject.FindGameObjectsWithTag("Arrow");
-                foreach (GameObject obj in allObjects)
-                {
-                    Destroy(obj);
-                }
 
-                numberOfTurns += 1;
-                firstPerspective = true;
-            }
+            //ACTIVATE CROSSBOW
+            //interactable.enabled = true;
+            bowStringController.canShootAgain();
+
+            //CLEAR FIELD (OLD VERSION)
+            //GameObject[] allObjects = GameObject.FindGameObjectsWithTag("Arrow");
+            //foreach (GameObject obj in allObjects)
+            //{
+                //Destroy(obj);
+            //}
+
+            numberOfTurns += 1;
+            firstPerspective = true;
+            
         }
     }
 
@@ -83,6 +105,21 @@ public class ChangePerspectiveController : MonoBehaviour
 
     public void enableChange(){
         changeEnabled = true;
+    }
+
+    public void addPoints(int roundPoints)
+    {
+        points += roundPoints;
+    }
+
+    public int getPoints()
+    {
+        return points;
+    }
+
+    public int getNumberOfTurns()
+    {
+        return numberOfTurns;
     }
 }
 

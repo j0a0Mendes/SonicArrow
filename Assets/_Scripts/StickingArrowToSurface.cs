@@ -57,7 +57,7 @@ public class StickingArrowToSurface : MonoBehaviour
         
 
         //CHANGE PERSPECTIVEEE (REMOVE TO GET ORIGINAL VERSION)
-        //changePerspectiveCounterTrigger = true;
+        changePerspectiveCounterTrigger = true;
 
         rb.isKinematic = true;
         myCollider.isTrigger = true;
@@ -82,7 +82,7 @@ public class StickingArrowToSurface : MonoBehaviour
         if (changePerspectiveCounterTrigger)
         {
             changePerspectiveCounter += 1;
-            if(changePerspectiveCounter == 100)
+            if(changePerspectiveCounter == 75)
             {
                 controller.enableChange();
                 controller.changePerspective();

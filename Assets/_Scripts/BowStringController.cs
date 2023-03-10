@@ -34,6 +34,9 @@ public class BowStringController : MonoBehaviour
 
     private bool positioned = false;
 
+    //PERSPECTIVE CHANGE
+    private ChangePerspectiveController controller;
+
     [SerializeField]
     private float zAxisPull;
 
@@ -46,11 +49,11 @@ public class BowStringController : MonoBehaviour
 
     private bool stringPulled;
 
+    private bool canShoot = true;
 
     //HAPTICS
 
     public XRController leftHandController;
-    private GameObject leftHandObject;
 
     //RELOCATE_BOW
     [SerializeField]
@@ -69,11 +72,10 @@ public class BowStringController : MonoBehaviour
 
     private void Start()
     {
-        //controller = (XRController)GameObject.FindObjectOfType(typeof(XRController));
         interactable.selectEntered.AddListener(PrepareBowString);
         interactable.selectExited.AddListener(ResetBowString);
+        controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
 
-        //zAxisPull= -0.3f;
         zAxisPull = 1;
 
         if (!positioned & rightHand != null)
@@ -82,12 +84,11 @@ public class BowStringController : MonoBehaviour
             Vector3 currentPosition = rightHandTransform.position;
             Vector3 crossbowAdjustment = new Vector3(-0.046f, 0.026f, 0.436f);
             Vector3 minorAdjust = new Vector3(0.7f, 0.1f, -0.5f);
-            //transform.position = new Vector3(-0.046f, 0.026f, 0.436f);
-
-            transform.position = currentPosition + crossbowAdjustment + minorAdjust;
             
-            //(357.147f, -21.846f, 7.2480016f);
+            transform.position = currentPosition + crossbowAdjustment + minorAdjust;
             transform.rotation = Quaternion.Euler(357.147f, 3f, 6f);
+            
+            
             positioned = true;
 
         }
@@ -122,47 +123,53 @@ public class BowStringController : MonoBehaviour
         //if(zAxisPull <= 0)
         //{
 
-            //convert bow string mid point position to the local space of the MidPoint
-            //Vector3 midPointLocalSpace =
-            //    midPointParent.InverseTransformPoint(midPointGrabObject.position); // localPosition
+        //convert bow string mid point position to the local space of the MidPoint
+        //Vector3 midPointLocalSpace =
+        //    midPointParent.InverseTransformPoint(midPointGrabObject.position); // localPosition
 
-            //Vector3 midPointLocalSpace = new Vector3(0, 0, zAxisPull);
+        //Vector3 midPointLocalSpace = new Vector3(0, 0, zAxisPull);
 
-            /**Debug.Log("-----------------------");
-            Debug.Log(midPointLocalSpace);
-            Debug.Log(midPointLocalSpace.z);
-            Debug.Log("-----------------------");**/
+        /**Debug.Log("-----------------------");
+        Debug.Log(midPointLocalSpace);
+        Debug.Log(midPointLocalSpace.z);
+        Debug.Log("-----------------------");**/
 
-            //get the offset
-        midPointLocalZAbs = Mathf.Abs(midPointLocalSpace.z);
+        //get the offset
 
-        if (midPointLocalSpace.z < 0 && stringPulled == false)
+        if (canShoot)
         {
-            Debug.Log("PUULLIINIGGGG");
-            stringPulled = true;
-            OnBowPulled?.Invoke();
+            midPointLocalZAbs = Mathf.Abs(midPointLocalSpace.z);
+
+            if (midPointLocalSpace.z < 0 && stringPulled == false && canShoot == true)
+            {
+                Debug.Log("PUULLIINIGGGG");
+                stringPulled = true;
+                OnBowPulled?.Invoke();
+            }
+            else if (midPointLocalSpace.z == 0 && stringPulled == true && canShoot == true)
+            {
+                Debug.Log("RELEASEEEED");
+
+                stringPulled = false;
+                ResetBowString();
+
+                zAxisPull = 1;
+
+                canShoot = false;
+            }
+
+
+            previousStrength = strength;
+
+            HandleStringPushedBackToStart(midPointLocalSpace);
+
+            HandleStringPulledBackTolimit(midPointLocalZAbs, midPointLocalSpace);
+
+            HandlePullingString(midPointLocalZAbs, midPointLocalSpace);
+
+            bowStringRenderer.CreateString(midPointVisualObject.position);
+   
         }
-        else if (midPointLocalSpace.z == 0 && stringPulled == true)
-        {
-            Debug.Log("RELEASEEEED");
-            
-            stringPulled= false;
-            ResetBowString();
-            
-            zAxisPull= 1;
-        }
-        
-
-        previousStrength = strength;
-
-        HandleStringPushedBackToStart(midPointLocalSpace);
-
-        HandleStringPulledBackTolimit(midPointLocalZAbs, midPointLocalSpace);
-
-        HandlePullingString(midPointLocalZAbs, midPointLocalSpace);
-
-        bowStringRenderer.CreateString(midPointVisualObject.position);
-        //}
     }
 
     private void ResetBowString(SelectExitEventArgs arg0)
@@ -191,6 +198,13 @@ public class BowStringController : MonoBehaviour
         midPointGrabObject.localPosition = Vector3.zero;
         midPointVisualObject.localPosition = Vector3.zero;
         bowStringRenderer.CreateString(null);
+
+
+
+        controller.enableChange();
+        controller.changePerspective();
+
+
     }
 
     private void PrepareBowString(SelectEnterEventArgs arg0)
@@ -280,11 +294,6 @@ public class BowStringController : MonoBehaviour
         actionReplayRecords.Add(new ActionReplayRecord { position = transform.position, rotation = transform.rotation });
     }
 
-    /**public void disableBowGrab()
-    {
-        XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
-        grabInteractable.enabled = false;
-    }**/
 
     public void prepareCrossBow()
     {
@@ -296,17 +305,10 @@ public class BowStringController : MonoBehaviour
         zAxisPull = 0;
     }
 
-    /**public void ForceSelectEntered()
-    {
-        interactable.OnSelectEntered(new SelectEnterEventArgs());
-    }**/
-
-    //ELIMINAR
-    public float getShotState()
-    {
-        return midPointLocalZAbs;
-    }
-
     
 
+    public void canShootAgain()
+    {
+        canShoot = true;
+    }
 }
