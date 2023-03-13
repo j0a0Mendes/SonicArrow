@@ -45,6 +45,14 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
+        if(collision.gameObject.tag == "WallFirstLayer" || collision.gameObject.tag == "WallSecondLayer" || collision.gameObject.tag == "WallThirdLayer" || collision.gameObject.tag == "WallForthLayer" || collision.gameObject.tag == "WallFifthLayer" || collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Ceiling")
+        {
+            GameObject spotterNoPoints = GameObject.Find("No_Points");
+            spotterNoPoints.GetComponent<AudioSource>().Play();
+        }
+
+
         windNavigatingSound.Stop();
 
         //REPLAY PORPUSE

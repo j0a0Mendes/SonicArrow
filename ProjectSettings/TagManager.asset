@@ -21,17 +21,17 @@ TagManager:
   - Interactive
   - LeftHand
   - TargetFirstRegion
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - TargetSecondRegion
+  - TargetThirdRegion
+  - TargetForthRegion
+  - TargetFifthRegion
+  - WallFirstLayer
+  - WallSecondLayer
+  - WallThirdLayer
+  - WallForthLayer
+  - WallFifthLayer
+  - Floor
+  - Ceiling
   - 
   - 
   - 

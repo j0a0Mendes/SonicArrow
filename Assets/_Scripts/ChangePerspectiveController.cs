@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -31,6 +32,7 @@ public class ChangePerspectiveController : MonoBehaviour
     private int numberOfTurns = 0;
     private int points = 0;
 
+    private Transform initialPosition;
 
     //TARGET REGIONS
     [SerializeField]
@@ -45,7 +47,9 @@ public class ChangePerspectiveController : MonoBehaviour
         changeEnabled = false;
         changePerspectiveTrigger = false;
         bowStringController = GameObject.FindObjectOfType<BowStringController>();
+        //initialPosition = xrorigin;
         //targetFirstRegion = GameObject.FindGameObjectWithTag("TargetFirstRegion");
+
     }
 
     private void Awake()
@@ -58,8 +62,8 @@ public class ChangePerspectiveController : MonoBehaviour
         if (changePerspectiveTrigger && firstPerspective)
         {
             changePerspectiveTrigger = false;
-            
-            xrorigin.position = targetFirstRegion.transform.position;
+            Vector3 adjustments = new Vector3(-1.75f,-1.399138f,0);
+            xrorigin.position = targetFirstRegion.transform.position + adjustments;
             //playerCamera.transform.position = targetFirstRegion.transform.position;
             firstPerspective = false;
 
@@ -68,8 +72,9 @@ public class ChangePerspectiveController : MonoBehaviour
         {
             
             changePerspectiveTrigger = false;
-            xrorigin.position = new Vector3(-15.273f, 0.082f, -5.23f);
-
+            //xrorigin.position = new Vector3(-15.273f, 0.082f, -5.23f);
+            xrorigin.position = new Vector3(-41.893f, 0.082f, -4.4f);
+            //xrorigin.position = initialPosition.position;
             //playerCamera.transform.position = new Vector3(1.39f,0,-0.22f);
 
 
