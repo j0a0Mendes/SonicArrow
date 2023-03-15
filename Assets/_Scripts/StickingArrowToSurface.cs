@@ -45,11 +45,38 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-
-        if(collision.gameObject.tag == "WallFirstLayer" || collision.gameObject.tag == "WallSecondLayer" || collision.gameObject.tag == "WallThirdLayer" || collision.gameObject.tag == "WallForthLayer" || collision.gameObject.tag == "WallFifthLayer" || collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Ceiling")
+        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag == "Untagged");
+        string collidedWith = collision.gameObject.tag;
+        if (collidedWith == "WallFirstLayer" || collidedWith == "WallSecondLayer" || collidedWith == "WallThirdLayer" || collidedWith == "WallForthLayer" || collidedWith == "WallFifthLayer" || collidedWith == "Floor" || collidedWith == "Ceiling")
         {
             GameObject spotterNoPoints = GameObject.Find("No_Points");
             spotterNoPoints.GetComponent<AudioSource>().Play();
+        }
+        else if (collidedWith == "TargetFirstRegion")
+        {
+            GameObject spotter = GameObject.Find("5_Points");
+            spotter.GetComponent<AudioSource>().Play();
+        }
+        else if (collidedWith == "TargetSecondRegion")
+        {
+            GameObject spotter = GameObject.Find("4_Points");
+            spotter.GetComponent<AudioSource>().Play();
+        }
+        else if (collidedWith == "TargetThirdRegion")
+        {
+            GameObject spotter = GameObject.Find("3_Points");
+            spotter.GetComponent<AudioSource>().Play();
+        }
+        else if (collidedWith == "TargetForthRegion")
+        {
+            GameObject spotter = GameObject.Find("2_Points");
+            spotter.GetComponent<AudioSource>().Play();
+        }
+        else if (collidedWith == "TargetFifthRegion")
+        {
+            GameObject spotter = GameObject.Find("1_Points");
+            spotter.GetComponent<AudioSource>().Play();
         }
 
 

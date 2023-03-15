@@ -136,11 +136,11 @@ GameObject:
   - component: {fileID: 15751221}
   - component: {fileID: 15751224}
   - component: {fileID: 15751223}
-  - component: {fileID: 15751222}
   - component: {fileID: 15751225}
+  - component: {fileID: 15751226}
   m_Layer: 10
   m_Name: TargetFirstRegion
-  m_TagString: Untagged
+  m_TagString: TargetFirstRegion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,29 +160,6 @@ Transform:
   m_Father: {fileID: 993148233}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &15751222
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 15751220}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &15751223
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -245,6 +222,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b503b3cae400c24db183893bd607197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &15751226
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15751220}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &23001081
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +258,7 @@ GameObject:
   - component: {fileID: 23001083}
   m_Layer: 18
   m_Name: LeftWallFourthLayer
-  m_TagString: Wall
+  m_TagString: WallForthLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -468,9 +467,10 @@ GameObject:
   - component: {fileID: 58619731}
   - component: {fileID: 58619730}
   - component: {fileID: 58619733}
-  m_Layer: 0
+  - component: {fileID: 58619734}
+  m_Layer: 14
   m_Name: TargetFithRegion
-  m_TagString: Untagged
+  m_TagString: TargetFifthRegion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,12 +507,12 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.000000059604645, y: 0, z: 0}
 --- !u!23 &58619731
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -575,6 +575,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d83763251aeb82459d9869e9d19549d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &58619734
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58619728}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &142366493
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,7 +611,7 @@ GameObject:
   - component: {fileID: 142366495}
   m_Layer: 20
   m_Name: Floor
-  m_TagString: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -723,7 +745,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ac8f24f64628c9d4dbac6a815428a02e, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -851,7 +873,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 313d4b0b5d0fcc841bc098a2c2ff7f19, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -950,7 +972,7 @@ GameObject:
   - component: {fileID: 302821650}
   m_Layer: 17
   m_Name: FrontWallThirdLayer
-  m_TagString: Wall
+  m_TagString: WallThirdLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1614,7 +1636,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: afecfc35671fda444afa7bbe2c68e82e, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2399,7 +2421,7 @@ GameObject:
   - component: {fileID: 643944723}
   m_Layer: 17
   m_Name: LeftWallThirdLayer
-  m_TagString: Wall
+  m_TagString: WallThirdLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2504,7 +2526,7 @@ GameObject:
   - component: {fileID: 745671883}
   m_Layer: 19
   m_Name: LeftWallFifthLayer
-  m_TagString: Wall
+  m_TagString: WallFifthLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2899,7 +2921,7 @@ GameObject:
   - component: {fileID: 919759377}
   m_Layer: 15
   m_Name: BackWallFirstLayer
-  m_TagString: Wall
+  m_TagString: WallFirstLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3004,7 +3026,7 @@ GameObject:
   - component: {fileID: 922860686}
   m_Layer: 17
   m_Name: RightWallThirdLayer
-  m_TagString: Wall
+  m_TagString: WallThirdLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3109,7 +3131,7 @@ GameObject:
   - component: {fileID: 925575146}
   m_Layer: 18
   m_Name: FrontWallFourthLayer
-  m_TagString: Wall
+  m_TagString: WallForthLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3157,7 +3179,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925575144}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3547,7 +3569,7 @@ GameObject:
   - component: {fileID: 1267735337}
   m_Layer: 18
   m_Name: RightWallFourthLayer
-  m_TagString: Wall
+  m_TagString: WallForthLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3658,7 +3680,7 @@ GameObject:
   - component: {fileID: 1312735671}
   m_Layer: 17
   m_Name: BackWallThirdLayer
-  m_TagString: Wall
+  m_TagString: WallThirdLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4014,11 +4036,11 @@ GameObject:
   - component: {fileID: 1396443172}
   - component: {fileID: 1396443175}
   - component: {fileID: 1396443174}
-  - component: {fileID: 1396443173}
   - component: {fileID: 1396443176}
-  m_Layer: 0
+  - component: {fileID: 1396443177}
+  m_Layer: 12
   m_Name: TargetThirdRegion
-  m_TagString: Untagged
+  m_TagString: TargetThirdRegion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4038,29 +4060,6 @@ Transform:
   m_Father: {fileID: 993148233}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &1396443173
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396443171}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1396443174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4068,7 +4067,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396443171}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4123,6 +4122,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07c6de3f77cfbc341a61c20930785b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &1396443177
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396443171}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1416831787
 GameObject:
   m_ObjectHideFlags: 0
@@ -4137,7 +4158,7 @@ GameObject:
   - component: {fileID: 1416831789}
   m_Layer: 16
   m_Name: BackWallSecondLayer
-  m_TagString: Wall
+  m_TagString: WallSecondLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4347,7 +4368,7 @@ GameObject:
   - component: {fileID: 1493767640}
   m_Layer: 16
   m_Name: LeftWallSecondLayer
-  m_TagString: Wall
+  m_TagString: WallSecondLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4556,7 +4577,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 47965db50ae61644a977fe6496d6ad4b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4655,7 +4676,7 @@ GameObject:
   - component: {fileID: 1527095238}
   m_Layer: 21
   m_Name: Ceiling
-  m_TagString: Wall
+  m_TagString: Ceiling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5179,7 +5200,7 @@ GameObject:
   - component: {fileID: 1563379439}
   m_Layer: 15
   m_Name: RightWallFirstLayer
-  m_TagString: Wall
+  m_TagString: WallFirstLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5577,7 +5598,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cdd9608a5b6488f45ab2e61edebfeb8d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5676,7 +5697,7 @@ GameObject:
   - component: {fileID: 1696681596}
   m_Layer: 15
   m_Name: LeftWallFirstLayer
-  m_TagString: Wall
+  m_TagString: WallFirstLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5960,11 +5981,11 @@ GameObject:
   - component: {fileID: 1754954863}
   - component: {fileID: 1754954866}
   - component: {fileID: 1754954865}
-  - component: {fileID: 1754954864}
   - component: {fileID: 1754954867}
-  m_Layer: 0
+  - component: {fileID: 1754954868}
+  m_Layer: 13
   m_Name: TargetForthRegion
-  m_TagString: Untagged
+  m_TagString: TargetForthRegion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5984,29 +6005,6 @@ Transform:
   m_Father: {fileID: 993148233}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &1754954864
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1754954862}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1754954865
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6014,7 +6012,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754954862}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6069,6 +6067,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de72174e37d2e4540a2be2457dc35531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &1754954868
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754954862}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1769494779
 GameObject:
   m_ObjectHideFlags: 0
@@ -6083,7 +6103,7 @@ GameObject:
   - component: {fileID: 1769494781}
   m_Layer: 19
   m_Name: RightWallFifthLayer
-  m_TagString: Wall
+  m_TagString: WallFifthLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6188,7 +6208,7 @@ GameObject:
   - component: {fileID: 1797864569}
   m_Layer: 16
   m_Name: FrontWallSecondLayer
-  m_TagString: Wall
+  m_TagString: WallSecondLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6418,11 +6438,11 @@ GameObject:
   - component: {fileID: 1883534748}
   - component: {fileID: 1883534751}
   - component: {fileID: 1883534750}
-  - component: {fileID: 1883534749}
   - component: {fileID: 1883534752}
-  m_Layer: 0
+  - component: {fileID: 1883534753}
+  m_Layer: 11
   m_Name: TargetSecondRegion
-  m_TagString: Untagged
+  m_TagString: TargetSecondRegion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6442,29 +6462,6 @@ Transform:
   m_Father: {fileID: 993148233}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &1883534749
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1883534747}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1883534750
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6472,7 +6469,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883534747}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6527,6 +6524,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012d776369cd90848b6a64e9337ca53b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &1883534753
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883534747}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1886491546
 GameObject:
   m_ObjectHideFlags: 0
@@ -6541,7 +6560,7 @@ GameObject:
   - component: {fileID: 1886491548}
   m_Layer: 15
   m_Name: FrontWallFirstLayer
-  m_TagString: Wall
+  m_TagString: WallFirstLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6589,7 +6608,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886491546}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6675,7 +6694,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 526904c09d5164a4f80145e944f2ce62, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -6879,7 +6898,7 @@ GameObject:
   - component: {fileID: 1950535724}
   m_Layer: 19
   m_Name: BackWallFifthLayer
-  m_TagString: Wall
+  m_TagString: WallFifthLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7091,7 +7110,7 @@ GameObject:
   - component: {fileID: 1983604563}
   m_Layer: 16
   m_Name: RightWallSecondLayer
-  m_TagString: Wall
+  m_TagString: WallSecondLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7268,7 +7287,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b08a1dddcaa03fd438ae3e5b5fb0de73, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -7367,7 +7386,7 @@ GameObject:
   - component: {fileID: 2056006123}
   m_Layer: 19
   m_Name: FrontWallFifthLayer
-  m_TagString: Wall
+  m_TagString: WallFifthLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7415,7 +7434,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056006121}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7472,7 +7491,7 @@ GameObject:
   - component: {fileID: 2081494552}
   m_Layer: 18
   m_Name: BackWallFourthLayer
-  m_TagString: Wall
+  m_TagString: WallForthLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

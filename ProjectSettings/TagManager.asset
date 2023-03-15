@@ -9,6 +9,18 @@ TagManager:
   - Wall
   - LeftHand
   - MainBow
+  - TargetFirstRegion
+  - TargetSecondRegion
+  - TargetThirdRegion
+  - TargetForthRegion
+  - TargetFifthRegion
+  - WallFirstLayer
+  - WallSecondLayer
+  - WallThirdLayer
+  - WallForthLayer
+  - WallFifthLayer
+  - Floor
+  - Ceiling
   layers:
   - Default
   - TransparentFX

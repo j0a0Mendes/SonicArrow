@@ -142,13 +142,13 @@ public class BowStringController : MonoBehaviour
 
             if (midPointLocalSpace.z < 0 && stringPulled == false && canShoot == true)
             {
-                Debug.Log("PUULLIINIGGGG");
+                //Debug.Log("PUULLIINIGGGG");
                 stringPulled = true;
                 OnBowPulled?.Invoke();
             }
             else if (midPointLocalSpace.z == 0 && stringPulled == true && canShoot == true)
             {
-                Debug.Log("RELEASEEEED");
+                //Debug.Log("RELEASEEEED");
 
                 stringPulled = false;
                 ResetBowString();
