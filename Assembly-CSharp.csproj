@@ -75,6 +75,7 @@
     <Compile Include="Assets\_Scripts\StickingArrowToSurface.cs" />
     <Compile Include="Assets\_Scripts\ArrowBehaviour.cs" />
     <Compile Include="Assets\_Scripts\ActionReplayArrow.cs" />
+    <Compile Include="Assets\_Scripts\TargetObject.cs" />
     <Compile Include="Assets\_Scripts\OnePoint.cs" />
     <Compile Include="Assets\Samples\OpenXR Plugin\1.4.2\Meshing Subsystem Feature\MeshingBehaviour.cs" />
     <Compile Include="Assets\_Scripts\MainTarget.cs" />

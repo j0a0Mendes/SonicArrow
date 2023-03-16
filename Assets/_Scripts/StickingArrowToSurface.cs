@@ -57,26 +57,31 @@ public class StickingArrowToSurface : MonoBehaviour
         {
             GameObject spotter = GameObject.Find("5_Points");
             spotter.GetComponent<AudioSource>().Play();
+            controller.addPoints(5);
         }
         else if (collidedWith == "TargetSecondRegion")
         {
             GameObject spotter = GameObject.Find("4_Points");
             spotter.GetComponent<AudioSource>().Play();
+            controller.addPoints(4);
         }
         else if (collidedWith == "TargetThirdRegion")
         {
             GameObject spotter = GameObject.Find("3_Points");
             spotter.GetComponent<AudioSource>().Play();
+            controller.addPoints(3);
         }
         else if (collidedWith == "TargetForthRegion")
         {
             GameObject spotter = GameObject.Find("2_Points");
             spotter.GetComponent<AudioSource>().Play();
+            controller.addPoints(2);
         }
         else if (collidedWith == "TargetFifthRegion")
         {
             GameObject spotter = GameObject.Find("1_Point");
             spotter.GetComponent<AudioSource>().Play();
+            controller.addPoints(1);
         }
 
 

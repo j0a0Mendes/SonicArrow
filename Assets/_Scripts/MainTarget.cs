@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.GraphicsBuffer;
 
 public class MainTarget : MonoBehaviour
 {
     private bool sounding = false;
 
-    [SerializeField]
-    private AudioSource hitSound;
+    //[SerializeField]
+    //private AudioSource hitSound;
 
     [SerializeField]
     private AudioSource targetLocation;
@@ -34,9 +35,14 @@ public class MainTarget : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Arrow")
-        {
-            hitSound.Play();    
-        }
+        //if(collision.gameObject.tag == "Arrow")
+        //{
+        //    hitSound.Play();    
+        //}
+    }
+
+    public Vector3 getTargetPos()
+    {
+        return new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 }

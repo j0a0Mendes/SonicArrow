@@ -29,8 +29,8 @@ public class ChangePerspectiveController : MonoBehaviour
 
     private BowStringController bowStringController;
 
-    private int numberOfTurns = 0;
-    private int points = 0;
+    private int numberOfShots;
+    private int points;
 
     private Transform initialPosition;
 
@@ -65,6 +65,7 @@ public class ChangePerspectiveController : MonoBehaviour
             Vector3 adjustments = new Vector3(-1.75f,-1.399138f,0);
             xrorigin.position = targetFirstRegion.transform.position + adjustments;
             //playerCamera.transform.position = targetFirstRegion.transform.position;
+            
             firstPerspective = false;
 
         }
@@ -89,7 +90,7 @@ public class ChangePerspectiveController : MonoBehaviour
                 //Destroy(obj);
             //}
 
-            numberOfTurns += 1;
+            numberOfShots += 1;
             firstPerspective = true;
             
         }
@@ -122,9 +123,9 @@ public class ChangePerspectiveController : MonoBehaviour
         return points;
     }
 
-    public int getNumberOfTurns()
+    public int getNumberOfShots()
     {
-        return numberOfTurns;
+        return numberOfShots;
     }
 }
 
