@@ -143,6 +143,11 @@ public class BowStringController : MonoBehaviour
             if (midPointLocalSpace.z < 0 && stringPulled == false && canShoot == true)
             {
                 //Debug.Log("PUULLIINIGGGG");
+                
+                if (!audioSource.isPlaying)
+                {
+                    audioSource.Play(0);
+                }
                 stringPulled = true;
                 OnBowPulled?.Invoke();
             }

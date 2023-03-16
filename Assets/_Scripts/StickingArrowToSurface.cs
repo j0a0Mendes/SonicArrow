@@ -75,7 +75,7 @@ public class StickingArrowToSurface : MonoBehaviour
         }
         else if (collidedWith == "TargetFifthRegion")
         {
-            GameObject spotter = GameObject.Find("1_Points");
+            GameObject spotter = GameObject.Find("1_Point");
             spotter.GetComponent<AudioSource>().Play();
         }
 
