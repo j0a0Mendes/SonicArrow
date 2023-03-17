@@ -28,7 +28,7 @@ public class TargetObject : MonoBehaviour
         //targetZ = -5.46f;
 
         float randomY = GetRandomNumber(0.5f, 8.0f);
-        float randomZ = GetRandomNumber(-52.0f, 24.0f);
+        float randomZ = GetRandomNumber(-16.7f, 5.6f);
         
         targetY= randomY;
         targetZ = randomZ;
