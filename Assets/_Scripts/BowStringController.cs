@@ -4,6 +4,7 @@ using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
+using static UnityEngine.GraphicsBuffer;
 
 
 public class BowStringController : MonoBehaviour
@@ -33,6 +34,8 @@ public class BowStringController : MonoBehaviour
     public UnityEvent<float> OnBowReleased;
 
     private bool positioned = false;
+
+    public KeyControllers keyControllersScript;
 
     //PERSPECTIVE CHANGE
     private ChangePerspectiveController controller;
@@ -72,6 +75,8 @@ public class BowStringController : MonoBehaviour
 
     private void Start()
     {
+        keyControllersScript = GameObject.FindObjectOfType<KeyControllers>();
+
         interactable.selectEntered.AddListener(PrepareBowString);
         interactable.selectExited.AddListener(ResetBowString);
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
@@ -144,12 +149,13 @@ public class BowStringController : MonoBehaviour
             {
                 //Debug.Log("PUULLIINIGGGG");
                 
-                if (!audioSource.isPlaying)
-                {
-                    audioSource.Play(0);
-                }
+                
                 stringPulled = true;
                 OnBowPulled?.Invoke();
+
+                //HAPTICS
+                //keyControllers.Vibrate(1.0f,1.0f);
+                keyControllersScript.SendHaptics(false, 0.3f, 0.1f);
             }
             else if (midPointLocalSpace.z == 0 && stringPulled == true && canShoot == true)
             {
@@ -315,5 +321,10 @@ public class BowStringController : MonoBehaviour
     public void canShootAgain()
     {
         canShoot = true;
+    }
+
+    public void playPullingString()
+    {
+        audioSource.Play(0);
     }
 }

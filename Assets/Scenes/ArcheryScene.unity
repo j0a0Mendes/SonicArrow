@@ -168,7 +168,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15751220}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -593,7 +593,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58619728}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1124,7 +1124,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302821648}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2208,6 +2208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d2b28497bff464babcc994873cbf87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftController: {fileID: 0}
+  rightController: {fileID: 0}
   targetSoundTrigger:
     m_UseReference: 0
     m_Action:
@@ -2261,10 +2263,10 @@ MonoBehaviour:
   loadCrossbowButton:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Load Crossbow Button
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: a87a1773-e4fe-49af-a0d9-fb2dbacb8049
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2273,15 +2275,17 @@ MonoBehaviour:
   shootCrossbowButton:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Shoot Crossbow Button
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 9ab7d833-e01d-4aff-b3ec-8b98cb535e57
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
+  defaultAmplitude: 0.2
+  defaultDuration: 0.5
 --- !u!1 &589551386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,7 +3286,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925575144}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4339,7 +4343,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396443171}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5381,6 +5385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d2b28497bff464babcc994873cbf87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftController: {fileID: 540063312}
+  rightController: {fileID: 1560014289}
   targetSoundTrigger:
     m_UseReference: 1
     m_Action:
@@ -5457,6 +5463,8 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -2405056927684170282, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+  defaultAmplitude: 0.2
+  defaultDuration: 0.5
 --- !u!1 &1563379437
 GameObject:
   m_ObjectHideFlags: 0
@@ -6283,7 +6291,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754954862}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6527,7 +6535,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797864567}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6740,7 +6748,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883534747}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6879,7 +6887,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886491546}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7738,7 +7746,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056006121}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

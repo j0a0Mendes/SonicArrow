@@ -3,9 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class KeyControllers : MonoBehaviour
 {
+
+    [SerializeField]
+    public XRBaseController leftController;
+
+    [SerializeField]
+    public XRBaseController rightController;
+
     [SerializeField]
     public InputActionProperty targetSoundTrigger;  //target sound trigger (B)
 
@@ -43,9 +52,15 @@ public class KeyControllers : MonoBehaviour
     private bool readyToShoot;
 
     private bool xButtonEnabled;
-    private bool startYCount;
-    private int yCount = 0;
+    //private bool startYCount;
+    //private int yCount = 0;
 
+    //HAPTICS PURPOSES
+    
+
+    public float defaultAmplitude = 1f;
+    public float defaultDuration = 1.2f;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +77,10 @@ public class KeyControllers : MonoBehaviour
         buttonBEnabled = false;
         buttonYEnabled = false;
         buttonXEnabled = false;
+
+        //HAPTIC PURPOSES
+        
+        
     }   
 
     // Update is called once per frame
@@ -92,7 +111,9 @@ public class KeyControllers : MonoBehaviour
             {
                 readyToShoot = true;
                 bowStringController.prepareCrossBow();
+                bowStringController.playPullingString();
                 Debug.Log("CROSSBOW PREPARED");
+                SendHaptics();
             }
 
             if (buttonShootCrossbow == 1 && readyToShoot == true)
@@ -132,11 +153,7 @@ public class KeyControllers : MonoBehaviour
                 //actionReplay.triggerReplayMode();
 
                 actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
-                actionReplayArrow.triggerReplayMode();
-
-
-                
-                
+                actionReplayArrow.triggerReplayMode();   
             }
             
             //if(buttonTriggered == 2){
@@ -199,5 +216,26 @@ public class KeyControllers : MonoBehaviour
     public void disableButtonY()
     {
         buttonYEnabled = false;
+    }
+
+    //HAPTIC PURPOSES
+    [ContextMenu("Send Haptics")]
+    public void SendHaptics()
+    {
+        //leftController.SendHapticImpulse(defaultAmplitude, defaultDuration);
+        rightController.SendHapticImpulse(defaultAmplitude, defaultDuration);
+    }
+
+    public void SendHaptics(bool isLeftController, float amplitude, float duration)
+    {
+        if (isLeftController && leftController != null)
+        {
+            leftController.SendHapticImpulse(amplitude, duration);
+        }
+        else if(rightController != null)
+        {
+            Debug.Log("Vibrating");
+            rightController.SendHapticImpulse(amplitude, duration);
+        }
     }
 }

@@ -62,7 +62,7 @@ public class ChangePerspectiveController : MonoBehaviour
         if (changePerspectiveTrigger && firstPerspective)
         {
             changePerspectiveTrigger = false;
-            Vector3 adjustments = new Vector3(-1.75f,-1.399138f,0);
+            Vector3 adjustments = new Vector3(-1f,-1.399138f,0);
             xrorigin.position = targetFirstRegion.transform.position + adjustments;
             //playerCamera.transform.position = targetFirstRegion.transform.position;
             
