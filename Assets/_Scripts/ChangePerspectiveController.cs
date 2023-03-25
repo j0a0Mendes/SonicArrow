@@ -40,7 +40,11 @@ public class ChangePerspectiveController : MonoBehaviour
 
     //SYSTEM CONTROLLER
     //public int numberOfTurns; //Turn is defined by two states, according to each perspective
-    
+
+    //MODE SELECTION
+    [SerializeField]
+    public int modeSelected = 0;
+
     void Start()
     {
         firstPerspective = true;
@@ -62,7 +66,7 @@ public class ChangePerspectiveController : MonoBehaviour
         if (changePerspectiveTrigger && firstPerspective)
         {
             changePerspectiveTrigger = false;
-            Vector3 adjustments = new Vector3(-1f,-1.399138f,0);
+            Vector3 adjustments = new Vector3(-0.7f,-1.399138f,0);
             xrorigin.position = targetFirstRegion.transform.position + adjustments;
             //playerCamera.transform.position = targetFirstRegion.transform.position;
             
@@ -126,6 +130,16 @@ public class ChangePerspectiveController : MonoBehaviour
     public int getNumberOfShots()
     {
         return numberOfShots;
+    }
+
+    public bool getIsInFirstPerspective()
+    {
+        return firstPerspective;
+    }
+
+    public int getModeSelected()
+    {
+        return modeSelected;
     }
 }
 

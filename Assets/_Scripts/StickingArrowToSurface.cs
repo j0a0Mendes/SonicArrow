@@ -29,19 +29,22 @@ public class StickingArrowToSurface : MonoBehaviour
     private bool changePerspectiveCounterTrigger;
     //private bool notFlying = false;
 
+    private int modeSelected;
+
     private void Start() 
     { 
         windNavigatingSound.Play();
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
     }
 
-    //private void Update() 
-    //{ 
-    //    if (notFlying)
-    //
-    //        windNavigatingSound.Stop();
-    //    }   
-    //}
+    private void Update() 
+    {
+        //    if (notFlying)
+        //
+        //        windNavigatingSound.Stop();
+        //    }   
+        modeSelected = controller.getModeSelected();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -94,10 +97,13 @@ public class StickingArrowToSurface : MonoBehaviour
 
         keyControllers = GameObject.FindObjectOfType<KeyControllers>();
         keyControllers.enableButtonX();
-        
+
 
         //CHANGE PERSPECTIVEEE (REMOVE TO GET ORIGINAL VERSION)
-        changePerspectiveCounterTrigger = true;
+        if (modeSelected == 0)
+        {
+            changePerspectiveCounterTrigger = true;
+        }
 
         rb.isKinematic = true;
         myCollider.isTrigger = true;

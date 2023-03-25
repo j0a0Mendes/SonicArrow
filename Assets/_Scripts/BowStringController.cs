@@ -68,6 +68,8 @@ public class BowStringController : MonoBehaviour
 
     float midPointLocalZAbs;
 
+    private int modeSelected;
+
     private void Awake()
     {
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
@@ -155,7 +157,7 @@ public class BowStringController : MonoBehaviour
 
                 //HAPTICS
                 //keyControllers.Vibrate(1.0f,1.0f);
-                keyControllersScript.SendHaptics(false, 0.3f, 0.1f);
+                //keyControllersScript.SendHaptics(false, 0.3f, 0.1f);
             }
             else if (midPointLocalSpace.z == 0 && stringPulled == true && canShoot == true)
             {
@@ -188,8 +190,8 @@ public class BowStringController : MonoBehaviour
         OnBowReleased?.Invoke(strength);
         strength = 0;
         previousStrength = 0;
-        audioSource.pitch = 1;
-        audioSource.Stop();
+        //audioSource.pitch = 1;
+        //audioSource.Stop();
 
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
@@ -202,8 +204,8 @@ public class BowStringController : MonoBehaviour
         OnBowReleased?.Invoke(strength);
         strength = 0;
         previousStrength = 0;
-        audioSource.pitch = 1;
-        audioSource.Stop();
+        //audioSource.pitch = 1;
+        //audioSource.Stop();
 
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
@@ -211,9 +213,12 @@ public class BowStringController : MonoBehaviour
         bowStringRenderer.CreateString(null);
 
 
-
-        controller.enableChange();
-        controller.changePerspective();
+        if(modeSelected == 0)
+        {
+            controller.enableChange();
+            controller.changePerspective();
+        }
+        
 
 
     }
@@ -230,8 +235,8 @@ public class BowStringController : MonoBehaviour
     {
         if (midPointLocalSpace.z >= 0)
         {
-            audioSource.pitch = 1;
-            audioSource.Stop();
+            //audioSource.pitch = 1;
+            //audioSource.Stop();
             strength = 0;
             midPointVisualObject.localPosition = Vector3.zero;
         }
@@ -242,7 +247,7 @@ public class BowStringController : MonoBehaviour
         //We specify max pulling limit for the string. We don't allow the string to go any farther than "bowStringStretchLimit"
         if (midPointLocalSpace.z < 0 && midPointLocalZAbs >= bowStringStretchLimit)
         {
-            audioSource.Pause();
+            //audioSource.Pause();
             strength = 1;
             //Vector3 direction = midPointParent.TransformDirection(new Vector3(0, 0, midPointLocalSpace.z));
             midPointVisualObject.localPosition = new Vector3(0, 0, -bowStringStretchLimit);
@@ -254,15 +259,15 @@ public class BowStringController : MonoBehaviour
         //what happens when we are between point 0 and the string pull limit
         if (midPointLocalSpace.z < 0 && midPointLocalZAbs < bowStringStretchLimit)
         {
-            if (audioSource.isPlaying == false && strength <= 0.01f)
-            {
-                audioSource.Play();
-            }
+            //if (audioSource.isPlaying == false && strength <= 0.01f)
+            //{
+            //    audioSource.Play();
+            //}
 
             strength = Remap(midPointLocalZAbs, 0, bowStringStretchLimit, 0, 1);
             midPointVisualObject.localPosition = new Vector3(0, 0, midPointLocalSpace.z);
 
-            PlayStringPullinSound();
+            //PlayStringPullinSound();
         }
     }
 
@@ -271,7 +276,7 @@ public class BowStringController : MonoBehaviour
         return (value - fromMin) / (fromMax - fromMin) * (toMax - toMin) + toMin;
     }
 
-    private void PlayStringPullinSound()
+    /**private void PlayStringPullinSound()
     {
         //Check if we have moved the string enought to play the sound unpause it
         if (Mathf.Abs(strength - previousStrength) > stringSoundThreshold)
@@ -294,7 +299,7 @@ public class BowStringController : MonoBehaviour
             audioSource.Pause();
         }
 
-    }
+    }**/
 
     //REPLAY MECHANISM
     
@@ -325,6 +330,11 @@ public class BowStringController : MonoBehaviour
 
     public void playPullingString()
     {
-        audioSource.Play(0);
+        audioSource.Play();
+    }
+
+    public void setModeSelected(int mode)
+    {
+        modeSelected = mode;
     }
 }

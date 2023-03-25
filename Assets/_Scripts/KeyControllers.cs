@@ -52,6 +52,8 @@ public class KeyControllers : MonoBehaviour
     private bool readyToShoot;
 
     private bool xButtonEnabled;
+
+    private int modeSelected;
     //private bool startYCount;
     //private int yCount = 0;
 
@@ -59,7 +61,7 @@ public class KeyControllers : MonoBehaviour
     
 
     public float defaultAmplitude = 1f;
-    public float defaultDuration = 1.2f;
+    public float defaultDuration = 1.5f;
     
 
     // Start is called before the first frame update
@@ -86,6 +88,9 @@ public class KeyControllers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //get mode selected. 0 - Instant Sound Output. 1 - Replay Mode
+        modeSelected = controller.getModeSelected();
+
         //button A in the right controller
         float buttonATriggered = changePerspective.action.ReadValue<float>();
 
@@ -107,7 +112,7 @@ public class KeyControllers : MonoBehaviour
         if (target != null)
         {
 
-            if(buttonLoadCrossbow == 1 && readyToShoot == false)
+            if(buttonLoadCrossbow == 1 && readyToShoot == false && controller.getIsInFirstPerspective() == true)
             {
                 readyToShoot = true;
                 bowStringController.prepareCrossBow();
@@ -116,7 +121,7 @@ public class KeyControllers : MonoBehaviour
                 SendHaptics();
             }
 
-            if (buttonShootCrossbow == 1 && readyToShoot == true)
+            if (buttonShootCrossbow == 1 && readyToShoot == true && controller.getIsInFirstPerspective() == true)
             {
                 readyToShoot = false;
                 bowStringController.shootCrossBow();
