@@ -16,14 +16,15 @@ public class StickingArrowToSurface : MonoBehaviour
     private AudioSource windNavigatingSound;
 
     private ChangePerspectiveController controller;
-    //[SerializeField]
-    //GameObject rightHand;
-
-    //KeyControllers keyControllers;
 
     private ActionReplayArrow actionReplayArrow;
 
-    private KeyControllers keyControllers;
+    private KeyControllers keyControllers;  //LEFT HAND ONLY
+
+    //[SerializeField]
+    private GameObject rightHand;
+
+    private KeyControllers keyControllersrRight;    //RIGHT HAND ONLY
 
     private int changePerspectiveCounter;
     private bool changePerspectiveCounterTrigger;
@@ -35,6 +36,11 @@ public class StickingArrowToSurface : MonoBehaviour
     { 
         windNavigatingSound.Play();
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
+        keyControllers = GameObject.FindObjectOfType<KeyControllers>();
+
+        rightHand = GameObject.FindGameObjectWithTag("RightHand");
+        keyControllersrRight = rightHand.GetComponent<KeyControllers>();
+        //keyControllerRightHand = GameObject.FindObjectOfType<KeyControllerSupport>();
     }
 
     private void Update() 
@@ -48,13 +54,18 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag);
+
+        Debug.Log("ACERTOU");
+        modeSelected = controller.getModeSelected();
+        //Debug.Log(modeSelected);
+        //Debug.Log(collision.gameObject.tag);
         //Debug.Log(collision.gameObject.tag == "Untagged");
         string collidedWith = collision.gameObject.tag;
         if (collidedWith == "WallFirstLayer" || collidedWith == "WallSecondLayer" || collidedWith == "WallThirdLayer" || collidedWith == "WallForthLayer" || collidedWith == "WallFifthLayer" || collidedWith == "Floor" || collidedWith == "Ceiling")
         {
             GameObject spotterNoPoints = GameObject.Find("No_Points");
             spotterNoPoints.GetComponent<AudioSource>().Play();
+            controller.addPoints(0);
         }
         else if (collidedWith == "TargetFirstRegion")
         {
@@ -95,9 +106,16 @@ public class StickingArrowToSurface : MonoBehaviour
        
         actionReplayArrow.alreadyHitTrigger();
 
-        keyControllers = GameObject.FindObjectOfType<KeyControllers>();
-        keyControllers.enableButtonX();
+        //keyControllers.enableButtonX();
 
+        
+        if(keyControllersrRight != null)
+        {
+            //Debug.Log("A ENABLED");
+            keyControllersrRight.enableButtonA();
+        }
+        
+        //keyControllers.enableButtonA();
 
         //CHANGE PERSPECTIVEEE (REMOVE TO GET ORIGINAL VERSION)
         if (modeSelected == 0)
@@ -137,5 +155,10 @@ public class StickingArrowToSurface : MonoBehaviour
                 changePerspectiveCounterTrigger = false;
             }
         }
+    }
+
+    public void activatePerspectiveTrigger()
+    {
+        changePerspectiveCounterTrigger = true;
     }
 }

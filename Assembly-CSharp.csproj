@@ -64,6 +64,7 @@
     <Compile Include="Assets\Samples\OpenXR Plugin\1.4.2\Intercept Feature\InterceptMessageHandler.cs" />
     <Compile Include="Assets\_Scripts\BowStringController.cs" />
     <Compile Include="Assets\_Scripts\TargetFirstRegion.cs" />
+    <Compile Include="Assets\_Scripts\KeyControllerSupport.cs" />
     <Compile Include="Assets\_Scripts\ActionReplayClone.cs" />
     <Compile Include="Assets\_Scripts\MovingTarget.cs" />
     <Compile Include="Assets\_Scripts\ChangePerspectiveController.cs" />

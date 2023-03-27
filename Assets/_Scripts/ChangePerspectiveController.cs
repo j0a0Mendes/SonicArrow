@@ -34,6 +34,12 @@ public class ChangePerspectiveController : MonoBehaviour
 
     private Transform initialPosition;
 
+    private GameObject rightHand;
+    private KeyControllers keyControllersrRight;
+
+    private GameObject LeftHand;
+    private KeyControllers keyControllersrLeft;
+
     //TARGET REGIONS
     [SerializeField]
     GameObject targetFirstRegion;
@@ -51,6 +57,12 @@ public class ChangePerspectiveController : MonoBehaviour
         changeEnabled = false;
         changePerspectiveTrigger = false;
         bowStringController = GameObject.FindObjectOfType<BowStringController>();
+
+        rightHand = GameObject.FindGameObjectWithTag("RightHand");
+        keyControllersrRight = rightHand.GetComponent<KeyControllers>();
+
+        LeftHand = GameObject.FindGameObjectWithTag("LeftHand");
+        keyControllersrLeft = LeftHand.GetComponent<KeyControllers>();
         //initialPosition = xrorigin;
         //targetFirstRegion = GameObject.FindGameObjectWithTag("TargetFirstRegion");
 
@@ -141,6 +153,12 @@ public class ChangePerspectiveController : MonoBehaviour
     {
         return modeSelected;
     }
+
+    public void enableButtonA()
+    {
+        keyControllersrRight.enableButtonA();
+    }
+
 }
 
 

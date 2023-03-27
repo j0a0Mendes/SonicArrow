@@ -37,6 +37,14 @@ public class BowStringController : MonoBehaviour
 
     public KeyControllers keyControllersScript;
 
+    //Get keycontrollers respectivelly
+    private GameObject rightHandObj;
+    private KeyControllers keyControllersrRight;
+
+    private GameObject LeftHand;
+    private KeyControllers keyControllersrLeft;
+
+    //public KeyControllers keyControllersRightHand;
     //PERSPECTIVE CHANGE
     private ChangePerspectiveController controller;
 
@@ -45,6 +53,7 @@ public class BowStringController : MonoBehaviour
 
     //PERSPECTIVE CONTROLLER
     private bool alreadyShot;
+    private bool okok;
 
     private bool theresArrow;
 
@@ -78,6 +87,13 @@ public class BowStringController : MonoBehaviour
     private void Start()
     {
         keyControllersScript = GameObject.FindObjectOfType<KeyControllers>();
+
+        //Get key controllers
+        rightHandObj = GameObject.FindGameObjectWithTag("RightHand");
+        keyControllersrRight = rightHand.GetComponent<KeyControllers>();
+
+        LeftHand = GameObject.FindGameObjectWithTag("LeftHand");
+        keyControllersrLeft = LeftHand.GetComponent<KeyControllers>();
 
         interactable.selectEntered.AddListener(PrepareBowString);
         interactable.selectExited.AddListener(ResetBowString);
@@ -115,6 +131,7 @@ public class BowStringController : MonoBehaviour
             positioned = true;
             
         }**/
+        modeSelected = controller.getModeSelected();
 
         if (!crossbowed && positioned == true)
         {
@@ -147,7 +164,7 @@ public class BowStringController : MonoBehaviour
         {
             midPointLocalZAbs = Mathf.Abs(midPointLocalSpace.z);
 
-            if (midPointLocalSpace.z < 0 && stringPulled == false && canShoot == true)
+            if (midPointLocalSpace.z < 0 && stringPulled == false && canShoot == true)      //PUULLIINIGGGG
             {
                 //Debug.Log("PUULLIINIGGGG");
                 
@@ -159,7 +176,7 @@ public class BowStringController : MonoBehaviour
                 //keyControllers.Vibrate(1.0f,1.0f);
                 //keyControllersScript.SendHaptics(false, 0.3f, 0.1f);
             }
-            else if (midPointLocalSpace.z == 0 && stringPulled == true && canShoot == true)
+            else if (midPointLocalSpace.z == 0 && stringPulled == true && canShoot == true)     //RELEASEEEED
             {
                 //Debug.Log("RELEASEEEED");
 
@@ -169,6 +186,8 @@ public class BowStringController : MonoBehaviour
                 zAxisPull = 1;
 
                 canShoot = false;
+                    
+                
             }
 
 
@@ -178,7 +197,7 @@ public class BowStringController : MonoBehaviour
 
             HandleStringPulledBackTolimit(midPointLocalZAbs, midPointLocalSpace);
 
-            HandlePullingString(midPointLocalZAbs, midPointLocalSpace);
+            HandlePullingString(midPointLocalZAbs, midPointLocalSpace);     //PULLING
 
             bowStringRenderer.CreateString(midPointVisualObject.position);
    
@@ -220,7 +239,7 @@ public class BowStringController : MonoBehaviour
         }
         
 
-
+        alreadyShot = true;
     }
 
     private void PrepareBowString(SelectEnterEventArgs arg0)
@@ -326,6 +345,7 @@ public class BowStringController : MonoBehaviour
     public void canShootAgain()
     {
         canShoot = true;
+        alreadyShot = false;
     }
 
     public void playPullingString()
@@ -336,5 +356,16 @@ public class BowStringController : MonoBehaviour
     public void setModeSelected(int mode)
     {
         modeSelected = mode;
+    }
+
+    public void changePerspective()
+    {
+        controller.enableChange();
+        controller.changePerspective();
+    }
+
+    public bool getAlreadyShot()
+    {
+        return alreadyShot;
     }
 }

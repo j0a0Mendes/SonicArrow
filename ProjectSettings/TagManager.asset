@@ -21,6 +21,7 @@ TagManager:
   - WallFifthLayer
   - Floor
   - Ceiling
+  - RightHand
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -57,12 +58,19 @@ public class KeyControllers : MonoBehaviour
     //private bool startYCount;
     //private int yCount = 0;
 
+    private GameObject rightHand;
+    private KeyControllers keyControllersrRight;
+
+    private GameObject LeftHand;
+    private KeyControllers keyControllersrLeft;
+
     //HAPTICS PURPOSES
-    
+
 
     public float defaultAmplitude = 1f;
     public float defaultDuration = 1.5f;
-    
+
+    public int count = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -70,6 +78,12 @@ public class KeyControllers : MonoBehaviour
         target = GameObject.FindObjectOfType<MainTarget>();
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
         bowStringController = GameObject.FindObjectOfType<BowStringController>();
+
+        rightHand = GameObject.FindGameObjectWithTag("RightHand");
+        keyControllersrRight = rightHand.GetComponent<KeyControllers>();
+
+        LeftHand = GameObject.FindGameObjectWithTag("LeftHand");
+        keyControllersrLeft = LeftHand.GetComponent<KeyControllers>();
         //actionReplay = GameObject.FindObjectOfType<ActionReplay>();
         //actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
 
@@ -117,7 +131,7 @@ public class KeyControllers : MonoBehaviour
                 readyToShoot = true;
                 bowStringController.prepareCrossBow();
                 bowStringController.playPullingString();
-                Debug.Log("CROSSBOW PREPARED");
+                //Debug.Log("CROSSBOW PREPARED");
                 SendHaptics();
             }
 
@@ -125,15 +139,35 @@ public class KeyControllers : MonoBehaviour
             {
                 readyToShoot = false;
                 bowStringController.shootCrossBow();
-                Debug.Log("CROSSBOW SHOT");
+                //Debug.Log("CROSSBOW SHOT");
             }
 
+            //Debug.Log("ButtonEnabled: " + buttonAEnabled.ToString());
+            //Debug.Log(buttonATriggered);
 
-            if (buttonATriggered == 1 && buttonAEnabled == true){
-                Debug.Log("A PRESSED");
-                controller.enableChange();
-                controller.changePerspective();
-
+            count = 0;
+            if (buttonATriggered == 1){
+                //Debug.Log("A PRESSSSEEEEEEEEEEEEEEEEEEED");
+                //Debug.Log("ButtonEnabled: " + buttonXEnabled.ToString() + " " + count.ToString());
+                if (buttonAEnabled == true)
+                {
+                    count += 1;
+                    //Debug.Log("UM VALENTE PENIS");
+                    buttonAEnabled = false;
+                    controller.enableChange();
+                    controller.changePerspective();
+                    if (count % 2 == 0)
+                    {
+                        //keyControllersrLeft.enableButtonX();
+                        keyControllersrLeft.disableButtonX();
+                    }
+                    else
+                    {
+                        keyControllersrLeft.enableButtonX();
+                        //keyControllersrLeft.disableButtonX();
+                    }
+                    
+                }
             }
 
             if (buttonBTriggered == 1)
@@ -151,9 +185,10 @@ public class KeyControllers : MonoBehaviour
 
             if(buttonXTriggered == 1 && buttonXEnabled == true)
             {
-                disableButtonX();
-                Debug.Log("X PRESSED");
-                buttonXEnabled = false;
+                //WHY?
+                //Debug.Log("BUTAO: " + buttonXEnabled.ToString());
+                //disableButtonX();
+                //Debug.Log("X PRESSED");
                 //startYCount = true;
                 //actionReplay.triggerReplayMode();
 
@@ -184,13 +219,15 @@ public class KeyControllers : MonoBehaviour
 
     public void enableButtonA()
     {
-        buttonAEnabled= true;
-        controller.enableChange();
+        //Debug.Log("MEGA PENISSSSS");
+        buttonAEnabled = true;
+        //controller.enableChange();
     }
 
     public void disableButtonA()
     {
         buttonAEnabled = false;
+        //Debug.Log("Button A Disabled");
     }
 
     public void enableButtonB()
@@ -205,6 +242,7 @@ public class KeyControllers : MonoBehaviour
 
     public void enableButtonX()
     {
+        //Debug.Log("ESQUECEEE");
         buttonXEnabled = true;
     }
 

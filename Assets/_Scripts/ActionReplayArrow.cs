@@ -109,6 +109,7 @@ public class ActionReplayArrow : MonoBehaviour
                 
                 //Destroy(gameObject);
                 
+
                 
                 replayEndTwoSeconds = 0;
             }
@@ -150,6 +151,8 @@ public class ActionReplayArrow : MonoBehaviour
 
                     Debug.Log("HIT SOUND");
                     playedHitSound = true;
+
+                    controller.enableButtonA();
                 }
             }    
         }

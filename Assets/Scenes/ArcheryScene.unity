@@ -2286,6 +2286,7 @@ MonoBehaviour:
     m_Reference: {fileID: 0}
   defaultAmplitude: 0.2
   defaultDuration: 0.5
+  count: 0
 --- !u!1 &589551386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2409,6 +2410,7 @@ MonoBehaviour:
   controllerStand: {fileID: 0}
   midPointGrabObject: {fileID: 1305830390}
   targetFirstRegion: {fileID: 15751220}
+  modeSelected: 1
 --- !u!1 &643724478
 GameObject:
   m_ObjectHideFlags: 0
@@ -5056,9 +5058,10 @@ GameObject:
   - component: {fileID: 1560014287}
   - component: {fileID: 1560014290}
   - component: {fileID: 1560014291}
+  - component: {fileID: 1560014292}
   m_Layer: 7
   m_Name: RIght Hand
-  m_TagString: Untagged
+  m_TagString: RightHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5465,6 +5468,20 @@ MonoBehaviour:
       type: 3}
   defaultAmplitude: 0.2
   defaultDuration: 0.5
+  count: 0
+--- !u!114 &1560014292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560014285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227d465bd3d50af4d9c3de4e391e95ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyControllersRight: {fileID: 0}
 --- !u!1 &1563379437
 GameObject:
   m_ObjectHideFlags: 0
