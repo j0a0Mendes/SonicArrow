@@ -56,6 +56,7 @@ public class StickingArrowToSurface : MonoBehaviour
     {
 
         Debug.Log("ACERTOU");
+        keyControllers.enableButtonX();
         modeSelected = controller.getModeSelected();
         //Debug.Log(modeSelected);
         //Debug.Log(collision.gameObject.tag);

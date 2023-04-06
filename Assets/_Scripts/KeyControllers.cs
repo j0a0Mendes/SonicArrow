@@ -152,11 +152,10 @@ public class KeyControllers : MonoBehaviour
                 if (buttonAEnabled == true)
                 {
                     count += 1;
-                    //Debug.Log("UM VALENTE PENIS");
                     buttonAEnabled = false;
-                    controller.enableChange();
-                    controller.changePerspective();
-                    if (count % 2 == 0)
+                    //controller.enableChange();
+                    //controller.changePerspective();
+                    /**if (count % 2 == 0)
                     {
                         //keyControllersrLeft.enableButtonX();
                         keyControllersrLeft.disableButtonX();
@@ -165,7 +164,7 @@ public class KeyControllers : MonoBehaviour
                     {
                         keyControllersrLeft.enableButtonX();
                         //keyControllersrLeft.disableButtonX();
-                    }
+                    }**/
                     
                 }
             }
@@ -192,8 +191,12 @@ public class KeyControllers : MonoBehaviour
                 //startYCount = true;
                 //actionReplay.triggerReplayMode();
 
+                buttonXEnabled = false;
                 actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
-                actionReplayArrow.triggerReplayMode();   
+                actionReplayArrow.triggerReplayMode();
+
+                controller.enableChange();
+                controller.changePerspective();
             }
             
             //if(buttonTriggered == 2){

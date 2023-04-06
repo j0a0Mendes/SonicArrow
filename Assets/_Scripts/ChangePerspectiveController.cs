@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class ChangePerspectiveController : MonoBehaviour
@@ -51,6 +52,9 @@ public class ChangePerspectiveController : MonoBehaviour
     [SerializeField]
     public int modeSelected = 0;
 
+    private bool changePerspectiveInASec = false;
+    private int countChangePerspective = 0;
+
     void Start()
     {
         firstPerspective = true;
@@ -75,6 +79,7 @@ public class ChangePerspectiveController : MonoBehaviour
     }
 
     void Update(){
+
         if (changePerspectiveTrigger && firstPerspective)
         {
             changePerspectiveTrigger = false;
@@ -109,6 +114,18 @@ public class ChangePerspectiveController : MonoBehaviour
             numberOfShots += 1;
             firstPerspective = true;
             
+        }
+
+        if (changePerspectiveInASec)
+        {
+            countChangePerspective++;
+            if (countChangePerspective == 20)
+            {
+                enableChange();
+                changePerspective();
+                changePerspectiveInASec = false;
+                countChangePerspective = 0;
+            }
         }
     }
 
@@ -157,6 +174,11 @@ public class ChangePerspectiveController : MonoBehaviour
     public void enableButtonA()
     {
         keyControllersrRight.enableButtonA();
+    }
+
+    public void triggerChangePerspectiveInASec()
+    {
+        changePerspectiveInASec = true;
     }
 
 }

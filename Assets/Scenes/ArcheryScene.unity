@@ -1062,6 +1062,61 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &264609966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264609967}
+  - component: {fileID: 264609968}
+  m_Layer: 0
+  m_Name: ParameterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &264609967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264609966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 406701641}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &264609968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264609966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717b1fe6f884f8d4db1ffd16e2565eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeOfPerspective: 1
+  changeOfPerspectiveInstant: 1
+  changeOfPerspectiveOnReplay: 0
+  targetSound: 1
+  targetSoundUserPos: 1
+  targetSoundCrossbowAim: 0
+  spotterTalking: 1
+  spotterPointsAid: 1
+  spotterQuadrantAid: 0
+  spotterDirectionAid: 0
+  whiteNoiseVerticalAid: 1
 --- !u!1 &302821648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,6 +1599,7 @@ Transform:
   - {fileID: 325661148}
   - {fileID: 1964602098}
   - {fileID: 1314992947}
+  - {fileID: 264609967}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

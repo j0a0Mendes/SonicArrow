@@ -84,6 +84,7 @@
     <Compile Include="Assets\_Scripts\ActionReplayRecord.cs" />
     <Compile Include="Assets\Samples\OpenXR Plugin\1.4.2\Intercept Feature\InterceptCreateSessionFeature.cs" />
     <Compile Include="Assets\_Scripts\FourPoints.cs" />
+    <Compile Include="Assets\_Scripts\ParameterManager.cs" />
     <Compile Include="Assets\_Scripts\VerticallityAidString.cs" />
     <Compile Include="Assets\_Scripts\ActionReplay.cs" />
     <Compile Include="Assets\_Scripts\StickingArrowBehaviour.cs" />

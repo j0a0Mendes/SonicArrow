@@ -41,11 +41,14 @@ public class ActionReplayArrow : MonoBehaviour
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
     }
 
+    private bool changePerspectiveInASec = false;
+    private int countChangePerspective = 0;
+
     // Update is called once per frame
     void Update()
     {
-        
 
+        
         if (triggerIsReplayMode)
         {
             if (!audioPlaying)
@@ -152,7 +155,12 @@ public class ActionReplayArrow : MonoBehaviour
                     Debug.Log("HIT SOUND");
                     playedHitSound = true;
 
-                    controller.enableButtonA();
+                    //controller.enableButtonA();
+                    controller.triggerChangePerspectiveInASec();
+
+                    
+
+                    //keyControllers.enableButtonX();
                 }
             }    
         }
@@ -173,6 +181,4 @@ public class ActionReplayArrow : MonoBehaviour
     {
         alreadyHit = true;
     }
-
-
 }
