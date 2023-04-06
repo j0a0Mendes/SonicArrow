@@ -110,55 +110,22 @@ public class BowStringController : MonoBehaviour
             
             transform.position = currentPosition + crossbowAdjustment + minorAdjust;
             transform.rotation = Quaternion.Euler(357.147f, 3f, 6f);
-            
-            
+                    
             positioned = true;
-
         }
 
     }
 
     private void Update()
     {
-
-        /**if (!positioned & rightHand != null)
-        {
-            Transform rightHandTransform = rightHand.transform;
-            transform.position = rightHandTransform.position;
-
-            //transform.position = new Vector3(-0.046f, 0.026f, 0.436f);
-
-            positioned = true;
-            
-        }**/
         modeSelected = controller.getModeSelected();
 
         if (!crossbowed && positioned == true)
         {
             crossbowed = true;
-
-            //transform.position = new Vector3(170f, -98.53101f, 6f);
-            //transform.position = new Vector3(6f, -98.53101f, 170f);
         }
 
-        Vector3 midPointLocalSpace = new Vector3(0, 0, zAxisPull);
-
-        //if (interactor != null)
-        //if(zAxisPull <= 0)
-        //{
-
-        //convert bow string mid point position to the local space of the MidPoint
-        //Vector3 midPointLocalSpace =
-        //    midPointParent.InverseTransformPoint(midPointGrabObject.position); // localPosition
-
-        //Vector3 midPointLocalSpace = new Vector3(0, 0, zAxisPull);
-
-        /**Debug.Log("-----------------------");
-        Debug.Log(midPointLocalSpace);
-        Debug.Log(midPointLocalSpace.z);
-        Debug.Log("-----------------------");**/
-
-        //get the offset
+        Vector3 midPointLocalSpace = new Vector3(0, 0, zAxisPull);      
 
         if (canShoot)
         {
@@ -167,14 +134,8 @@ public class BowStringController : MonoBehaviour
             if (midPointLocalSpace.z < 0 && stringPulled == false && canShoot == true)      //PUULLIINIGGGG
             {
                 //Debug.Log("PUULLIINIGGGG");
-                
-                
                 stringPulled = true;
                 OnBowPulled?.Invoke();
-
-                //HAPTICS
-                //keyControllers.Vibrate(1.0f,1.0f);
-                //keyControllersScript.SendHaptics(false, 0.3f, 0.1f);
             }
             else if (midPointLocalSpace.z == 0 && stringPulled == true && canShoot == true)     //RELEASEEEED
             {
@@ -185,11 +146,8 @@ public class BowStringController : MonoBehaviour
 
                 zAxisPull = 1;
 
-                canShoot = false;
-                    
-                
+                canShoot = false;     
             }
-
 
             previousStrength = strength;
 
@@ -209,8 +167,6 @@ public class BowStringController : MonoBehaviour
         OnBowReleased?.Invoke(strength);
         strength = 0;
         previousStrength = 0;
-        //audioSource.pitch = 1;
-        //audioSource.Stop();
 
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
@@ -223,8 +179,6 @@ public class BowStringController : MonoBehaviour
         OnBowReleased?.Invoke(strength);
         strength = 0;
         previousStrength = 0;
-        //audioSource.pitch = 1;
-        //audioSource.Stop();
 
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
@@ -254,8 +208,6 @@ public class BowStringController : MonoBehaviour
     {
         if (midPointLocalSpace.z >= 0)
         {
-            //audioSource.pitch = 1;
-            //audioSource.Stop();
             strength = 0;
             midPointVisualObject.localPosition = Vector3.zero;
         }
@@ -266,9 +218,7 @@ public class BowStringController : MonoBehaviour
         //We specify max pulling limit for the string. We don't allow the string to go any farther than "bowStringStretchLimit"
         if (midPointLocalSpace.z < 0 && midPointLocalZAbs >= bowStringStretchLimit)
         {
-            //audioSource.Pause();
             strength = 1;
-            //Vector3 direction = midPointParent.TransformDirection(new Vector3(0, 0, midPointLocalSpace.z));
             midPointVisualObject.localPosition = new Vector3(0, 0, -bowStringStretchLimit);
         }
     }
@@ -278,15 +228,8 @@ public class BowStringController : MonoBehaviour
         //what happens when we are between point 0 and the string pull limit
         if (midPointLocalSpace.z < 0 && midPointLocalZAbs < bowStringStretchLimit)
         {
-            //if (audioSource.isPlaying == false && strength <= 0.01f)
-            //{
-            //    audioSource.Play();
-            //}
-
             strength = Remap(midPointLocalZAbs, 0, bowStringStretchLimit, 0, 1);
             midPointVisualObject.localPosition = new Vector3(0, 0, midPointLocalSpace.z);
-
-            //PlayStringPullinSound();
         }
     }
 
@@ -294,31 +237,6 @@ public class BowStringController : MonoBehaviour
     {
         return (value - fromMin) / (fromMax - fromMin) * (toMax - toMin) + toMin;
     }
-
-    /**private void PlayStringPullinSound()
-    {
-        //Check if we have moved the string enought to play the sound unpause it
-        if (Mathf.Abs(strength - previousStrength) > stringSoundThreshold)
-        {
-            if (strength < previousStrength)
-            {
-                //Play string sound in reverse if we are pusing the string towards the bow
-                audioSource.pitch = -1;
-            }
-            else
-            {
-                //Play the sound normally
-                audioSource.pitch = 1;
-            }
-            audioSource.UnPause();
-        }
-        else
-        {
-            //if we stop moving Pause the sounds
-            audioSource.Pause();
-        }
-
-    }**/
 
     //REPLAY MECHANISM
     
@@ -329,7 +247,6 @@ public class BowStringController : MonoBehaviour
         actionReplayRecords.Add(new ActionReplayRecord { position = transform.position, rotation = transform.rotation });
     }
 
-
     public void prepareCrossBow()
     {
         zAxisPull = -0.3f;
@@ -339,8 +256,6 @@ public class BowStringController : MonoBehaviour
     {
         zAxisPull = 0;
     }
-
-    
 
     public void canShootAgain()
     {

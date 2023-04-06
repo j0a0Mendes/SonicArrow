@@ -45,9 +45,6 @@ public class ChangePerspectiveController : MonoBehaviour
     [SerializeField]
     GameObject targetFirstRegion;
 
-    //SYSTEM CONTROLLER
-    //public int numberOfTurns; //Turn is defined by two states, according to each perspective
-
     //MODE SELECTION
     [SerializeField]
     public int modeSelected = 0;
@@ -67,14 +64,11 @@ public class ChangePerspectiveController : MonoBehaviour
 
         LeftHand = GameObject.FindGameObjectWithTag("LeftHand");
         keyControllersrLeft = LeftHand.GetComponent<KeyControllers>();
-        //initialPosition = xrorigin;
-        //targetFirstRegion = GameObject.FindGameObjectWithTag("TargetFirstRegion");
 
     }
 
     private void Awake()
     {
-        //playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
     }
 
@@ -85,7 +79,6 @@ public class ChangePerspectiveController : MonoBehaviour
             changePerspectiveTrigger = false;
             Vector3 adjustments = new Vector3(-0.7f,-1.399138f,0);
             xrorigin.position = targetFirstRegion.transform.position + adjustments;
-            //playerCamera.transform.position = targetFirstRegion.transform.position;
             
             firstPerspective = false;
 
@@ -94,22 +87,10 @@ public class ChangePerspectiveController : MonoBehaviour
         {
             
             changePerspectiveTrigger = false;
-            //xrorigin.position = new Vector3(-15.273f, 0.082f, -5.23f);
+            
             xrorigin.position = new Vector3(-41.893f, 0.082f, -4.4f);
-            //xrorigin.position = initialPosition.position;
-            //playerCamera.transform.position = new Vector3(1.39f,0,-0.22f);
-
-
-            //ACTIVATE CROSSBOW
-            //interactable.enabled = true;
+          
             bowStringController.canShootAgain();
-
-            //CLEAR FIELD (OLD VERSION)
-            //GameObject[] allObjects = GameObject.FindGameObjectsWithTag("Arrow");
-            //foreach (GameObject obj in allObjects)
-            //{
-                //Destroy(obj);
-            //}
 
             numberOfShots += 1;
             firstPerspective = true;

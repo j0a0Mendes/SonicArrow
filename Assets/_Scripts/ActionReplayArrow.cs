@@ -12,16 +12,12 @@ public class ActionReplayArrow : MonoBehaviour
     private bool endReplayRecordVar;
 
     private bool alreadyHit = false;
-    private bool lastFrameRecorded = false;
 
     private bool audioPlaying;
-    private bool endSoundPlayed;
 
     [SerializeField]
     private AudioSource windNavigatingSound;
 
-    //[SerializeField]
-    //private AudioSource arrowHitSound;
     private bool playedHitSound;
 
     KeyControllers keyControllers;
@@ -34,7 +30,7 @@ public class ActionReplayArrow : MonoBehaviour
     private GameObject stickingArrow;
 
     private List<ActionReplayRecord> actionReplayRecords = new List<ActionReplayRecord>();
-    // Start is called before the first frame update
+
     void Start()
     {
         triggerIsReplayMode = false;
@@ -55,7 +51,6 @@ public class ActionReplayArrow : MonoBehaviour
             {
                 windNavigatingSound.Play();
                 audioPlaying = true;
-                //ArrowParent.windNavigatingSound.Play();
             }
 
             triggerIsReplayMode = false;
@@ -71,7 +66,6 @@ public class ActionReplayArrow : MonoBehaviour
             else
             {
                 SetTransform(actionReplayRecords.Count -1);
-                //CleanReplay();  
             }
         }
     }
@@ -86,7 +80,6 @@ public class ActionReplayArrow : MonoBehaviour
 
         if (isInReplayMode == false)
         {
-            //MAYBE??
             currentReplayIndex = 0;
 
             actionReplayRecords.Add(new ActionReplayRecord { position = transform.position, rotation = transform.rotation, alreadyHit = alreadyHit });    
@@ -95,7 +88,6 @@ public class ActionReplayArrow : MonoBehaviour
         {
             int nextIndex = currentReplayIndex + 1;
 
-            //if (nextIndex < actionReplayRecords.Count && replayEndTwoSeconds < 200)
             if (nextIndex < actionReplayRecords.Count)
             {
                 SetTransform(nextIndex);
@@ -106,19 +98,9 @@ public class ActionReplayArrow : MonoBehaviour
                 keyControllers.enableButtonA();
                 Debug.Log("END OF REPLAY");
                 
-                //changePerspective (ERASE TO GO TO OLD VERSION)
-                //controller.enableChange();
-                //controller.changePerspective();
-                
-                //Destroy(gameObject);
-                
-
-                
                 replayEndTwoSeconds = 0;
             }
         }
-
-        //ADICIONAR UM PARAMETRO AO RECORD
     }
 
     public void triggerReplayMode()
@@ -143,11 +125,6 @@ public class ActionReplayArrow : MonoBehaviour
                 windNavigatingSound.Stop();
                 if (!playedHitSound)
                 {
-                    //arrowHitSound.Play();
-                    //KeyControllers keyControllers = GameObject.FindObjectOfType<KeyControllers>();
-                    //keyControllers.enableButtonA();
-                    //keyControllers.enableButtonX(); 
-
                     GameObject arrow = Instantiate(stickingArrow);
                     arrow.transform.position = transform.position;
                     arrow.transform.forward = transform.forward;
@@ -155,12 +132,7 @@ public class ActionReplayArrow : MonoBehaviour
                     Debug.Log("HIT SOUND");
                     playedHitSound = true;
 
-                    //controller.enableButtonA();
                     controller.triggerChangePerspectiveInASec();
-
-                    
-
-                    //keyControllers.enableButtonX();
                 }
             }    
         }
