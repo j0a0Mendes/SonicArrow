@@ -52,6 +52,15 @@ public class ChangePerspectiveController : MonoBehaviour
     private bool changePerspectiveInASec = false;
     private int countChangePerspective = 0;
 
+    //PARAMETER MANAGEMENT 
+    private ParameterManager parameterManager;
+
+    private bool changePerspectiveParameter;
+    private bool targetSoundParameter;
+    private bool spotterTalkingParameter;
+    private bool whiteNoiseVerticalParameter;
+    private bool hapticOnTargetHoverParameter;
+
     void Start()
     {
         firstPerspective = true;
@@ -65,6 +74,8 @@ public class ChangePerspectiveController : MonoBehaviour
         LeftHand = GameObject.FindGameObjectWithTag("LeftHand");
         keyControllersrLeft = LeftHand.GetComponent<KeyControllers>();
 
+        parameterManager = GameObject.FindObjectOfType<ParameterManager>();
+
     }
 
     private void Awake()
@@ -72,8 +83,26 @@ public class ChangePerspectiveController : MonoBehaviour
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
     }
 
-    void Update(){
+    void Update() {
 
+        updateParameters();
+
+        //changePerspectiveParameter
+        //targetSoundParameter
+        //spotterTalkingParameter
+        //whiteNoiseVerticalParameter
+        //hapticOnTargetHoverParameter
+
+        if (changePerspectiveParameter) {
+            if (parameterManager.getChangeOfPerspectiveInstant())
+            {
+                modeSelected= 0;
+            }
+            else if(parameterManager.getChangeOfPerspectiveOnReplay()) {
+                modeSelected= 1;
+            }
+        }
+        
         if (changePerspectiveTrigger && firstPerspective)
         {
             changePerspectiveTrigger = false;
@@ -162,6 +191,59 @@ public class ChangePerspectiveController : MonoBehaviour
         changePerspectiveInASec = true;
     }
 
+    public void updateParameters()
+    {
+        changePerspectiveParameter = parameterManager.getChangeOfPerspective();
+        targetSoundParameter = parameterManager.getTargetSound();
+        spotterTalkingParameter = parameterManager.getSpotterTalking();
+        whiteNoiseVerticalParameter = parameterManager.getWhiteNoiseVerticalAid();
+        hapticOnTargetHoverParameter = parameterManager.getHapticOnTargetHover();
+    }
+
+    public bool getParameterTargetSound()
+    {
+        return targetSoundParameter;
+    }
+
+    public bool getParameterSpotterTalking()
+    {
+        return spotterTalkingParameter;
+    }
+
+    public bool getParameterSpotterPoints()
+    {
+        return parameterManager.getSpotterPointsAid();
+    }
+
+    public bool getParameterSpotterQuadrants()
+    {
+        return parameterManager.getSpotterQuadrantAid();
+    }
+
+    public bool getParameterSpotterDirection()
+    {
+        return parameterManager.getSpotterDirectionAid();
+    }
+
+    public bool getParameterWhiteNoiseVerticalAid()
+    {
+        return whiteNoiseVerticalParameter;
+    }
+
+    public bool getHapticOnTargetHover()
+    {
+        return hapticOnTargetHoverParameter;
+    }
+
+    public bool getTargetChangesAtFivePoints()
+    {
+        return parameterManager.getTargetChangesAtFivePoints();
+    }
+
+    public bool getTargetStill()
+    {
+        return parameterManager.getTargetStill();
+    }
 }
 
 

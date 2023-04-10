@@ -65,6 +65,27 @@ public class ParameterManager : MonoBehaviour
     public bool whiteNoiseVerticalAid = false;
 
     //------------------------------------------------
+    //Other haptic aids
+
+    [SerializeField]
+    public bool hapticOnTargetHover = false;
+
+    //------------------------------------------------
+    //Target Movement
+    private bool previousTargetStill = true;
+    private bool previousTargetMoving = false;
+    private bool previousTargetChangesAtFivePoints = false;
+
+    [SerializeField]
+    public bool targetStill = true;
+
+    [SerializeField]
+    public bool targetChangesAtFivePoints = false;
+
+    [SerializeField]
+    public bool targetMoving = false;
+
+
 
     void Start()
     {
@@ -212,167 +233,97 @@ public class ParameterManager : MonoBehaviour
 
         //Spotter constraints--------------------------------------
 
-        
 
         if (spotterTalking != previousSpotterTalking)
         {
             previousSpotterTalking = spotterTalking;
-
             if (spotterTalking)
             {
                 spotterPointsAid = true;
-                previousSpotterPointsAid = true;
                 spotterDirectionAid = false;
-                previousSpotterDirectionAid = false;
                 spotterQuadrantAid = false;
-                previousSpotterQuadrantAid = false;
             }
             else
             {
                 spotterPointsAid = false;
-                previousSpotterPointsAid = false;
                 spotterDirectionAid = false;
-                previousSpotterDirectionAid = false;
                 spotterQuadrantAid = false;
-                previousSpotterQuadrantAid = false;
             }
         }
- 
-        if (spotterTalking)
+
+        if(spotterTalking == true && spotterPointsAid == false && spotterDirectionAid== false && spotterQuadrantAid == false)
         {
-            if (spotterPointsAid != previousSpotterPointsAid)
-            {
-                previousSpotterPointsAid = spotterPointsAid;
-
-                if (spotterPointsAid)
-                {
-                    spotterDirectionAid = false;
-                    previousSpotterDirectionAid = false;
-                    spotterQuadrantAid = false;
-                    previousSpotterQuadrantAid = false;
-                }
-                else
-                {
-                    spotterDirectionAid = true;
-                    previousSpotterDirectionAid = true;
-                    spotterQuadrantAid = false;
-                    previousSpotterQuadrantAid = false;
-                }
-
-            }
-
-            if (spotterDirectionAid != previousSpotterDirectionAid)
-            {
-                previousSpotterDirectionAid = spotterDirectionAid;
-
-                if (spotterDirectionAid)
-                {
-                    spotterPointsAid = false;
-                    previousSpotterPointsAid = false;
-                    spotterQuadrantAid = false;
-                    previousSpotterQuadrantAid = false;
-                }
-                else
-                {
-                    spotterPointsAid = false;
-                    previousSpotterPointsAid = false;
-                    spotterQuadrantAid = true;
-                    previousSpotterQuadrantAid = true;
-                }
-            }
-
-            if (spotterQuadrantAid != previousSpotterQuadrantAid)
-            {
-                previousSpotterQuadrantAid = spotterQuadrantAid;
-
-                if (spotterQuadrantAid)
-                {
-                    spotterPointsAid = false;
-                    previousSpotterPointsAid = false;
-                    spotterDirectionAid = false;
-                    previousSpotterDirectionAid = false;
-                }
-                else
-                {
-                    spotterPointsAid = true;
-                    previousSpotterPointsAid = true;
-                    spotterDirectionAid = false;
-                    previousSpotterDirectionAid = false;
-                }
-            }
-
-
+            spotterPointsAid = true;
+            previousSpotterPointsAid = true;
         }
-        else
+
+        //Target Movement constraints-------------------------------
+        if(targetStill != previousTargetStill)
         {
-            spotterPointsAid = false;
-            previousSpotterPointsAid = false;
-            spotterDirectionAid = false;
-            previousSpotterDirectionAid = false;
-            spotterQuadrantAid = false;
-            previousSpotterQuadrantAid = false;
+            previousTargetStill = targetStill;
+            if(targetStill)
+            {    
+                targetChangesAtFivePoints = false;
+                previousTargetChangesAtFivePoints = false;
+                targetMoving = false;
+                previousTargetMoving = false;
+            }
+            else
+            {
+                targetChangesAtFivePoints = true;
+                previousTargetChangesAtFivePoints = true;
+                targetMoving = false;
+                previousTargetMoving = false;
+            }
         }
 
+        if (targetChangesAtFivePoints != previousTargetChangesAtFivePoints)
+        {
+            previousTargetChangesAtFivePoints = targetChangesAtFivePoints;
+            if (targetChangesAtFivePoints)
+            {
+                targetStill = false;
+                previousTargetStill = false;
+                targetMoving = false;
+                previousTargetMoving = false;
+            }
+            else
+            {
+                targetStill = false;
+                previousTargetStill = false;
+                targetMoving = true;
+                previousTargetMoving = true;
+            }
+        }
+
+        if (targetMoving != previousTargetMoving)
+        {
+            previousTargetMoving = targetMoving;
+            if (targetMoving)
+            {
+                targetStill = false;
+                previousTargetStill = false;
+                targetChangesAtFivePoints = false;
+                previousTargetChangesAtFivePoints = false;
+            }
+            else
+            {
+                targetStill = true;
+                previousTargetStill = true;
+                targetChangesAtFivePoints = false;
+                previousTargetChangesAtFivePoints = false;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        //--------CONSTRAINTS---------
-        //Change of perspective method
-        
-
-        //Audio Parameters
-        if (targetSound)
-        {
-            if (targetSoundUserPos)
-            {
-                targetSoundCrossbowAim = false;
-            }
-            
-            if(targetSoundCrossbowAim)
-            {
-                targetSoundUserPos = false;
-            }
-        }
-        else
-        {
-            targetSoundCrossbowAim = false;
-            targetSoundUserPos = false;
-        }
-
-        //Spotter talking parameters
-        if (spotterTalking)
-        {
-            if (spotterPointsAid)
-            {
-                spotterQuadrantAid = false;
-                spotterDirectionAid = false;
-            }
-            else if(spotterDirectionAid)
-            {
-                spotterPointsAid = false;
-                spotterQuadrantAid = false;
-            }
-            else
-            {
-                spotterQuadrantAid = true;
-                spotterDirectionAid = false;
-                spotterPointsAid = false;
-            }
-        }
-        else
-        {
-            spotterQuadrantAid = false;
-            spotterDirectionAid = false;
-            spotterPointsAid = false;
-        }
-        //-----END-OF-CONSTRAINTS------
-
     }
-
+ 
     //Getters
+    //Perspective 
     public bool getChangeOfPerspective()
     {
         return changeOfPerspective;
@@ -388,8 +339,74 @@ public class ParameterManager : MonoBehaviour
         return changeOfPerspectiveOnReplay;
     }
 
-    //Setters
+    //--------------------------------------
+    //Hearing the target sound
+    public bool getTargetSound()
+    {
+        return targetSound;
+    }
+    public bool getTargetSoundUserPos()
+    {
+        return targetSoundUserPos;
+    }                 //UNIQUE
+    public bool getTargetSoundCrossbowAim()
+    {
+        return targetSoundCrossbowAim;
+    }
 
+    //--------------------------------------
+    //Spotter aid
+    public bool getSpotterTalking()
+    {
+        return spotterTalking;
+    }
+    public bool getSpotterPointsAid()
+    {
+        return spotterPointsAid;
+    }
+    public bool getSpotterQuadrantAid()
+    {
+        return spotterQuadrantAid;
+    }
+    public bool getSpotterDirectionAid()
+    {
+        return spotterDirectionAid;
+    }
+
+    //--------------------------------------
+    //Other sound aids
+    public bool getWhiteNoiseVerticalAid()
+    {
+        return whiteNoiseVerticalAid;
+    }
+
+    //--------------------------------------
+    //Other haptic aids
+    public bool getHapticOnTargetHover()
+    {
+        return hapticOnTargetHover;
+    }
+    //--------------------------------------
+    //Target movement
+
+    public bool getTargetStill()
+    {
+        return targetStill;
+    }
+    public bool getTargetMoving()
+    {
+        return targetMoving;
+    }
+    public bool getTargetChangesAtFivePoints()
+    {
+        return targetChangesAtFivePoints;
+    }
+
+    //--------------------------------------
+    //--------------------------------------
+
+    //SETTERS
+    //Perspective
     public void setChangeOfPerspective(bool val)
     {
         changeOfPerspective = val;
@@ -404,4 +421,69 @@ public class ParameterManager : MonoBehaviour
     {
         changeOfPerspectiveOnReplay = val;
     }
+
+    //--------------------------------------
+    //Hearing the target sound
+    public void setTargetSound(bool val)
+    {
+        targetSound = val;
+    }
+    public void setTargetSoundUserPos(bool val)
+    {
+        targetSoundUserPos = val;
+    }                
+    public void setTargetSoundCrossbowAim(bool val)
+    {
+        targetSoundCrossbowAim = val;
+    }
+
+    //--------------------------------------
+    //Spotter aid
+    public void setSpotterTalking(bool val)
+    {
+        spotterTalking = val;
+    }
+    public void setSpotterPointsAid(bool val)
+    {
+        spotterPointsAid = val;
+    }
+    public void setSpotterQuadrantAid(bool val)
+    {
+        spotterQuadrantAid = val;
+    }
+    public void setSpotterDirectionAid(bool val)
+    {
+        spotterDirectionAid = val;
+    }
+    //--------------------------------------
+    //Other sound aids
+    public void setWhiteNoiseVerticalAid(bool val)
+    {
+        whiteNoiseVerticalAid = val;
+    }
+
+    //--------------------------------------
+    //Other haptic aids
+    public void setHapticOnTargetHover(bool val)
+    {
+        hapticOnTargetHover = val;
+    }
+
+    //--------------------------------------
+    //Target movement
+
+    public void setTargetStill(bool val)
+    {
+       targetStill = val;
+    }
+    public void setTargetMoving(bool val)
+    {
+        targetMoving = val;
+    }
+    public void setTargetChangesAtFivePoints(bool val)
+    {
+        targetChangesAtFivePoints = val;
+    }
+
+    //--------------------------------------
 }

@@ -1,9 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
+
 
 public class TargetObject : MonoBehaviour
 {
@@ -16,9 +15,24 @@ public class TargetObject : MonoBehaviour
     [SerializeField]
     public float targetZ;
 
+    [SerializeField]
+    public GameObject firstAngle;
+
+    [SerializeField]
+    public GameObject secondAngle;
+
+    [SerializeField]
+    public GameObject thirdAngle;
+
+    [SerializeField]
+    public GameObject forthAngle;
+
+    private int wallSystemPos;     //Wall that the target starts 
+
     // Start is called before the first frame update
     void Start()
     {
+        wallSystemPos = 1;
     }
 
     private void Awake()
@@ -50,5 +64,40 @@ public class TargetObject : MonoBehaviour
     public (float, float, float) getTargetPos()
     {
         return (targetX, targetY, targetZ); 
+    }
+
+    public void changeTargetPos()
+    {
+        getAngle(wallSystemPos).SetActive(false);
+        List<int> numbers = new List<int>();
+        numbers.Add(1);
+        numbers.Add(2);
+        numbers.Add(3);
+        numbers.Add(4);
+        numbers.Remove(wallSystemPos);
+
+        int selectedNumber = numbers[new System.Random().Next(numbers.Count)];
+        wallSystemPos = selectedNumber;
+        getAngle(wallSystemPos).SetActive(true);
+    }
+
+    public GameObject getAngle(int wallAngle)
+    {
+        if(wallAngle == 1)
+        {
+            return firstAngle;
+        }else if(wallAngle == 2)
+        {
+            return secondAngle;
+        }else if(wallAngle == 3)
+        {
+            return thirdAngle;
+        }else if(wallAngle == 4)
+        {
+            return forthAngle;
+        }
+
+        return firstAngle;
+
     }
 }

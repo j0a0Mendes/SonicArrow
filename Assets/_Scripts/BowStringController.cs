@@ -79,6 +79,8 @@ public class BowStringController : MonoBehaviour
 
     private int modeSelected;
 
+    
+
     private void Awake()
     {
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
