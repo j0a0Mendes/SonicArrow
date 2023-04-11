@@ -41,6 +41,8 @@ public class TargetObject : MonoBehaviour
         //targetY = 2.0f;
         //targetZ = -5.46f;
 
+        
+
         float randomY = GetRandomNumber(0.5f, 8.0f);
         float randomZ = GetRandomNumber(-16.7f, 5.6f);
         
@@ -79,6 +81,8 @@ public class TargetObject : MonoBehaviour
         int selectedNumber = numbers[new System.Random().Next(numbers.Count)];
         wallSystemPos = selectedNumber;
         getAngle(wallSystemPos).SetActive(true);
+        relocateTarget();
+
     }
 
     public GameObject getAngle(int wallAngle)
@@ -99,5 +103,58 @@ public class TargetObject : MonoBehaviour
 
         return firstAngle;
 
+    }
+
+    public void relocateTarget()
+    {
+        if (wallSystemPos == 1)
+        {
+            targetX = 10.45f;
+
+            float randomY = GetRandomNumber(0.5f, 8.0f);
+            float randomZ = GetRandomNumber(-16.7f, 5.6f);
+
+            targetY = randomY;
+            targetZ = randomZ;
+
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
+        else if (wallSystemPos == 2)
+        {
+            targetZ = 45.6f;
+            
+            float randomY = GetRandomNumber(0.5f, 8.0f);
+            float randomX = GetRandomNumber(-52.5f, -31.7f);
+            
+            targetY = randomY;
+            targetX = randomX;
+
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+        }
+        else if (wallSystemPos == 3)
+        {
+            targetX = -95.2f;
+
+            float randomY = GetRandomNumber(0.5f, 8.0f);
+            float randomZ = GetRandomNumber(-16.7f, 5.6f);
+
+            targetY = randomY;
+            targetZ = randomZ;
+
+
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+        else if (wallSystemPos == 4)
+        {
+            targetZ = -56.6f;
+
+            float randomY = GetRandomNumber(0.5f, 8.0f);
+            float randomX = GetRandomNumber(-52.5f, -31.7f);
+
+            targetY = randomY;
+            targetX = randomX;
+
+            transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+        }
     }
 }

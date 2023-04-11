@@ -45,6 +45,8 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private bool isPlaying = false;
 
+    private bool FivePointsFlag = false;
+
 
     private void Start()
     {
@@ -144,7 +146,7 @@ public class StickingArrowToSurface : MonoBehaviour
                     GameObject spotter = GameObject.Find("Time_To_Change_TargetPos");
                     audioList.Add(spotter.GetComponent<AudioSource>());
 
-                    target.changeTargetPos();      //Por mais a frente para ser so dps dos audios
+                    FivePointsFlag = true;
                 }
             }
             controller.addPoints(5);
@@ -248,6 +250,11 @@ public class StickingArrowToSurface : MonoBehaviour
 
         collision.collider.GetComponent<IHittable>()?.GetHit();
 
+        if (FivePointsFlag)
+        {
+            target.changeTargetPos();      //Por mais a frente para ser so dps dos audios
+            FivePointsFlag = false;
+        }
         //Destroy(gameObject);
 
     }
