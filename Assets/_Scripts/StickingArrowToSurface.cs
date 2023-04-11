@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 public class StickingArrowToSurface : MonoBehaviour
@@ -37,16 +39,15 @@ public class StickingArrowToSurface : MonoBehaviour
     TargetObject target;
 
     //PLAYING AUDIOS
-    public AudioClip[] clips;
+    public List<AudioSource> audioList = new List<AudioSource>();
 
-    private List<AudioSource> audioSources;
-    private int currentIndexPlaying = 0;
+    private int currentSourceIndex = 0;
 
-    private int currentIndexAdding = 0;
+    private bool isPlaying = false;
 
 
-    private void Start() 
-    { 
+    private void Start()
+    {
         windNavigatingSound.Play();
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
         keyControllers = GameObject.FindObjectOfType<KeyControllers>();
@@ -57,10 +58,9 @@ public class StickingArrowToSurface : MonoBehaviour
         target = GameObject.FindObjectOfType<TargetObject>();
         //keyControllerRightHand = GameObject.FindObjectOfType<KeyControllerSupport>();
 
-        audioSources = new List<AudioSource>();
     }
 
-    private void Update() 
+    private void Update()
     {
         //    if (notFlying)
         //
@@ -84,16 +84,24 @@ public class StickingArrowToSurface : MonoBehaviour
             if (controller.getParameterSpotterTalking())
             {
                 GameObject spotterNoPoints = GameObject.Find("Hit_A_Wall");
-                spotterNoPoints.GetComponent<AudioSource>().Play();
+                audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
             }
 
             controller.addPoints(0);
-        }else if (collidedWith == "Floor" )
+        }
+        else if (collidedWith == "Floor")
         {
             if (controller.getParameterSpotterTalking())
             {
                 GameObject spotterNoPoints = GameObject.Find("Hit_Floor");
-                spotterNoPoints.GetComponent<AudioSource>().Play();
+                audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
+
+                if (controller.getParameterSpotterDirection())
+                {
+                    GameObject spotterAimLower = GameObject.Find("Aim_Higher");
+                    audioList.Add(spotterAimLower.GetComponent<AudioSource>());
+
+                }
             }
 
             controller.addPoints(0);
@@ -103,10 +111,13 @@ public class StickingArrowToSurface : MonoBehaviour
             if (controller.getParameterSpotterTalking())
             {
                 GameObject spotterNoPoints = GameObject.Find("Hit_Ceiling");
-                spotterNoPoints.GetComponent<AudioSource>().Play();
+                audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
 
-                GameObject spotterAimLower = GameObject.Find("Aim_Lower");
-                spotterAimLower.GetComponent<AudioSource>().Play();
+                if (controller.getParameterSpotterDirection())
+                {
+                    GameObject spotterAimLower = GameObject.Find("Aim_Lower");
+                    audioList.Add(spotterAimLower.GetComponent<AudioSource>());
+                }
             }
 
             controller.addPoints(0);
@@ -118,21 +129,22 @@ public class StickingArrowToSurface : MonoBehaviour
                 if (controller.getParameterSpotterPoints())
                 {
                     GameObject spotter = GameObject.Find("5_Points");
-                    addAudio(spotter.GetComponent<AudioSource>());
+                    audioList.Add(spotter.GetComponent<AudioSource>());
 
-                }else
+                }
+                else
                 {
                     GameObject spotter = GameObject.Find("Hit_Center");
-                    addAudio(spotter.GetComponent<AudioSource>());
+                    audioList.Add(spotter.GetComponent<AudioSource>());
                 }
+
 
                 if (controller.getTargetChangesAtFivePoints())
                 {
                     GameObject spotter = GameObject.Find("Time_To_Change_TargetPos");
-                    addAudio(spotter.GetComponent<AudioSource>());
+                    audioList.Add(spotter.GetComponent<AudioSource>());
 
                     target.changeTargetPos();      //Por mais a frente para ser so dps dos audios
-
                 }
             }
             controller.addPoints(5);
@@ -144,7 +156,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 if (controller.getParameterSpotterPoints())
                 {
                     GameObject spotter = GameObject.Find("4_Points");
-                    spotter.GetComponent<AudioSource>().Play();
+                    audioList.Add(spotter.GetComponent<AudioSource>());
                 }
             }
 
@@ -157,7 +169,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 if (controller.getParameterSpotterPoints())
                 {
                     GameObject spotter = GameObject.Find("3_Points");
-                    spotter.GetComponent<AudioSource>().Play();
+                    audioList.Add(spotter.GetComponent<AudioSource>());
                 }
             }
 
@@ -170,7 +182,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 if (controller.getParameterSpotterPoints())
                 {
                     GameObject spotter = GameObject.Find("2_Points");
-                    spotter.GetComponent<AudioSource>().Play();
+                    audioList.Add(spotter.GetComponent<AudioSource>());
                 }
             }
 
@@ -183,7 +195,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 if (controller.getParameterSpotterPoints())
                 {
                     GameObject spotter = GameObject.Find("1_Point");
-                    spotter.GetComponent<AudioSource>().Play();
+                    audioList.Add(spotter.GetComponent<AudioSource>());
                 }
             }
 
@@ -193,22 +205,27 @@ public class StickingArrowToSurface : MonoBehaviour
 
         windNavigatingSound.Stop();
 
-        PlayAllSounds();        //play all the sounds registered
+        if (!isPlaying)
+        {
+            StartCoroutine(PlayAllAudioSources());
+        }
+
+        
 
         //REPLAY PORPUSE
         actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
-       
+
         actionReplayArrow.alreadyHitTrigger();
 
         //keyControllers.enableButtonX();
 
-        
-        if(keyControllersrRight != null)
+
+        if (keyControllersrRight != null)
         {
             //Debug.Log("A ENABLED");
             keyControllersrRight.enableButtonA();
         }
-        
+
         //keyControllers.enableButtonA();
 
         //CHANGE PERSPECTIVEEE (REMOVE TO GET ORIGINAL VERSION)
@@ -240,12 +257,12 @@ public class StickingArrowToSurface : MonoBehaviour
         if (changePerspectiveCounterTrigger)
         {
             changePerspectiveCounter += 1;
-            if(changePerspectiveCounter == 75)
+            if (changePerspectiveCounter == 75)
             {
                 controller.enableChange();
                 controller.changePerspective();
 
-                changePerspectiveCounter= 0;
+                changePerspectiveCounter = 0;
                 changePerspectiveCounterTrigger = false;
             }
         }
@@ -255,33 +272,20 @@ public class StickingArrowToSurface : MonoBehaviour
     {
         changePerspectiveCounterTrigger = true;
     }
-    // Get references to the AudioSources on other objects
-    //audioSources = new List<AudioSource>();
-    //audioSources.Add(GameObject.Find("AudioSource1").GetComponent<AudioSource>());
-    //audioSources.Add(GameObject.Find("AudioSource2").GetComponent<AudioSource>());
-    // Add more AudioSources to the list as needed...
 
-    // Play all sounds
-    //StartCoroutine(PlayAllSounds());
-    IEnumerator PlayAllSounds()
+    private IEnumerator PlayAllAudioSources()
     {
-        foreach (AudioClip clip in clips)
+        isPlaying = true;
+
+        foreach (AudioSource audioSource in audioList)
         {
-            // Play the current sound on the next available AudioSource
-            audioSources[currentIndexPlaying % audioSources.Count].clip = clip;
-            audioSources[currentIndexPlaying % audioSources.Count].Play();
-            currentIndexPlaying++;
-
-            // Wait for the clip to finish playing before playing the next one
-            while (audioSources[currentIndexPlaying % audioSources.Count].isPlaying)
-            {
-                yield return null;
-            }
+            audioSource.Play();
+            yield return new WaitForSeconds(audioSource.clip.length);
         }
+
+        isPlaying = false;
+
+        audioList.Clear();
     }
 
-    public void addAudio(AudioSource audio)
-    {
-        audioSources.Add(audio);
-    }
 }
