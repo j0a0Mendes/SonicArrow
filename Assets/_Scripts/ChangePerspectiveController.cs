@@ -116,15 +116,15 @@ public class ChangePerspectiveController : MonoBehaviour
             }
             else if (wallSystem == 2)
             {
-                adjustments = new Vector3(-0.7f, -1.399138f, 0);
+                adjustments = new Vector3(0, -1.399138f, -0.7f);
             }
             else if (wallSystem == 3)
             {
-                adjustments = new Vector3(-0.7f, -1.399138f, 0);
+                adjustments = new Vector3(0.7f, -1.399138f, 0);
             }
             else
             {
-                adjustments = new Vector3(-0.7f, -1.399138f, 0);
+                adjustments = new Vector3(0, -1.399138f, 0.7f);
             }
             
             xrorigin.position = targetFirstRegion.transform.position + adjustments;
@@ -218,6 +218,11 @@ public class ChangePerspectiveController : MonoBehaviour
         spotterTalkingParameter = parameterManager.getSpotterTalking();
         whiteNoiseVerticalParameter = parameterManager.getWhiteNoiseVerticalAid();
         hapticOnTargetHoverParameter = parameterManager.getHapticOnTargetHover();
+    }
+
+    public bool getParameterPerspectiveReplay()
+    {
+        return parameterManager.getChangeOfPerspectiveOnReplay();
     }
 
     public bool getParameterTargetSound()

@@ -193,13 +193,15 @@ public class KeyControllers : MonoBehaviour
                 //Debug.Log("X PRESSED");
                 //startYCount = true;
                 //actionReplay.triggerReplayMode();
+                if (controller.getParameterPerspectiveReplay())
+                {
+                    buttonXEnabled = false;
+                    actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
+                    actionReplayArrow.triggerReplayMode();
 
-                buttonXEnabled = false;
-                actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
-                actionReplayArrow.triggerReplayMode();
-
-                controller.enableChange();
-                controller.changePerspective();
+                    controller.enableChange();
+                    controller.changePerspective();
+                }
             }
             
             //if(buttonTriggered == 2){

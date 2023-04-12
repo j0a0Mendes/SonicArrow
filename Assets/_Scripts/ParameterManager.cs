@@ -30,14 +30,14 @@ public class ParameterManager : MonoBehaviour
     private bool previousTargetSoundUserPos;
     private bool previousTargetSoundCrossbowAim;
 
-    [SerializeField]
-    public bool targetSound;
+    //[SerializeField]
+    private bool targetSound;
 
-    [SerializeField]
-    public bool targetSoundUserPos;                  //UNIQUE
+    //[SerializeField]
+    private bool targetSoundUserPos;                  //UNIQUE
 
-    [SerializeField]
-    public bool targetSoundCrossbowAim;             //UNIQUE
+    //[SerializeField]
+    private bool targetSoundCrossbowAim;             //UNIQUE
 
     //------------------------------------------------
     //Spotter Aid
@@ -55,14 +55,14 @@ public class ParameterManager : MonoBehaviour
     [SerializeField]
     public bool spotterQuadrantAid = true;
 
-    [SerializeField]
-    public bool spotterDirectionAid = false;
+    //[SerializeField]
+    private bool spotterDirectionAid = false;
 
     //------------------------------------------------
     //Other sound aids
 
-    [SerializeField]
-    public bool whiteNoiseVerticalAid = false;
+    //[SerializeField]
+    private bool whiteNoiseVerticalAid = false;
 
     //------------------------------------------------
     //Other haptic aids
@@ -82,8 +82,8 @@ public class ParameterManager : MonoBehaviour
     [SerializeField]
     public bool targetChangesAtFivePoints = true;
 
-    [SerializeField]
-    public bool targetMoving = false;
+    //[SerializeField]
+    private bool targetMoving = false;
 
 
 
@@ -289,10 +289,10 @@ public class ParameterManager : MonoBehaviour
             }
             else
             {
-                targetStill = false;
-                previousTargetStill = false;
-                targetMoving = true;
-                previousTargetMoving = true;
+                targetStill = true;
+                previousTargetStill = true;
+                targetMoving = false;
+                previousTargetMoving = false;
             }
         }
 
