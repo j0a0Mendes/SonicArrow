@@ -191,15 +191,78 @@ public class TargetObject : MonoBehaviour
             }
         }else if(wallSystemPos == 2)
         {
-            return 0;
+            if (coord1 > transform.position.y)
+            {
+                if (coord2 > transform.position.x)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 4;
+                }
+            }
+            else
+            {
+                if (coord2 > transform.position.x)
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 3;
+                }
+            }
         }
         else if(wallSystemPos == 3)
         {
-            return 0;
+            if (coord1 > transform.position.y)
+            {
+                if (coord2 > transform.position.z)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 4;
+                }
+            }
+            else
+            {
+                if (coord2 > transform.position.z)
+                {
+                    return 2;
+                }
+                else
+                {
+                    return 3;
+                }
+            }
         }
         else
         {
-            return 0;
+            if (coord1 > transform.position.y)
+            {
+                if (coord2 > transform.position.x)
+                {
+                    return 4;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+            else
+            {
+                if (coord2 > transform.position.x)
+                {
+                    return 3;
+                }
+                else
+                {
+                    return 2;
+                }
+            }
         }
     }
 }

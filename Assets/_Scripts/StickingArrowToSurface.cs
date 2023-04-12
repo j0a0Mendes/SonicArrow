@@ -163,7 +163,49 @@ public class StickingArrowToSurface : MonoBehaviour
 
                 if (controller.getParameterSpotterQuadrants())
                 {
-                    Debug.Log(target.getHitQuadrant(transform.position.y, transform.position.z));
+                    int quadrant;
+
+                    if (target.getWallSystem() == 1)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.z);
+                    }
+                    else if (target.getWallSystem() == 2)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.x);
+                    }
+                    else if (target.getWallSystem() == 3)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.z);
+                    }
+                    else if (target.getWallSystem() == 4)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.x);
+                    }
+                    else
+                    {
+                        quadrant = 1;
+                    }
+
+                    if (quadrant == 1)
+                    {
+                        GameObject spotter = GameObject.Find("First_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if (quadrant == 2)
+                    {
+                        GameObject spotter = GameObject.Find("Second_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if (quadrant == 3)
+                    {
+                        GameObject spotter = GameObject.Find("Third_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if (quadrant == 4)
+                    {
+                        GameObject spotter = GameObject.Find("Forth_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
                 }
             }
 
@@ -181,7 +223,49 @@ public class StickingArrowToSurface : MonoBehaviour
 
                 if (controller.getParameterSpotterQuadrants())
                 {
-                    Debug.Log(target.getHitQuadrant(transform.position.y, transform.position.z));
+                    int quadrant;
+
+                    if (target.getWallSystem() == 1)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.z);
+                    }
+                    else if (target.getWallSystem() == 2)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.x);
+                    }
+                    else if (target.getWallSystem() == 3)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.z);
+                    }
+                    else if (target.getWallSystem() == 4)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.x);
+                    }
+                    else
+                    {
+                        quadrant = 1;
+                    }
+
+                    if (quadrant == 1)
+                    {
+                        GameObject spotter = GameObject.Find("First_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if (quadrant == 2)
+                    {
+                        GameObject spotter = GameObject.Find("Second_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if (quadrant == 3)
+                    {
+                        GameObject spotter = GameObject.Find("Third_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if (quadrant == 4)
+                    {
+                        GameObject spotter = GameObject.Find("Forth_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
                 }
             }
 
@@ -199,7 +283,48 @@ public class StickingArrowToSurface : MonoBehaviour
 
                 if (controller.getParameterSpotterQuadrants())
                 {
-                    Debug.Log(target.getHitQuadrant(transform.position.y, transform.position.z));
+                    int quadrant;
+
+                    if (target.getWallSystem() == 1)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.z);
+                    }else if (target.getWallSystem() == 2)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.x);
+                    }
+                    else if (target.getWallSystem() == 3)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.z);
+                    }
+                    else if (target.getWallSystem() == 4)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.x);
+                    }
+                    else
+                    {
+                        quadrant = 1;
+                    }
+
+                    if(quadrant == 1)
+                    {
+                        GameObject spotter = GameObject.Find("First_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if(quadrant == 2)
+                    {
+                        GameObject spotter = GameObject.Find("Second_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if (quadrant == 3)
+                    {
+                        GameObject spotter = GameObject.Find("Third_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if (quadrant == 4)
+                    {
+                        GameObject spotter = GameObject.Find("Forth_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
                 }
             }
 
@@ -217,7 +342,49 @@ public class StickingArrowToSurface : MonoBehaviour
 
                 if (controller.getParameterSpotterQuadrants())
                 {
-                    Debug.Log(target.getHitQuadrant(transform.position.y, transform.position.z));
+                    int quadrant;
+
+                    if (target.getWallSystem() == 1)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.z);
+                    }
+                    else if (target.getWallSystem() == 2)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.x);
+                    }
+                    else if (target.getWallSystem() == 3)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.z);
+                    }
+                    else if (target.getWallSystem() == 4)
+                    {
+                        quadrant = target.getHitQuadrant(transform.position.y, transform.position.x);
+                    }
+                    else
+                    {
+                        quadrant = 1;
+                    }
+
+                    if (quadrant == 1)
+                    {
+                        GameObject spotter = GameObject.Find("First_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if (quadrant == 2)
+                    {
+                        GameObject spotter = GameObject.Find("Second_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if (quadrant == 3)
+                    {
+                        GameObject spotter = GameObject.Find("Third_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else if (quadrant == 4)
+                    {
+                        GameObject spotter = GameObject.Find("Forth_Quadrant");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
                 }
             }
 
