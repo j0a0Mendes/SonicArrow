@@ -157,4 +157,49 @@ public class TargetObject : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, -90f, 0f);
         }
     }
+
+    public int getWallSystem()
+    {
+        return wallSystemPos;
+    }
+
+    public int getHitQuadrant(float coord1, float coord2)
+    {
+        if (wallSystemPos == 1)
+        {
+            if (coord1 > transform.position.y)
+            {
+                if (coord2 > transform.position.z)
+                {
+                    return 4;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+            else
+            {
+                if (coord2 > transform.position.z)
+                {
+                    return 3;
+                }
+                else
+                {
+                    return 2;
+                }
+            }
+        }else if(wallSystemPos == 2)
+        {
+            return 0;
+        }
+        else if(wallSystemPos == 3)
+        {
+            return 0;
+        }
+        else
+        {
+            return 0;
+        }
+    }
 }

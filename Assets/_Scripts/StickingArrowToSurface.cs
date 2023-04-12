@@ -160,6 +160,11 @@ public class StickingArrowToSurface : MonoBehaviour
                     GameObject spotter = GameObject.Find("4_Points");
                     audioList.Add(spotter.GetComponent<AudioSource>());
                 }
+
+                if (controller.getParameterSpotterQuadrants())
+                {
+                    Debug.Log(target.getHitQuadrant(transform.position.y, transform.position.z));
+                }
             }
 
             controller.addPoints(4);
@@ -172,6 +177,11 @@ public class StickingArrowToSurface : MonoBehaviour
                 {
                     GameObject spotter = GameObject.Find("3_Points");
                     audioList.Add(spotter.GetComponent<AudioSource>());
+                }
+
+                if (controller.getParameterSpotterQuadrants())
+                {
+                    Debug.Log(target.getHitQuadrant(transform.position.y, transform.position.z));
                 }
             }
 
@@ -186,6 +196,11 @@ public class StickingArrowToSurface : MonoBehaviour
                     GameObject spotter = GameObject.Find("2_Points");
                     audioList.Add(spotter.GetComponent<AudioSource>());
                 }
+
+                if (controller.getParameterSpotterQuadrants())
+                {
+                    Debug.Log(target.getHitQuadrant(transform.position.y, transform.position.z));
+                }
             }
 
             controller.addPoints(2);
@@ -198,6 +213,11 @@ public class StickingArrowToSurface : MonoBehaviour
                 {
                     GameObject spotter = GameObject.Find("1_Point");
                     audioList.Add(spotter.GetComponent<AudioSource>());
+                }
+
+                if (controller.getParameterSpotterQuadrants())
+                {
+                    Debug.Log(target.getHitQuadrant(transform.position.y, transform.position.z));
                 }
             }
 
@@ -242,6 +262,10 @@ public class StickingArrowToSurface : MonoBehaviour
         GameObject arrow = Instantiate(stickingArrow);
         arrow.transform.position = transform.position;
         arrow.transform.forward = transform.forward;
+
+        //Debug.Log("ARROW: " +  transform.position);
+        //Debug.Log("TARGET: " + target.transform.position);
+
 
         if (collision.collider.attachedRigidbody != null)
         {

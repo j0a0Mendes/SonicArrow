@@ -53,7 +53,7 @@ public class ParameterManager : MonoBehaviour
     public bool spotterPointsAid = true;
 
     [SerializeField]
-    public bool spotterQuadrantAid = false;
+    public bool spotterQuadrantAid = true;
 
     [SerializeField]
     public bool spotterDirectionAid = false;
@@ -72,15 +72,15 @@ public class ParameterManager : MonoBehaviour
 
     //------------------------------------------------
     //Target Movement
-    private bool previousTargetStill = true;
+    private bool previousTargetStill = false;
     private bool previousTargetMoving = false;
-    private bool previousTargetChangesAtFivePoints = false;
+    private bool previousTargetChangesAtFivePoints = true;
 
     [SerializeField]
-    public bool targetStill = true;
+    public bool targetStill = false;
 
     [SerializeField]
-    public bool targetChangesAtFivePoints = false;
+    public bool targetChangesAtFivePoints = true;
 
     [SerializeField]
     public bool targetMoving = false;

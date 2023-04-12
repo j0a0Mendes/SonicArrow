@@ -42,6 +42,8 @@ public class KeyControllers : MonoBehaviour
 
     private MainTarget target;
 
+    private TargetObject targetObject;
+
     private ChangePerspectiveController controller;
 
     private ActionReplay actionReplay;
@@ -76,6 +78,7 @@ public class KeyControllers : MonoBehaviour
     void Start()
     {
         target = GameObject.FindObjectOfType<MainTarget>();
+        targetObject = GameObject.FindObjectOfType<TargetObject>();
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
         bowStringController = GameObject.FindObjectOfType<BowStringController>();
 
@@ -284,4 +287,10 @@ public class KeyControllers : MonoBehaviour
             rightController.SendHapticImpulse(amplitude, duration);
         }
     }
+
+    public int getWallSystem()
+    {
+        return targetObject.getWallSystem();
+    }
+   
 }
