@@ -75,6 +75,10 @@ public class StickingArrowToSurface : MonoBehaviour
     {
 
         Debug.Log("ACERTOU");
+        if (controller.getParameterPerspectiveReplay())
+        {
+            controller.canShootAgain();
+        }
         keyControllers.enableButtonX();
         modeSelected = controller.getModeSelected();
         //Debug.Log(modeSelected);

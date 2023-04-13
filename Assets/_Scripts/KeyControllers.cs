@@ -67,10 +67,11 @@ public class KeyControllers : MonoBehaviour
     private KeyControllers keyControllersrLeft;
 
     //HAPTICS PURPOSES
+    public bool vibrate;
 
 
-    public float defaultAmplitude = 1f;
-    public float defaultDuration = 1.5f;
+    public float defaultAmplitude = 10f;
+    public float defaultDuration = 0.1f;
 
     public int count = 0;
 
@@ -98,13 +99,16 @@ public class KeyControllers : MonoBehaviour
         buttonXEnabled = false;
 
         //HAPTIC PURPOSES
-        
-        
     }   
 
     // Update is called once per frame
     void Update()
     {
+        if (vibrate)
+        {
+            SendHaptics();
+        }
+
         //get mode selected. 0 - Instant Sound Output. 1 - Replay Mode
         modeSelected = controller.getModeSelected();
 
@@ -273,8 +277,8 @@ public class KeyControllers : MonoBehaviour
     [ContextMenu("Send Haptics")]
     public void SendHaptics()
     {
-        //leftController.SendHapticImpulse(defaultAmplitude, defaultDuration);
-        rightController.SendHapticImpulse(defaultAmplitude, defaultDuration);
+        leftController.SendHapticImpulse(defaultAmplitude, defaultDuration);
+        //rightController.SendHapticImpulse(defaultAmplitude, defaultDuration);
     }
 
     public void SendHaptics(bool isLeftController, float amplitude, float duration)
@@ -282,6 +286,8 @@ public class KeyControllers : MonoBehaviour
         if (isLeftController && leftController != null)
         {
             leftController.SendHapticImpulse(amplitude, duration);
+            Debug.Log("Vibrating");
+            //SendHaptics();
         }
         else if(rightController != null)
         {
@@ -290,9 +296,36 @@ public class KeyControllers : MonoBehaviour
         }
     }
 
+    public void SendHaptics(bool isLeftController)
+    {
+        if (isLeftController && leftController != null)
+        {
+            Debug.Log("Vibrating");
+            leftController.SendHapticImpulse(defaultAmplitude, defaultDuration);
+            //SendHaptics();
+        }
+        else if (rightController != null)
+        {
+            Debug.Log("Vibrating");
+            rightController.SendHapticImpulse(defaultAmplitude, defaultDuration);
+        }
+    }
+
     public int getWallSystem()
     {
         return targetObject.getWallSystem();
     }
-   
+
+    public void activateVibrate()
+    {
+        vibrate = true;
+    }
+    public void deactivateVibrate()
+    {
+        vibrate = false;
+    }
+
+
+
+
 }

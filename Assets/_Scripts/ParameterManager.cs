@@ -47,49 +47,49 @@ public class ParameterManager : MonoBehaviour
     private bool previousSpotterDirectionAid;
 
     [SerializeField]
-    public bool spotterTalking = true; 
+    public bool spotterTalking; 
 
     [SerializeField]
-    public bool spotterPointsAid = true;
+    public bool spotterPointsAid;
 
     [SerializeField]
-    public bool spotterQuadrantAid = true;
+    public bool spotterQuadrantAid;
 
     //[SerializeField]
-    private bool spotterDirectionAid = false;
+    private bool spotterDirectionAid;
 
     //------------------------------------------------
     //Other sound aids
 
     //[SerializeField]
-    private bool whiteNoiseVerticalAid = false;
+    private bool whiteNoiseVerticalAid;
 
     //------------------------------------------------
     //Other haptic aids
 
     [SerializeField]
-    public bool hapticOnTargetHover = false;
+    public bool hapticOnTargetHover;
 
     //------------------------------------------------
     //Target Movement
-    private bool previousTargetStill = false;
-    private bool previousTargetMoving = false;
-    private bool previousTargetChangesAtFivePoints = true;
+    private bool previousTargetStill;
+    private bool previousTargetMoving;
+    private bool previousTargetChangesAtFivePoints;
 
     [SerializeField]
-    public bool targetStill = false;
+    public bool targetStill;
 
     [SerializeField]
-    public bool targetChangesAtFivePoints = true;
+    public bool targetChangesAtFivePoints;
 
     //[SerializeField]
-    private bool targetMoving = false;
+    private bool targetMoving;
 
 
 
     void Start()
     {
-        changeOfPerspective = true;
+        /**changeOfPerspective = true;
         previousChangeOfPerspective = true;
         changeOfPerspectiveInstant = true;
         previousChangeOfPerspectiveInstant = true;
@@ -97,7 +97,7 @@ public class ParameterManager : MonoBehaviour
         targetSound = true;
         previousTargetSound = true;
         targetSoundUserPos = true;
-        previousTargetSoundUserPos = true;
+        previousTargetSoundUserPos = true;**/
     }
 
     private void OnValidate()
@@ -109,10 +109,10 @@ public class ParameterManager : MonoBehaviour
 
             if(changeOfPerspective)
             {
-                changeOfPerspectiveInstant = true;
-                previousChangeOfPerspectiveInstant = true;
-                changeOfPerspectiveOnReplay = false;
-                previousChangeOfPerspectiveOnReplay = false;
+                //changeOfPerspectiveInstant = true;
+                //previousChangeOfPerspectiveInstant = true;
+                //changeOfPerspectiveOnReplay = false;
+                //previousChangeOfPerspectiveOnReplay = false;
             }
             else
             {
@@ -239,9 +239,9 @@ public class ParameterManager : MonoBehaviour
             previousSpotterTalking = spotterTalking;
             if (spotterTalking)
             {
-                spotterPointsAid = true;
-                spotterDirectionAid = false;
-                spotterQuadrantAid = false;
+                //spotterPointsAid = true;
+                //spotterDirectionAid = false;
+                //spotterQuadrantAid = false;
             }
             else
             {

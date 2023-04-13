@@ -27,7 +27,31 @@ public class TargetObject : MonoBehaviour
     [SerializeField]
     public GameObject forthAngle;
 
+    [SerializeField]
+    public GameObject targetFirstRegion;
+
+    [SerializeField]
+    public GameObject targetSecondRegion;
+
+    [SerializeField]
+    public GameObject targetThirdRegion;
+
+    [SerializeField]
+    public GameObject targetForthRegion;
+
+    [SerializeField]
+    public GameObject targetFifthRegion;
+
+    private MeshCollider first;
+    private MeshCollider second;
+    private MeshCollider third;
+    private MeshCollider forth;
+    private MeshCollider fifth;
+
     private int wallSystemPos;     //Wall that the target starts 
+
+    [SerializeField]
+    public Transform endpoint1, endpoint2;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +73,12 @@ public class TargetObject : MonoBehaviour
         targetY= randomY;
         targetZ = randomZ;
 
+        first = targetFirstRegion.GetComponent<MeshCollider>();
+        second = targetSecondRegion.GetComponent<MeshCollider>();
+        third = targetThirdRegion.GetComponent<MeshCollider>();
+        forth = targetForthRegion.GetComponent<MeshCollider>();
+        fifth = targetFifthRegion.GetComponent<MeshCollider>();
+
         //transform.position = new Vector3(targetX, targetY, targetZ);
     }
 
@@ -56,6 +86,20 @@ public class TargetObject : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(targetX, targetY, targetZ);
+
+        /**bool isBetweenPoints = Physics.Linecast(endpoint1.position, endpoint2.position, out RaycastHit hitInfo)
+            && hitInfo.collider == first;
+
+        if (isBetweenPoints)
+        {
+            // The object's mesh collider is between point A and point B
+            Debug.Log("Object is between points A and B");
+        }
+        else
+        {
+            // The object's mesh collider is not between point A and point B
+            //Debug.Log("Object is not between points A and B");
+        }**/
     }
 
     public static float GetRandomNumber(float min, float max)
@@ -264,5 +308,20 @@ public class TargetObject : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void receiveTwoPoints(Transform point1, Transform point2)
+    {
+        endpoint1 = point1;
+        endpoint2 = point2;
+    }
+
+    public void updateMeshes()
+    {
+        first = targetFirstRegion.GetComponent<MeshCollider>();
+        second = targetSecondRegion.GetComponent<MeshCollider>();
+        third = targetThirdRegion.GetComponent<MeshCollider>();
+        forth = targetForthRegion.GetComponent<MeshCollider>();
+        fifth = targetFifthRegion.GetComponent<MeshCollider>();
     }
 }

@@ -88,6 +88,7 @@ public class BowStringController : MonoBehaviour
 
     private void Start()
     {
+        targetObject = GameObject.FindObjectOfType<TargetObject>();
         keyControllersScript = GameObject.FindObjectOfType<KeyControllers>();
 
         //Get key controllers
@@ -118,8 +119,29 @@ public class BowStringController : MonoBehaviour
 
     }
 
+    private TargetObject targetObject;
+    public float threshold = 0.9f;
     private void Update()
     {
+        /**
+        Vector3 toController = rightHand.transform.position - transform.position;
+        Vector3 toTarget = targetObject.transform.position - transform.position;
+
+        // check if the vectors are pointing in opposite directions
+        if (Vector3.Dot(toController, toTarget) < 0)
+        {
+            toTarget = -toTarget; // invert the direction of the toTarget vector
+        }
+
+        // calculate the dot product of the two vectors
+        float dotProduct = Vector3.Dot(toController.normalized, toTarget.normalized);
+
+        // check if the dot product is greater than the threshold value
+        if (dotProduct < threshold)
+        {
+            Debug.Log("The bow is pointing at the target!");
+        }**/
+
         modeSelected = controller.getModeSelected();
 
         if (!crossbowed && positioned == true)

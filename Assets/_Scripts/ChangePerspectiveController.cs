@@ -269,6 +269,16 @@ public class ChangePerspectiveController : MonoBehaviour
     {
         return parameterManager.getTargetStill();
     }
+
+    public bool getInFirstPerspective()
+    {
+        return firstPerspective;
+    }
+
+    public void canShootAgain()
+    {
+        bowStringController.canShootAgain();
+    }
 }
 
 
