@@ -279,6 +279,22 @@ public class ChangePerspectiveController : MonoBehaviour
     {
         bowStringController.canShootAgain();
     }
+
+    public bool getTargetSound()
+    {
+        return parameterManager.getTargetSound();
+    }
+
+    public bool getTargetSoundUserPos()
+    {
+        return parameterManager.getTargetSoundUserPos();
+    }
+
+    public bool getTargetSoundAimPos()
+    {
+        return parameterManager.getTargetSoundCrossbowAim();
+    }
+
 }
 
 

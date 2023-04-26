@@ -30,13 +30,13 @@ public class ParameterManager : MonoBehaviour
     private bool previousTargetSoundUserPos;
     private bool previousTargetSoundCrossbowAim;
 
-    //[SerializeField]
+    [SerializeField]
     private bool targetSound;
 
-    //[SerializeField]
+    [SerializeField]
     private bool targetSoundUserPos;                  //UNIQUE
 
-    //[SerializeField]
+    [SerializeField]
     private bool targetSoundCrossbowAim;             //UNIQUE
 
     //------------------------------------------------
@@ -173,10 +173,10 @@ public class ParameterManager : MonoBehaviour
 
             if (targetSound)
             {
-                targetSoundUserPos = true;
-                previousTargetSoundUserPos = true;
-                targetSoundCrossbowAim = false;
-                previousTargetSoundCrossbowAim = false;
+                //targetSoundUserPos = true;
+                //previousTargetSoundUserPos = true;
+                //targetSoundCrossbowAim = false;
+                //previousTargetSoundCrossbowAim = false;
             }
             else
             {

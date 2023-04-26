@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(LineRenderer))]
 
@@ -20,6 +21,12 @@ public class VerticallityAidString : MonoBehaviour
     //PARAMETER MANAGEMENT 
     private ParameterManager parameterManager;
     private ChangePerspectiveController controller;
+
+    [SerializeField]
+    public GameObject ballPrefab;
+
+    [SerializeField]
+    public GameObject ballPointer;
 
     private void Awake()
     {
@@ -52,10 +59,14 @@ public class VerticallityAidString : MonoBehaviour
         targetObject = GameObject.FindObjectOfType<TargetObject>();
     }
 
+   
+
     private bool flag;
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log(other.gameObject.name);
+
+        //ballPrefab.transform.position = other.ClosestPointOnBounds(ballPointer.transform.position);
+        
         if (other.gameObject.name == "TargetFirstRegion" || other.gameObject.name == "TargetSecondRegion" || other.gameObject.name == "TargetThirdRegion" || other.gameObject.name == "TargetForthRegion" || other.gameObject.name == "TargetFifthRegion" || other.gameObject.name == "Target")
         {
             //Debug.Log("TOUCHING TARGET");
@@ -77,13 +88,11 @@ public class VerticallityAidString : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("String collided " + collision.gameObject.name);
-    }
+  
 
     private void Update() {
-        //sendPointsToTarget(endpoint_1,endpoint_2);
+     
+
         if (flag)
         {
             if (keyControllersrLeft != null)

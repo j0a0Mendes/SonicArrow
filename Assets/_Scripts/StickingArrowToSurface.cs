@@ -27,7 +27,7 @@ public class StickingArrowToSurface : MonoBehaviour
     //[SerializeField]
     private GameObject rightHand;
 
-    private KeyControllers keyControllersrRight;    //RIGHT HAND ONLY
+    private KeyControllers keyControllersRight;    //RIGHT HAND ONLY
 
     private int changePerspectiveCounter;
     private bool changePerspectiveCounterTrigger;
@@ -55,7 +55,7 @@ public class StickingArrowToSurface : MonoBehaviour
         keyControllers = GameObject.FindObjectOfType<KeyControllers>();
 
         rightHand = GameObject.FindGameObjectWithTag("RightHand");
-        keyControllersrRight = rightHand.GetComponent<KeyControllers>();
+        keyControllersRight = rightHand.GetComponent<KeyControllers>();
 
         target = GameObject.FindObjectOfType<TargetObject>();
         //keyControllerRightHand = GameObject.FindObjectOfType<KeyControllerSupport>();
@@ -413,10 +413,10 @@ public class StickingArrowToSurface : MonoBehaviour
         //keyControllers.enableButtonX();
 
 
-        if (keyControllersrRight != null)
+        if (keyControllersRight != null)
         {
             //Debug.Log("A ENABLED");
-            keyControllersrRight.enableButtonA();
+            keyControllersRight.enableButtonA();
         }
 
         //keyControllers.enableButtonA();
@@ -488,6 +488,9 @@ public class StickingArrowToSurface : MonoBehaviour
         isPlaying = false;
 
         audioList.Clear();
+
+        keyControllersRight.readyToShootTrue();
+        keyControllersRight.reloadCrossbow();
     }
 
 }

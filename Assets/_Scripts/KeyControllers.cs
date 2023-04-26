@@ -34,6 +34,9 @@ public class KeyControllers : MonoBehaviour
     [SerializeField]
     public InputActionProperty shootCrossbowButton;   //shoot the crossbow
 
+    [SerializeField]
+    public GameObject ballPointer;
+
     //MANAGE WHEN YOU CAN PRESS KEYS
     private bool buttonAEnabled;
     private bool buttonBEnabled;
@@ -75,9 +78,13 @@ public class KeyControllers : MonoBehaviour
 
     public int count = 0;
 
+    private AudioListener listener;
+
     // Start is called before the first frame update
     void Start()
     {
+        listener = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
+
         target = GameObject.FindObjectOfType<MainTarget>();
         targetObject = GameObject.FindObjectOfType<TargetObject>();
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
@@ -98,6 +105,8 @@ public class KeyControllers : MonoBehaviour
         buttonYEnabled = false;
         buttonXEnabled = false;
 
+        reloadCrossbow();
+
         //HAPTIC PURPOSES
     }   
 
@@ -107,6 +116,14 @@ public class KeyControllers : MonoBehaviour
         if (vibrate)
         {
             SendHaptics();
+        }
+
+        if (controller.getTargetSoundAimPos())
+        {
+            listener.transform.position = ballPointer.transform.position;
+        }else if (controller.getTargetSoundUserPos())
+        {
+            listener.transform.position = Camera.main.transform.position;
         }
 
         //get mode selected. 0 - Instant Sound Output. 1 - Replay Mode
@@ -132,16 +149,6 @@ public class KeyControllers : MonoBehaviour
 
         if (target != null)
         {
-
-            if(buttonLoadCrossbow == 1 && readyToShoot == false && controller.getIsInFirstPerspective() == true)
-            {
-                readyToShoot = true;
-                bowStringController.prepareCrossBow();
-                bowStringController.playPullingString();
-                //Debug.Log("CROSSBOW PREPARED");
-                SendHaptics();
-            }
-
             if (buttonShootCrossbow == 1 && readyToShoot == true && controller.getIsInFirstPerspective() == true)
             {
                 readyToShoot = false;
@@ -149,11 +156,9 @@ public class KeyControllers : MonoBehaviour
                 //Debug.Log("CROSSBOW SHOT");
             }
 
-            //Debug.Log("ButtonEnabled: " + buttonAEnabled.ToString());
-            //Debug.Log(buttonATriggered);
-
+            /**
             count = 0;
-            if (buttonATriggered == 1){
+            if (buttonBTriggered == 1){
                 //Debug.Log("A PRESSSSEEEEEEEEEEEEEEEEEEED");
                 //Debug.Log("ButtonEnabled: " + buttonXEnabled.ToString() + " " + count.ToString());
                 if (buttonAEnabled == true)
@@ -171,18 +176,20 @@ public class KeyControllers : MonoBehaviour
                     {
                         keyControllersrLeft.enableButtonX();
                         //keyControllersrLeft.disableButtonX();
-                    }**/
+                    }
                     
                 }
-            }
+            }**/
 
-            if (buttonBTriggered == 1)
+            if (buttonATriggered == 1)
             {
                 Debug.Log("B PRESSED");
-                Debug.Log(buttonAEnabled);
-                //trigger the sound from the target
-                target.turnOnTargetSound();
-                //controller.enableChange();
+                if (controller.getTargetSound())
+                {
+                    //trigger the sound from the target
+                    target.turnOnTargetSound();
+                    //controller.enableChange();
+                }
             }
             else
             {
@@ -207,26 +214,20 @@ public class KeyControllers : MonoBehaviour
                     controller.changePerspective();
                 }
             }
-            
-            //if(buttonTriggered == 2){
-            //    changeController.changePerspective();
-            //}
         }   
     }
 
-    private void FixedUpdate()
+    public void reloadCrossbow()
     {
-        /**if (startYCount)
-        {
-            /yCount++;
-            if(yCount == 100)
-            {
-                startYCount = false;
-                yCount = 0;
-                enableButtonX(); 
-        
-            }
-        }**/
+        bowStringController.prepareCrossBow();
+        bowStringController.playPullingString();
+        //Debug.Log("CROSSBOW PREPARED");
+        readyToShootTrue();
+        SendHaptics();
+    }
+    public void readyToShootTrue()
+    {
+        readyToShoot = true;
     }
 
     public void enableButtonA()
