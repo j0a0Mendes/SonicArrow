@@ -123,25 +123,6 @@ public class BowStringController : MonoBehaviour
     public float threshold = 0.9f;
     private void Update()
     {
-        /**
-        Vector3 toController = rightHand.transform.position - transform.position;
-        Vector3 toTarget = targetObject.transform.position - transform.position;
-
-        // check if the vectors are pointing in opposite directions
-        if (Vector3.Dot(toController, toTarget) < 0)
-        {
-            toTarget = -toTarget; // invert the direction of the toTarget vector
-        }
-
-        // calculate the dot product of the two vectors
-        float dotProduct = Vector3.Dot(toController.normalized, toTarget.normalized);
-
-        // check if the dot product is greater than the threshold value
-        if (dotProduct < threshold)
-        {
-            Debug.Log("The bow is pointing at the target!");
-        }**/
-
         modeSelected = controller.getModeSelected();
 
         if (!crossbowed && positioned == true)
@@ -208,6 +189,7 @@ public class BowStringController : MonoBehaviour
         midPointGrabObject.localPosition = Vector3.zero;
         midPointVisualObject.localPosition = Vector3.zero;
         bowStringRenderer.CreateString(null);
+        
 
 
         if(modeSelected == 0)
@@ -307,4 +289,21 @@ public class BowStringController : MonoBehaviour
     {
         return alreadyShot;
     }
+    
+    /**public void clearScene()
+    {
+        GameObject[] objectsToRemove = GameObject.FindGameObjectsWithTag();
+        GameObject[] objectsToRemove2 = GameObject.FindGameObjectsWithTag();
+
+        // Combine both arrays
+        GameObject[] allObjectsToRemove = new GameObject[objectsToRemove.Length + objectsToRemove2.Length];
+        objectsToRemove.CopyTo(allObjectsToRemove, 0);
+        objectsToRemove2.CopyTo(allObjectsToRemove, objectsToRemove.Length);
+
+        // Loop through all objects and destroy them
+        foreach (GameObject obj in allObjectsToRemove)
+        {
+            Destroy(obj);
+        }
+    }**/
 }

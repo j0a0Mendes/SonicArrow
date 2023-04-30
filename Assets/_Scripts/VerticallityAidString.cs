@@ -73,22 +73,22 @@ public class VerticallityAidString : MonoBehaviour
     {
 
         //ballPrefab.transform.position = other.ClosestPointOnBounds(ballPointer.transform.position);
-        
-        if (other.gameObject.name == "TargetFirstRegion" || other.gameObject.name == "TargetSecondRegion" || other.gameObject.name == "TargetThirdRegion" || other.gameObject.name == "TargetForthRegion" || other.gameObject.name == "TargetFifthRegion" || other.gameObject.name == "Target")
+        //Debug.Log("ENTER: " + other.gameObject.name);
+        if (other.gameObject.name == "TargetSurface" )
         {
             flag = true;
             beepFlag = true;
         }
-        else
+        /**else
         {
             beepFlag = false;
-        }
+        }**/
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "TargetFirstRegion" || other.gameObject.name == "TargetSecondRegion" || other.gameObject.name == "TargetThirdRegion" || other.gameObject.name == "TargetForthRegion" || other.gameObject.name == "TargetFifthRegion" || other.gameObject.name == "Target")
-        {   
+         Debug.Log("ENTER: " + other.gameObject.name);
+        if (other.gameObject.name == "TargetSurface") { 
             flag = false;
             beepFlag = false;
         }
@@ -107,7 +107,7 @@ public class VerticallityAidString : MonoBehaviour
             {
                 if (keyControllersrLeft != null)
                 {
-                    Debug.Log("YAAAA");
+                    //Debug.Log("YAAAA");
                     //keyControllersrLeft.activateVibrate();
                     keyControllersrLeft.SendHaptics(true, 0.4f, 0.1f);
                     //LeftHand.GetComponent<KeyControllers>().SendHaptics(keyControllersrLeft);
@@ -122,7 +122,7 @@ public class VerticallityAidString : MonoBehaviour
 
         if (parameterManager.getSpotterBeepAid())
         {
-            Debug.Log(beepFlag);
+            //Debug.Log(beepFlag);
             if (beepFlag)
             {
                 wallBeep.GetComponent<AimingWall>().DeactivateLoop();

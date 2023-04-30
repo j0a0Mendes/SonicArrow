@@ -155,7 +155,7 @@ public class ParameterManager : MonoBehaviour
                 thirdCondition = false;
                 previousThirdCondition = false;
             }
-            else
+            /**else
             {
                 firstCondition = true;
                 
@@ -163,7 +163,7 @@ public class ParameterManager : MonoBehaviour
                 previousSecondCondition = false;
                 thirdCondition = false;
                 previousThirdCondition = false;
-            }
+            }**/
             
             
         }

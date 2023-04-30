@@ -75,7 +75,7 @@ public class StickingArrowToSurface : MonoBehaviour
     {
 
         Debug.Log("ACERTOU");
-        if (controller.getParameterPerspectiveReplay())
+        if (controller.getModeSelected() == 1)
         {
             controller.canShootAgain();
         }

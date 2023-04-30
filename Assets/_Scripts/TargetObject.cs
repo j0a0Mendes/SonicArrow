@@ -62,7 +62,7 @@ public class TargetObject : MonoBehaviour
     private void Awake()
     {
         //targetX = 10.45f;
-        targetX = 13f;
+        targetX = 12.27f;
         //targetY = 2.0f;
         //targetZ = -5.46f;
 
@@ -154,7 +154,7 @@ public class TargetObject : MonoBehaviour
     {
         if (wallSystemPos == 1)
         {
-            targetX = 10.45f;
+            targetX = 12.27f;
 
             float randomY = GetRandomNumber(0.5f, 8.0f);
             float randomZ = GetRandomNumber(-16.7f, 5.6f);
@@ -166,8 +166,9 @@ public class TargetObject : MonoBehaviour
         }
         else if (wallSystemPos == 2)
         {
-            targetZ = 45.6f;
-            
+            //targetZ = 45.6f;
+            targetZ = 45f;
+
             float randomY = GetRandomNumber(0.5f, 8.0f);
             float randomX = GetRandomNumber(-52.5f, -31.7f);
             
@@ -178,7 +179,8 @@ public class TargetObject : MonoBehaviour
         }
         else if (wallSystemPos == 3)
         {
-            targetX = -95.2f;
+            //targetX = -95.2f;
+            targetX = -94.2f;
 
             float randomY = GetRandomNumber(0.5f, 8.0f);
             float randomZ = GetRandomNumber(-16.7f, 5.6f);
@@ -191,7 +193,8 @@ public class TargetObject : MonoBehaviour
         }
         else if (wallSystemPos == 4)
         {
-            targetZ = -56.6f;
+            //targetZ = -56.6f;
+            targetZ = -55.5f;
 
             float randomY = GetRandomNumber(0.5f, 8.0f);
             float randomX = GetRandomNumber(-52.5f, -31.7f);

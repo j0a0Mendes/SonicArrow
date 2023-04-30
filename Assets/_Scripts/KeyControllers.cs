@@ -184,7 +184,7 @@ public class KeyControllers : MonoBehaviour
             if (buttonATriggered == 1)
             {
                 Debug.Log("B PRESSED");
-                if (controller.getTargetSound())
+                if (controller.getTargetSound() == true && controller.getInFirstPerspective() == true)
                 {
                     //trigger the sound from the target
                     target.turnOnTargetSound();

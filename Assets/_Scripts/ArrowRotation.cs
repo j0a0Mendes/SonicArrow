@@ -12,4 +12,9 @@ public class ArrowRotation : MonoBehaviour
         transform.forward =
             Vector3.Slerp(transform.forward, rb.velocity.normalized, Time.fixedDeltaTime);
     }
+
+    private void Start()
+    {
+        Destroy(gameObject, 6f);
+    }
 }

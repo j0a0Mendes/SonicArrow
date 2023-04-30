@@ -45,9 +45,9 @@ TagManager:
   - WallFifthLayer
   - Floor
   - Ceiling
+  - 
+  - TargetSurface
   - VerticallityAid
-  - 
-  - 
   - 
   - 
   - 
