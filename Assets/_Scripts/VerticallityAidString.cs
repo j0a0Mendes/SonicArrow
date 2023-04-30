@@ -28,6 +28,13 @@ public class VerticallityAidString : MonoBehaviour
     [SerializeField]
     public GameObject ballPointer;
 
+    public GameObject wallBeep;
+    public GameObject targetBeep;
+
+    //Flags
+    private bool flag;
+    private bool beepFlag;
+
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
@@ -61,7 +68,7 @@ public class VerticallityAidString : MonoBehaviour
 
    
 
-    private bool flag;
+    
     private void OnTriggerEnter(Collider other)
     {
 
@@ -69,43 +76,66 @@ public class VerticallityAidString : MonoBehaviour
         
         if (other.gameObject.name == "TargetFirstRegion" || other.gameObject.name == "TargetSecondRegion" || other.gameObject.name == "TargetThirdRegion" || other.gameObject.name == "TargetForthRegion" || other.gameObject.name == "TargetFifthRegion" || other.gameObject.name == "Target")
         {
-            //Debug.Log("TOUCHING TARGET");
-            if (parameterManager.getHapticOnTargetHover())
-            {
-                flag = true;
-            }
+            flag = true;
+            beepFlag = true;
+        }
+        else
+        {
+            beepFlag = false;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.name == "TargetFirstRegion" || other.gameObject.name == "TargetSecondRegion" || other.gameObject.name == "TargetThirdRegion" || other.gameObject.name == "TargetForthRegion" || other.gameObject.name == "TargetFifthRegion" || other.gameObject.name == "Target")
-        {
-            if (parameterManager.getHapticOnTargetHover())
-            {
-                flag = false;
-            }
+        {   
+            flag = false;
+            beepFlag = false;
         }
     }
 
   
 
     private void Update() {
-     
 
-        if (flag)
+        
+
+
+        if (parameterManager.getHapticOnTargetHover())
         {
-            if (keyControllersrLeft != null)
+            if (flag)
             {
-                Debug.Log("YAAAA");
-                //keyControllersrLeft.activateVibrate();
-                keyControllersrLeft.SendHaptics(true, 0.4f, 0.1f);
-                //LeftHand.GetComponent<KeyControllers>().SendHaptics(keyControllersrLeft);
+                if (keyControllersrLeft != null)
+                {
+                    Debug.Log("YAAAA");
+                    //keyControllersrLeft.activateVibrate();
+                    keyControllersrLeft.SendHaptics(true, 0.4f, 0.1f);
+                    //LeftHand.GetComponent<KeyControllers>().SendHaptics(keyControllersrLeft);
+                }
+                else
+                {
+                    keyControllersrLeft.SendHaptics(true, 1, 0f);
+                    keyControllersrLeft.deactivateVibrate();
+                }
+            }
+        }
+
+        if (parameterManager.getSpotterBeepAid())
+        {
+            Debug.Log(beepFlag);
+            if (beepFlag)
+            {
+                wallBeep.GetComponent<AimingWall>().DeactivateLoop();
+                targetBeep.GetComponent<AimingTarget>().ActivateLoop();
+                
+                //wallBeep.GetComponent<AimingWall>().ActivateLoop();
             }
             else
             {
-                keyControllersrLeft.SendHaptics(true, 1, 0f);
-                keyControllersrLeft.deactivateVibrate();
+                targetBeep.GetComponent<AimingTarget>().DeactivateLoop();
+                wallBeep.GetComponent<AimingWall>().ActivateLoop();
+                
+                //targetBeep.GetComponent<AimingTarget>().ActivateLoop();
             }
         }
 

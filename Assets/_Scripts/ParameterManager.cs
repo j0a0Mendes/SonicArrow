@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ParameterManager : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class ParameterManager : MonoBehaviour
     [SerializeField]
     public bool changeOfPerspectiveOnReplay;        //UNIQUE
 
+    public string separador1;
+
     //------------------------------------------------
     //Hearing the target sound
     private bool previousTargetSound;
@@ -38,6 +41,8 @@ public class ParameterManager : MonoBehaviour
 
     [SerializeField]
     private bool targetSoundCrossbowAim;             //UNIQUE
+
+    public string separador2;
 
     //------------------------------------------------
     //Spotter Aid
@@ -58,6 +63,11 @@ public class ParameterManager : MonoBehaviour
     //[SerializeField]
     private bool spotterDirectionAid;
 
+    [SerializeField]
+    public bool spotterBeepAid;
+
+    public string separador3;
+
     //------------------------------------------------
     //Other sound aids
 
@@ -69,6 +79,8 @@ public class ParameterManager : MonoBehaviour
 
     [SerializeField]
     public bool hapticOnTargetHover;
+
+    public string separador4;
 
     //------------------------------------------------
     //Target Movement
@@ -85,7 +97,25 @@ public class ParameterManager : MonoBehaviour
     //[SerializeField]
     private bool targetMoving;
 
+    [SerializeField]
+    public string separador5;
 
+    [SerializeField]
+    public bool activateConditions;
+
+    [SerializeField]
+    public bool firstCondition;
+
+    [SerializeField]
+    public bool secondCondition;
+
+    [SerializeField]
+    public bool thirdCondition;
+
+    private bool previousActivateConditions;
+    private bool previousFirstCondition;
+    private bool previousSecondCondition;
+    private bool previousThirdCondition;
 
     void Start()
     {
@@ -98,12 +128,155 @@ public class ParameterManager : MonoBehaviour
         previousTargetSound = true;
         targetSoundUserPos = true;
         previousTargetSoundUserPos = true;**/
+
+        
     }
+
+    //changeOfPerspective = false;
+    //targetSound = false;
+    //spotterTalking = false;
+    //spotterBeepAid = false;
+    //hapticOnTargetHover = false;
+    //targetStill = true;
+
 
     private void OnValidate()
     {
+        if (activateConditions != previousActivateConditions)
+        {
+            previousActivateConditions = activateConditions;
+
+            if (!activateConditions)
+            {
+                firstCondition = false;
+                previousFirstCondition = false;
+                secondCondition = false;
+                previousSecondCondition = false;
+                thirdCondition = false;
+                previousThirdCondition = false;
+            }
+            else
+            {
+                firstCondition = true;
+                
+                secondCondition = false;
+                previousSecondCondition = false;
+                thirdCondition = false;
+                previousThirdCondition = false;
+            }
+            
+            
+        }
+
+        if (activateConditions)
+        {
+            if (firstCondition != previousFirstCondition)
+            {
+                previousFirstCondition = firstCondition;
+
+                if (firstCondition)
+                {
+                    clearParameters();
+                    secondCondition = false;
+                    previousSecondCondition = false;
+                    thirdCondition = false;
+                    previousThirdCondition = false;
+
+                    //before shot
+                    targetSound = true;
+                    targetSoundUserPos = true;
+
+                    //after shot
+                    changeOfPerspective = true;
+                    changeOfPerspectiveInstant = true;
+                    spotterTalking = true;
+                    spotterPointsAid = true;
+                    spotterQuadrantAid = true;
+                }
+                else
+                {
+                    secondCondition = true;
+                    
+                    thirdCondition = false;
+                    previousThirdCondition = false;
+                }
+            }
+            
+            if (secondCondition != previousSecondCondition)
+            {
+                previousSecondCondition = secondCondition;
+
+                if (secondCondition)
+                {
+                    clearParameters();
+                    firstCondition = false;
+                    previousFirstCondition = false;
+                    thirdCondition = false;
+                    previousThirdCondition = false;
+
+
+                    //before shot
+                    targetSound = true;
+                    targetSoundCrossbowAim = true;
+
+                    //after shot
+                    changeOfPerspective = true;
+                    changeOfPerspectiveInstant = true;
+                    spotterTalking = true;
+                    spotterPointsAid = true;
+                    spotterQuadrantAid = true;
+                }else
+                {
+                    firstCondition = false;
+                    previousFirstCondition = false;
+                    thirdCondition = true;
+                    
+                }
+
+            }
+            
+            if (thirdCondition != previousThirdCondition)
+            {
+                previousThirdCondition = thirdCondition;
+
+                if (thirdCondition)
+                {
+                    clearParameters();
+                    firstCondition = false;
+                    previousFirstCondition = false;
+                    secondCondition = false;
+                    previousSecondCondition = false;
+
+                    //before shot
+                    spotterBeepAid = true;
+
+                    //after shot
+                    spotterTalking = true;
+                    spotterPointsAid = true;
+                    spotterQuadrantAid = true;
+                }
+                else
+                {
+                    firstCondition = true;
+                    
+                    secondCondition = false;    
+                    previousSecondCondition = false;
+                }
+            }
+        }
+        else
+        {
+            firstCondition = false;
+            previousFirstCondition = false;
+            secondCondition = false;
+            previousSecondCondition = false;
+            thirdCondition = false;
+            previousThirdCondition = false;
+        }
+       
+
         //Change of perspective constraints 
-        if(changeOfPerspective != previousChangeOfPerspective)
+        if (changeOfPerspective != previousChangeOfPerspective)
         {
             previousChangeOfPerspective = changeOfPerspective;
 
@@ -322,6 +495,17 @@ public class ParameterManager : MonoBehaviour
 
     }
  
+
+    public void clearParameters()
+    {
+        changeOfPerspective = false;
+        targetSound = false;
+        spotterTalking = false;
+        spotterBeepAid = false;
+        //hapticOnTargetHover = false;
+        //targetStill = true;
+    }    
+
     //Getters
     //Perspective 
     public bool getChangeOfPerspective()
@@ -371,6 +555,11 @@ public class ParameterManager : MonoBehaviour
     public bool getSpotterDirectionAid()
     {
         return spotterDirectionAid;
+    }
+
+    public bool getSpotterBeepAid()
+    {
+        return spotterBeepAid;
     }
 
     //--------------------------------------
@@ -455,6 +644,8 @@ public class ParameterManager : MonoBehaviour
     {
         spotterDirectionAid = val;
     }
+
+
     //--------------------------------------
     //Other sound aids
     public void setWhiteNoiseVerticalAid(bool val)

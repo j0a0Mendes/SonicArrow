@@ -61,11 +61,12 @@ public class TargetObject : MonoBehaviour
 
     private void Awake()
     {
-        targetX = 10.45f;
+        //targetX = 10.45f;
+        targetX = 13f;
         //targetY = 2.0f;
         //targetZ = -5.46f;
 
-        
+
 
         float randomY = GetRandomNumber(0.5f, 8.0f);
         float randomZ = GetRandomNumber(-16.7f, 5.6f);

@@ -294,7 +294,6 @@ public class ChangePerspectiveController : MonoBehaviour
     {
         return parameterManager.getTargetSoundCrossbowAim();
     }
-
 }
 
 
