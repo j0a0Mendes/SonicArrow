@@ -71,23 +71,15 @@ public class VerticallityAidString : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-
-        //ballPrefab.transform.position = other.ClosestPointOnBounds(ballPointer.transform.position);
-        //Debug.Log("ENTER: " + other.gameObject.name);
         if (other.gameObject.name == "TargetSurface" )
         {
             flag = true;
             beepFlag = true;
         }
-        /**else
-        {
-            beepFlag = false;
-        }**/
     }
 
     private void OnTriggerExit(Collider other)
     {
-         Debug.Log("ENTER: " + other.gameObject.name);
         if (other.gameObject.name == "TargetSurface") { 
             flag = false;
             beepFlag = false;
@@ -107,10 +99,7 @@ public class VerticallityAidString : MonoBehaviour
             {
                 if (keyControllersrLeft != null)
                 {
-                    //Debug.Log("YAAAA");
-                    //keyControllersrLeft.activateVibrate();
                     keyControllersrLeft.SendHaptics(true, 0.4f, 0.1f);
-                    //LeftHand.GetComponent<KeyControllers>().SendHaptics(keyControllersrLeft);
                 }
                 else
                 {
@@ -122,20 +111,15 @@ public class VerticallityAidString : MonoBehaviour
 
         if (parameterManager.getSpotterBeepAid())
         {
-            //Debug.Log(beepFlag);
             if (beepFlag)
             {
                 wallBeep.GetComponent<AimingWall>().DeactivateLoop();
                 targetBeep.GetComponent<AimingTarget>().ActivateLoop();
-                
-                //wallBeep.GetComponent<AimingWall>().ActivateLoop();
             }
             else
             {
                 targetBeep.GetComponent<AimingTarget>().DeactivateLoop();
                 wallBeep.GetComponent<AimingWall>().ActivateLoop();
-                
-                //targetBeep.GetComponent<AimingTarget>().ActivateLoop();
             }
         }
 

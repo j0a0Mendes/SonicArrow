@@ -66,6 +66,7 @@
     <Compile Include="Assets\Samples\OpenXR Plugin\1.4.2\Intercept Feature\InterceptMessageHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\_Scripts\BowStringController.cs" />
+    <Compile Include="Assets\_Scripts\WhiteNoiseAssist.cs" />
     <Compile Include="Assets\_Scripts\AimingWall.cs" />
     <Compile Include="Assets\_Scripts\TargetFirstRegion.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\_Scripts\WhiteNoiseAss.cs" />
     <Compile Include="Assets\_Scripts\KeyControllerSupport.cs" />
     <Compile Include="Assets\_Scripts\ActionReplayClone.cs" />
     <Compile Include="Assets\_Scripts\MovingTarget.cs" />
@@ -87,6 +89,7 @@
     <Compile Include="Assets\Samples\OpenXR Plugin\1.4.2\Meshing Subsystem Feature\FallingSphere.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\_Content\VR_Hands_FBX\Scripts\HandAnimation.cs" />
+    <Compile Include="Assets\_Scripts\WhiteNoiseSpotter.cs" />
     <Compile Include="Assets\_Scripts\ThreePoints.cs" />
     <Compile Include="Assets\_Scripts\ArrowController.cs" />
     <Compile Include="Assets\_Scripts\FivePoints.cs" />

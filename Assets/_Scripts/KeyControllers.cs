@@ -80,6 +80,11 @@ public class KeyControllers : MonoBehaviour
 
     private AudioListener listener;
 
+    //WHITE NOISE
+    public GameObject whiteNoiseSpotter;
+
+    public bool playWhiteNoise;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -196,15 +201,12 @@ public class KeyControllers : MonoBehaviour
                 target.turnOffTargetSound();
             }
 
-            if(buttonXTriggered == 1 && buttonXEnabled == true)
+            //if(buttonXTriggered == 1 && buttonXEnabled == true)
+            if(buttonXTriggered == 1)
             {
-                //WHY?
-                //Debug.Log("BUTAO: " + buttonXEnabled.ToString());
-                //disableButtonX();
-                //Debug.Log("X PRESSED");
-                //startYCount = true;
-                //actionReplay.triggerReplayMode();
-                if (controller.getParameterPerspectiveReplay())
+                Debug.Log("X PRESSED");
+
+                /**if (controller.getParameterPerspectiveReplay())
                 {
                     buttonXEnabled = false;
                     actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
@@ -212,10 +214,26 @@ public class KeyControllers : MonoBehaviour
 
                     controller.enableChange();
                     controller.changePerspective();
+                }**/
+                if (controller.getParameterWhiteNoise())
+                {
+                    Debug.Log("PLAYING WHITE NOISE");
+                    playWhiteNoise = true;
                 }
+
+            }
+            else
+            {
+                playWhiteNoise = false;
             }
         }   
     }
+
+    public bool getPlayWN()
+    {
+        return playWhiteNoise;
+    }
+
 
     public void reloadCrossbow()
     {

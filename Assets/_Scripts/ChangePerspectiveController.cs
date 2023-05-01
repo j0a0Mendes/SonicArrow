@@ -307,6 +307,11 @@ public class ChangePerspectiveController : MonoBehaviour
     {
         return parameterManager.getTargetSoundCrossbowAim();
     }
+
+    public bool getParameterWhiteNoise()
+    {
+        return parameterManager.getWhiteNoiseVerticalAid();
+    }
 }
 
 

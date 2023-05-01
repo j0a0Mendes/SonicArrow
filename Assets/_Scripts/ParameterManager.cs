@@ -71,8 +71,8 @@ public class ParameterManager : MonoBehaviour
     //------------------------------------------------
     //Other sound aids
 
-    //[SerializeField]
-    private bool whiteNoiseVerticalAid;
+    [SerializeField]
+    public bool whiteNoiseVerticalAid;
 
     //------------------------------------------------
     //Other haptic aids
