@@ -144,7 +144,7 @@ public class BowStringController : MonoBehaviour
             }
             else if (midPointLocalSpace.z == 0 && stringPulled == true && canShoot == true)     //RELEASEEEED
             {
-                //Debug.Log("RELEASEEEED");
+                //Debug.Log(audioSource.isPlaying);
 
                 stringPulled = false;
                 ResetBowString();
@@ -177,6 +177,11 @@ public class BowStringController : MonoBehaviour
         midPointGrabObject.localPosition = Vector3.zero;
         midPointVisualObject.localPosition = Vector3.zero;
         bowStringRenderer.CreateString(null);
+    }
+
+    public bool stringPullingSound()
+    {
+        return audioSource.isPlaying;
     }
 
     private void ResetBowString()

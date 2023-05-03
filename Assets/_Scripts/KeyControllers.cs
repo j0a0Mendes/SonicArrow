@@ -85,6 +85,8 @@ public class KeyControllers : MonoBehaviour
 
     public bool playWhiteNoise;
 
+    public bool playTargetSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -152,12 +154,17 @@ public class KeyControllers : MonoBehaviour
         //button shoot from the right controller
         float buttonShootCrossbow = shootCrossbowButton.action.ReadValue<float>();
 
+        //controller.getInFirstPerspective();
+        
         if (target != null)
         {
             if (buttonShootCrossbow == 1 && readyToShoot == true && controller.getIsInFirstPerspective() == true)
             {
-                readyToShoot = false;
-                bowStringController.shootCrossBow();
+                if (!bowStringController.stringPullingSound())
+                {
+                    readyToShoot = false;
+                    bowStringController.shootCrossBow();
+                }
                 //Debug.Log("CROSSBOW SHOT");
             }
 
@@ -188,17 +195,25 @@ public class KeyControllers : MonoBehaviour
 
             if (buttonATriggered == 1)
             {
-                Debug.Log("B PRESSED");
-                if (controller.getTargetSound() == true && controller.getInFirstPerspective() == true)
+                if (controller.getTargetSound()) 
                 {
-                    //trigger the sound from the target
-                    target.turnOnTargetSound();
-                    //controller.enableChange();
+                    if (controller.getInFirstPerspective())
+                    {
+                        playTargetSound = true;
+                    }
+                    else
+                    {
+                        playTargetSound = false;
+                    }
+                    //Debug.Log("B PRESSED");
+                    //Debug.Log(controller.getInFirstPerspective());
+                    
                 }
             }
             else
             {
-                target.turnOffTargetSound();
+                //target.turnOffTargetSound();
+                playTargetSound = false;
             }
 
             //if(buttonXTriggered == 1 && buttonXEnabled == true)
@@ -217,7 +232,6 @@ public class KeyControllers : MonoBehaviour
                 }**/
                 if (controller.getParameterWhiteNoise())
                 {
-                    Debug.Log("PLAYING WHITE NOISE");
                     playWhiteNoise = true;
                 }
 
@@ -229,6 +243,10 @@ public class KeyControllers : MonoBehaviour
         }   
     }
 
+    public bool getTargetPlaying()
+    {
+        return playTargetSound;
+    }
     public bool getPlayWN()
     {
         return playWhiteNoise;

@@ -8,23 +8,37 @@ public class MainTarget : MonoBehaviour
 {
     private bool sounding = false;
 
+    private GameObject RightHand;
+    private KeyControllers keyControllersrRight;
+
     [SerializeField]
     private AudioSource targetLocation;
 
+    private void Start()
+    {
+        targetLocation = GetComponent<AudioSource>();
+        RightHand = GameObject.FindGameObjectWithTag("RightHand");
+        keyControllersrRight = RightHand.GetComponent<KeyControllers>();
+    }
+
     void Update()
     {
-        if (sounding & !targetLocation.isPlaying)
+        if (keyControllersrRight.getTargetPlaying() == true & !targetLocation.isPlaying)
         {
-            targetLocation.Play();       
+            targetLocation.Play();
+        }
+        else if(!keyControllersrRight.getTargetPlaying())
+        {
+            targetLocation.Stop();
         }
     }
 
-    public void turnOnTargetSound()
+    /**public void turnOnTargetSound()
     {
         sounding= true;
     }
     public void turnOffTargetSound()
     {
         sounding = false;
-    }
+    }*/
 }

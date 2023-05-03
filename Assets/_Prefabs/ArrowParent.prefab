@@ -239,6 +239,7 @@ MonoBehaviour:
   stickingArrow: {fileID: 6932036676620923788, guid: 693c3cab400f5e546828cab1c6ef75e9,
     type: 3}
   windNavigatingSound: {fileID: 1042803885603108265}
+  audioList: []
 --- !u!82 &1042803885603108265
 AudioSource:
   m_ObjectHideFlags: 0
@@ -342,7 +343,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6726587074533708524}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e9ca59c09e394e4eaa8a899252a9793, type: 3}
   m_Name: 
