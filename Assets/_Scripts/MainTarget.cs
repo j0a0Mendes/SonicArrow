@@ -6,8 +6,6 @@ using static UnityEngine.GraphicsBuffer;
 
 public class MainTarget : MonoBehaviour
 {
-    private bool sounding = false;
-
     private GameObject RightHand;
     private KeyControllers keyControllersrRight;
 
@@ -32,13 +30,4 @@ public class MainTarget : MonoBehaviour
             targetLocation.Stop();
         }
     }
-
-    /**public void turnOnTargetSound()
-    {
-        sounding= true;
-    }
-    public void turnOffTargetSound()
-    {
-        sounding = false;
-    }*/
 }

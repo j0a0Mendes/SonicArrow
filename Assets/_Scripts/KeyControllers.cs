@@ -168,31 +168,6 @@ public class KeyControllers : MonoBehaviour
                 //Debug.Log("CROSSBOW SHOT");
             }
 
-            /**
-            count = 0;
-            if (buttonBTriggered == 1){
-                //Debug.Log("A PRESSSSEEEEEEEEEEEEEEEEEEED");
-                //Debug.Log("ButtonEnabled: " + buttonXEnabled.ToString() + " " + count.ToString());
-                if (buttonAEnabled == true)
-                {
-                    count += 1;
-                    buttonAEnabled = false;
-                    //controller.enableChange();
-                    //controller.changePerspective();
-                    /**if (count % 2 == 0)
-                    {
-                        //keyControllersrLeft.enableButtonX();
-                        keyControllersrLeft.disableButtonX();
-                    }
-                    else
-                    {
-                        keyControllersrLeft.enableButtonX();
-                        //keyControllersrLeft.disableButtonX();
-                    }
-                    
-                }
-            }**/
-
             if (buttonATriggered == 1)
             {
                 if (controller.getTargetSound()) 
@@ -212,7 +187,6 @@ public class KeyControllers : MonoBehaviour
             }
             else
             {
-                //target.turnOffTargetSound();
                 playTargetSound = false;
             }
 
@@ -220,16 +194,6 @@ public class KeyControllers : MonoBehaviour
             if(buttonXTriggered == 1)
             {
                 Debug.Log("X PRESSED");
-
-                /**if (controller.getParameterPerspectiveReplay())
-                {
-                    buttonXEnabled = false;
-                    actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
-                    actionReplayArrow.triggerReplayMode();
-
-                    controller.enableChange();
-                    controller.changePerspective();
-                }**/
                 if (controller.getParameterWhiteNoise())
                 {
                     playWhiteNoise = true;
@@ -268,7 +232,6 @@ public class KeyControllers : MonoBehaviour
 
     public void enableButtonA()
     {
-        //Debug.Log("MEGA PENISSSSS");
         buttonAEnabled = true;
         //controller.enableChange();
     }
@@ -291,7 +254,6 @@ public class KeyControllers : MonoBehaviour
 
     public void enableButtonX()
     {
-        //Debug.Log("ESQUECEEE");
         buttonXEnabled = true;
     }
 

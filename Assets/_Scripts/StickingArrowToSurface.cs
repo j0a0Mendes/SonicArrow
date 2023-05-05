@@ -85,7 +85,7 @@ public class StickingArrowToSurface : MonoBehaviour
         //Debug.Log(collision.gameObject.tag);
         //Debug.Log(collision.gameObject.tag == "Untagged");
         string collidedWith = collision.gameObject.tag;
-        if (collidedWith == "WallFirstLayer" || collidedWith == "WallSecondLayer" || collidedWith == "WallThirdLayer" || collidedWith == "WallForthLayer" || collidedWith == "WallFifthLayer")
+        if (collidedWith == "FrontWall" || collidedWith == "BackWall" || collidedWith == "LeftWall" || collidedWith == "RightWall")
         {
             if (controller.getParameterSpotterTalking())
             {

@@ -79,7 +79,7 @@ public class BowStringController : MonoBehaviour
 
     private int modeSelected;
 
-    
+    private TargetObject targetObject;
 
     private void Awake()
     {
@@ -110,17 +110,15 @@ public class BowStringController : MonoBehaviour
             Vector3 currentPosition = rightHandTransform.position;
             Vector3 crossbowAdjustment = new Vector3(-0.046f, 0.026f, 0.436f);
             Vector3 minorAdjust = new Vector3(0.7f, 0.1f, -0.5f);
-            
+
             transform.position = currentPosition + crossbowAdjustment + minorAdjust;
             transform.rotation = Quaternion.Euler(357.147f, 3f, 6f);
-                    
+
             positioned = true;
         }
 
     }
 
-    private TargetObject targetObject;
-    public float threshold = 0.9f;
     private void Update()
     {
         modeSelected = controller.getModeSelected();
@@ -130,7 +128,7 @@ public class BowStringController : MonoBehaviour
             crossbowed = true;
         }
 
-        Vector3 midPointLocalSpace = new Vector3(0, 0, zAxisPull);      
+        Vector3 midPointLocalSpace = new Vector3(0, 0, zAxisPull);
 
         if (canShoot)
         {
@@ -151,7 +149,7 @@ public class BowStringController : MonoBehaviour
 
                 zAxisPull = 1;
 
-                canShoot = false;     
+                canShoot = false;
             }
 
             previousStrength = strength;
@@ -163,7 +161,7 @@ public class BowStringController : MonoBehaviour
             HandlePullingString(midPointLocalZAbs, midPointLocalSpace);     //PULLING
 
             bowStringRenderer.CreateString(midPointVisualObject.position);
-   
+
         }
     }
 
@@ -194,15 +192,15 @@ public class BowStringController : MonoBehaviour
         midPointGrabObject.localPosition = Vector3.zero;
         midPointVisualObject.localPosition = Vector3.zero;
         bowStringRenderer.CreateString(null);
-        
 
 
-        if(modeSelected == 0)
+
+        if (modeSelected == 0)
         {
             controller.enableChange();
             controller.changePerspective();
         }
-        
+
 
         alreadyShot = true;
     }
@@ -213,7 +211,7 @@ public class BowStringController : MonoBehaviour
         OnBowPulled?.Invoke();
     }
 
-    
+
 
     private void HandleStringPushedBackToStart(Vector3 midPointLocalSpace)
     {
@@ -250,7 +248,7 @@ public class BowStringController : MonoBehaviour
     }
 
     //REPLAY MECHANISM
-    
+
     private List<ActionReplayRecord> actionReplayRecords = new List<ActionReplayRecord>();
 
     private void FixedUpdate()
@@ -294,21 +292,4 @@ public class BowStringController : MonoBehaviour
     {
         return alreadyShot;
     }
-    
-    /**public void clearScene()
-    {
-        GameObject[] objectsToRemove = GameObject.FindGameObjectsWithTag();
-        GameObject[] objectsToRemove2 = GameObject.FindGameObjectsWithTag();
-
-        // Combine both arrays
-        GameObject[] allObjectsToRemove = new GameObject[objectsToRemove.Length + objectsToRemove2.Length];
-        objectsToRemove.CopyTo(allObjectsToRemove, 0);
-        objectsToRemove2.CopyTo(allObjectsToRemove, objectsToRemove.Length);
-
-        // Loop through all objects and destroy them
-        foreach (GameObject obj in allObjectsToRemove)
-        {
-            Destroy(obj);
-        }
-    }**/
 }

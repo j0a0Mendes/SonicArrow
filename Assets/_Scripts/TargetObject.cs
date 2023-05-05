@@ -53,10 +53,19 @@ public class TargetObject : MonoBehaviour
     [SerializeField]
     public Transform endpoint1, endpoint2;
 
+    //Target Movement
+
+    public float speed = 5f; // speed of movement
+
+    //Parameter Movement
+    private ParameterManager parameterManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
         wallSystemPos = 1;
+        parameterManager = GameObject.FindObjectOfType<ParameterManager>();
     }
 
     private void Awake()
@@ -70,8 +79,8 @@ public class TargetObject : MonoBehaviour
 
         float randomY = GetRandomNumber(0.5f, 8.0f);
         float randomZ = GetRandomNumber(-16.7f, 5.6f);
-        
-        targetY= randomY;
+
+        targetY = randomY;
         targetZ = randomZ;
 
         first = targetFirstRegion.GetComponent<MeshCollider>();
@@ -80,27 +89,32 @@ public class TargetObject : MonoBehaviour
         forth = targetForthRegion.GetComponent<MeshCollider>();
         fifth = targetFifthRegion.GetComponent<MeshCollider>();
 
-        //transform.position = new Vector3(targetX, targetY, targetZ);
+        transform.position = new Vector3(targetX, targetY, targetZ);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(targetX, targetY, targetZ);
+        //transform.position = new Vector3(targetX, targetY, targetZ);
 
-        /**bool isBetweenPoints = Physics.Linecast(endpoint1.position, endpoint2.position, out RaycastHit hitInfo)
-            && hitInfo.collider == first;
-
-        if (isBetweenPoints)
+        //Target Movement
+        if (parameterManager.getTargetMoving())
         {
-            // The object's mesh collider is between point A and point B
-            Debug.Log("Object is between points A and B");
+            transform.Translate(Vector3.forward * speed * Time.deltaTime); // move object forward in the z-axis
+
+        }
+    }
+
+    public void InvertSpeed()
+    {
+        if (speed == 5)
+        {
+            speed = -5;
         }
         else
         {
-            // The object's mesh collider is not between point A and point B
-            //Debug.Log("Object is not between points A and B");
-        }**/
+            speed = 5;
+        }
     }
 
     public static float GetRandomNumber(float min, float max)
@@ -110,7 +124,7 @@ public class TargetObject : MonoBehaviour
 
     public (float, float, float) getTargetPos()
     {
-        return (targetX, targetY, targetZ); 
+        return (targetX, targetY, targetZ);
     }
 
     public void changeTargetPos()
@@ -132,16 +146,19 @@ public class TargetObject : MonoBehaviour
 
     public GameObject getAngle(int wallAngle)
     {
-        if(wallAngle == 1)
+        if (wallAngle == 1)
         {
             return firstAngle;
-        }else if(wallAngle == 2)
+        }
+        else if (wallAngle == 2)
         {
             return secondAngle;
-        }else if(wallAngle == 3)
+        }
+        else if (wallAngle == 3)
         {
             return thirdAngle;
-        }else if(wallAngle == 4)
+        }
+        else if (wallAngle == 4)
         {
             return forthAngle;
         }
@@ -163,24 +180,29 @@ public class TargetObject : MonoBehaviour
             targetZ = randomZ;
 
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+
+            transform.position = new Vector3(targetX, targetY, targetZ);
         }
         else if (wallSystemPos == 2)
         {
             //targetZ = 45.6f;
-            targetZ = 45f;
+            targetZ = 45.5f;
 
             float randomY = GetRandomNumber(0.5f, 8.0f);
             float randomX = GetRandomNumber(-52.5f, -31.7f);
-            
+
             targetY = randomY;
             targetX = randomX;
 
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+
+            transform.position = new Vector3(targetX, targetY, targetZ);
         }
         else if (wallSystemPos == 3)
         {
             //targetX = -95.2f;
-            targetX = -94.2f;
+            //targetX = -94.2f;
+            targetX = -97.2f;
 
             float randomY = GetRandomNumber(0.5f, 8.0f);
             float randomZ = GetRandomNumber(-16.7f, 5.6f);
@@ -190,11 +212,13 @@ public class TargetObject : MonoBehaviour
 
 
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+
+            transform.position = new Vector3(targetX, targetY, targetZ);
         }
         else if (wallSystemPos == 4)
         {
             //targetZ = -56.6f;
-            targetZ = -55.5f;
+            targetZ = -56f;
 
             float randomY = GetRandomNumber(0.5f, 8.0f);
             float randomX = GetRandomNumber(-52.5f, -31.7f);
@@ -203,6 +227,8 @@ public class TargetObject : MonoBehaviour
             targetX = randomX;
 
             transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+
+            transform.position = new Vector3(targetX, targetY, targetZ);
         }
     }
 
@@ -237,7 +263,8 @@ public class TargetObject : MonoBehaviour
                     return 2;
                 }
             }
-        }else if(wallSystemPos == 2)
+        }
+        else if (wallSystemPos == 2)
         {
             if (coord1 > transform.position.y)
             {
@@ -262,7 +289,7 @@ public class TargetObject : MonoBehaviour
                 }
             }
         }
-        else if(wallSystemPos == 3)
+        else if (wallSystemPos == 3)
         {
             if (coord1 > transform.position.y)
             {

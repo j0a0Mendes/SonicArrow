@@ -94,8 +94,8 @@ public class ParameterManager : MonoBehaviour
     [SerializeField]
     public bool targetChangesAtFivePoints;
 
-    //[SerializeField]
-    private bool targetMoving;
+    [SerializeField]
+    public bool targetMoving;
 
     [SerializeField]
     public string separador5;
@@ -117,29 +117,7 @@ public class ParameterManager : MonoBehaviour
     private bool previousSecondCondition;
     private bool previousThirdCondition;
 
-    void Start()
-    {
-        /**changeOfPerspective = true;
-        previousChangeOfPerspective = true;
-        changeOfPerspectiveInstant = true;
-        previousChangeOfPerspectiveInstant = true;
-
-        targetSound = true;
-        previousTargetSound = true;
-        targetSoundUserPos = true;
-        previousTargetSoundUserPos = true;**/
-
-        
-    }
-
-    //changeOfPerspective = false;
-    //targetSound = false;
-    //spotterTalking = false;
-    //spotterBeepAid = false;
-    //hapticOnTargetHover = false;
-    //targetStill = true;
-
-
+  
     private void OnValidate()
     {
         if (activateConditions != previousActivateConditions)
@@ -154,18 +132,7 @@ public class ParameterManager : MonoBehaviour
                 previousSecondCondition = false;
                 thirdCondition = false;
                 previousThirdCondition = false;
-            }
-            /**else
-            {
-                firstCondition = true;
-                
-                secondCondition = false;
-                previousSecondCondition = false;
-                thirdCondition = false;
-                previousThirdCondition = false;
-            }**/
-            
-            
+            } 
         }
 
         if (activateConditions)

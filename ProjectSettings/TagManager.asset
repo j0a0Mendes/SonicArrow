@@ -22,6 +22,11 @@ TagManager:
   - Floor
   - Ceiling
   - RightHand
+  - BackWall
+  - FrontWall
+  - LeftWall
+  - RightWall
+  - TargetSquare
   layers:
   - Default
   - TransparentFX
@@ -45,13 +50,13 @@ TagManager:
   - WallFifthLayer
   - Floor
   - Ceiling
-  - 
+  - TargetSquare
   - TargetSurface
   - VerticallityAid
-  - 
-  - 
-  - 
-  - 
+  - FrontWall
+  - BackWall
+  - LeftWall
+  - RightWall
   - 
   - 
   - 
