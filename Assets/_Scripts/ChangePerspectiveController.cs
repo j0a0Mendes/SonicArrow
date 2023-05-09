@@ -87,13 +87,6 @@ public class ChangePerspectiveController : MonoBehaviour
 
         updateParameters();
 
-        //changePerspectiveParameter
-        //targetSoundParameter
-        //spotterTalkingParameter
-        //whiteNoiseVerticalParameter
-        //hapticOnTargetHoverParameter
-
-        //if (changePerspectiveParameter) {
         if (parameterManager.getChangeOfPerspective())
             {
                 if (parameterManager.getChangeOfPerspectiveInstant())
@@ -171,13 +164,6 @@ public class ChangePerspectiveController : MonoBehaviour
             }
         }
     }
-
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Somebody Touched it!!");
-    }
-
     public void changePerspective(){
         if(changeEnabled){
             changePerspectiveTrigger = true;

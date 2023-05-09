@@ -37,8 +37,8 @@ public class WhiteNoiseAssist : MonoBehaviour
 
         // Calculate the proportional number between 0.5 and 2.0
         //float proportionalNumber = Mathf.InverseLerp(-2.5f, 14.5f, clampedInputNumber) * 1.5f + 0.5f;
-        float proportionalNumber = Mathf.InverseLerp(-2.5f, 14.5f, clampedInputNumber) * 2.0f;
-
+        //float proportionalNumber = Mathf.InverseLerp(-2.5f, 14.5f, clampedInputNumber) * 2.0f;
+        float proportionalNumber = Mathf.InverseLerp(-2.5f, 14.5f, clampedInputNumber) * 3.0f;
 
         return proportionalNumber;
     }

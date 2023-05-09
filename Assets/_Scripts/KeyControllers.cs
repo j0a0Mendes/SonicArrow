@@ -43,6 +43,9 @@ public class KeyControllers : MonoBehaviour
     private bool buttonXEnabled;
     private bool buttonYEnabled;
 
+    [SerializeField]
+    public GameObject centerTarget;
+
     private MainTarget target;
 
     private TargetObject targetObject;
@@ -127,9 +130,23 @@ public class KeyControllers : MonoBehaviour
 
         if (controller.getTargetSoundAimPos())
         {
-            listener.transform.position = ballPointer.transform.position;
-        }else if (controller.getTargetSoundUserPos())
+            //Debug.Log("AIMPOS");
+            //listener.transform.position = targetObject.transform.position;
+            listener.transform.position = centerTarget.transform.position;
+            //listener.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+
+            if (controller.getInFirstPerspective())
+            {
+                listener.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+            }
+            else
+            {
+                listener.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+            }
+        }
+        else if (controller.getTargetSoundUserPos())
         {
+            //Debug.Log("USERPOS");
             listener.transform.position = Camera.main.transform.position;
         }
 
@@ -193,7 +210,7 @@ public class KeyControllers : MonoBehaviour
             //if(buttonXTriggered == 1 && buttonXEnabled == true)
             if(buttonXTriggered == 1)
             {
-                Debug.Log("X PRESSED");
+                //Debug.Log("X PRESSED");
                 if (controller.getParameterWhiteNoise())
                 {
                     playWhiteNoise = true;

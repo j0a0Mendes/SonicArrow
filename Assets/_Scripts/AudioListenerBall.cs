@@ -1,21 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using static UnityEngine.GraphicsBuffer;
 
-public class MainTarget : MonoBehaviour
+public class AudioListenerBall : MonoBehaviour
 {
     private GameObject RightHand;
     private KeyControllers keyControllersrRight;
     private ChangePerspectiveController controller;
 
     [SerializeField]
-    private AudioSource targetLocation;
+    private AudioSource ballSound;
 
     private void Start()
     {
-        targetLocation = GetComponent<AudioSource>();
+        ballSound = GetComponent<AudioSource>();
         RightHand = GameObject.FindGameObjectWithTag("RightHand");
         keyControllersrRight = RightHand.GetComponent<KeyControllers>();
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
@@ -23,15 +21,15 @@ public class MainTarget : MonoBehaviour
 
     void Update()
     {
-        if (keyControllersrRight.getTargetPlaying() == true & !targetLocation.isPlaying & controller.getTargetSoundUserPos())
+        if (keyControllersrRight.getTargetPlaying() == true & !ballSound.isPlaying & controller.getTargetSoundAimPos())
         {
-            //Debug.Log("PLAY TARGET");
-            targetLocation.Play();
+            //Debug.Log("PLAY BALL");
+            ballSound.Play();
         }
-        else if(!keyControllersrRight.getTargetPlaying())
+        else if (!keyControllersrRight.getTargetPlaying())
         {
-            //Debug.Log("STOP TARGET");
-            targetLocation.Stop();
+            //Debug.Log("STOP BALL");
+            ballSound.Stop();
         }
     }
 }

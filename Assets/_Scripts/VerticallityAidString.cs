@@ -34,6 +34,7 @@ public class VerticallityAidString : MonoBehaviour
     //Flags
     private bool flag;
     private bool beepFlag;
+    private bool otherWallsBeep;
 
     private void Awake()
     {
@@ -71,10 +72,22 @@ public class VerticallityAidString : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log(other.gameObject.name);
         if (other.gameObject.name == "TargetSurface" )
         {
             flag = true;
             beepFlag = true;
+        }
+        else
+        {
+            if (other.gameObject.name == "BackWall" || other.gameObject.name == "RightWall" || other.gameObject.name == "LeftWall" || other.gameObject.name == "Floor" || other.gameObject.name == "Ceiling")
+            {
+                otherWallsBeep = true;
+            }
+            else
+            {
+                otherWallsBeep = false;
+            }
         }
     }
 
@@ -84,15 +97,16 @@ public class VerticallityAidString : MonoBehaviour
             flag = false;
             beepFlag = false;
         }
+
+        //if (other.gameObject.name == "BackWall" || other.gameObject.name == "RightWall" || other.gameObject.name == "LeftWall" || other.gameObject.name == "Floor" || other.gameObject.name == "Ceiling")
+        //{
+        //   otherWallsBeep = false;
+        //}
     }
 
   
 
     private void Update() {
-
-        
-
-
         if (parameterManager.getHapticOnTargetHover())
         {
             if (flag)
@@ -111,6 +125,7 @@ public class VerticallityAidString : MonoBehaviour
 
         if (parameterManager.getSpotterBeepAid())
         {
+            
             if (beepFlag)
             {
                 wallBeep.GetComponent<AimingWall>().DeactivateLoop();
@@ -118,8 +133,18 @@ public class VerticallityAidString : MonoBehaviour
             }
             else
             {
-                targetBeep.GetComponent<AimingTarget>().DeactivateLoop();
-                wallBeep.GetComponent<AimingWall>().ActivateLoop();
+                if (otherWallsBeep)
+                {
+                    targetBeep.GetComponent<AimingTarget>().DeactivateLoop();
+                    wallBeep.GetComponent<AimingWall>().DeactivateLoop();
+                }
+                else
+                {
+                    targetBeep.GetComponent<AimingTarget>().DeactivateLoop();
+                    wallBeep.GetComponent<AimingWall>().ActivateLoop();
+                }
+                
+                
             }
         }
 
