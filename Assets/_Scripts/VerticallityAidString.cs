@@ -72,7 +72,6 @@ public class VerticallityAidString : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log(other.gameObject.name);
         if (other.gameObject.name == "TargetSurface" )
         {
             flag = true;
@@ -97,11 +96,6 @@ public class VerticallityAidString : MonoBehaviour
             flag = false;
             beepFlag = false;
         }
-
-        //if (other.gameObject.name == "BackWall" || other.gameObject.name == "RightWall" || other.gameObject.name == "LeftWall" || other.gameObject.name == "Floor" || other.gameObject.name == "Ceiling")
-        //{
-        //   otherWallsBeep = false;
-        //}
     }
 
   
@@ -113,7 +107,7 @@ public class VerticallityAidString : MonoBehaviour
             {
                 if (keyControllersrLeft != null)
                 {
-                    keyControllersrLeft.SendHaptics(true, 0.4f, 0.1f);
+                    keyControllersrLeft.SendHaptics(true, 0.2f, 0.1f);
                 }
                 else
                 {

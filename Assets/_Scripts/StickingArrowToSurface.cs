@@ -74,7 +74,7 @@ public class StickingArrowToSurface : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        Debug.Log("ACERTOU");
+        
         if (controller.getModeSelected() == 1)
         {
             controller.canShootAgain();
@@ -94,6 +94,8 @@ public class StickingArrowToSurface : MonoBehaviour
             }
 
             controller.addPoints(0);
+
+            Debug.Log("WALL HIT");
         }
         else if (collidedWith == "Floor")
         {
@@ -110,6 +112,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            Debug.Log("FLOOR HIT");
             controller.addPoints(0);
         }
         else if (collidedWith == "Ceiling")
@@ -126,6 +129,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            Debug.Log("CEILING HIT");
             controller.addPoints(0);
         }
         else if (collidedWith == "TargetFirstRegion")
@@ -153,6 +157,8 @@ public class StickingArrowToSurface : MonoBehaviour
                     FivePointsFlag = true;
                 }
             }
+
+            Debug.Log("5 POINTS!!!");
             controller.addPoints(5);
         }
         else if (collidedWith == "TargetSecondRegion")
@@ -213,6 +219,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            Debug.Log("4 POINTS");
             controller.addPoints(4);
         }
         else if (collidedWith == "TargetThirdRegion")
@@ -273,6 +280,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            Debug.Log("3 POINTS");
             controller.addPoints(3);
         }
         else if (collidedWith == "TargetForthRegion")
@@ -332,6 +340,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            Debug.Log("2 POINTS");
             controller.addPoints(2);
         }
         else if (collidedWith == "TargetFifthRegion")
@@ -392,6 +401,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            Debug.Log("1 POINTS");
             controller.addPoints(1);
         }
 
@@ -479,7 +489,10 @@ public class StickingArrowToSurface : MonoBehaviour
     {
         isPlaying = true;
 
-        foreach (AudioSource audioSource in audioList)
+        // Create a copy of the audioList
+        List<AudioSource> audioListCopy = new List<AudioSource>(audioList);
+
+        foreach (AudioSource audioSource in audioListCopy)
         {
             audioSource.Play();
             yield return new WaitForSeconds(audioSource.clip.length);

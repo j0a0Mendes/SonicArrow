@@ -11,6 +11,10 @@ public class MainTarget : MonoBehaviour
     private ChangePerspectiveController controller;
 
     [SerializeField]
+    public GameObject ballPointer;
+    private WhiteNoiseAssist whiteNoiseAssist;
+
+    [SerializeField]
     private AudioSource targetLocation;
 
     private void Start()
@@ -19,10 +23,14 @@ public class MainTarget : MonoBehaviour
         RightHand = GameObject.FindGameObjectWithTag("RightHand");
         keyControllersrRight = RightHand.GetComponent<KeyControllers>();
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
+        whiteNoiseAssist = ballPointer.GetComponent<WhiteNoiseAssist>();
     }
 
     void Update()
     {
+
+        targetLocation.pitch = whiteNoiseAssist.getAimPitch();
+
         if (keyControllersrRight.getTargetPlaying() == true & !targetLocation.isPlaying & controller.getTargetSoundUserPos())
         {
             //Debug.Log("PLAY TARGET");

@@ -249,10 +249,7 @@ public class ParameterManager : MonoBehaviour
 
             if(changeOfPerspective)
             {
-                //changeOfPerspectiveInstant = true;
-                //previousChangeOfPerspectiveInstant = true;
-                //changeOfPerspectiveOnReplay = false;
-                //previousChangeOfPerspectiveOnReplay = false;
+
             }
             else
             {
@@ -313,10 +310,6 @@ public class ParameterManager : MonoBehaviour
 
             if (targetSound)
             {
-                //targetSoundUserPos = true;
-                //previousTargetSoundUserPos = true;
-                //targetSoundCrossbowAim = false;
-                //previousTargetSoundCrossbowAim = false;
             }
             else
             {

@@ -113,12 +113,10 @@ public class ChangePerspectiveController : MonoBehaviour
 
             if (wallSystem == 1)
             {
-                //adjustments = new Vector3(-0.7f, -1.399138f, 0);
                 adjustments = new Vector3(-1.4f, -1.399138f, 0);
             }
             else if (wallSystem == 2)
             {
-                //adjustments = new Vector3(0, -1.399138f, -0.7f);
                 adjustments = new Vector3(0, -1.399138f, -1.4f);
             }
             else if (wallSystem == 3)
@@ -129,7 +127,6 @@ public class ChangePerspectiveController : MonoBehaviour
             }
             else
             {
-                //adjustments = new Vector3(0, -1.399138f, 0.7f);
                 adjustments = new Vector3(0, -1.399138f, 1.4f);
             }
             

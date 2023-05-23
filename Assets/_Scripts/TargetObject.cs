@@ -60,6 +60,12 @@ public class TargetObject : MonoBehaviour
     //Parameter Movement
     private ParameterManager parameterManager;
 
+    [SerializeField]
+    public GameObject targetSoundObj;
+
+    [SerializeField]
+    public GameObject ballPointer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -70,14 +76,10 @@ public class TargetObject : MonoBehaviour
 
     private void Awake()
     {
-        //targetX = 10.45f;
         targetX = 12.27f;
-        //targetY = 2.0f;
-        //targetZ = -5.46f;
+      
 
-
-
-        float randomY = GetRandomNumber(0.5f, 8.0f);
+        float randomY = GetRandomNumber(-12f, 21f);
         float randomZ = GetRandomNumber(-16.7f, 5.6f);
 
         targetY = randomY;
@@ -95,13 +97,12 @@ public class TargetObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.position = new Vector3(targetX, targetY, targetZ);
+        targetPitch(ballPointer.transform.position.y);
 
         //Target Movement
         if (parameterManager.getTargetMoving())
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime); // move object forward in the z-axis
-
         }
     }
 
@@ -173,7 +174,7 @@ public class TargetObject : MonoBehaviour
         {
             targetX = 12.27f;
 
-            float randomY = GetRandomNumber(0.5f, 8.0f);
+            float randomY = GetRandomNumber(-12f, 21f);
             float randomZ = GetRandomNumber(-16.7f, 5.6f);
 
             targetY = randomY;
@@ -185,10 +186,9 @@ public class TargetObject : MonoBehaviour
         }
         else if (wallSystemPos == 2)
         {
-            //targetZ = 45.6f;
             targetZ = 45.5f;
 
-            float randomY = GetRandomNumber(0.5f, 8.0f);
+            float randomY = GetRandomNumber(-12f, 21f);
             float randomX = GetRandomNumber(-52.5f, -31.7f);
 
             targetY = randomY;
@@ -200,11 +200,9 @@ public class TargetObject : MonoBehaviour
         }
         else if (wallSystemPos == 3)
         {
-            //targetX = -95.2f;
-            //targetX = -94.2f;
             targetX = -97.2f;
 
-            float randomY = GetRandomNumber(0.5f, 8.0f);
+            float randomY = GetRandomNumber(-12f, 21f);
             float randomZ = GetRandomNumber(-16.7f, 5.6f);
 
             targetY = randomY;
@@ -217,10 +215,9 @@ public class TargetObject : MonoBehaviour
         }
         else if (wallSystemPos == 4)
         {
-            //targetZ = -56.6f;
             targetZ = -56f;
 
-            float randomY = GetRandomNumber(0.5f, 8.0f);
+            float randomY = GetRandomNumber(-12f, 21f);
             float randomX = GetRandomNumber(-52.5f, -31.7f);
 
             targetY = randomY;
@@ -355,4 +352,41 @@ public class TargetObject : MonoBehaviour
         forth = targetForthRegion.GetComponent<MeshCollider>();
         fifth = targetFifthRegion.GetComponent<MeshCollider>();
     }
+
+    
+    public void targetPitch(float aimY)
+    {
+        float targetPitchVal = 0.0f;
+        targetY = transform.position.y;
+
+        if (targetY == aimY)
+        {
+            targetPitchVal = 1;
+        }
+        else if (aimY > targetY)
+        {
+            if (aimY >= 21)
+            {
+                targetPitchVal = 3;
+            }
+            else
+            {
+                targetPitchVal = (aimY - targetY) / (21 - targetY) * 2 + 1;
+            }
+        }
+        else // b < a
+        {
+            if (aimY <= -12)
+            {
+                targetPitchVal = 0;
+            }
+            else
+            {
+                targetPitchVal = (aimY - targetY) / (-12 - targetY) * -1;
+            }
+        }
+
+        targetSoundObj.GetComponent<AudioSource>().pitch = targetPitchVal;
+    }
+    
 }

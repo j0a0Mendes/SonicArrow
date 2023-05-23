@@ -7,6 +7,8 @@ public class WhiteNoiseAssist : MonoBehaviour
     public GameObject whiteNoiseSpotter;
     private WhiteNoiseSpotter whiteNoiseScript;
     private float inputNumber;
+
+    private float pitchValue;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +21,14 @@ public class WhiteNoiseAssist : MonoBehaviour
     {
         inputNumber = transform.position.y;
 
-        if(transform.position.y < -2.5f)
+        //Debug.Log(inputNumber);
+
+        if(transform.position.y < -15.4f)
         {
-            inputNumber = -2.5f;
-        }else if(transform.position.y > 14.5f)
+            inputNumber = -15.4f;
+        }else if(transform.position.y > 25.4f)
         {
-            inputNumber = 14.5f;
+            inputNumber = 25.4f;
         }
 
         whiteNoiseScript.changePitch(getWhiteNoisePitch());
@@ -32,14 +36,29 @@ public class WhiteNoiseAssist : MonoBehaviour
 
     public float getWhiteNoisePitch()
     {
-        // Clamp the input number between -2.5 and 14.5
-        float clampedInputNumber = Mathf.Clamp(inputNumber, -2.5f, 14.5f);
+        // Clamp the input number between -15.4 and 25.4
+        float clampedInputNumber = Mathf.Clamp(inputNumber, -15.4f, 25.4f);
 
-        // Calculate the proportional number between 0.5 and 2.0
-        //float proportionalNumber = Mathf.InverseLerp(-2.5f, 14.5f, clampedInputNumber) * 1.5f + 0.5f;
-        //float proportionalNumber = Mathf.InverseLerp(-2.5f, 14.5f, clampedInputNumber) * 2.0f;
-        float proportionalNumber = Mathf.InverseLerp(-2.5f, 14.5f, clampedInputNumber) * 3.0f;
+        float proportionalNumber = Mathf.InverseLerp(-15.4f, 25.4f, clampedInputNumber) * 3.0f;
 
+        //Debug.Log(proportionalNumber);
+        pitchValue = proportionalNumber;
+        
         return proportionalNumber;
+    }
+
+    public float getTargetPitch(float inputNumb)
+    {
+        // Clamp the input number between -15.4 and 25.4
+        float clampedInputNumber = Mathf.Clamp(inputNumb, -15.4f, 25.4f);
+
+        float pitchValue = Mathf.InverseLerp(-15.4f, 25.4f, clampedInputNumber) * 3.0f;
+
+        return pitchValue;
+    }
+
+    public float getAimPitch()
+    {
+        return pitchValue;
     }
 }

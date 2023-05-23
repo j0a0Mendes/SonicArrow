@@ -131,18 +131,9 @@ public class KeyControllers : MonoBehaviour
         if (controller.getTargetSoundAimPos())
         {
             //Debug.Log("AIMPOS");
-            //listener.transform.position = targetObject.transform.position;
             listener.transform.position = centerTarget.transform.position;
-            //listener.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
-
-            if (controller.getInFirstPerspective())
-            {
-                listener.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-            }
-            else
-            {
-                listener.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
-            }
+            listener.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+            
         }
         else if (controller.getTargetSoundUserPos())
         {
@@ -197,9 +188,6 @@ public class KeyControllers : MonoBehaviour
                     {
                         playTargetSound = false;
                     }
-                    //Debug.Log("B PRESSED");
-                    //Debug.Log(controller.getInFirstPerspective());
-                    
                 }
             }
             else
@@ -207,15 +195,16 @@ public class KeyControllers : MonoBehaviour
                 playTargetSound = false;
             }
 
-            //if(buttonXTriggered == 1 && buttonXEnabled == true)
             if(buttonXTriggered == 1)
             {
                 //Debug.Log("X PRESSED");
-                if (controller.getParameterWhiteNoise())
+                if (playTargetSound == false)
                 {
-                    playWhiteNoise = true;
+                    if (controller.getParameterWhiteNoise())
+                    {
+                        playWhiteNoise = true;
+                    }
                 }
-
             }
             else
             {
@@ -294,7 +283,7 @@ public class KeyControllers : MonoBehaviour
     public void SendHaptics()
     {
         leftController.SendHapticImpulse(defaultAmplitude, defaultDuration);
-        //rightController.SendHapticImpulse(defaultAmplitude, defaultDuration);
+
     }
 
     public void SendHaptics(bool isLeftController, float amplitude, float duration)
@@ -302,8 +291,6 @@ public class KeyControllers : MonoBehaviour
         if (isLeftController && leftController != null)
         {
             leftController.SendHapticImpulse(amplitude, duration);
-            Debug.Log("Vibrating");
-            //SendHaptics();
         }
         else if(rightController != null)
         {
@@ -318,7 +305,6 @@ public class KeyControllers : MonoBehaviour
         {
             Debug.Log("Vibrating");
             leftController.SendHapticImpulse(defaultAmplitude, defaultDuration);
-            //SendHaptics();
         }
         else if (rightController != null)
         {
