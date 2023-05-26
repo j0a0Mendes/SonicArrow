@@ -141,6 +141,11 @@ public class VerticallityAidString : MonoBehaviour
                 
             }
         }
+        else
+        {
+            targetBeep.GetComponent<AimingTarget>().DeactivateLoop();
+            wallBeep.GetComponent<AimingWall>().DeactivateLoop();
+        }
 
 
     }

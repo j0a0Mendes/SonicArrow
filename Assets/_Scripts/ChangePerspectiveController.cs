@@ -4,7 +4,9 @@ using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class ChangePerspectiveController : MonoBehaviour
 {
@@ -84,7 +86,24 @@ public class ChangePerspectiveController : MonoBehaviour
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
     }
 
+
+    private int conditionChangeCount = 0;
     void Update() {
+        conditionChangeCount++;
+
+        if(keyControllersrLeft.getLeftConditionTrigger() == true && keyControllersrRight.getRightConditionTrigger() == true)
+        {
+            Debug.Log(conditionChangeCount);
+            if(conditionChangeCount >= 25)
+            {
+                conditionChangeCount = 0;
+                parameterManager.selectNextCondition();
+                //resetTheSystem();
+
+
+                Debug.Log("Change condition");
+            }    
+        }
 
         updateParameters();
 
@@ -295,6 +314,11 @@ public class ChangePerspectiveController : MonoBehaviour
     public bool getParameterWhiteNoise()
     {
         return parameterManager.getWhiteNoiseVerticalAid();
+    }
+
+    public void resetTheSystem()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
 

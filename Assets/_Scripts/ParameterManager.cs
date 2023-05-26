@@ -117,7 +117,34 @@ public class ParameterManager : MonoBehaviour
     private bool previousSecondCondition;
     private bool previousThirdCondition;
 
-  
+    private void Start()
+    {
+        if (activateConditions)
+        {
+            if(firstCondition)
+            {
+                GameObject intro = GameObject.Find("Hi_Im_Tom_1_Condition");
+                intro.GetComponent<AudioSource>().Play();
+            }
+            else if(secondCondition)
+            {
+                GameObject intro = GameObject.Find("Hi_Im_Tom_2_Condition");
+                intro.GetComponent<AudioSource>().Play();
+            }
+            else if(thirdCondition)
+            {
+                GameObject intro = GameObject.Find("Hi_Im_Tom_3_Condition");
+                intro.GetComponent<AudioSource>().Play();
+            }
+        }
+        else
+        {
+            GameObject intro = GameObject.Find("Hi_Im_Tom");
+            intro.GetComponent<AudioSource>().Play();
+        }
+        
+    }
+
     private void OnValidate()
     {
         if (activateConditions != previousActivateConditions)
@@ -143,6 +170,7 @@ public class ParameterManager : MonoBehaviour
 
                 if (firstCondition)
                 {
+                    Debug.Log("First Condition");
                     clearParameters();
                     secondCondition = false;
                     previousSecondCondition = false;
@@ -175,6 +203,7 @@ public class ParameterManager : MonoBehaviour
 
                 if (secondCondition)
                 {
+                    Debug.Log("Second Condition");
                     clearParameters();
                     firstCondition = false;
                     previousFirstCondition = false;
@@ -203,11 +232,12 @@ public class ParameterManager : MonoBehaviour
             }
             
             if (thirdCondition != previousThirdCondition)
-            {
+            {        
                 previousThirdCondition = thirdCondition;
 
                 if (thirdCondition)
                 {
+                    Debug.Log("Third Condition");
                     clearParameters();
                     firstCondition = false;
                     previousFirstCondition = false;
@@ -449,10 +479,77 @@ public class ParameterManager : MonoBehaviour
         }
     }
 
+    private bool conditionChanged;
     // Update is called once per frame
     void Update()
     {
+        if (conditionChanged)
+        {
+            if (firstCondition)
+            {
+                Debug.Log("First Condition");
+                clearParameters();
+                secondCondition = false;
+                previousSecondCondition = false;
+                thirdCondition = false;
+                previousThirdCondition = false;
 
+                //before shot
+                targetSound = true;
+                targetSoundUserPos = true;
+                targetSoundCrossbowAim = false;
+                spotterBeepAid = false;
+
+                //after shot
+                changeOfPerspective = true;
+                changeOfPerspectiveInstant = true;
+                spotterTalking = true;
+                spotterPointsAid = true;
+                spotterQuadrantAid = true;
+            }
+        }else if (secondCondition)
+        {
+            Debug.Log("Second Condition");
+            clearParameters();
+            firstCondition = false;
+            previousFirstCondition = false;
+            thirdCondition = false;
+            previousThirdCondition = false;
+
+
+            //before shot
+            targetSound = true;
+            targetSoundUserPos = false;
+            targetSoundCrossbowAim = true;
+           
+
+            //after shot
+            changeOfPerspective = true;
+            changeOfPerspectiveInstant = true;
+            spotterTalking = true;
+            spotterPointsAid = true;
+            spotterQuadrantAid = true;
+        }else if (thirdCondition)
+        {
+            Debug.Log("Third Condition");
+            clearParameters();
+            firstCondition = false;
+            previousFirstCondition = false;
+            secondCondition = false;
+            previousSecondCondition = false;
+
+            //before shot
+            targetSound = false;
+            targetSoundUserPos = false;
+            spotterBeepAid = true;
+
+            //after shot
+            spotterTalking = true;
+            spotterPointsAid = true;
+            spotterQuadrantAid = true;
+        }
+
+        conditionChanged = false;
     }
  
 
@@ -637,4 +734,43 @@ public class ParameterManager : MonoBehaviour
     }
 
     //--------------------------------------
+
+    public void selectNextCondition()
+    {
+        if (activateConditions)
+        {
+            if (firstCondition)
+            {
+                firstCondition = false;
+                secondCondition = true;
+            }else if (secondCondition)
+            {
+                secondCondition = false;
+                thirdCondition = true;
+            }
+            else if (thirdCondition)
+            {
+                thirdCondition = false;
+                firstCondition = true;
+            }
+        }
+
+        if (firstCondition)
+        {
+            GameObject intro = GameObject.Find("Hi_Im_Tom_1_Condition");
+            intro.GetComponent<AudioSource>().Play();
+        }
+        else if (secondCondition)
+        {
+            GameObject intro = GameObject.Find("Hi_Im_Tom_2_Condition");
+            intro.GetComponent<AudioSource>().Play();
+        }
+        else if (thirdCondition)
+        {
+            GameObject intro = GameObject.Find("Hi_Im_Tom_3_Condition");
+            intro.GetComponent<AudioSource>().Play();
+        }
+
+        conditionChanged = true;
+    }
 }

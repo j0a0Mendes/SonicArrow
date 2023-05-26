@@ -39,7 +39,7 @@ public class StickingArrowToSurface : MonoBehaviour
     TargetObject target;
 
     //PLAYING AUDIOS
-    public List<AudioSource> audioList = new List<AudioSource>();
+    public List<AudioSource> audioList;
 
     private int currentSourceIndex = 0;
 
@@ -60,21 +60,17 @@ public class StickingArrowToSurface : MonoBehaviour
         target = GameObject.FindObjectOfType<TargetObject>();
         //keyControllerRightHand = GameObject.FindObjectOfType<KeyControllerSupport>();
 
+        audioList = new List<AudioSource>();
+
     }
 
     private void Update()
     {
-        //    if (notFlying)
-        //
-        //        windNavigatingSound.Stop();
-        //    }   
         modeSelected = controller.getModeSelected();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-
-        
         if (controller.getModeSelected() == 1)
         {
             controller.canShootAgain();
@@ -198,22 +194,22 @@ public class StickingArrowToSurface : MonoBehaviour
 
                     if (quadrant == 1)
                     {
-                        GameObject spotter = GameObject.Find("First_Quadrant");
+                        GameObject spotter = GameObject.Find("First_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                     else if (quadrant == 2)
                     {
-                        GameObject spotter = GameObject.Find("Second_Quadrant");
+                        GameObject spotter = GameObject.Find("Fourth_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                     else if (quadrant == 3)
                     {
-                        GameObject spotter = GameObject.Find("Third_Quadrant");
+                        GameObject spotter = GameObject.Find("Third_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                     else if (quadrant == 4)
                     {
-                        GameObject spotter = GameObject.Find("Forth_Quadrant");
+                        GameObject spotter = GameObject.Find("Second_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                 }
@@ -259,22 +255,22 @@ public class StickingArrowToSurface : MonoBehaviour
 
                     if (quadrant == 1)
                     {
-                        GameObject spotter = GameObject.Find("First_Quadrant");
+                        GameObject spotter = GameObject.Find("First_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                     else if (quadrant == 2)
                     {
-                        GameObject spotter = GameObject.Find("Second_Quadrant");
+                        GameObject spotter = GameObject.Find("Fourth_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                     else if (quadrant == 3)
                     {
-                        GameObject spotter = GameObject.Find("Third_Quadrant");
+                        GameObject spotter = GameObject.Find("Third_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                     else if (quadrant == 4)
                     {
-                        GameObject spotter = GameObject.Find("Forth_Quadrant");
+                        GameObject spotter = GameObject.Find("Second_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                 }
@@ -317,24 +313,24 @@ public class StickingArrowToSurface : MonoBehaviour
                         quadrant = 1;
                     }
 
-                    if(quadrant == 1)
+                    if (quadrant == 1)
                     {
-                        GameObject spotter = GameObject.Find("First_Quadrant");
+                        GameObject spotter = GameObject.Find("First_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
-                    else if(quadrant == 2)
+                    else if (quadrant == 2)
                     {
-                        GameObject spotter = GameObject.Find("Second_Quadrant");
+                        GameObject spotter = GameObject.Find("Fourth_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                     else if (quadrant == 3)
                     {
-                        GameObject spotter = GameObject.Find("Third_Quadrant");
+                        GameObject spotter = GameObject.Find("Third_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                     else if (quadrant == 4)
                     {
-                        GameObject spotter = GameObject.Find("Forth_Quadrant");
+                        GameObject spotter = GameObject.Find("Second_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                 }
@@ -380,22 +376,22 @@ public class StickingArrowToSurface : MonoBehaviour
 
                     if (quadrant == 1)
                     {
-                        GameObject spotter = GameObject.Find("First_Quadrant");
+                        GameObject spotter = GameObject.Find("First_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                     else if (quadrant == 2)
                     {
-                        GameObject spotter = GameObject.Find("Second_Quadrant");
+                        GameObject spotter = GameObject.Find("Fourth_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                     else if (quadrant == 3)
                     {
-                        GameObject spotter = GameObject.Find("Third_Quadrant");
+                        GameObject spotter = GameObject.Find("Third_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                     else if (quadrant == 4)
                     {
-                        GameObject spotter = GameObject.Find("Forth_Quadrant");
+                        GameObject spotter = GameObject.Find("Second_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                 }

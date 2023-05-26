@@ -29,7 +29,10 @@ public class KeyControllers : MonoBehaviour
     public InputActionProperty changePerspective;   //future change for the white noise (A)
 
     [SerializeField]
-    public InputActionProperty loadCrossbowButton;   //load the crossbow
+    public InputActionProperty loadCrossbowButton;   //right grip
+
+    [SerializeField]
+    public InputActionProperty leftGrip;   //left grip
 
     [SerializeField]
     public InputActionProperty shootCrossbowButton;   //shoot the crossbow
@@ -91,6 +94,10 @@ public class KeyControllers : MonoBehaviour
     public bool playTargetSound;
 
     // Start is called before the first frame update
+
+    private bool leftConditionTrigger;
+
+    private bool rightConditionTrigger;
     void Start()
     {
         listener = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
@@ -156,8 +163,11 @@ public class KeyControllers : MonoBehaviour
         //button Y in the left controller
         float buttonYTriggered = replayTrigger.action.ReadValue<float>();
 
-        //button grip from the right controller
+        //button right grip from the right controller
         float buttonLoadCrossbow = loadCrossbowButton.action.ReadValue<float>();
+
+        //button left grip from the right controller
+        float buttonLeftGrip = leftGrip.action.ReadValue<float>();
 
         //button shoot from the right controller
         float buttonShootCrossbow = shootCrossbowButton.action.ReadValue<float>();
@@ -195,7 +205,26 @@ public class KeyControllers : MonoBehaviour
                 playTargetSound = false;
             }
 
-            if(buttonXTriggered == 1)
+            if(buttonLoadCrossbow == 1)
+            {
+                rightConditionTrigger = true;
+            }
+            else
+            {
+                rightConditionTrigger = false;
+            }
+
+            if (buttonLeftGrip == 1)
+            {
+                leftConditionTrigger = true;
+            }
+            else
+            {
+                leftConditionTrigger = false;
+            }
+
+
+            if (buttonXTriggered == 1)
             {
                 //Debug.Log("X PRESSED");
                 if (playTargetSound == false)
@@ -327,7 +356,15 @@ public class KeyControllers : MonoBehaviour
         vibrate = false;
     }
 
+    public bool getLeftConditionTrigger()
+    {
+        return leftConditionTrigger;
+    }
 
+    public bool getRightConditionTrigger()
+    {
+        return rightConditionTrigger;
+    }
 
 
 }
