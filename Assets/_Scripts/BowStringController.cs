@@ -117,6 +117,8 @@ public class BowStringController : MonoBehaviour
             positioned = true;
         }
 
+        prepareCrossBow();
+
     }
 
     private void Update()

@@ -67,6 +67,7 @@ public class ChangePerspectiveController : MonoBehaviour
         changeEnabled = false;
         changePerspectiveTrigger = false;
         bowStringController = GameObject.FindObjectOfType<BowStringController>();
+        bowStringController.canShootAgain();
 
         rightHand = GameObject.FindGameObjectWithTag("RightHand");
         keyControllersrRight = rightHand.GetComponent<KeyControllers>();
