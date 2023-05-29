@@ -97,7 +97,7 @@ public class TargetObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        targetPitch(ballPointer.transform.position.y);
+        //targetPitch(ballPointer.transform.position.y);
 
         //Target Movement
         if (parameterManager.getTargetMoving())
@@ -386,7 +386,8 @@ public class TargetObject : MonoBehaviour
             }
         }
 
-        targetSoundObj.GetComponent<AudioSource>().pitch = targetPitchVal;
+        //UNCOMMENT TO GET PITCH VALUE CHANGED
+        //targetSoundObj.GetComponent<AudioSource>().pitch = targetPitchVal;
     }
     
 }

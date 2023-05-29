@@ -28,8 +28,14 @@ public class VerticallityAidString : MonoBehaviour
     [SerializeField]
     public GameObject ballPointer;
 
+    [SerializeField]
+    public GameObject redBall;
+
     public GameObject wallBeep;
     public GameObject targetBeep;
+
+    [SerializeField]
+    public GameObject centerTarget;
 
     //Flags
     private bool flag;
@@ -99,8 +105,15 @@ public class VerticallityAidString : MonoBehaviour
     }
 
   
+    private int beepCount = 0;
+    private int beepFreq = 0;
 
     private void Update() {
+
+        beepCount += 1;
+
+        beepFreq = calculateBeepFreq(centerTarget.transform.position.x, centerTarget.transform.position.y, centerTarget.transform.position.z, redBall.transform.position.x, redBall.transform.position.y, redBall.transform.position.z);
+        
         if (parameterManager.getHapticOnTargetHover())
         {
             if (flag)
@@ -119,8 +132,12 @@ public class VerticallityAidString : MonoBehaviour
 
         if (parameterManager.getSpotterBeepAid())
         {
-            
-            if (beepFlag)
+            if(beepCount >= beepFreq){
+                wallBeep.GetComponent<AudioSource>().Play();
+                beepCount = 0;
+            }
+
+            /*if (beepFlag)
             {
                 wallBeep.GetComponent<AimingWall>().DeactivateLoop();
                 targetBeep.GetComponent<AimingTarget>().ActivateLoop();
@@ -139,7 +156,8 @@ public class VerticallityAidString : MonoBehaviour
                 }
                 
                 
-            }
+            }*/
+
         }
         else
         {
@@ -153,5 +171,26 @@ public class VerticallityAidString : MonoBehaviour
     public void sendPointsToTarget(Transform point1, Transform point2)
     {
         targetObject.receiveTwoPoints(point1, point2);
+    }
+
+
+    public int calculateBeepFreq(float aX, float aY, float aZ, float bX, float bY, float bZ)
+    {
+        float distance = Vector3.Distance(new Vector3(aX, aY, aZ), new Vector3(bX, bY, bZ));
+
+        if (distance <= 0f)
+        {
+            return 5;
+        }
+        else if (distance >= 45f)
+        {
+            return 30;
+        }
+        else
+        {
+            float scaleFactor = 25f / 45f;
+            int result = 5 + Mathf.RoundToInt(distance * scaleFactor);
+            return result;
+        }
     }
 }

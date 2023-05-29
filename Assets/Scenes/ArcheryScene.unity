@@ -3421,18 +3421,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717b1fe6f884f8d4db1ffd16e2565eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeOfPerspective: 1
-  changeOfPerspectiveInstant: 1
+  changeOfPerspective: 0
+  changeOfPerspectiveInstant: 0
   changeOfPerspectiveOnReplay: 0
   separador1: 
-  targetSound: 1
-  targetSoundUserPos: 1
+  targetSound: 0
+  targetSoundUserPos: 0
   targetSoundCrossbowAim: 0
   separador2: 
   spotterTalking: 1
   spotterPointsAid: 1
   spotterQuadrantAid: 1
-  spotterBeepAid: 0
+  spotterBeepAid: 1
   separador3: 
   whiteNoiseVerticalAid: 1
   hapticOnTargetHover: 0
@@ -3442,9 +3442,10 @@ MonoBehaviour:
   targetMoving: 0
   separador5: 
   activateConditions: 1
-  firstCondition: 1
+  firstCondition: 0
   secondCondition: 0
-  thirdCondition: 0
+  thirdCondition: 1
+  centerTarget: {fileID: 414346336}
 --- !u!1 &267719053
 GameObject:
   m_ObjectHideFlags: 0
@@ -15322,8 +15323,10 @@ MonoBehaviour:
   endpoint_2: {fileID: 60688705}
   ballPrefab: {fileID: 1936656719}
   ballPointer: {fileID: 1549656680}
+  redBall: {fileID: 476033842}
   wallBeep: {fileID: 1655127104}
   targetBeep: {fileID: 805908615}
+  centerTarget: {fileID: 414346336}
 --- !u!136 &1334499356
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16907,6 +16910,7 @@ MonoBehaviour:
   firstCondition: 0
   secondCondition: 0
   thirdCondition: 0
+  centerTarget: {fileID: 0}
 --- !u!114 &1469239983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19262,7 +19266,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -22628,7 +22632,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

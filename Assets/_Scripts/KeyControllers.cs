@@ -84,7 +84,7 @@ public class KeyControllers : MonoBehaviour
 
     public int count = 0;
 
-    private AudioListener listener;
+    //private AudioListener listener;
 
     //WHITE NOISE
     public GameObject whiteNoiseSpotter;
@@ -100,7 +100,7 @@ public class KeyControllers : MonoBehaviour
     private bool rightConditionTrigger;
     void Start()
     {
-        listener = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
+        //listener = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
 
         target = GameObject.FindObjectOfType<MainTarget>();
         targetObject = GameObject.FindObjectOfType<TargetObject>();
@@ -135,7 +135,7 @@ public class KeyControllers : MonoBehaviour
             SendHaptics();
         }
 
-        if (controller.getTargetSoundAimPos())
+        /*if (controller.getTargetSoundAimPos())
         {
             //Debug.Log("AIMPOS");
             listener.transform.position = centerTarget.transform.position;
@@ -146,7 +146,7 @@ public class KeyControllers : MonoBehaviour
         {
             //Debug.Log("USERPOS");
             listener.transform.position = Camera.main.transform.position;
-        }
+        }*/
 
         //get mode selected. 0 - Instant Sound Output. 1 - Replay Mode
         modeSelected = controller.getModeSelected();

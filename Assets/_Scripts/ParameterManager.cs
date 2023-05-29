@@ -117,8 +117,16 @@ public class ParameterManager : MonoBehaviour
     private bool previousSecondCondition;
     private bool previousThirdCondition;
 
+    //AudioListener position
+    private AudioListener listener;
+
+    [SerializeField]
+    public GameObject centerTarget;
+
     private void Start()
     {
+        listener = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
+
         if (activateConditions)
         {
             if(firstCondition)
@@ -483,6 +491,21 @@ public class ParameterManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //AUDIOLISTENER
+        if (targetSoundCrossbowAim)
+        {
+            //Debug.Log("AIMPOS");
+            listener.transform.position = centerTarget.transform.position;
+            listener.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+            
+        }
+        else if (targetSoundUserPos)
+        {
+            //Debug.Log("USERPOS");
+            listener.transform.position = Camera.main.transform.position;
+        }
+
+
         if (conditionChanged)
         {
             if (firstCondition)
@@ -529,6 +552,7 @@ public class ParameterManager : MonoBehaviour
             spotterTalking = true;
             spotterPointsAid = true;
             spotterQuadrantAid = true;
+
         }else if (thirdCondition)
         {
             Debug.Log("Third Condition");
@@ -540,7 +564,9 @@ public class ParameterManager : MonoBehaviour
 
             //before shot
             targetSound = false;
-            targetSoundUserPos = false;
+            targetSoundUserPos = true;
+            targetSoundCrossbowAim = false;
+
             spotterBeepAid = true;
 
             //after shot
