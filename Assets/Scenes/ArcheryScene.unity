@@ -3421,18 +3421,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717b1fe6f884f8d4db1ffd16e2565eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeOfPerspective: 0
-  changeOfPerspectiveInstant: 0
+  changeOfPerspective: 1
+  changeOfPerspectiveInstant: 1
   changeOfPerspectiveOnReplay: 0
   separador1: 
-  targetSound: 0
+  targetSound: 1
   targetSoundUserPos: 0
-  targetSoundCrossbowAim: 0
+  targetSoundCrossbowAim: 1
   separador2: 
   spotterTalking: 1
   spotterPointsAid: 1
-  spotterQuadrantAid: 1
-  spotterBeepAid: 1
+  spotterQuadrantAid: 0
+  spotterBeepAid: 0
   separador3: 
   whiteNoiseVerticalAid: 1
   hapticOnTargetHover: 0
@@ -3443,8 +3443,8 @@ MonoBehaviour:
   separador5: 
   activateConditions: 1
   firstCondition: 0
-  secondCondition: 0
-  thirdCondition: 1
+  secondCondition: 1
+  thirdCondition: 0
   centerTarget: {fileID: 414346336}
 --- !u!1 &267719053
 GameObject:
@@ -4279,6 +4279,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1151844921754575795, guid: 3b3471abbec66934abdc62c5d5c14a17,
         type: 3}
+    - target: {fileID: 9139544765594900639, guid: 7fd0147ec4c090d43935a8d7f51b2e36,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9139544765594900639, guid: 7fd0147ec4c090d43935a8d7f51b2e36,
         type: 3}
       propertyPath: m_audioClip
@@ -12205,6 +12210,7 @@ MonoBehaviour:
   speed: 5
   targetSoundObj: {fileID: 408026667}
   ballPointer: {fileID: 1549656680}
+  audioListenerBall: {fileID: 476033842}
 --- !u!1 &1005570478
 GameObject:
   m_ObjectHideFlags: 0

@@ -136,28 +136,6 @@ public class VerticallityAidString : MonoBehaviour
                 wallBeep.GetComponent<AudioSource>().Play();
                 beepCount = 0;
             }
-
-            /*if (beepFlag)
-            {
-                wallBeep.GetComponent<AimingWall>().DeactivateLoop();
-                targetBeep.GetComponent<AimingTarget>().ActivateLoop();
-            }
-            else
-            {
-                if (otherWallsBeep)
-                {
-                    targetBeep.GetComponent<AimingTarget>().DeactivateLoop();
-                    wallBeep.GetComponent<AimingWall>().DeactivateLoop();
-                }
-                else
-                {
-                    targetBeep.GetComponent<AimingTarget>().DeactivateLoop();
-                    wallBeep.GetComponent<AimingWall>().ActivateLoop();
-                }
-                
-                
-            }*/
-
         }
         else
         {

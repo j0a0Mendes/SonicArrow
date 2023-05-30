@@ -65,6 +65,9 @@ public class TargetObject : MonoBehaviour
 
     [SerializeField]
     public GameObject ballPointer;
+    
+    [SerializeField]
+    public GameObject audioListenerBall;
 
 
     // Start is called before the first frame update
@@ -97,7 +100,7 @@ public class TargetObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //targetPitch(ballPointer.transform.position.y);
+        targetPitch(audioListenerBall.transform.position.y);
 
         //Target Movement
         if (parameterManager.getTargetMoving())
@@ -354,7 +357,7 @@ public class TargetObject : MonoBehaviour
     }
 
     
-    public void targetPitch(float aimY)
+    /*public void targetPitch(float aimY)
     {
         float targetPitchVal = 0.0f;
         targetY = transform.position.y;
@@ -383,11 +386,49 @@ public class TargetObject : MonoBehaviour
             else
             {
                 targetPitchVal = (aimY - targetY) / (-12 - targetY) * -1;
+                //targetPitchVal = (aimY - targetY) / (-12 - targetY) * -1;
             }
         }
 
         //UNCOMMENT TO GET PITCH VALUE CHANGED
-        //targetSoundObj.GetComponent<AudioSource>().pitch = targetPitchVal;
+        targetSoundObj.GetComponent<AudioSource>().pitch = targetPitchVal;
+    }*/
+
+    void targetPitch(float aimY)
+    {
+        targetY = transform.position.y;
+        float targetPitch = 0.0f;
+
+        if (aimY == targetY)
+        {
+            targetPitch = 1;
+        }
+        else if (aimY > targetY)
+        {
+            if (aimY >= 21)
+            {
+                targetPitch = 2;
+            }
+            else
+            {
+                float proportion = (aimY - targetY) / (21 - targetY);
+                targetPitch = 1 + proportion;
+            }
+        }
+        else
+        {
+            if (aimY <= -12)
+            {
+                targetPitch = 0f;
+            }
+            else
+            {
+                float proportion = (aimY - targetY) / (-12 - targetY);
+                targetPitch = 1 - proportion;
+            }
+        }
+
+        targetSoundObj.GetComponent<AudioSource>().pitch = targetPitch;
     }
     
 }

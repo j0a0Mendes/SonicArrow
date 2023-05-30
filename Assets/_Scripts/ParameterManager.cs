@@ -194,7 +194,7 @@ public class ParameterManager : MonoBehaviour
                     changeOfPerspectiveInstant = true;
                     spotterTalking = true;
                     spotterPointsAid = true;
-                    spotterQuadrantAid = true;
+                    spotterQuadrantAid = false;
                 }
                 else
                 {
@@ -228,7 +228,7 @@ public class ParameterManager : MonoBehaviour
                     changeOfPerspectiveInstant = true;
                     spotterTalking = true;
                     spotterPointsAid = true;
-                    spotterQuadrantAid = true;
+                    spotterQuadrantAid = false;
                 }else
                 {
                     firstCondition = false;
@@ -258,7 +258,7 @@ public class ParameterManager : MonoBehaviour
                     //after shot
                     spotterTalking = true;
                     spotterPointsAid = true;
-                    spotterQuadrantAid = true;
+                    spotterQuadrantAid = false;
                 }
                 else
                 {
@@ -528,7 +528,7 @@ public class ParameterManager : MonoBehaviour
                 changeOfPerspectiveInstant = true;
                 spotterTalking = true;
                 spotterPointsAid = true;
-                spotterQuadrantAid = true;
+                spotterQuadrantAid = false;
             }
         }else if (secondCondition)
         {
@@ -551,7 +551,7 @@ public class ParameterManager : MonoBehaviour
             changeOfPerspectiveInstant = true;
             spotterTalking = true;
             spotterPointsAid = true;
-            spotterQuadrantAid = true;
+            spotterQuadrantAid = false;
 
         }else if (thirdCondition)
         {
@@ -572,7 +572,7 @@ public class ParameterManager : MonoBehaviour
             //after shot
             spotterTalking = true;
             spotterPointsAid = true;
-            spotterQuadrantAid = true;
+            spotterQuadrantAid = false;
         }
 
         conditionChanged = false;
