@@ -47,6 +47,8 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private bool FivePointsFlag = false;
 
+    private BowStringController bowStringController;
+
 
     private void Start()
     {
@@ -61,6 +63,8 @@ public class StickingArrowToSurface : MonoBehaviour
         //keyControllerRightHand = GameObject.FindObjectOfType<KeyControllerSupport>();
 
         audioList = new List<AudioSource>();
+
+        bowStringController = GameObject.FindObjectOfType<BowStringController>();
 
     }
 
@@ -213,6 +217,14 @@ public class StickingArrowToSurface : MonoBehaviour
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                 }
+
+                if (controller.getTargetChangesAtFivePoints())
+                {
+                    GameObject spotter = GameObject.Find("Time_To_Change_TargetPos");
+                    audioList.Add(spotter.GetComponent<AudioSource>());
+
+                    FivePointsFlag = true;
+                }
             }
 
             Debug.Log("4 POINTS");
@@ -274,6 +286,14 @@ public class StickingArrowToSurface : MonoBehaviour
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
                 }
+
+                if (controller.getTargetChangesAtFivePoints())
+                {
+                    GameObject spotter = GameObject.Find("Time_To_Change_TargetPos");
+                    audioList.Add(spotter.GetComponent<AudioSource>());
+
+                    FivePointsFlag = true;
+                }
             }
 
             Debug.Log("3 POINTS");
@@ -333,6 +353,14 @@ public class StickingArrowToSurface : MonoBehaviour
                         GameObject spotter = GameObject.Find("Second_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
+                }
+
+                if (controller.getTargetChangesAtFivePoints())
+                {
+                    GameObject spotter = GameObject.Find("Time_To_Change_TargetPos");
+                    audioList.Add(spotter.GetComponent<AudioSource>());
+
+                    FivePointsFlag = true;
                 }
             }
 
@@ -394,6 +422,14 @@ public class StickingArrowToSurface : MonoBehaviour
                         GameObject spotter = GameObject.Find("Second_Quadrant_Clear");
                         audioList.Add(spotter.GetComponent<AudioSource>());
                     }
+                }
+
+                if (controller.getTargetChangesAtFivePoints())
+                {
+                    GameObject spotter = GameObject.Find("Time_To_Change_TargetPos");
+                    audioList.Add(spotter.GetComponent<AudioSource>());
+
+                    FivePointsFlag = true;
                 }
             }
 
@@ -500,6 +536,8 @@ public class StickingArrowToSurface : MonoBehaviour
 
         keyControllersRight.readyToShootTrue();
         keyControllersRight.reloadCrossbow();
+
+        bowStringController.prepareCrossBow();
     }
 
 }
