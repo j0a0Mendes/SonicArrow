@@ -75,6 +75,8 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        target.activateCanMove();
+
         if (controller.getModeSelected() == 1)
         {
             controller.canShootAgain();

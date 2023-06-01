@@ -181,6 +181,7 @@ public class KeyControllers : MonoBehaviour
                 if (!bowStringController.stringPullingSound())
                 {
                     readyToShoot = false;
+                    targetObject.deactivateCanMove();
                     bowStringController.shootCrossBow();
                 }
                 //Debug.Log("CROSSBOW SHOT");

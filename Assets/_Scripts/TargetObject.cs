@@ -56,6 +56,7 @@ public class TargetObject : MonoBehaviour
     //Target Movement
 
     public float speed = 5f; // speed of movement
+    public float previousSpeed = 0;
 
     //Parameter Movement
     private ParameterManager parameterManager;
@@ -69,10 +70,15 @@ public class TargetObject : MonoBehaviour
     [SerializeField]
     public GameObject audioListenerBall;
 
+    private bool canMove;
+
+    private int flagMovement = 1;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        canMove = true;
         wallSystemPos = 1;
         parameterManager = GameObject.FindObjectOfType<ParameterManager>();
     }
@@ -97,28 +103,50 @@ public class TargetObject : MonoBehaviour
         transform.position = new Vector3(targetX, targetY, targetZ);
     }
 
+
     // Update is called once per frame
     void Update()
     {
         targetPitch(audioListenerBall.transform.position.y);
 
         //Target Movement
-        if (parameterManager.getTargetMoving())
+        if (parameterManager.getTargetMoving() && canMove == true)
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime); // move object forward in the z-axis
+            if(wallSystemPos == 1 ||wallSystemPos == 3){
+                transform.Translate(Vector3.forward * flagMovement * speed * Time.deltaTime); // move object forward in the z-axis
+                if(transform.position.z >  6f || transform.position.z < -17.11f){
+                    InvertSpeed();
+                }
+            }else{
+                transform.Translate(transform.right * flagMovement * speed * Time.deltaTime);
+                if(transform.position.x > -30.5f || transform.position.x < -53.82f){
+                    InvertSpeed();
+                }
+            }
         }
+    }
+
+    public void activateCanMove(){
+        canMove = true;
+    }
+
+    public void deactivateCanMove(){
+        canMove = false;
     }
 
     public void InvertSpeed()
     {
-        if (speed == 5)
-        {
-            speed = -5;
-        }
-        else
-        {
-            speed = 5;
-        }
+        flagMovement = flagMovement * -1;
+    }
+
+    public void StopMovement(){
+        previousSpeed = speed;
+        speed = 0;
+    }
+
+    
+    public void RestartMovement(){
+        speed = previousSpeed;
     }
 
     public static float GetRandomNumber(float min, float max)
@@ -189,7 +217,7 @@ public class TargetObject : MonoBehaviour
         }
         else if (wallSystemPos == 2)
         {
-            targetZ = 45.5f;
+            targetZ = 45.7f;
 
             float randomY = GetRandomNumber(-12f, 21f);
             float randomX = GetRandomNumber(-52.5f, -31.7f);
@@ -203,7 +231,8 @@ public class TargetObject : MonoBehaviour
         }
         else if (wallSystemPos == 3)
         {
-            targetX = -97.2f;
+            //targetX = -97.2f;
+            targetX = -93.5f;
 
             float randomY = GetRandomNumber(-12f, 21f);
             float randomZ = GetRandomNumber(-16.7f, 5.6f);
@@ -356,44 +385,6 @@ public class TargetObject : MonoBehaviour
         fifth = targetFifthRegion.GetComponent<MeshCollider>();
     }
 
-    
-    /*public void targetPitch(float aimY)
-    {
-        float targetPitchVal = 0.0f;
-        targetY = transform.position.y;
-
-        if (targetY == aimY)
-        {
-            targetPitchVal = 1;
-        }
-        else if (aimY > targetY)
-        {
-            if (aimY >= 21)
-            {
-                targetPitchVal = 3;
-            }
-            else
-            {
-                targetPitchVal = (aimY - targetY) / (21 - targetY) * 2 + 1;
-            }
-        }
-        else // b < a
-        {
-            if (aimY <= -12)
-            {
-                targetPitchVal = 0;
-            }
-            else
-            {
-                targetPitchVal = (aimY - targetY) / (-12 - targetY) * -1;
-                //targetPitchVal = (aimY - targetY) / (-12 - targetY) * -1;
-            }
-        }
-
-        //UNCOMMENT TO GET PITCH VALUE CHANGED
-        targetSoundObj.GetComponent<AudioSource>().pitch = targetPitchVal;
-    }*/
-
     void targetPitch(float aimY)
     {
         targetY = transform.position.y;
@@ -429,6 +420,7 @@ public class TargetObject : MonoBehaviour
         }
 
         targetSoundObj.GetComponent<AudioSource>().pitch = targetPitch;
+        audioListenerBall.GetComponent<AudioSource>().pitch = targetPitch;
     }
     
 }

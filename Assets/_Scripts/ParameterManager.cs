@@ -522,6 +522,8 @@ public class ParameterManager : MonoBehaviour
                 targetSoundUserPos = true;
                 targetSoundCrossbowAim = false;
                 spotterBeepAid = false;
+                targetMoving = true;
+                targetChangesAtFivePoints = true;
 
                 //after shot
                 changeOfPerspective = true;
@@ -544,6 +546,8 @@ public class ParameterManager : MonoBehaviour
             targetSound = true;
             targetSoundUserPos = false;
             targetSoundCrossbowAim = true;
+            targetMoving = true;
+            targetChangesAtFivePoints = true;
            
 
             //after shot
@@ -567,6 +571,8 @@ public class ParameterManager : MonoBehaviour
             targetSoundUserPos = true;
             targetSoundCrossbowAim = false;
 
+            targetMoving = true;
+            targetChangesAtFivePoints = true;
             spotterBeepAid = true;
 
             //after shot

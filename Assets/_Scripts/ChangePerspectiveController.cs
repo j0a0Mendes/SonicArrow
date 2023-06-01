@@ -88,6 +88,8 @@ public class ChangePerspectiveController : MonoBehaviour
 
 
     private int conditionChangeCount = 0;
+
+    
     void Update() {
         conditionChangeCount++;
 

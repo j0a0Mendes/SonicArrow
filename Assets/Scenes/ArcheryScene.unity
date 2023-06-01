@@ -786,7 +786,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80602035}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3112,13 +3112,14 @@ GameObject:
   - component: {fileID: 245596185}
   - component: {fileID: 245596184}
   - component: {fileID: 245596183}
+  - component: {fileID: 245596186}
   m_Layer: 0
   m_Name: RightTargetBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &245596182
 Transform:
   m_ObjectHideFlags: 0
@@ -3205,6 +3206,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245596181}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &245596186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245596181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19cd25990a7dc3e41864adc780c534ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &245776089
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,8 +3544,8 @@ MonoBehaviour:
   changeOfPerspectiveOnReplay: 0
   separador1: 
   targetSound: 1
-  targetSoundUserPos: 0
-  targetSoundCrossbowAim: 1
+  targetSoundUserPos: 1
+  targetSoundCrossbowAim: 0
   separador2: 
   spotterTalking: 1
   spotterPointsAid: 1
@@ -3543,12 +3556,12 @@ MonoBehaviour:
   hapticOnTargetHover: 0
   separador4: 
   targetStill: 0
-  targetChangesAtFivePoints: 1
-  targetMoving: 0
+  targetChangesAtFivePoints: 0
+  targetMoving: 1
   separador5: 
   activateConditions: 1
-  firstCondition: 0
-  secondCondition: 1
+  firstCondition: 1
+  secondCondition: 0
   thirdCondition: 0
   centerTarget: {fileID: 414346336}
 --- !u!1 &267719053
@@ -11384,7 +11397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &963521269
 Transform:
   m_ObjectHideFlags: 0
@@ -11463,7 +11476,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963521268}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d83763251aeb82459d9869e9d19549d, type: 3}
   m_Name: 
@@ -12270,7 +12283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993148232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.27, y: -1.74, z: -5.46}
+  m_LocalPosition: {x: 12.27, y: -7.8, z: -6.3}
   m_LocalScale: {x: 0.54690534, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12315,6 +12328,7 @@ MonoBehaviour:
   endpoint1: {fileID: 2142446562}
   endpoint2: {fileID: 60688705}
   speed: 5
+  previousSpeed: 0
   targetSoundObj: {fileID: 408026667}
   ballPointer: {fileID: 1549656680}
   audioListenerBall: {fileID: 476033842}
@@ -14247,7 +14261,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250742897}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -16205,7 +16219,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378853742}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -21115,7 +21129,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840149673}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -23527,13 +23541,14 @@ GameObject:
   - component: {fileID: 1995227317}
   - component: {fileID: 1995227316}
   - component: {fileID: 1995227315}
+  - component: {fileID: 1995227318}
   m_Layer: 0
   m_Name: LeftTargetBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1995227314
 Transform:
   m_ObjectHideFlags: 0
@@ -23620,6 +23635,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995227313}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1995227318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995227313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ecd9c89dc8aec6478f1b6bc7aaf0c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2006484413
 GameObject:
   m_ObjectHideFlags: 0
