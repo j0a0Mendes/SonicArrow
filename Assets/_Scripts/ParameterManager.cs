@@ -118,14 +118,24 @@ public class ParameterManager : MonoBehaviour
     private bool previousThirdCondition;
 
     //AudioListener position
-    private AudioListener listener;
+    private AudioListener listenerTarget;
+
+    private AudioListener listenerUser;
 
     [SerializeField]
     public GameObject centerTarget;
 
     private void Start()
     {
-        listener = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
+        listenerUser = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
+        listenerTarget = centerTarget.GetComponent<AudioListener>();
+
+        //listener = FindObjectOfType<AudioListener>();
+
+        //PROTOTYPE REASONS, FORCE LOAD CONDITION
+        firstCondition = true;
+        secondCondition = false;
+        thirdCondition = false;
 
         if (activateConditions)
         {
@@ -150,6 +160,28 @@ public class ParameterManager : MonoBehaviour
             GameObject intro = GameObject.Find("Hi_Im_Tom");
             intro.GetComponent<AudioSource>().Play();
         }
+
+        clearParameters();
+        secondCondition = false;
+        previousSecondCondition = false;
+        thirdCondition = false;
+        previousThirdCondition = false;
+
+        //before shot
+        targetSound = true;
+        targetSoundUserPos = true;
+        targetSoundCrossbowAim = false;
+        spotterBeepAid = false;
+        targetMoving = true;
+        targetChangesAtFivePoints = true;
+        whiteNoiseVerticalAid = true;
+
+        //after shot
+        changeOfPerspective = true;
+        changeOfPerspectiveInstant = true;
+        spotterTalking = true;
+        spotterPointsAid = true;
+        spotterQuadrantAid = false;
         
     }
 
@@ -491,21 +523,6 @@ public class ParameterManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //AUDIOLISTENER
-        if (targetSoundCrossbowAim)
-        {
-            //Debug.Log("AIMPOS");
-            listener.transform.position = centerTarget.transform.position;
-            listener.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-            
-        }
-        else if (targetSoundUserPos)
-        {
-            //Debug.Log("USERPOS");
-            listener.transform.position = Camera.main.transform.position;
-        }
-
-
         if (conditionChanged)
         {
             if (firstCondition)
@@ -524,6 +541,7 @@ public class ParameterManager : MonoBehaviour
                 spotterBeepAid = false;
                 targetMoving = true;
                 targetChangesAtFivePoints = true;
+                whiteNoiseVerticalAid = true;
 
                 //after shot
                 changeOfPerspective = true;
@@ -548,6 +566,7 @@ public class ParameterManager : MonoBehaviour
             targetSoundCrossbowAim = true;
             targetMoving = true;
             targetChangesAtFivePoints = true;
+            whiteNoiseVerticalAid = true;
            
 
             //after shot
@@ -570,15 +589,35 @@ public class ParameterManager : MonoBehaviour
             targetSound = false;
             targetSoundUserPos = true;
             targetSoundCrossbowAim = false;
+            whiteNoiseVerticalAid = true;
 
             targetMoving = true;
             targetChangesAtFivePoints = true;
             spotterBeepAid = true;
 
+            
             //after shot
             spotterTalking = true;
             spotterPointsAid = true;
             spotterQuadrantAid = false;
+        }
+
+        //AUDIOLISTENER
+        if (targetSoundCrossbowAim)
+        {
+            //Debug.Log("AIMPOS");
+            //listener.transform.position = centerTarget.transform.position;
+            //listener.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+            listenerTarget.enabled = true;
+            listenerUser.enabled = false;
+            
+        }
+        else if (targetSoundUserPos)
+        {
+            listenerTarget.enabled = false;
+            listenerUser.enabled = true;
+            //Debug.Log("USERPOS");
+            //listener.transform.position = Camera.main.transform.position;
         }
 
         conditionChanged = false;

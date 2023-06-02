@@ -98,6 +98,9 @@ public class KeyControllers : MonoBehaviour
     private bool leftConditionTrigger;
 
     private bool rightConditionTrigger;
+
+    private bool canPlayTargetSound = true;
+
     void Start()
     {
         //listener = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
@@ -126,6 +129,7 @@ public class KeyControllers : MonoBehaviour
 
         //HAPTIC PURPOSES
     }   
+
 
     // Update is called once per frame
     void Update()
@@ -180,6 +184,7 @@ public class KeyControllers : MonoBehaviour
             {
                 if (!bowStringController.stringPullingSound())
                 {
+                    canPlayTargetSound = false;
                     readyToShoot = false;
                     targetObject.deactivateCanMove();
                     bowStringController.shootCrossBow();
@@ -191,7 +196,7 @@ public class KeyControllers : MonoBehaviour
             {
                 if (controller.getTargetSound()) 
                 {
-                    if (controller.getInFirstPerspective())
+                    if (controller.getInFirstPerspective() && canPlayTargetSound == true)
                     {
                         playTargetSound = true;
                     }
@@ -241,6 +246,10 @@ public class KeyControllers : MonoBehaviour
                 playWhiteNoise = false;
             }
         }   
+    }
+
+    public void activateCanPlayTargetSound(){
+        canPlayTargetSound = true;
     }
 
     public bool getTargetPlaying()

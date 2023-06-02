@@ -494,6 +494,12 @@ public class StickingArrowToSurface : MonoBehaviour
             target.changeTargetPos();      //Por mais a frente para ser so dps dos audios
             FivePointsFlag = false;
         }
+
+        //MAYBE?---------------------------------
+        keyControllersRight.activateCanPlayTargetSound();
+        keyControllersRight.readyToShootTrue();
+        keyControllersRight.reloadCrossbow();
+            //MAYBE?---------------------------------
         //Destroy(gameObject);
 
     }
@@ -536,10 +542,8 @@ public class StickingArrowToSurface : MonoBehaviour
 
         audioList.Clear();
 
-        keyControllersRight.readyToShootTrue();
-        keyControllersRight.reloadCrossbow();
-
-        bowStringController.prepareCrossBow();
+        //keyControllersRight.readyToShootTrue();
+        //keyControllersRight.reloadCrossbow();
     }
 
 }

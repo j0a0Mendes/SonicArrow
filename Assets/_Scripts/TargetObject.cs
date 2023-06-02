@@ -74,10 +74,12 @@ public class TargetObject : MonoBehaviour
 
     private int flagMovement = 1;
 
+    private BowStringController bowStringController;
 
     // Start is called before the first frame update
     void Start()
     {
+        bowStringController = GameObject.FindObjectOfType<BowStringController>();
         canMove = true;
         wallSystemPos = 1;
         parameterManager = GameObject.FindObjectOfType<ParameterManager>();
@@ -114,12 +116,20 @@ public class TargetObject : MonoBehaviour
         {
             if(wallSystemPos == 1 ||wallSystemPos == 3){
                 transform.Translate(Vector3.forward * flagMovement * speed * Time.deltaTime); // move object forward in the z-axis
-                if(transform.position.z >  6f || transform.position.z < -17.11f){
+                if(transform.position.z >  6f){
+                    InvertSpeed();
+                }
+
+                if(transform.position.z < -17.11f){
                     InvertSpeed();
                 }
             }else{
                 transform.Translate(transform.right * flagMovement * speed * Time.deltaTime);
-                if(transform.position.x > -30.5f || transform.position.x < -53.82f){
+                if(transform.position.x > -30.5f){
+                    InvertSpeed();
+                }
+
+                if(transform.position.x < -53.82f){
                     InvertSpeed();
                 }
             }
@@ -231,8 +241,7 @@ public class TargetObject : MonoBehaviour
         }
         else if (wallSystemPos == 3)
         {
-            //targetX = -97.2f;
-            targetX = -93.5f;
+            targetX = -97.2f;
 
             float randomY = GetRandomNumber(-12f, 21f);
             float randomZ = GetRandomNumber(-16.7f, 5.6f);
@@ -259,6 +268,8 @@ public class TargetObject : MonoBehaviour
 
             transform.position = new Vector3(targetX, targetY, targetZ);
         }
+
+        bowStringController.prepareCrossBow();
     }
 
     public int getWallSystem()
@@ -420,6 +431,8 @@ public class TargetObject : MonoBehaviour
         }
 
         targetSoundObj.GetComponent<AudioSource>().pitch = targetPitch;
+        audioListenerBall.GetComponent<AudioSource>().pitch = targetPitch;
+
         audioListenerBall.GetComponent<AudioSource>().pitch = targetPitch;
     }
     
