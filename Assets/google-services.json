@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "839927187522",
+    "project_id": "sonicarrow-26c69",
+    "storage_bucket": "sonicarrow-26c69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839927187522:android:1a0f6e3ad4252ba3a885db",
+        "android_client_info": {
+          "package_name": "com.JoaoMendes.SonicArrow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839927187522-ro5847v8fc8lgn5t6bkiv96g8f89jk0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcbYw4LPZX1SQ_pV-HBHUcfyE6pGZwuU4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839927187522-ro5847v8fc8lgn5t6bkiv96g8f89jk0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

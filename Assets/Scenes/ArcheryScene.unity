@@ -4404,14 +4404,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9139544765594900639, guid: 7fd0147ec4c090d43935a8d7f51b2e36,
         type: 3}
+      propertyPath: Priority
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139544765594900639, guid: 7fd0147ec4c090d43935a8d7f51b2e36,
+        type: 3}
       propertyPath: m_Volume
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139544765594900639, guid: 7fd0147ec4c090d43935a8d7f51b2e36,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 9139544765594900639, guid: 7fd0147ec4c090d43935a8d7f51b2e36,
         type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 9fb9d9bb5cea7ce42abb0300b0ef63f6, type: 3}
+    - target: {fileID: 9139544765594900639, guid: 7fd0147ec4c090d43935a8d7f51b2e36,
+        type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1.1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 336615671472136945, guid: 7fd0147ec4c090d43935a8d7f51b2e36, type: 3}
     - {fileID: 336615671472136944, guid: 7fd0147ec4c090d43935a8d7f51b2e36, type: 3}
@@ -19405,7 +19420,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eb727ef57905a4f4e9f2ed6b07680bbd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0

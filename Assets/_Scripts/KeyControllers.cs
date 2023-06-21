@@ -115,8 +115,6 @@ public class KeyControllers : MonoBehaviour
 
         LeftHand = GameObject.FindGameObjectWithTag("LeftHand");
         keyControllersrLeft = LeftHand.GetComponent<KeyControllers>();
-        //actionReplay = GameObject.FindObjectOfType<ActionReplay>();
-        //actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
 
         //REPLAY BUTTON
         xButtonEnabled = true;
@@ -138,19 +136,6 @@ public class KeyControllers : MonoBehaviour
         {
             SendHaptics();
         }
-
-        /*if (controller.getTargetSoundAimPos())
-        {
-            //Debug.Log("AIMPOS");
-            listener.transform.position = centerTarget.transform.position;
-            listener.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-            
-        }
-        else if (controller.getTargetSoundUserPos())
-        {
-            //Debug.Log("USERPOS");
-            listener.transform.position = Camera.main.transform.position;
-        }*/
 
         //get mode selected. 0 - Instant Sound Output. 1 - Replay Mode
         modeSelected = controller.getModeSelected();
@@ -187,7 +172,7 @@ public class KeyControllers : MonoBehaviour
                     canPlayTargetSound = false;
                     readyToShoot = false;
                     targetObject.deactivateCanMove();
-                    bowStringController.shootCrossBow();
+                    bowStringController.shootCrossBow();       //CROSSBOW SHOT
                 }
                 //Debug.Log("CROSSBOW SHOT");
             }
@@ -230,7 +215,7 @@ public class KeyControllers : MonoBehaviour
             }
 
 
-            if (buttonXTriggered == 1)
+            /**if (buttonXTriggered == 1)
             {
                 //Debug.Log("X PRESSED");
                 if (playTargetSound == false)
@@ -244,7 +229,7 @@ public class KeyControllers : MonoBehaviour
             else
             {
                 playWhiteNoise = false;
-            }
+            }**/
         }   
     }
 

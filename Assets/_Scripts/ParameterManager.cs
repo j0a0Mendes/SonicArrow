@@ -550,74 +550,72 @@ public class ParameterManager : MonoBehaviour
                 spotterPointsAid = true;
                 spotterQuadrantAid = false;
             }
-        }else if (secondCondition)
-        {
-            Debug.Log("Second Condition");
-            clearParameters();
-            firstCondition = false;
-            previousFirstCondition = false;
-            thirdCondition = false;
-            previousThirdCondition = false;
+            else if (secondCondition)
+            {
+                Debug.Log("Second Condition");
+                clearParameters();
+                firstCondition = false;
+                previousFirstCondition = false;
+                thirdCondition = false;
+                previousThirdCondition = false;
 
 
-            //before shot
-            targetSound = true;
-            targetSoundUserPos = false;
-            targetSoundCrossbowAim = true;
-            targetMoving = true;
-            targetChangesAtFivePoints = true;
-            whiteNoiseVerticalAid = true;
-           
+                //before shot
+                targetSound = true;
+                targetSoundUserPos = false;
+                targetSoundCrossbowAim = true;
+                targetMoving = true;
+                targetChangesAtFivePoints = true;
+                whiteNoiseVerticalAid = true;
 
-            //after shot
-            changeOfPerspective = true;
-            changeOfPerspectiveInstant = true;
-            spotterTalking = true;
-            spotterPointsAid = true;
-            spotterQuadrantAid = false;
 
-        }else if (thirdCondition)
-        {
-            Debug.Log("Third Condition");
-            clearParameters();
-            firstCondition = false;
-            previousFirstCondition = false;
-            secondCondition = false;
-            previousSecondCondition = false;
+                //after shot
+                changeOfPerspective = true;
+                changeOfPerspectiveInstant = true;
+                spotterTalking = true;
+                spotterPointsAid = true;
+                spotterQuadrantAid = false;
 
-            //before shot
-            targetSound = false;
-            targetSoundUserPos = true;
-            targetSoundCrossbowAim = false;
-            whiteNoiseVerticalAid = true;
+            }
+            else if (thirdCondition)
+            {
+                Debug.Log("Third Condition");
+                clearParameters();
+                firstCondition = false;
+                previousFirstCondition = false;
+                secondCondition = false;
+                previousSecondCondition = false;
 
-            targetMoving = true;
-            targetChangesAtFivePoints = true;
-            spotterBeepAid = true;
+                //before shot
+                targetSound = false;
+                targetSoundUserPos = true;
+                targetSoundCrossbowAim = false;
+                whiteNoiseVerticalAid = true;
 
-            
-            //after shot
-            spotterTalking = true;
-            spotterPointsAid = true;
-            spotterQuadrantAid = false;
+                targetMoving = true;
+                targetChangesAtFivePoints = true;
+                spotterBeepAid = true;
+
+
+                //after shot
+                spotterTalking = true;
+                spotterPointsAid = true;
+                spotterQuadrantAid = false;
+            }
         }
 
         //AUDIOLISTENER
         if (targetSoundCrossbowAim)
         {
-            //Debug.Log("AIMPOS");
-            //listener.transform.position = centerTarget.transform.position;
-            //listener.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-            listenerTarget.enabled = true;
+            listenerTarget.enabled = true;      //AIMPOS
             listenerUser.enabled = false;
             
         }
         else if (targetSoundUserPos)
         {
-            listenerTarget.enabled = false;
+            listenerTarget.enabled = false;     //USERPOS
             listenerUser.enabled = true;
-            //Debug.Log("USERPOS");
-            //listener.transform.position = Camera.main.transform.position;
+
         }
 
         conditionChanged = false;
