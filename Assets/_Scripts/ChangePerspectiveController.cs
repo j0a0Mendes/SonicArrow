@@ -100,7 +100,6 @@ public class ChangePerspectiveController : MonoBehaviour
             {
                 conditionChangeCount = 0;
                 parameterManager.selectNextCondition();
-                //resetTheSystem();
 
 
                 Debug.Log("Change condition");
@@ -165,12 +164,6 @@ public class ChangePerspectiveController : MonoBehaviour
             xrorigin.position = new Vector3(-41.893f, 0.082f, -4.4f);
           
             bowStringController.canShootAgain();
-            
-            //MAYBE?---------------------------------
-            //keyControllersrRight.activateCanPlayTargetSound();
-            //keyControllersrRight.readyToShootTrue();
-            //keyControllersrRight.reloadCrossbow();
-            //MAYBE?---------------------------------
 
             numberOfShots += 1;
             firstPerspective = true;

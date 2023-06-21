@@ -129,7 +129,7 @@ public class TargetObject : MonoBehaviour
                     InvertSpeed();
                 }
 
-                if(transform.position.x < -53.82f){
+                if(transform.position.x < -50.82f){
                     InvertSpeed();
                 }
             }
@@ -227,7 +227,7 @@ public class TargetObject : MonoBehaviour
         }
         else if (wallSystemPos == 2)
         {
-            targetZ = 45.7f;
+            targetZ = 49.26f;
 
             float randomY = GetRandomNumber(-12f, 21f);
             float randomX = GetRandomNumber(-52.5f, -31.7f);
@@ -235,7 +235,7 @@ public class TargetObject : MonoBehaviour
             targetY = randomY;
             targetX = randomX;
 
-            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+            transform.rotation = Quaternion.Euler(0f, -90f, 0f);
 
             transform.position = new Vector3(targetX, targetY, targetZ);
         }
@@ -256,15 +256,15 @@ public class TargetObject : MonoBehaviour
         }
         else if (wallSystemPos == 4)
         {
-            targetZ = -56f;
+            targetZ = -60f;
 
             float randomY = GetRandomNumber(-12f, 21f);
-            float randomX = GetRandomNumber(-52.5f, -31.7f);
+            float randomX = GetRandomNumber(-50f, -31.7f);
 
             targetY = randomY;
             targetX = randomX;
 
-            transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
 
             transform.position = new Vector3(targetX, targetY, targetZ);
         }
