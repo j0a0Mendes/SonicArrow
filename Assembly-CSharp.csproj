@@ -81,6 +81,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\_Scripts\WhiteNoiseAss.cs" />
+    <Compile Include="Assets\_Scripts\LogManager.cs" />
     <Compile Include="Assets\_Scripts\KeyControllerSupport.cs" />
     <Compile Include="Assets\_Scripts\ActionReplayClone.cs" />
     <Compile Include="Assets\_Scripts\MovingTarget.cs" />

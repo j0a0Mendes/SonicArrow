@@ -7,6 +7,11 @@ public class ParameterManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    [SerializeField]
+    public int userID = 0;
+
+    private string pointsLabel;
+
     //Change of perspective
 
     private bool previousChangeOfPerspective;
@@ -125,10 +130,14 @@ public class ParameterManager : MonoBehaviour
     [SerializeField]
     public GameObject centerTarget;
 
+    private LogManager logManager;
+
     private void Start()
     {
         listenerUser = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
         listenerTarget = centerTarget.GetComponent<AudioListener>();
+
+        logManager = GameObject.FindObjectOfType<LogManager>().GetComponent<LogManager>();
 
         //listener = FindObjectOfType<AudioListener>();
 
@@ -613,9 +622,8 @@ public class ParameterManager : MonoBehaviour
         }
         else if (targetSoundUserPos)
         {
-            listenerTarget.enabled = false;     //USERPOS
-            listenerUser.enabled = true;
-
+            //listenerTarget.enabled = false;     //USERPOS
+            //listenerUser.enabled = true;
         }
 
         conditionChanged = false;
@@ -634,6 +642,12 @@ public class ParameterManager : MonoBehaviour
 
     //Getters
     //Perspective 
+
+    public int getUserId()
+    {
+        return userID;
+    }
+
     public bool getChangeOfPerspective()
     {
         return changeOfPerspective;
@@ -715,6 +729,21 @@ public class ParameterManager : MonoBehaviour
     public bool getTargetChangesAtFivePoints()
     {
         return targetChangesAtFivePoints;
+    }
+
+    public bool getFirstCondition()
+    {
+        return firstCondition;
+    }
+
+    public bool getSecondCondition()
+    {
+        return secondCondition;
+    }
+
+    public bool getThirdCondition()
+    {
+        return thirdCondition;
     }
 
     //--------------------------------------
@@ -841,5 +870,54 @@ public class ParameterManager : MonoBehaviour
         }
 
         conditionChanged = true;
+    }
+
+    public void updatePoints(string pointsMade)
+    {
+        pointsLabel = pointsMade;
+    }
+
+    public void makeLog()
+    {
+        string targetMovement = "Target Still and Changes On Hit";
+        string condition = "condition 0";
+
+        if (firstCondition)
+        {
+            condition = "Condition 1";
+        }
+        else if (secondCondition)
+        {
+            condition = "Condition 2";
+        }
+        else if (thirdCondition)
+        {
+            condition = "Condition 3";
+        }
+
+        if(targetMoving)
+        {
+            if (targetChangesAtFivePoints)
+            {
+                targetMovement = "Target Moving and Changes On Hit";
+            }
+            else
+            {
+                targetMovement = "Target Moving";
+            }
+        }else if (targetStill)
+        {
+            if (targetChangesAtFivePoints)
+            {
+                targetMovement = "Target Still and Changes On Hit";
+            }
+            else
+            {
+                targetMovement = "Target Still";
+            }
+        }
+        
+        logManager.Log("User " + userID.ToString(), condition, targetMovement, pointsLabel);
+    
     }
 }

@@ -49,6 +49,10 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private BowStringController bowStringController;
 
+    //PARAMETER MANAGEMENT 
+    private ParameterManager parameterManager;
+
+
 
     private void Start()
     {
@@ -66,15 +70,23 @@ public class StickingArrowToSurface : MonoBehaviour
 
         bowStringController = GameObject.FindObjectOfType<BowStringController>();
 
+        parameterManager = GameObject.FindObjectOfType<ParameterManager>();
+
     }
 
     private void Update()
     {
+        
         modeSelected = controller.getModeSelected();
+
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+
+
         target.activateCanMove();
 
         if (controller.getModeSelected() == 1)
@@ -87,7 +99,7 @@ public class StickingArrowToSurface : MonoBehaviour
         //Debug.Log(collision.gameObject.tag);
         //Debug.Log(collision.gameObject.tag == "Untagged");
         string collidedWith = collision.gameObject.tag;
-        if (collidedWith == "FrontWall" || collidedWith == "BackWall" || collidedWith == "LeftWall" || collidedWith == "RightWall")
+        if (collidedWith == "FrontWall")
         {
             if (controller.getParameterSpotterTalking())
             {
@@ -97,7 +109,47 @@ public class StickingArrowToSurface : MonoBehaviour
 
             controller.addPoints(0);
 
-            Debug.Log("WALL HIT");
+            parameterManager.updatePoints("TargetWall Hit");
+            Debug.Log("TARGET WALL HIT");
+
+        }else if (collidedWith == "BackWall")
+        {
+            if (controller.getParameterSpotterTalking())
+            {
+                GameObject spotterNoPoints = GameObject.Find("Hit_A_Wall");
+                audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
+            }
+
+            controller.addPoints(0);
+
+            parameterManager.updatePoints("BackWall Hit");
+            Debug.Log("BACK WALL HIT");
+        }
+        else if (collidedWith == "LeftWall")
+        {
+            if (controller.getParameterSpotterTalking())
+            {
+                GameObject spotterNoPoints = GameObject.Find("Hit_A_Wall");
+                audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
+            }
+
+            controller.addPoints(0);
+
+            parameterManager.updatePoints("LeftWall Hit");
+            Debug.Log("LEFT WALL HIT");
+        }
+        else if (collidedWith == "RightWall")
+        {
+            if (controller.getParameterSpotterTalking())
+            {
+                GameObject spotterNoPoints = GameObject.Find("Hit_A_Wall");
+                audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
+            }
+
+            controller.addPoints(0);
+
+            parameterManager.updatePoints("RightWall Hit");
+            Debug.Log("RIGHT WALL HIT");
         }
         else if (collidedWith == "Floor")
         {
@@ -114,6 +166,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            parameterManager.updatePoints("Floor Hit");
             Debug.Log("FLOOR HIT");
             controller.addPoints(0);
         }
@@ -131,6 +184,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            parameterManager.updatePoints("Ceiling Hit");
             Debug.Log("CEILING HIT");
             controller.addPoints(0);
         }
@@ -160,6 +214,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            parameterManager.updatePoints("5 Points");
             Debug.Log("5 POINTS!!!");
             controller.addPoints(5);
         }
@@ -229,6 +284,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            parameterManager.updatePoints("4 Points");
             Debug.Log("4 POINTS");
             controller.addPoints(4);
         }
@@ -298,6 +354,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            parameterManager.updatePoints("3 Points");
             Debug.Log("3 POINTS");
             controller.addPoints(3);
         }
@@ -366,6 +423,7 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
+            parameterManager.updatePoints("2 Points");
             Debug.Log("2 POINTS");
             controller.addPoints(2);
         }
@@ -435,10 +493,13 @@ public class StickingArrowToSurface : MonoBehaviour
                 }
             }
 
-            Debug.Log("1 POINTS");
+            parameterManager.updatePoints("1 Point");
+            Debug.Log("1 POINT");
             controller.addPoints(1);
         }
 
+        //LOG CREATION
+        parameterManager.makeLog();
 
         windNavigatingSound.Stop();
 
@@ -541,9 +602,6 @@ public class StickingArrowToSurface : MonoBehaviour
         isPlaying = false;
 
         audioList.Clear();
-
-        //keyControllersRight.readyToShootTrue();
-        //keyControllersRight.reloadCrossbow();
     }
 
 }

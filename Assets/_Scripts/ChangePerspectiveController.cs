@@ -63,6 +63,16 @@ public class ChangePerspectiveController : MonoBehaviour
     private bool whiteNoiseVerticalParameter;
     private bool hapticOnTargetHoverParameter;
 
+    private AudioListener centerUserAudioListener;
+
+    [SerializeField]
+    public GameObject centerUserPos;
+
+    [SerializeField]
+    public GameObject cameraUser;
+
+    private AudioListener listenerUser;
+
     void Start()
     {
         firstPerspective = true;
@@ -79,6 +89,9 @@ public class ChangePerspectiveController : MonoBehaviour
 
         parameterManager = GameObject.FindObjectOfType<ParameterManager>();
 
+        //AudioListeners
+        centerUserAudioListener = centerUserPos.GetComponent<AudioListener>();
+        listenerUser = cameraUser.GetComponent<AudioListener>(); // Get the AudioListener component
     }
 
     private void Awake()
@@ -150,9 +163,8 @@ public class ChangePerspectiveController : MonoBehaviour
             }
             
             xrorigin.position = targetFirstRegion.transform.position + adjustments;
-            
+            xrorigin.rotation *= Quaternion.Euler(0f, 180f, 0f);
             firstPerspective = false;
-
         }
         else if(changePerspectiveTrigger && !firstPerspective)
         {
@@ -165,7 +177,8 @@ public class ChangePerspectiveController : MonoBehaviour
 
             numberOfShots += 1;
             firstPerspective = true;
-            
+
+            xrorigin.rotation *= Quaternion.Euler(0f, 180f, 0f);
         }
 
         if (changePerspectiveInASec)
@@ -180,6 +193,14 @@ public class ChangePerspectiveController : MonoBehaviour
             }
         }
     }
+
+    public void SwitchAudioListeners(bool enableListenerUser)
+    {
+        listenerUser.enabled = enableListenerUser;
+        centerUserAudioListener.enabled = !enableListenerUser;
+    }
+
+
     public void changePerspective(){
         if(changeEnabled){
             changePerspectiveTrigger = true;
