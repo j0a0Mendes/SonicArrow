@@ -17,7 +17,7 @@ public class ParameterManager : MonoBehaviour
     private bool previousChangeOfPerspective;
     private bool previousChangeOfPerspectiveInstant;
     private bool previousChangeOfPerspectiveOnReplay;
-    
+
 
     [SerializeField]
     public bool changeOfPerspective;
@@ -25,7 +25,7 @@ public class ParameterManager : MonoBehaviour
     [SerializeField]
     public bool changeOfPerspectiveInstant;          //UNIQUE
 
-    
+
 
     [SerializeField]
     public bool changeOfPerspectiveOnReplay;        //UNIQUE
@@ -57,7 +57,7 @@ public class ParameterManager : MonoBehaviour
     private bool previousSpotterDirectionAid;
 
     [SerializeField]
-    public bool spotterTalking; 
+    public bool spotterTalking;
 
     [SerializeField]
     public bool spotterPointsAid;
@@ -148,17 +148,17 @@ public class ParameterManager : MonoBehaviour
 
         if (activateConditions)
         {
-            if(firstCondition)
+            if (firstCondition)
             {
                 GameObject intro = GameObject.Find("Hi_Im_Tom_1_Condition");
                 intro.GetComponent<AudioSource>().Play();
             }
-            else if(secondCondition)
+            else if (secondCondition)
             {
                 GameObject intro = GameObject.Find("Hi_Im_Tom_2_Condition");
                 intro.GetComponent<AudioSource>().Play();
             }
-            else if(thirdCondition)
+            else if (thirdCondition)
             {
                 GameObject intro = GameObject.Find("Hi_Im_Tom_3_Condition");
                 intro.GetComponent<AudioSource>().Play();
@@ -181,8 +181,9 @@ public class ParameterManager : MonoBehaviour
         targetSoundUserPos = true;
         targetSoundCrossbowAim = false;
         spotterBeepAid = false;
-        targetMoving = true;
-        targetChangesAtFivePoints = true;
+        targetMoving = false;
+        targetChangesAtFivePoints = false;
+        targetStill = true;
         whiteNoiseVerticalAid = true;
 
         //after shot
@@ -191,7 +192,7 @@ public class ParameterManager : MonoBehaviour
         spotterTalking = true;
         spotterPointsAid = true;
         spotterQuadrantAid = false;
-        
+
     }
 
     private void OnValidate()
@@ -208,7 +209,7 @@ public class ParameterManager : MonoBehaviour
                 previousSecondCondition = false;
                 thirdCondition = false;
                 previousThirdCondition = false;
-            } 
+            }
         }
 
         if (activateConditions)
@@ -231,8 +232,8 @@ public class ParameterManager : MonoBehaviour
                     targetSoundUserPos = true;
 
                     //after shot
-                    changeOfPerspective = true;
-                    changeOfPerspectiveInstant = true;
+                    changeOfPerspective = false;
+                    changeOfPerspectiveInstant = false;
                     spotterTalking = true;
                     spotterPointsAid = true;
                     spotterQuadrantAid = false;
@@ -240,12 +241,12 @@ public class ParameterManager : MonoBehaviour
                 else
                 {
                     secondCondition = true;
-                    
+
                     thirdCondition = false;
                     previousThirdCondition = false;
                 }
             }
-            
+
             if (secondCondition != previousSecondCondition)
             {
                 previousSecondCondition = secondCondition;
@@ -265,23 +266,24 @@ public class ParameterManager : MonoBehaviour
                     targetSoundCrossbowAim = true;
 
                     //after shot
-                    changeOfPerspective = true;
-                    changeOfPerspectiveInstant = true;
+                    changeOfPerspective = false;
+                    changeOfPerspectiveInstant = false;
                     spotterTalking = true;
                     spotterPointsAid = true;
                     spotterQuadrantAid = false;
-                }else
+                }
+                else
                 {
                     firstCondition = false;
                     previousFirstCondition = false;
                     thirdCondition = true;
-                    
+
                 }
 
             }
-            
+
             if (thirdCondition != previousThirdCondition)
-            {        
+            {
                 previousThirdCondition = thirdCondition;
 
                 if (thirdCondition)
@@ -295,6 +297,8 @@ public class ParameterManager : MonoBehaviour
 
                     //before shot
                     spotterBeepAid = true;
+                    targetSound = true;
+                    targetSoundUserPos = true;
 
                     //after shot
                     spotterTalking = true;
@@ -304,8 +308,8 @@ public class ParameterManager : MonoBehaviour
                 else
                 {
                     firstCondition = true;
-                    
-                    secondCondition = false;    
+
+                    secondCondition = false;
                     previousSecondCondition = false;
                 }
             }
@@ -319,14 +323,14 @@ public class ParameterManager : MonoBehaviour
             thirdCondition = false;
             previousThirdCondition = false;
         }
-       
+
 
         //Change of perspective constraints 
         if (changeOfPerspective != previousChangeOfPerspective)
         {
             previousChangeOfPerspective = changeOfPerspective;
 
-            if(changeOfPerspective)
+            if (changeOfPerspective)
             {
 
             }
@@ -354,7 +358,7 @@ public class ParameterManager : MonoBehaviour
                 {
                     changeOfPerspectiveOnReplay = true;
                     previousChangeOfPerspectiveOnReplay = true;
-                } 
+                }
             }
 
             if (changeOfPerspectiveOnReplay != previousChangeOfPerspectiveOnReplay)
@@ -463,33 +467,33 @@ public class ParameterManager : MonoBehaviour
             }
         }
 
-        if(spotterTalking == true && spotterPointsAid == false && spotterDirectionAid== false && spotterQuadrantAid == false)
+        if (spotterTalking == true && spotterPointsAid == false && spotterDirectionAid == false && spotterQuadrantAid == false)
         {
             spotterPointsAid = true;
             previousSpotterPointsAid = true;
         }
 
         //Target Movement constraints-------------------------------
-        if(targetStill != previousTargetStill)
+        if (targetStill != previousTargetStill)
         {
             previousTargetStill = targetStill;
-            if(targetStill)
-            {    
-                targetChangesAtFivePoints = false;
-                previousTargetChangesAtFivePoints = false;
+            if (targetStill)
+            {
+                //targetChangesAtFivePoints = false;
+                //previousTargetChangesAtFivePoints = false;
                 targetMoving = false;
                 previousTargetMoving = false;
             }
             else
             {
-                targetChangesAtFivePoints = true;
-                previousTargetChangesAtFivePoints = true;
-                targetMoving = false;
-                previousTargetMoving = false;
+                //targetChangesAtFivePoints = true;
+                //previousTargetChangesAtFivePoints = true;
+                targetMoving = true;
+                previousTargetMoving = true;
             }
         }
 
-        if (targetChangesAtFivePoints != previousTargetChangesAtFivePoints)
+        /*if (targetChangesAtFivePoints != previousTargetChangesAtFivePoints)
         {
             previousTargetChangesAtFivePoints = targetChangesAtFivePoints;
             if (targetChangesAtFivePoints)
@@ -506,7 +510,7 @@ public class ParameterManager : MonoBehaviour
                 targetMoving = false;
                 previousTargetMoving = false;
             }
-        }
+        }*/
 
         if (targetMoving != previousTargetMoving)
         {
@@ -515,15 +519,15 @@ public class ParameterManager : MonoBehaviour
             {
                 targetStill = false;
                 previousTargetStill = false;
-                targetChangesAtFivePoints = false;
-                previousTargetChangesAtFivePoints = false;
+                //targetChangesAtFivePoints = false;
+                //previousTargetChangesAtFivePoints = false;
             }
             else
             {
                 targetStill = true;
                 previousTargetStill = true;
-                targetChangesAtFivePoints = false;
-                previousTargetChangesAtFivePoints = false;
+                //targetChangesAtFivePoints = false;
+                //previousTargetChangesAtFivePoints = false;
             }
         }
     }
@@ -579,8 +583,8 @@ public class ParameterManager : MonoBehaviour
 
 
                 //after shot
-                changeOfPerspective = true;
-                changeOfPerspectiveInstant = true;
+                changeOfPerspective = false;
+                changeOfPerspectiveInstant = false;
                 spotterTalking = true;
                 spotterPointsAid = true;
                 spotterQuadrantAid = false;
@@ -618,7 +622,7 @@ public class ParameterManager : MonoBehaviour
         {
             listenerTarget.enabled = true;      //AIMPOS
             listenerUser.enabled = false;
-            
+
         }
         else if (targetSoundUserPos)
         {
@@ -628,7 +632,7 @@ public class ParameterManager : MonoBehaviour
 
         conditionChanged = false;
     }
- 
+
 
     public void clearParameters()
     {
@@ -638,7 +642,7 @@ public class ParameterManager : MonoBehaviour
         spotterBeepAid = false;
         //hapticOnTargetHover = false;
         //targetStill = true;
-    }    
+    }
 
     //Getters
     //Perspective 
@@ -775,7 +779,7 @@ public class ParameterManager : MonoBehaviour
     public void setTargetSoundUserPos(bool val)
     {
         targetSoundUserPos = val;
-    }                
+    }
     public void setTargetSoundCrossbowAim(bool val)
     {
         targetSoundCrossbowAim = val;
@@ -820,7 +824,7 @@ public class ParameterManager : MonoBehaviour
 
     public void setTargetStill(bool val)
     {
-       targetStill = val;
+        targetStill = val;
     }
     public void setTargetMoving(bool val)
     {
@@ -841,7 +845,8 @@ public class ParameterManager : MonoBehaviour
             {
                 firstCondition = false;
                 secondCondition = true;
-            }else if (secondCondition)
+            }
+            else if (secondCondition)
             {
                 secondCondition = false;
                 thirdCondition = true;
@@ -895,7 +900,7 @@ public class ParameterManager : MonoBehaviour
             condition = "Condition 3";
         }
 
-        if(targetMoving)
+        if (targetMoving)
         {
             if (targetChangesAtFivePoints)
             {
@@ -905,7 +910,8 @@ public class ParameterManager : MonoBehaviour
             {
                 targetMovement = "Target Moving";
             }
-        }else if (targetStill)
+        }
+        else if (targetStill)
         {
             if (targetChangesAtFivePoints)
             {
@@ -916,8 +922,8 @@ public class ParameterManager : MonoBehaviour
                 targetMovement = "Target Still";
             }
         }
-        
+
         logManager.Log("User " + userID.ToString(), condition, targetMovement, pointsLabel);
-    
+
     }
 }
