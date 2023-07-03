@@ -91,6 +91,10 @@ public class KeyControllers : MonoBehaviour
 
     public bool playWhiteNoise;
 
+    public bool playPropperSoundTarget;
+
+    public bool playPropperSoundAim;
+
     public bool playTargetSound;
 
     // Start is called before the first frame update
@@ -215,21 +219,24 @@ public class KeyControllers : MonoBehaviour
             }
 
 
-            /**if (buttonXTriggered == 1)
+            if (buttonXTriggered == 1)
             {
                 //Debug.Log("X PRESSED");
                 if (playTargetSound == false)
                 {
-                    if (controller.getParameterWhiteNoise())
+                    if (controller.getFirstCondition() || controller.getThirdCondition())
                     {
-                        playWhiteNoise = true;
+                        playPropperSoundTarget = true;
+                    }else if(controller.getSecondCondition()){
+                        playPropperSoundAim = true;
                     }
                 }
             }
             else
             {
-                playWhiteNoise = false;
-            }**/
+                playPropperSoundAim = false;
+                playPropperSoundTarget = false;
+            }
         }   
     }
 
@@ -361,5 +368,12 @@ public class KeyControllers : MonoBehaviour
         return rightConditionTrigger;
     }
 
+    public bool getPropperSoundAim(){
+        return playPropperSoundAim;
+    }
+
+    public bool getPropperSoundTarget(){
+        return playPropperSoundTarget;
+    }
 
 }

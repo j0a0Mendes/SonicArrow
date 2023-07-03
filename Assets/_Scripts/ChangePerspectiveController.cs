@@ -199,6 +199,7 @@ public class ChangePerspectiveController : MonoBehaviour
         listenerUser.enabled = enableListenerUser;
         centerUserAudioListener.enabled = !enableListenerUser;
     }
+    
 
 
     public void changePerspective(){
@@ -339,6 +340,18 @@ public class ChangePerspectiveController : MonoBehaviour
     public void resetTheSystem()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public bool getFirstCondition(){
+        return parameterManager.getFirstCondition();
+    }
+
+    public bool getSecondCondition(){
+        return parameterManager.getSecondCondition();
+    }
+
+    public bool getThirdCondition(){
+        return parameterManager.getThirdCondition();
     }
 }
 

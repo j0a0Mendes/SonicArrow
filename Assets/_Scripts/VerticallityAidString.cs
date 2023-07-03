@@ -160,9 +160,9 @@ public class VerticallityAidString : MonoBehaviour
         {
             return 5;
         }
-        else if (distance >= 45f)
+        else if (distance >= 20f)
         {
-            return 30;
+            return 30000000;
         }
         else
         {
