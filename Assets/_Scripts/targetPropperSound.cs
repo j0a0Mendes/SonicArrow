@@ -24,7 +24,7 @@ public class targetPropperSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(keyControllersrLeft.getPropperSoundTarget() || sound.isPlaying){
+        if(keyControllersrLeft.getPropperSoundTarget() & !sound.isPlaying){
             sound.Play();
             
         }else if(!keyControllersrLeft.getPropperSoundTarget()){

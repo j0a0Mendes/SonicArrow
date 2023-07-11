@@ -108,7 +108,7 @@ public class VerticallityAidString : MonoBehaviour
     private int beepCount = 0;
     private int beepFreq = 0;
 
-    private void Update() {
+    private void FixedUpdate() {
 
         beepCount += 1;
 
@@ -160,9 +160,9 @@ public class VerticallityAidString : MonoBehaviour
         {
             return 5;
         }
-        else if (distance >= 20f)
+        else if (distance >= 10f)
         {
-            return 30000000;
+            return 300000000;
         }
         else
         {

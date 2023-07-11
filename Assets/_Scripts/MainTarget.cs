@@ -26,10 +26,10 @@ public class MainTarget : MonoBehaviour
         whiteNoiseAssist = ballPointer.GetComponent<WhiteNoiseAssist>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
 
-        targetLocation.pitch = whiteNoiseAssist.getAimPitch();
+        //targetLocation.pitch = whiteNoiseAssist.getAimPitch();
 
         if (keyControllersrRight.getTargetPlaying() == true & !targetLocation.isPlaying & controller.getTargetSoundUserPos())
         {

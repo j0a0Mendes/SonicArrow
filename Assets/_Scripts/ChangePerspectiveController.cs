@@ -136,12 +136,13 @@ public class ChangePerspectiveController : MonoBehaviour
             modeSelected = 1;
         }
 
-        bowStringController.setModeSelected(modeSelected);
-        
+        //bowStringController.setModeSelected(modeSelected);
+        bowStringController.setModeSelected(1);
+
         if (changePerspectiveTrigger && firstPerspective)
         {
             changePerspectiveTrigger = false;
-            int wallSystem = keyControllersrLeft.getWallSystem();
+            /*int wallSystem = keyControllersrLeft.getWallSystem();
 
             Vector3 adjustments = new Vector3(-0.7f, -1.399138f, 0);        //just to avoid error
 
@@ -163,7 +164,7 @@ public class ChangePerspectiveController : MonoBehaviour
             }
             
             xrorigin.position = targetFirstRegion.transform.position + adjustments;
-            xrorigin.rotation *= Quaternion.Euler(0f, 180f, 0f);
+            xrorigin.rotation *= Quaternion.Euler(0f, 180f, 0f);*/
             firstPerspective = false;
         }
         else if(changePerspectiveTrigger && !firstPerspective)
@@ -171,14 +172,14 @@ public class ChangePerspectiveController : MonoBehaviour
             
             changePerspectiveTrigger = false;
             
-            xrorigin.position = new Vector3(-41.893f, 0.082f, -4.4f);
+            //xrorigin.position = new Vector3(-41.893f, 0.082f, -4.4f);
           
             bowStringController.canShootAgain();
 
             numberOfShots += 1;
             firstPerspective = true;
 
-            xrorigin.rotation *= Quaternion.Euler(0f, 180f, 0f);
+            //xrorigin.rotation *= Quaternion.Euler(0f, 180f, 0f);
         }
 
         if (changePerspectiveInASec)

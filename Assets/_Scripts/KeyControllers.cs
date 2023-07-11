@@ -105,6 +105,8 @@ public class KeyControllers : MonoBehaviour
 
     private bool canPlayTargetSound = true;
 
+    private CenterTarget centerScript;
+
     void Start()
     {
         //listener = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
@@ -129,6 +131,8 @@ public class KeyControllers : MonoBehaviour
 
         reloadCrossbow();
 
+        
+        
         //HAPTIC PURPOSES
     }   
 
@@ -177,6 +181,9 @@ public class KeyControllers : MonoBehaviour
                     readyToShoot = false;
                     targetObject.deactivateCanMove();
                     bowStringController.shootCrossBow();       //CROSSBOW SHOT
+                    //centerTarget.transform.rotation *= Quaternion.Euler(0f, 90f, 0f);
+                    
+                   
                 }
                 //Debug.Log("CROSSBOW SHOT");
             }
@@ -222,12 +229,13 @@ public class KeyControllers : MonoBehaviour
             if (buttonXTriggered == 1)
             {
                 //Debug.Log("X PRESSED");
-                if (playTargetSound == false)
+                if (canPlayTargetSound == true)
                 {
-                    if (controller.getFirstCondition() || controller.getThirdCondition())
+                    if (controller.getFirstCondition() | controller.getThirdCondition())
                     {
                         playPropperSoundTarget = true;
-                    }else if(controller.getSecondCondition()){
+                    }
+                    else if(controller.getSecondCondition()){
                         playPropperSoundAim = true;
                     }
                 }
@@ -253,14 +261,19 @@ public class KeyControllers : MonoBehaviour
         return playWhiteNoise;
     }
 
-
+    private bool firstTimeFlag = false;
     public void reloadCrossbow()
     {
         bowStringController.prepareCrossBow();
         bowStringController.playPullingString();
         //Debug.Log("CROSSBOW PREPARED");
+        //centerScript.flipRotation();
         readyToShootTrue();
         SendHaptics();
+        
+        //centerTarget.transform.rotation *= Quaternion.Euler(0f, -90f, 0f);
+        
+        
     }
     public void readyToShootTrue()
     {

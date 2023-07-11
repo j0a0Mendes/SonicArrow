@@ -81,6 +81,9 @@ public class BowStringController : MonoBehaviour
 
     private TargetObject targetObject;
 
+    [SerializeField]
+    public GameObject centerTarget;
+
     private void Awake()
     {
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
@@ -261,10 +264,12 @@ public class BowStringController : MonoBehaviour
     public void prepareCrossBow()
     {
         zAxisPull = -0.3f;
+        centerTarget.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
     }
 
     public void shootCrossBow()
     {
+        centerTarget.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
         zAxisPull = 0;
     }
 

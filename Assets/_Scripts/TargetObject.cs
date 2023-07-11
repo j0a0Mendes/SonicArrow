@@ -171,7 +171,7 @@ public class TargetObject : MonoBehaviour
 
     public void changeTargetPos()
     {
-        getAngle(wallSystemPos).SetActive(false);
+        /*getAngle(wallSystemPos).SetActive(false);
         List<int> numbers = new List<int>();
         numbers.Add(1);
         numbers.Add(2);
@@ -180,8 +180,8 @@ public class TargetObject : MonoBehaviour
         numbers.Remove(wallSystemPos);
 
         int selectedNumber = numbers[new System.Random().Next(numbers.Count)];
-        wallSystemPos = selectedNumber;
-        getAngle(wallSystemPos).SetActive(true);
+        wallSystemPos = selectedNumber;*/
+        getAngle(1).SetActive(true);
         relocateTarget();
 
     }
@@ -409,19 +409,19 @@ public class TargetObject : MonoBehaviour
         {
             if (aimY >= 21)
             {
-                targetPitch = 2;
+                targetPitch = 0.1f;
             }
             else
             {
                 float proportion = (aimY - targetY) / (21 - targetY);
-                targetPitch = 1 + proportion;
+                targetPitch = 1 - proportion;
             }
         }
         else
         {
             if (aimY <= -12)
             {
-                targetPitch = 0f;
+                targetPitch = 0.1f;
             }
             else
             {
@@ -429,7 +429,11 @@ public class TargetObject : MonoBehaviour
                 targetPitch = 1 - proportion;
             }
         }
-
+       
+        if(targetPitch < 0.1f)
+        {
+            targetPitch= 0.1f;
+        }
         targetSoundObj.GetComponent<AudioSource>().pitch = targetPitch;
         audioListenerBall.GetComponent<AudioSource>().pitch = targetPitch;
 

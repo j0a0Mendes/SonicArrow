@@ -552,13 +552,14 @@ public class ParameterManager : MonoBehaviour
                 targetSoundUserPos = true;
                 targetSoundCrossbowAim = false;
                 spotterBeepAid = false;
-                targetMoving = true;
+                targetStill = true;
+                targetMoving = false;
                 targetChangesAtFivePoints = true;
                 whiteNoiseVerticalAid = true;
 
                 //after shot
-                changeOfPerspective = true;
-                changeOfPerspectiveInstant = true;
+                changeOfPerspective = false;
+                changeOfPerspectiveInstant = false;
                 spotterTalking = true;
                 spotterPointsAid = true;
                 spotterQuadrantAid = false;
@@ -577,7 +578,8 @@ public class ParameterManager : MonoBehaviour
                 targetSound = true;
                 targetSoundUserPos = false;
                 targetSoundCrossbowAim = true;
-                targetMoving = true;
+                targetStill = true;
+                targetMoving = false;
                 targetChangesAtFivePoints = true;
                 whiteNoiseVerticalAid = true;
 
@@ -600,17 +602,20 @@ public class ParameterManager : MonoBehaviour
                 previousSecondCondition = false;
 
                 //before shot
-                targetSound = false;
+                targetSound = true;
                 targetSoundUserPos = true;
                 targetSoundCrossbowAim = false;
                 whiteNoiseVerticalAid = true;
 
-                targetMoving = true;
+                targetStill = true;
+                targetMoving = false;
                 targetChangesAtFivePoints = true;
                 spotterBeepAid = true;
 
 
                 //after shot
+                changeOfPerspective = false;
+                changeOfPerspectiveInstant = false;
                 spotterTalking = true;
                 spotterPointsAid = true;
                 spotterQuadrantAid = false;
@@ -626,8 +631,8 @@ public class ParameterManager : MonoBehaviour
         }
         else if (targetSoundUserPos)
         {
-            //listenerTarget.enabled = false;     //USERPOS
-            //listenerUser.enabled = true;
+            listenerTarget.enabled = false;     //USERPOS
+            listenerUser.enabled = true;
         }
 
         conditionChanged = false;
