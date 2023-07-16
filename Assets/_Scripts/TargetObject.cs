@@ -76,6 +76,9 @@ public class TargetObject : MonoBehaviour
 
     private BowStringController bowStringController;
 
+    [SerializeField]
+    public bool relocateTargetVar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -107,7 +110,7 @@ public class TargetObject : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         targetPitch(audioListenerBall.transform.position.y);
 
@@ -116,11 +119,11 @@ public class TargetObject : MonoBehaviour
         {
             if(wallSystemPos == 1 ||wallSystemPos == 3){
                 transform.Translate(Vector3.forward * flagMovement * speed * Time.deltaTime); // move object forward in the z-axis
-                if(transform.position.z >  6f){
+                if(transform.position.z >  70f){
                     InvertSpeed();
                 }
 
-                if(transform.position.z < -17.11f){
+                if(transform.position.z < -81f){
                     InvertSpeed();
                 }
             }else{
@@ -133,6 +136,12 @@ public class TargetObject : MonoBehaviour
                     InvertSpeed();
                 }
             }
+        }
+
+        if (relocateTargetVar)
+        {
+            relocateTargetVar = false;
+            relocateTarget();
         }
     }
 
@@ -216,7 +225,7 @@ public class TargetObject : MonoBehaviour
             targetX = 12.27f;
 
             float randomY = GetRandomNumber(-12f, 21f);
-            float randomZ = GetRandomNumber(-16.7f, 5.6f);
+            float randomZ = GetRandomNumber(-80f, 69f);
 
             targetY = randomY;
             targetZ = randomZ;

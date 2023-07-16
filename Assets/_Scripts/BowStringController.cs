@@ -48,6 +48,8 @@ public class BowStringController : MonoBehaviour
     //PERSPECTIVE CHANGE
     private ChangePerspectiveController controller;
 
+    private TimeManager timeManager;
+
     [SerializeField]
     private float zAxisPull;
 
@@ -105,6 +107,8 @@ public class BowStringController : MonoBehaviour
         interactable.selectExited.AddListener(ResetBowString);
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
 
+        timeManager = GameObject.FindObjectOfType<TimeManager>();
+
         zAxisPull = 1;
 
         if (!positioned & rightHand != null)
@@ -144,10 +148,14 @@ public class BowStringController : MonoBehaviour
                 //Debug.Log("PUULLIINIGGGG");
                 stringPulled = true;
                 OnBowPulled?.Invoke();
+
+                timeManager.StartTimer();
             }
             else if (midPointLocalSpace.z == 0 && stringPulled == true && canShoot == true)     //RELEASEEEED
             {
                 //Debug.Log(audioSource.isPlaying);
+
+                timeManager.StopTimer();
 
                 stringPulled = false;
                 ResetBowString();

@@ -220,7 +220,7 @@ public class ParameterManager : MonoBehaviour
 
                 if (firstCondition)
                 {
-                    Debug.Log("First Condition");
+                    //Debug.Log("First Condition");
                     clearParameters();
                     secondCondition = false;
                     previousSecondCondition = false;
@@ -253,7 +253,7 @@ public class ParameterManager : MonoBehaviour
 
                 if (secondCondition)
                 {
-                    Debug.Log("Second Condition");
+                    //Debug.Log("Second Condition");
                     clearParameters();
                     firstCondition = false;
                     previousFirstCondition = false;
@@ -288,7 +288,7 @@ public class ParameterManager : MonoBehaviour
 
                 if (thirdCondition)
                 {
-                    Debug.Log("Third Condition");
+                    //Debug.Log("Third Condition");
                     clearParameters();
                     firstCondition = false;
                     previousFirstCondition = false;

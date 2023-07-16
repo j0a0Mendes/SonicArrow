@@ -142,29 +142,6 @@ public class ChangePerspectiveController : MonoBehaviour
         if (changePerspectiveTrigger && firstPerspective)
         {
             changePerspectiveTrigger = false;
-            /*int wallSystem = keyControllersrLeft.getWallSystem();
-
-            Vector3 adjustments = new Vector3(-0.7f, -1.399138f, 0);        //just to avoid error
-
-            if (wallSystem == 1)
-            {
-                adjustments = new Vector3(-1.4f, -1.399138f, 0);
-            }
-            else if (wallSystem == 2)
-            {
-                adjustments = new Vector3(0, -1.399138f, -1.4f);
-            }
-            else if (wallSystem == 3)
-            {
-                adjustments = new Vector3(1.4f, -1.399138f, 0);
-            }
-            else
-            {
-                adjustments = new Vector3(0, -1.399138f, 1.4f);
-            }
-            
-            xrorigin.position = targetFirstRegion.transform.position + adjustments;
-            xrorigin.rotation *= Quaternion.Euler(0f, 180f, 0f);*/
             firstPerspective = false;
         }
         else if(changePerspectiveTrigger && !firstPerspective)

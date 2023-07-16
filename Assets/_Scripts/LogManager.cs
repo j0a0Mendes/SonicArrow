@@ -9,6 +9,8 @@ public class LogManager : MonoBehaviour
     private StreamWriter writer;
     private static bool isFileOpen = false;
 
+    private TimeManager timeManager;
+
     private void Awake()
     {
         if (!isFileOpen)
@@ -26,6 +28,8 @@ public class LogManager : MonoBehaviour
 
             isFileOpen = true;
         }
+
+        timeManager = GameObject.FindObjectOfType<TimeManager>();
     }
 
     private void OnDestroy()
@@ -42,7 +46,9 @@ public class LogManager : MonoBehaviour
     {
         string conditionLabel = "Condition: ";
         string bars = " || ";
-        string logMessage = $"{DateTime.Now} {bars} {userID} {bars} {conditionLabel} {conditionNumber} {bars} {targetMovement} {bars} {points}";
+        string timeTook = timeManager.GetCurrentTimeAndReset();
+        string logMessage = $"{timeTook} {bars} {userID} {bars} {conditionLabel} {conditionNumber} {bars} {targetMovement} {bars} {points}";
+        Debug.Log(logMessage);
         writer.WriteLine(logMessage);
         writer.Flush();
     }
