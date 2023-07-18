@@ -7,10 +7,15 @@ public class ParameterManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    private ChangePerspectiveController controller;
+
     [SerializeField]
     public int userID = 0;
 
     private string pointsLabel;
+
+    private string targetPos;
+    private string arrowPos;
 
     //Change of perspective
 
@@ -125,17 +130,25 @@ public class ParameterManager : MonoBehaviour
     //AudioListener position
     private AudioListener listenerTarget;
 
+    private AudioListener listenerArrowTarget;
+
     private AudioListener listenerUser;
 
     [SerializeField]
     public GameObject centerTarget;
 
+    [SerializeField]
+    public GameObject centerListener;
+
     private LogManager logManager;
 
     private void Start()
     {
+        controller = GameObject.FindObjectOfType<ChangePerspectiveController>();
+
         listenerUser = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
-        listenerTarget = centerTarget.GetComponent<AudioListener>();
+        listenerTarget = centerListener.GetComponent<AudioListener>();
+        listenerArrowTarget = centerTarget.GetComponent<AudioListener>();
 
         logManager = GameObject.FindObjectOfType<LogManager>().GetComponent<LogManager>();
 
@@ -534,13 +547,13 @@ public class ParameterManager : MonoBehaviour
 
     private bool conditionChanged;
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (conditionChanged)
         {
             if (firstCondition)
             {
-                Debug.Log("First Condition");
+                //.Log("First Condition");
                 clearParameters();
                 secondCondition = false;
                 previousSecondCondition = false;
@@ -566,7 +579,7 @@ public class ParameterManager : MonoBehaviour
             }
             else if (secondCondition)
             {
-                Debug.Log("Second Condition");
+                //Debug.Log("Second Condition");
                 clearParameters();
                 firstCondition = false;
                 previousFirstCondition = false;
@@ -594,7 +607,7 @@ public class ParameterManager : MonoBehaviour
             }
             else if (thirdCondition)
             {
-                Debug.Log("Third Condition");
+                //Debug.Log("Third Condition");
                 clearParameters();
                 firstCondition = false;
                 previousFirstCondition = false;
@@ -625,13 +638,26 @@ public class ParameterManager : MonoBehaviour
         //AUDIOLISTENER
         if (targetSoundCrossbowAim)
         {
-            listenerTarget.enabled = true;      //AIMPOS
-            listenerUser.enabled = false;
+            if (controller.getIsInFirstPerspective())
+            {
+                listenerTarget.enabled = true;      //AIMPOS
+                listenerUser.enabled = false;
+                listenerArrowTarget.enabled = false;
+            }
+            else
+            {
+                listenerTarget.enabled = false;      //AIMPOS
+                listenerUser.enabled = false;
+                listenerArrowTarget.enabled = true;
+            }
+            
+            
 
         }
         else if (targetSoundUserPos)
         {
             listenerTarget.enabled = false;     //USERPOS
+            listenerArrowTarget.enabled = false;
             listenerUser.enabled = true;
         }
 
@@ -865,17 +891,17 @@ public class ParameterManager : MonoBehaviour
 
         if (firstCondition)
         {
-            GameObject intro = GameObject.Find("Hi_Im_Tom_1_Condition");
+            GameObject intro = GameObject.Find("Hi_Im_Tom");
             intro.GetComponent<AudioSource>().Play();
         }
         else if (secondCondition)
         {
-            GameObject intro = GameObject.Find("Hi_Im_Tom_2_Condition");
+            GameObject intro = GameObject.Find("Hi_Im_Tom");
             intro.GetComponent<AudioSource>().Play();
         }
         else if (thirdCondition)
         {
-            GameObject intro = GameObject.Find("Hi_Im_Tom_3_Condition");
+            GameObject intro = GameObject.Find("Hi_Im_Tom");
             intro.GetComponent<AudioSource>().Play();
         }
 
@@ -928,7 +954,17 @@ public class ParameterManager : MonoBehaviour
             }
         }
 
-        logManager.Log("User " + userID.ToString(), condition, targetMovement, pointsLabel);
+        logManager.Log("User " + userID.ToString(), condition, targetMovement, pointsLabel, targetPos, arrowPos);
 
+    }
+
+    public void arrowCoords(string arrowCoordsVal)
+    {
+        arrowPos = arrowCoordsVal;
+    }
+
+    public void targetCoords(string targetCoordsVal)
+    {
+        targetPos = targetCoordsVal;
     }
 }

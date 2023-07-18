@@ -78,8 +78,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\_Scripts\CenterTarget.cs" />
+    <Compile Include="Assets\_Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\_Scripts\SessionManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\_Scripts\WhiteNoiseAss.cs" />
     <Compile Include="Assets\_Scripts\LogManager.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\_Scripts\ChangePerspectiveController.cs" />
     <Compile Include="Assets\Samples\OpenXR Plugin\1.4.2\Meshing Subsystem Feature\FallingSphere.cs" />
+    <Compile Include="Assets\_Scripts\WriteDebugToFile.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\_Content\VR_Hands_FBX\Scripts\HandAnimation.cs" />
     <Compile Include="Assets\_Scripts\WhiteNoiseSpotter.cs" />
@@ -96,6 +99,7 @@
     <Compile Include="Assets\_Scripts\ArrowController.cs" />
     <Compile Include="Assets\_Scripts\FivePoints.cs" />
     <Compile Include="Assets\_Scripts\StickingArrowToSurface.cs" />
+    <Compile Include="Assets\_Scripts\SpotterTalkingCheck.cs" />
     <Compile Include="Assets\_Scripts\LeftTargetTrigger.cs" />
     <Compile Include="Assets\_Scripts\ArrowBehaviour.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />

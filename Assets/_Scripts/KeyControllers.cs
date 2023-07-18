@@ -173,7 +173,7 @@ public class KeyControllers : MonoBehaviour
         
         if (target != null)
         {
-            if (buttonShootCrossbow == 1 && readyToShoot == true && controller.getIsInFirstPerspective() == true)
+            if (buttonShootCrossbow == 1 && readyToShoot == true && controller.getIsInFirstPerspective() == true && controller.getIsTalking() == false)
             {
                 if (!bowStringController.stringPullingSound())
                 {

@@ -52,6 +52,9 @@ public class StickingArrowToSurface : MonoBehaviour
     //PARAMETER MANAGEMENT 
     private ParameterManager parameterManager;
 
+    [SerializeField]
+    public int shotWithoutHit = 0;
+
 
 
     private void Start()
@@ -74,18 +77,35 @@ public class StickingArrowToSurface : MonoBehaviour
 
     }
 
-    private void Update()
+    public void updateArrowTargetCoords()
     {
-        
-        modeSelected = controller.getModeSelected();
+        // Get the x and y coordinates of the arrow
+        float arrowX = transform.position.z;
+        float arrowY = transform.position.y;
+
+        // Create a string in the format "(x, y)"
+        string arrowCoords = string.Format("({0}, {1})", arrowX.ToString("F2"), arrowY.ToString("F2"));
+
+        parameterManager.arrowCoords(arrowCoords);
 
 
+        // Get the x and y coordinates of the target
+        float targetX = target.transform.position.z;
+        float targetY = target.transform.position.y;
+ 
 
+        // Create a string in the format "(x, y)"
+        string targetCoords = string.Format("({0}, {1})", targetX.ToString("F2"), targetY.ToString("F2"));
+
+        parameterManager.targetCoords(targetCoords);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         target.activateCanMove();
+        controller.setIsTalking(true);
+
+        updateArrowTargetCoords();
 
         if (controller.getModeSelected() == 1)
         {
@@ -108,46 +128,64 @@ public class StickingArrowToSurface : MonoBehaviour
             controller.addPoints(0);
 
             parameterManager.updatePoints("TargetWall Hit");
-            Debug.Log("TARGET WALL HIT");
+            controller.addShotWithoutHit();
+            //Debug.Log("TARGET WALL HIT");
 
         }else if (collidedWith == "BackWall")
         {
             if (controller.getParameterSpotterTalking())
             {
-                GameObject spotterNoPoints = GameObject.Find("Hit_A_Wall");
+                GameObject spotterNoPoints = GameObject.Find("Wall_Paralel");
                 audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
             }
 
             controller.addPoints(0);
 
             parameterManager.updatePoints("BackWall Hit");
-            Debug.Log("BACK WALL HIT");
+            controller.addShotWithoutHit();
+            //Debug.Log("BACK WALL HIT");
         }
         else if (collidedWith == "LeftWall")
         {
             if (controller.getParameterSpotterTalking())
             {
-                GameObject spotterNoPoints = GameObject.Find("Hit_A_Wall");
-                audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
+                if (parameterManager.getFirstCondition() | parameterManager.getThirdCondition())
+                {
+                    GameObject spotterNoPoints = GameObject.Find("Wall_Direita");
+                    audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
+                }
+                else
+                {
+                    GameObject spotterNoPoints = GameObject.Find("Wall_Esquerda");
+                    audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
+                }
+                
             }
 
             controller.addPoints(0);
 
             parameterManager.updatePoints("LeftWall Hit");
-            Debug.Log("LEFT WALL HIT");
+            controller.addShotWithoutHit();
+            //Debug.Log("LEFT WALL HIT");
         }
         else if (collidedWith == "RightWall")
         {
-            if (controller.getParameterSpotterTalking())
+            if (parameterManager.getFirstCondition() | parameterManager.getThirdCondition())
             {
-                GameObject spotterNoPoints = GameObject.Find("Hit_A_Wall");
+                GameObject spotterNoPoints = GameObject.Find("Wall_Esquerda");
+                audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
+            }
+            else
+            {
+                GameObject spotterNoPoints = GameObject.Find("Wall_Direita");
                 audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
             }
 
             controller.addPoints(0);
 
             parameterManager.updatePoints("RightWall Hit");
-            Debug.Log("RIGHT WALL HIT");
+            controller.addShotWithoutHit();
+            //Debug.Log("RIGHT WALL HIT");
         }
         else if (collidedWith == "Floor")
         {
@@ -155,45 +193,44 @@ public class StickingArrowToSurface : MonoBehaviour
             {
                 GameObject spotterNoPoints = GameObject.Find("Hit_Floor");
                 audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
-
-                if (controller.getParameterSpotterDirection())
-                {
-                    GameObject spotterAimLower = GameObject.Find("Aim_Higher");
-                    audioList.Add(spotterAimLower.GetComponent<AudioSource>());
-
-                }
             }
 
             parameterManager.updatePoints("Floor Hit");
-            Debug.Log("FLOOR HIT");
+            controller.addShotWithoutHit();
+            //Debug.Log("FLOOR HIT");
             controller.addPoints(0);
         }
         else if (collidedWith == "Ceiling")
         {
+            controller.addShotWithoutHit();
             if (controller.getParameterSpotterTalking())
             {
                 GameObject spotterNoPoints = GameObject.Find("Hit_Ceiling");
                 audioList.Add(spotterNoPoints.GetComponent<AudioSource>());
-
-                if (controller.getParameterSpotterDirection())
-                {
-                    GameObject spotterAimLower = GameObject.Find("Aim_Lower");
-                    audioList.Add(spotterAimLower.GetComponent<AudioSource>());
-                }
             }
 
             parameterManager.updatePoints("Ceiling Hit");
-            Debug.Log("CEILING HIT");
+            //Debug.Log("CEILING HIT");
             controller.addPoints(0);
         }
         else if (collidedWith == "TargetFirstRegion")
         {
+            controller.resetShotWithoutHit();
             if (controller.getParameterSpotterTalking())
             {
                 if (controller.getParameterSpotterPoints())
                 {
-                    GameObject spotter = GameObject.Find("5_Points");
-                    audioList.Add(spotter.GetComponent<AudioSource>());
+                    if(controller.getTargetChangesAtFivePoints())
+                    {
+                        GameObject spotter = GameObject.Find("5_Points_Change");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else
+                    {
+                        GameObject spotter = GameObject.Find("5_Points");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    
 
                 }
                 else
@@ -205,25 +242,32 @@ public class StickingArrowToSurface : MonoBehaviour
 
                 if (controller.getTargetChangesAtFivePoints())
                 {
-                    GameObject spotter = GameObject.Find("Time_To_Change_TargetPos");
-                    audioList.Add(spotter.GetComponent<AudioSource>());
-
                     FivePointsFlag = true;
                 }
             }
 
+            
             parameterManager.updatePoints("5 Points");
-            Debug.Log("5 POINTS!!!");
+            //Debug.Log("5 POINTS!!!");
             controller.addPoints(5);
         }
         else if (collidedWith == "TargetSecondRegion")
         {
+            controller.resetShotWithoutHit();
             if (controller.getParameterSpotterTalking())
             {
                 if (controller.getParameterSpotterPoints())
                 {
-                    GameObject spotter = GameObject.Find("4_Points");
-                    audioList.Add(spotter.GetComponent<AudioSource>());
+                    if (controller.getTargetChangesAtFivePoints())
+                    {
+                        GameObject spotter = GameObject.Find("4_Points_Change");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else
+                    {
+                        GameObject spotter = GameObject.Find("4_Points");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
                 }
 
                 if (controller.getParameterSpotterQuadrants())
@@ -275,25 +319,31 @@ public class StickingArrowToSurface : MonoBehaviour
 
                 if (controller.getTargetChangesAtFivePoints())
                 {
-                    GameObject spotter = GameObject.Find("Time_To_Change_TargetPos");
-                    audioList.Add(spotter.GetComponent<AudioSource>());
-
                     FivePointsFlag = true;
                 }
             }
 
             parameterManager.updatePoints("4 Points");
-            Debug.Log("4 POINTS");
+            //Debug.Log("4 POINTS");
             controller.addPoints(4);
         }
         else if (collidedWith == "TargetThirdRegion")
         {
+            controller.resetShotWithoutHit();
             if (controller.getParameterSpotterTalking())
             {
                 if (controller.getParameterSpotterPoints())
                 {
-                    GameObject spotter = GameObject.Find("3_Points");
-                    audioList.Add(spotter.GetComponent<AudioSource>());
+                    if (controller.getTargetChangesAtFivePoints())
+                    {
+                        GameObject spotter = GameObject.Find("3_Points_Change");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else
+                    {
+                        GameObject spotter = GameObject.Find("3_Points");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
                 }
 
                 if (controller.getParameterSpotterQuadrants())
@@ -345,25 +395,31 @@ public class StickingArrowToSurface : MonoBehaviour
 
                 if (controller.getTargetChangesAtFivePoints())
                 {
-                    GameObject spotter = GameObject.Find("Time_To_Change_TargetPos");
-                    audioList.Add(spotter.GetComponent<AudioSource>());
-
                     FivePointsFlag = true;
                 }
             }
 
             parameterManager.updatePoints("3 Points");
-            Debug.Log("3 POINTS");
+            //Debug.Log("3 POINTS");
             controller.addPoints(3);
         }
         else if (collidedWith == "TargetForthRegion")
         {
+            controller.resetShotWithoutHit();
             if (controller.getParameterSpotterTalking())
             {
                 if (controller.getParameterSpotterPoints())
                 {
-                    GameObject spotter = GameObject.Find("2_Points");
-                    audioList.Add(spotter.GetComponent<AudioSource>());
+                    if (controller.getTargetChangesAtFivePoints())
+                    {
+                        GameObject spotter = GameObject.Find("2_Points_Change");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else
+                    {
+                        GameObject spotter = GameObject.Find("2_Points");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
                 }
 
                 if (controller.getParameterSpotterQuadrants())
@@ -414,25 +470,32 @@ public class StickingArrowToSurface : MonoBehaviour
 
                 if (controller.getTargetChangesAtFivePoints())
                 {
-                    GameObject spotter = GameObject.Find("Time_To_Change_TargetPos");
-                    audioList.Add(spotter.GetComponent<AudioSource>());
-
                     FivePointsFlag = true;
                 }
             }
 
             parameterManager.updatePoints("2 Points");
-            Debug.Log("2 POINTS");
+            //Debug.Log("2 POINTS");
             controller.addPoints(2);
         }
         else if (collidedWith == "TargetFifthRegion")
         {
+            controller.resetShotWithoutHit();
             if (controller.getParameterSpotterTalking())
             {
                 if (controller.getParameterSpotterPoints())
                 {
-                    GameObject spotter = GameObject.Find("1_Point");
-                    audioList.Add(spotter.GetComponent<AudioSource>());
+                    if (controller.getTargetChangesAtFivePoints())
+                    {
+                        Debug.Log("change");
+                        GameObject spotter = GameObject.Find("1_Point_Change");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
+                    else
+                    {
+                        GameObject spotter = GameObject.Find("1_Point");
+                        audioList.Add(spotter.GetComponent<AudioSource>());
+                    }
                 }
 
                 if (controller.getParameterSpotterQuadrants())
@@ -484,16 +547,20 @@ public class StickingArrowToSurface : MonoBehaviour
 
                 if (controller.getTargetChangesAtFivePoints())
                 {
-                    GameObject spotter = GameObject.Find("Time_To_Change_TargetPos");
-                    audioList.Add(spotter.GetComponent<AudioSource>());
-
                     FivePointsFlag = true;
                 }
             }
 
             parameterManager.updatePoints("1 Point");
-            Debug.Log("1 POINT");
+            //Debug.Log("1 POINT");
             controller.addPoints(1);
+        }
+
+        if (controller.getChangeTarget())
+        {
+            GameObject spotter = GameObject.Find("Timeout");
+            audioList.Add(spotter.GetComponent<AudioSource>());
+            target.relocateTarget();
         }
 
         //LOG CREATION
@@ -558,13 +625,15 @@ public class StickingArrowToSurface : MonoBehaviour
         keyControllersRight.activateCanPlayTargetSound();
         keyControllersRight.readyToShootTrue();
         keyControllersRight.reloadCrossbow();
-            //MAYBE?---------------------------------
+        //MAYBE?---------------------------------
         //Destroy(gameObject);
 
     }
 
     private void FixedUpdate()
     {
+        modeSelected = controller.getModeSelected();
+
         if (changePerspectiveCounterTrigger)
         {
             changePerspectiveCounter += 1;
@@ -577,6 +646,8 @@ public class StickingArrowToSurface : MonoBehaviour
                 changePerspectiveCounterTrigger = false;
             }
         }
+
+        
     }
 
     public void activatePerspectiveTrigger()
@@ -587,6 +658,7 @@ public class StickingArrowToSurface : MonoBehaviour
     private IEnumerator PlayAllAudioSources()
     {
         isPlaying = true;
+        //Debug.Log("Audios Start");
 
         // Create a copy of the audioList
         List<AudioSource> audioListCopy = new List<AudioSource>(audioList);
@@ -600,6 +672,7 @@ public class StickingArrowToSurface : MonoBehaviour
         isPlaying = false;
 
         audioList.Clear();
+        
     }
 
 }

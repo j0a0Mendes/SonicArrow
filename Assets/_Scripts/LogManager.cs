@@ -1,15 +1,20 @@
 using System;
 using System.IO;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
 
 public class LogManager : MonoBehaviour
 {
-    public string logFileName = "logs.txt";
+    public string logFileName = "";
 
     private StreamWriter writer;
     private static bool isFileOpen = false;
 
     private TimeManager timeManager;
+
+    
 
     private void Awake()
     {
@@ -42,12 +47,14 @@ public class LogManager : MonoBehaviour
         }
     }
 
-    public void Log(string userID, string conditionNumber, string targetMovement, string points)
+    public void Log(string userID, string conditionNumber, string targetMovement, string points, string targetCoords, string arrowCoords)
     {
-        string conditionLabel = "Condition: ";
         string bars = " || ";
+        string targetLabel = " TargetPos: ";
+        string arrowLabel = " ArrowPos: ";
+
         string timeTook = timeManager.GetCurrentTimeAndReset();
-        string logMessage = $"{timeTook} {bars} {userID} {bars} {conditionLabel} {conditionNumber} {bars} {targetMovement} {bars} {points}";
+        string logMessage = $" {bars} {timeTook} {bars} {userID} {bars} {conditionNumber} {bars} {targetMovement} {bars} {points} {bars} {targetLabel} {targetCoords} {bars} {arrowLabel} {arrowCoords}";
         Debug.Log(logMessage);
         writer.WriteLine(logMessage);
         writer.Flush();

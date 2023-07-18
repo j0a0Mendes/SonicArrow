@@ -73,6 +73,15 @@ public class ChangePerspectiveController : MonoBehaviour
 
     private AudioListener listenerUser;
 
+    [SerializeField]
+    public int shotsWithoutHit = 0;
+
+    public bool changeTarget;
+
+    public bool isTalking;
+
+    
+
     void Start()
     {
         firstPerspective = true;
@@ -94,6 +103,42 @@ public class ChangePerspectiveController : MonoBehaviour
         listenerUser = cameraUser.GetComponent<AudioListener>(); // Get the AudioListener component
     }
 
+    public bool getIsTalking()
+    {
+        return isTalking;
+    }
+
+    public void setIsTalking(bool val)
+    {
+        isTalking = val;
+    }
+
+    public void addShotWithoutHit()
+    {
+        shotsWithoutHit += 1;
+        if (shotsWithoutHit > 5)
+        {
+            changeTarget = true;
+        }
+    }
+
+    public bool getChangeTarget()
+    {
+        if (changeTarget)
+        {
+            shotsWithoutHit = 0;
+            changeTarget = false;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void resetShotWithoutHit()
+    {
+        shotsWithoutHit = 0;
+    }
     private void Awake()
     {
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
@@ -103,19 +148,19 @@ public class ChangePerspectiveController : MonoBehaviour
     private int conditionChangeCount = 0;
 
     
-    void Update() {
+    void FixedUpdate() {
         conditionChangeCount++;
 
         if(keyControllersrLeft.getLeftConditionTrigger() == true && keyControllersrRight.getRightConditionTrigger() == true)
         {
-            Debug.Log(conditionChangeCount);
+            //Debug.Log(conditionChangeCount);
             if(conditionChangeCount >= 25)
             {
                 conditionChangeCount = 0;
                 parameterManager.selectNextCondition();
 
 
-                Debug.Log("Change condition");
+                //Debug.Log("Change condition");
             }    
         }
 

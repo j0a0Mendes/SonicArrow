@@ -149,9 +149,9 @@ public class BowStringController : MonoBehaviour
                 stringPulled = true;
                 OnBowPulled?.Invoke();
 
-                timeManager.StartTimer();
+                //timeManager.StartTimer();
             }
-            else if (midPointLocalSpace.z == 0 && stringPulled == true && canShoot == true)     //RELEASEEEED
+            else if (midPointLocalSpace.z == 0 && stringPulled == true && canShoot == true && controller.getIsTalking() == false)     //RELEASEEEED
             {
                 //Debug.Log(audioSource.isPlaying);
 
@@ -306,5 +306,10 @@ public class BowStringController : MonoBehaviour
     public bool getAlreadyShot()
     {
         return alreadyShot;
+    }
+
+    public void relocateTarget()
+    {
+        targetObject.relocateTarget();
     }
 }

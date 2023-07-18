@@ -119,11 +119,11 @@ public class TargetObject : MonoBehaviour
         {
             if(wallSystemPos == 1 ||wallSystemPos == 3){
                 transform.Translate(Vector3.forward * flagMovement * speed * Time.deltaTime); // move object forward in the z-axis
-                if(transform.position.z >  70f){
+                if(transform.position.z >  17.5f){
                     InvertSpeed();
                 }
 
-                if(transform.position.z < -81f){
+                if(transform.position.z < -28.3f){
                     InvertSpeed();
                 }
             }else{
@@ -225,7 +225,7 @@ public class TargetObject : MonoBehaviour
             targetX = 12.27f;
 
             float randomY = GetRandomNumber(-12f, 21f);
-            float randomZ = GetRandomNumber(-80f, 69f);
+            float randomZ = GetRandomNumber(-27.5f, 16.5f);
 
             targetY = randomY;
             targetZ = randomZ;

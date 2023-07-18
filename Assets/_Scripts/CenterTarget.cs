@@ -14,6 +14,7 @@ public class CenterTarget : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //transform.rotation = Quaternion.Euler(0f, -90f, 0f);
         /**if(flip)
         {
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);

@@ -240,6 +240,7 @@ MonoBehaviour:
     type: 3}
   windNavigatingSound: {fileID: 1042803885603108265}
   audioList: []
+  shotWithoutHit: 0
 --- !u!82 &1042803885603108265
 AudioSource:
   m_ObjectHideFlags: 0
@@ -258,7 +259,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 127
+  Priority: 114
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
