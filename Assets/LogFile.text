@@ -1,337 +1,197 @@
-[18/07/2023 19:57:10]00:05  ||  User 0  ||  Condition 1  ||  Target Still  ||  2 Points  ||   TargetPos:  (12,27, -9,81)  ||   ArrowPos:  
-[18/07/2023 19:57:14]00:01  ||  User 0  ||  Condition 1  ||  Target Still  ||  5 Points  ||   TargetPos:  (12,27, -9,81)  ||   ArrowPos:  
-[18/07/2023 19:59:53]00:02  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (12,27, 5,56)  ||   ArrowPos:  
-[18/07/2023 19:59:58]00:04  ||  User 0  ||  Condition 1  ||  Target Still  ||  RightWall Hit  ||   TargetPos:  (12,27, 5,56)  ||   ArrowPos:  
-[18/07/2023 20:00:05]00:05  ||  User 0  ||  Condition 1  ||  Target Still  ||  LeftWall Hit  ||   TargetPos:  (12,27, 5,56)  ||   ArrowPos:  
-[18/07/2023 20:00:12]00:05  ||  User 0  ||  Condition 1  ||  Target Still  ||  Floor Hit  ||   TargetPos:  (12,27, 5,56)  ||   ArrowPos:  
-[18/07/2023 20:00:18]00:04  ||  User 0  ||  Condition 1  ||  Target Still  ||  Ceiling Hit  ||   TargetPos:  (12,27, 5,56)  ||   ArrowPos:  
-[18/07/2023 20:00:24]00:05  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (12,27, 5,56)  ||   ArrowPos:  
-[18/07/2023 20:01:21]00:02  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (12,27, 10,84)  ||   ArrowPos:  
-[18/07/2023 20:01:26]00:02  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (12,27, 10,84)  ||   ArrowPos:  
-[18/07/2023 20:01:30]00:02  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (12,27, 10,84)  ||   ArrowPos:  
-[18/07/2023 20:01:34]00:02  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (12,27, 10,84)  ||   ArrowPos:  
-[18/07/2023 20:01:38]00:02  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (12,27, 10,84)  ||   ArrowPos:  
-[18/07/2023 20:01:42]00:02  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (12,27, 10,84)  ||   ArrowPos:  
-[18/07/2023 20:03:41]00:09  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (12,27, 10,37)  ||   ArrowPos:  
-[18/07/2023 20:03:48]00:05  ||  User 0  ||  Condition 1  ||  Target Still  ||  1 Point  ||   TargetPos:  (12,27, 10,37)  ||   ArrowPos:  
-[18/07/2023 20:03:51]00:01  ||  User 0  ||  Condition 1  ||  Target Still  ||  3 Points  ||   TargetPos:  (12,27, 10,37)  ||   ArrowPos:  
-[18/07/2023 20:03:53]00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  4 Points  ||   TargetPos:  (12,27, 10,37)  ||   ArrowPos:  
-[18/07/2023 20:03:55]00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  4 Points  ||   TargetPos:  (12,27, 10,37)  ||   ArrowPos:  
-[18/07/2023 20:03:57]00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  5 Points  ||   TargetPos:  (12,27, 10,37)  ||   ArrowPos:  
-[18/07/2023 20:04:54]Assets\_Scripts\RightTargetTrigger.cs(18,14): warning CS8321: The local function 'Update' is declared but never used
-[18/07/2023 20:04:54]Assets\_Scripts\ParameterManager.cs(59,18): warning CS0414: The field 'ParameterManager.previousSpotterPointsAid' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\KeyControllers.cs(46,18): warning CS0414: The field 'KeyControllers.buttonXEnabled' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\KeyControllers.cs(44,18): warning CS0414: The field 'KeyControllers.buttonAEnabled' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\VerticallityAidString.cs(43,18): warning CS0414: The field 'VerticallityAidString.otherWallsBeep' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\ActionReplayArrow.cs(41,17): warning CS0414: The field 'ActionReplayArrow.countChangePerspective' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\ActionReplayArrow.cs(40,18): warning CS0414: The field 'ActionReplayArrow.changePerspectiveInASec' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\KeyControllers.cs(66,18): warning CS0414: The field 'KeyControllers.xButtonEnabled' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\KeyControllers.cs(45,18): warning CS0414: The field 'KeyControllers.buttonBEnabled' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\VerticallityAidString.cs(42,18): warning CS0414: The field 'VerticallityAidString.beepFlag' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\KeyControllers.cs(264,18): warning CS0414: The field 'KeyControllers.firstTimeFlag' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\BowStringController.cs(28,19): warning CS0414: The field 'BowStringController.stringSoundThreshold' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\ActionReplayArrow.cs(12,18): warning CS0414: The field 'ActionReplayArrow.endReplayRecordVar' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\KeyControllers.cs(47,18): warning CS0414: The field 'KeyControllers.buttonYEnabled' is assigned but its value is never used
-[18/07/2023 20:04:54]Assets\_Scripts\StickingArrowToSurface.cs(44,17): warning CS0414: The field 'StickingArrowToSurface.currentSourceIndex' is assigned but its value is never used
-[18/07/2023 20:07:25](0.95, 16.33, -31.74)
-[18/07/2023 20:07:25]00:06  ||  User 0  ||  Condition 1  ||  Target Still  ||  RightWall Hit  ||   TargetPos:  (12,27, -11,46)  ||   ArrowPos:  
-[18/07/2023 20:12:18](9,27, -8,25)
-[18/07/2023 20:12:18]00:04  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (12,27, -9,00)  ||   ArrowPos:  
-[18/07/2023 20:12:23](8,97, -6,77)
-[18/07/2023 20:12:23]00:03  ||  User 0  ||  Condition 1  ||  Target Still  ||  1 Point  ||   TargetPos:  (12,27, -9,00)  ||   ArrowPos:  
-[18/07/2023 20:12:26](8,94, -7,36)
-[18/07/2023 20:12:26]00:01  ||  User 0  ||  Condition 1  ||  Target Still  ||  2 Points  ||   TargetPos:  (12,27, -9,00)  ||   ArrowPos:  
-[18/07/2023 20:12:31](8,91, -7,88)
-[18/07/2023 20:12:31]00:03  ||  User 0  ||  Condition 1  ||  Target Still  ||  3 Points  ||   TargetPos:  (12,27, -9,00)  ||   ArrowPos:  
-[18/07/2023 20:12:34](8,89, -8,26)
-[18/07/2023 20:12:34]00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  4 Points  ||   TargetPos:  (12,27, -9,00)  ||   ArrowPos:  
-[18/07/2023 20:12:36](8,89, -9,55)
-[18/07/2023 20:12:36]00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  4 Points  ||   TargetPos:  (12,27, -9,00)  ||   ArrowPos:  
-[18/07/2023 20:12:39](8,86, -9,14)
-[18/07/2023 20:12:39]00:01  ||  User 0  ||  Condition 1  ||  Target Still  ||  5 Points  ||   TargetPos:  (12,27, -9,00)  ||   ArrowPos:  
-[18/07/2023 20:12:48](4,56, -4,79)
-[18/07/2023 20:12:48]00:07  ||  User 0  ||  Condition 1  ||  Target Still  ||  LeftWall Hit  ||   TargetPos:  (12,27, -9,00)  ||   ArrowPos:  
-[18/07/2023 20:13:00](8,97, -6,90)
-[18/07/2023 20:13:00]00:11  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  1 Point  ||   TargetPos:  (12,27, -9,00)  ||   ArrowPos:  
-[18/07/2023 20:23:10](8,94, -6,30)
-[18/07/2023 20:23:10]00:05  ||  User 0  ||  Condition 1  ||  Target Still  ||  2 Points  ||   TargetPos:  (12,27, -7,71)  ||   ArrowPos:  
-[18/07/2023 20:23:31](8,91, -6,86)
-[18/07/2023 20:23:31]00:19  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  3 Points  ||   TargetPos:  (12,27, -7,71)  ||   ArrowPos:  
-[18/07/2023 20:59:05]00:06  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (12,27, -10,30)  ||   ArrowPos:  (9,95, 5,39)
-[18/07/2023 20:59:05]Audios Start
-[18/07/2023 20:59:08]Audios End
-[18/07/2023 20:59:11]00:04  ||  User 0  ||  Condition 1  ||  Target Still  ||  1 Point  ||   TargetPos:  (12,27, -10,30)  ||   ArrowPos:  (8,97, -8,02)
-[18/07/2023 20:59:11]Audios Start
-[18/07/2023 20:59:12]Audios End
-[18/07/2023 20:59:13]00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  2 Points  ||   TargetPos:  (12,27, -10,30)  ||   ArrowPos:  (8,94, -8,83)
-[18/07/2023 20:59:13]Audios Start
-[18/07/2023 20:59:15]Audios End
-[18/07/2023 20:59:27]00:12  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  4 Points  ||   TargetPos:  (12,27, -10,30)  ||   ArrowPos:  (8,89, -9,69)
-[18/07/2023 20:59:27]Audios Start
-[18/07/2023 21:04:19]00:19  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (0,74, 12,56)  ||   ArrowPos:  (-1,32, 11,25)
-[18/07/2023 21:04:19]Audios Start
-[18/07/2023 21:04:19]change
-[18/07/2023 21:04:19]00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  1 Point  ||   TargetPos:  (0,74, 12,56)  ||   ArrowPos:  (-1,32, 11,25)
-[18/07/2023 21:04:23]Audios End
-[18/07/2023 21:04:25]00:05  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  4 Points  ||   TargetPos:  (1,53, 15,02)  ||   ArrowPos:  (2,38, 14,93)
-[18/07/2023 21:04:25]Audios Start
-[18/07/2023 22:03:23]00:09  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-16,43, -3,43)  ||   ArrowPos:  (-8,55, 3,40)
-[18/07/2023 22:03:23]Audios Start
-[18/07/2023 22:04:49]00:04  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-2,44, 12,61)  ||   ArrowPos:  (1,55, 8,79)
-[18/07/2023 22:04:49]Audios Start
-[18/07/2023 22:04:52]Audios End
-[18/07/2023 22:05:00]00:09  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-2,44, 12,61)  ||   ArrowPos:  (-1,06, 8,74)
-[18/07/2023 22:05:00]Audios Start
-[18/07/2023 22:05:03]Audios End
-[18/07/2023 22:05:08]00:06  ||  User 0  ||  Condition 1  ||  Target Still  ||  3 Points  ||   TargetPos:  (-2,44, 12,61)  ||   ArrowPos:  (-3,35, 12,10)
-[18/07/2023 22:05:08]Audios Start
-[18/07/2023 22:05:08]Audios End
-[18/07/2023 22:05:13]00:03  ||  User 0  ||  Condition 1  ||  Target Still  ||  5 Points  ||   TargetPos:  (-2,44, 12,61)  ||   ArrowPos:  (-2,26, 12,23)
-[18/07/2023 22:05:13]Audios Start
-[18/07/2023 22:05:13]Audios End
-[18/07/2023 22:05:28]00:13  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  3 Points  ||   TargetPos:  (-2,44, 12,61)  ||   ArrowPos:  (-1,79, 13,40)
-[18/07/2023 22:05:28]Audios Start
-[18/07/2023 22:05:29]Audios End
-[18/07/2023 22:05:38]00:09  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  5 Points  ||   TargetPos:  (-26,07, 0,96)  ||   ArrowPos:  (-26,14, 0,94)
-[18/07/2023 22:05:38]Audios Start
-[18/07/2023 22:05:39]Audios End
-[18/07/2023 22:05:44]change
-[18/07/2023 22:05:44]00:04  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  1 Point  ||   TargetPos:  (-14,89, 20,46)  ||   ArrowPos:  (-12,74, 20,34)
-[18/07/2023 22:05:44]Audios Start
-[18/07/2023 22:05:44]Audios End
-[18/07/2023 22:07:52]00:05  ||  User 0  ||  Condition 1  ||  Target Still  ||  3 Points  ||   TargetPos:  (1,92, -4,42)  ||   ArrowPos:  (2,71, -3,62)
-[18/07/2023 22:07:52]Audios Start
-[18/07/2023 22:07:54]Audios End
-[18/07/2023 22:07:54]00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  LeftWall Hit  ||   TargetPos:  (1,92, -4,42)  ||   ArrowPos:  (20,17, 1,35)
-[18/07/2023 22:07:54]Audios Start
-[18/07/2023 22:07:59]Audios End
-[18/07/2023 22:08:00]00:04  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (1,92, -4,42)  ||   ArrowPos:  (15,45, -2,13)
-[18/07/2023 22:08:00]Audios Start
-[18/07/2023 22:08:04]Audios End
-[18/07/2023 22:08:06]00:04  ||  User 0  ||  Condition 1  ||  Target Still  ||  Floor Hit  ||   TargetPos:  (1,92, -4,42)  ||   ArrowPos:  (10,98, -12,94)
-[18/07/2023 22:08:06]Audios Start
-[18/07/2023 22:08:11]Audios End
-[18/07/2023 22:08:15]00:07  ||  User 0  ||  Condition 1  ||  Target Still  ||  2 Points  ||   TargetPos:  (1,92, -4,42)  ||   ArrowPos:  (3,19, -3,29)
-[18/07/2023 22:08:15]Audios Start
-[18/07/2023 22:08:17]Audios End
-[18/07/2023 22:08:27]00:10  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  3 Points  ||   TargetPos:  (1,92, -4,42)  ||   ArrowPos:  (2,81, -3,63)
-[18/07/2023 22:08:27]Audios Start
-[18/07/2023 22:08:34]Audios End
-[18/07/2023 22:08:35]00:07  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-12,03, 19,78)  ||   ArrowPos:  (3,38, -2,05)
-[18/07/2023 22:08:35]Audios Start
-[18/07/2023 22:08:38]Audios End
-[18/07/2023 22:08:39]00:03  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  2 Points  ||   TargetPos:  (-12,03, 19,78)  ||   ArrowPos:  (-11,84, 17,98)
-[18/07/2023 22:08:39]Audios Start
-[18/07/2023 22:08:47]Audios End
-[18/07/2023 22:08:48]00:07  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-3,01, 2,16)  ||   ArrowPos:  (-13,30, 11,21)
-[18/07/2023 22:08:48]Audios Start
-[18/07/2023 22:08:51]Audios End
-[18/07/2023 22:08:52]00:03  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-3,01, 2,16)  ||   ArrowPos:  (-12,51, 11,30)
-[18/07/2023 22:08:52]Audios Start
-[18/07/2023 22:08:55]Audios End
-[18/07/2023 22:08:56]00:03  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-3,01, 2,16)  ||   ArrowPos:  (-12,21, 11,25)
-[18/07/2023 22:08:56]Audios Start
-[18/07/2023 22:09:00]Audios End
-[18/07/2023 22:09:00]00:03  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-3,01, 2,16)  ||   ArrowPos:  (-11,23, 10,16)
-[18/07/2023 22:09:00]Audios Start
-[18/07/2023 22:09:04]Audios End
-[18/07/2023 22:09:05]00:04  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-3,01, 2,16)  ||   ArrowPos:  (-11,40, 10,42)
-[18/07/2023 22:09:05]Audios Start
-[18/07/2023 22:09:09]Audios End
-[18/07/2023 22:09:10]00:03  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-3,01, 2,16)  ||   ArrowPos:  (-11,25, 10,35)
-[18/07/2023 22:09:10]Audios Start
-[18/07/2023 22:09:23]Audios End
-[18/07/2023 22:09:24]00:13  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (5,99, 7,39)  ||   ArrowPos:  (-9,75, 10,50)
-[18/07/2023 22:09:24]Audios Start
-[18/07/2023 22:09:27]Audios End
-[18/07/2023 22:09:53]change
-[18/07/2023 22:09:53]00:27  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  1 Point  ||   TargetPos:  (5,99, 7,39)  ||   ArrowPos:  (8,19, 6,91)
-[18/07/2023 22:09:53]Audios Start
-[18/07/2023 22:10:01]Audios End
-[18/07/2023 22:10:02]00:08  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  3 Points  ||   TargetPos:  (-22,79, -4,67)  ||   ArrowPos:  (-21,46, -4,04)
-[18/07/2023 22:10:02]Audios Start
-[18/07/2023 22:10:10]Audios End
-[18/07/2023 22:10:47]00:44  ||  User 3  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-18,31, 8,48)  ||   ArrowPos:  (-3,00, 13,49)
-[18/07/2023 22:10:47]Audios Start
-[18/07/2023 22:10:51]Audios End
-[18/07/2023 22:10:54]00:05  ||  User 3  ||  Condition 2  ||  Target Still and Changes On Hit  ||  3 Points  ||   TargetPos:  (-18,31, 8,48)  ||   ArrowPos:  (-17,14, 8,55)
-[18/07/2023 22:10:54]Audios Start
-[18/07/2023 22:11:01]Audios End
-[18/07/2023 22:11:21]00:26  ||  User 3  ||  Condition 3  ||  Target Still and Changes On Hit  ||  4 Points  ||   TargetPos:  (14,09, -5,44)  ||   ArrowPos:  (13,23, -5,03)
-[18/07/2023 22:11:21]Audios Start
-[18/07/2023 22:11:28]Audios End
-[18/07/2023 22:11:31]00:09  ||  User 3  ||  Condition 3  ||  Target Still and Changes On Hit  ||  5 Points  ||   TargetPos:  (4,37, -2,72)  ||   ArrowPos:  (4,35, -2,46)
-[18/07/2023 22:11:31]Audios Start
-[18/07/2023 22:11:40]Audios End
-[18/07/2023 22:11:41]00:09  ||  User 3  ||  Condition 3  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-24,41, -5,83)  ||   ArrowPos:  (-30,76, -8,83)
-[18/07/2023 22:11:41]Audios Start
-[18/07/2023 22:11:44]Audios End
-[18/07/2023 22:21:14]  ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  5 Points  ||   TargetPos:  (1,49, 16,57)  ||   ArrowPos:  (1,45, 16,22)
-[18/07/2023 22:21:14]Audios Start
-[18/07/2023 22:21:18]Audios End
-[18/07/2023 22:21:19]  ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (1,49, 16,57)  ||   ArrowPos:  (8,38, 15,56)
-[18/07/2023 22:21:19]Audios Start
-[18/07/2023 22:21:22]Audios End
-[18/07/2023 22:21:27]  ||  00:03  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (1,49, 16,57)  ||   ArrowPos:  (5,36, 12,55)
-[18/07/2023 22:21:27]Audios Start
-[18/07/2023 22:21:30]Audios End
-[18/07/2023 22:21:35]  ||  00:03  ||  User 0  ||  Condition 1  ||  Target Still  ||  5 Points  ||   TargetPos:  (1,49, 16,57)  ||   ArrowPos:  (1,01, 16,71)
-[18/07/2023 22:21:35]Audios Start
-[18/07/2023 22:21:39]Audios End
-[18/07/2023 22:21:46]  ||  00:07  ||  User 0  ||  Condition 1  ||  Target Still  ||  3 Points  ||   TargetPos:  (1,49, 16,57)  ||   ArrowPos:  (2,55, 17,41)
-[18/07/2023 22:21:46]Audios Start
-[18/07/2023 22:21:48]Audios End
-[18/07/2023 22:25:16]  ||  00:00  ||  User 4  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-15,24, -7,60)  ||   ArrowPos:  (-9,92, -8,41)
-[18/07/2023 22:25:16]Audios Start
-[18/07/2023 22:25:20]Audios End
-[18/07/2023 22:25:26]  ||  00:05  ||  User 4  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-15,24, -7,60)  ||   ArrowPos:  (-6,67, -5,81)
-[18/07/2023 22:25:26]Audios Start
-[18/07/2023 22:25:30]Audios End
-[18/07/2023 22:25:33]  ||  00:02  ||  User 4  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-15,24, -7,60)  ||   ArrowPos:  (-12,84, -7,23)
-[18/07/2023 22:25:33]Audios Start
-[18/07/2023 22:25:33]  ||  00:00  ||  User 4  ||  Condition 2  ||  Target Still  ||  1 Point  ||   TargetPos:  (-15,24, -7,60)  ||   ArrowPos:  (-12,84, -7,23)
-[18/07/2023 22:25:36]Audios End
-[18/07/2023 22:26:12]Assets\_Scripts\RightTargetTrigger.cs(18,14): warning CS8321: The local function 'Update' is declared but never used
-[18/07/2023 22:26:12]Assets\_Scripts\ActionReplayArrow.cs(41,17): warning CS0414: The field 'ActionReplayArrow.countChangePerspective' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\KeyControllers.cs(45,18): warning CS0414: The field 'KeyControllers.buttonBEnabled' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\VerticallityAidString.cs(42,18): warning CS0414: The field 'VerticallityAidString.beepFlag' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\KeyControllers.cs(46,18): warning CS0414: The field 'KeyControllers.buttonXEnabled' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\ParameterManager.cs(59,18): warning CS0414: The field 'ParameterManager.previousSpotterPointsAid' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\KeyControllers.cs(44,18): warning CS0414: The field 'KeyControllers.buttonAEnabled' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\StickingArrowToSurface.cs(44,17): warning CS0414: The field 'StickingArrowToSurface.currentSourceIndex' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\KeyControllers.cs(66,18): warning CS0414: The field 'KeyControllers.xButtonEnabled' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\KeyControllers.cs(264,18): warning CS0414: The field 'KeyControllers.firstTimeFlag' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\ActionReplayArrow.cs(40,18): warning CS0414: The field 'ActionReplayArrow.changePerspectiveInASec' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\BowStringController.cs(28,19): warning CS0414: The field 'BowStringController.stringSoundThreshold' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\VerticallityAidString.cs(43,18): warning CS0414: The field 'VerticallityAidString.otherWallsBeep' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\KeyControllers.cs(47,18): warning CS0414: The field 'KeyControllers.buttonYEnabled' is assigned but its value is never used
-[18/07/2023 22:26:12]Assets\_Scripts\ActionReplayArrow.cs(12,18): warning CS0414: The field 'ActionReplayArrow.endReplayRecordVar' is assigned but its value is never used
-[18/07/2023 22:26:40]Assets\_Scripts\RightTargetTrigger.cs(18,14): warning CS8321: The local function 'Update' is declared but never used
-[18/07/2023 22:26:41]Assets\_Scripts\KeyControllers.cs(44,18): warning CS0414: The field 'KeyControllers.buttonAEnabled' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\KeyControllers.cs(66,18): warning CS0414: The field 'KeyControllers.xButtonEnabled' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\VerticallityAidString.cs(43,18): warning CS0414: The field 'VerticallityAidString.otherWallsBeep' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\VerticallityAidString.cs(42,18): warning CS0414: The field 'VerticallityAidString.beepFlag' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\ActionReplayArrow.cs(41,17): warning CS0414: The field 'ActionReplayArrow.countChangePerspective' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\KeyControllers.cs(45,18): warning CS0414: The field 'KeyControllers.buttonBEnabled' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\BowStringController.cs(28,19): warning CS0414: The field 'BowStringController.stringSoundThreshold' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\ParameterManager.cs(59,18): warning CS0414: The field 'ParameterManager.previousSpotterPointsAid' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\KeyControllers.cs(264,18): warning CS0414: The field 'KeyControllers.firstTimeFlag' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\KeyControllers.cs(46,18): warning CS0414: The field 'KeyControllers.buttonXEnabled' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\KeyControllers.cs(47,18): warning CS0414: The field 'KeyControllers.buttonYEnabled' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\ActionReplayArrow.cs(12,18): warning CS0414: The field 'ActionReplayArrow.endReplayRecordVar' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\ActionReplayArrow.cs(40,18): warning CS0414: The field 'ActionReplayArrow.changePerspectiveInASec' is assigned but its value is never used
-[18/07/2023 22:26:41]Assets\_Scripts\StickingArrowToSurface.cs(44,17): warning CS0414: The field 'StickingArrowToSurface.currentSourceIndex' is assigned but its value is never used
-[18/07/2023 22:28:11]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-6,00, 6,35)  ||   ArrowPos:  (0,30, 6,75)
-[18/07/2023 22:28:11]Audios Start
-[18/07/2023 22:28:15]Audios End
-[18/07/2023 22:28:19]  ||  00:04  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-6,00, 6,35)  ||   ArrowPos:  (10,65, 17,37)
-[18/07/2023 22:28:19]Audios Start
-[18/07/2023 22:28:22]Audios End
-[18/07/2023 22:28:26]  ||  00:03  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-6,00, 6,35)  ||   ArrowPos:  (-0,80, 4,09)
-[18/07/2023 22:28:26]Audios Start
-[18/07/2023 22:28:29]Audios End
-[18/07/2023 22:28:31]  ||  00:01  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-6,00, 6,35)  ||   ArrowPos:  (-14,79, 4,90)
-[18/07/2023 22:28:31]Audios Start
-[18/07/2023 22:28:34]Audios End
-[18/07/2023 22:33:35]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-15,27, -7,79)  ||   ArrowPos:  (-19,37, -6,95)
-[18/07/2023 22:33:35]Audios Start
-[18/07/2023 22:33:38]Audios End
-[18/07/2023 22:33:41]  ||  00:01  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-15,27, -7,79)  ||   ArrowPos:  (-19,08, -7,55)
-[18/07/2023 22:33:41]Audios Start
-[18/07/2023 22:33:44]Audios End
-[18/07/2023 22:34:04]  ||  00:19  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-15,27, -7,79)  ||   ArrowPos:  (-12,77, -8,42)
-[18/07/2023 22:34:04]Audios Start
-[18/07/2023 22:34:07]Audios End
-[18/07/2023 22:34:10]  ||  00:02  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-15,27, -7,79)  ||   ArrowPos:  (-18,68, -7,20)
-[18/07/2023 22:34:10]Audios Start
-[18/07/2023 22:34:14]Audios End
-[18/07/2023 22:36:44]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-2,17, -4,53)  ||   ArrowPos:  (-5,33, -3,90)
-[18/07/2023 22:36:44]Audios Start
-[18/07/2023 22:36:48]Audios End
-[18/07/2023 22:44:47]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-9,67, -2,59)  ||   ArrowPos:  (-6,86, -1,92)
-[18/07/2023 22:44:47]Audios Start
-[18/07/2023 22:44:51]Audios End
-[18/07/2023 22:44:53]  ||  00:01  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-9,67, -2,59)  ||   ArrowPos:  (-12,91, -2,20)
-[18/07/2023 22:44:53]Audios Start
-[18/07/2023 22:44:56]Audios End
-[18/07/2023 22:46:12]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-10,71, -6,21)  ||   ArrowPos:  (-17,21, -5,40)
-[18/07/2023 22:46:12]Audios Start
-[18/07/2023 22:46:15]Audios End
-[18/07/2023 22:46:16]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-10,71, -6,21)  ||   ArrowPos:  (-15,23, -6,87)
-[18/07/2023 22:46:16]Audios Start
-[18/07/2023 22:46:19]Audios End
-[18/07/2023 22:46:20]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-10,71, -6,21)  ||   ArrowPos:  (-5,71, -6,49)
-[18/07/2023 22:46:20]Audios Start
-[18/07/2023 22:46:24]Audios End
-[18/07/2023 22:47:03]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (0,93, 9,76)  ||   ArrowPos:  (4,49, 10,80)
-[18/07/2023 22:47:03]Audios Start
-[18/07/2023 22:47:06]Audios End
-[18/07/2023 22:47:07]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (0,93, 9,76)  ||   ArrowPos:  (4,51, 10,12)
-[18/07/2023 22:47:07]Audios Start
-[18/07/2023 22:47:11]Audios End
-[18/07/2023 22:48:06]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-1,63, 16,38)  ||   ArrowPos:  (1,88, 17,12)
-[18/07/2023 22:48:06]Audios Start
-[18/07/2023 22:48:09]Audios End
-[18/07/2023 22:48:11]  ||  00:01  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-1,63, 16,38)  ||   ArrowPos:  (1,59, 16,76)
-[18/07/2023 22:48:11]Audios Start
-[18/07/2023 22:48:14]Audios End
-[18/07/2023 22:49:10]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,21, 14,65)  ||   ArrowPos:  (-11,65, 16,19)
-[18/07/2023 22:49:10]Audios Start
-[18/07/2023 22:49:13]Audios End
-[18/07/2023 22:49:14]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,21, 14,65)  ||   ArrowPos:  (-11,03, 15,10)
-[18/07/2023 22:49:14]Audios Start
-[18/07/2023 22:49:17]Audios End
-[18/07/2023 22:49:20]  ||  00:01  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,21, 14,65)  ||   ArrowPos:  (-13,72, 17,63)
-[18/07/2023 22:49:20]Audios Start
-[18/07/2023 22:49:23]Audios End
-[18/07/2023 22:49:27]  ||  00:03  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,21, 14,65)  ||   ArrowPos:  (-12,96, 17,21)
-[18/07/2023 22:49:27]Audios Start
-[18/07/2023 22:49:30]Audios End
-[18/07/2023 22:51:05]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-14,04, -7,23)  ||   ArrowPos:  (-19,18, -6,62)
-[18/07/2023 22:51:05]Audios Start
-[18/07/2023 22:51:08]Audios End
-[18/07/2023 22:51:09]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-14,04, -7,23)  ||   ArrowPos:  (-18,20, -7,53)
-[18/07/2023 22:51:09]Audios Start
-[18/07/2023 22:51:12]Audios End
-[18/07/2023 22:51:17]  ||  00:04  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-14,04, -7,23)  ||   ArrowPos:  (-0,27, 1,21)
-[18/07/2023 22:51:17]Audios Start
-[18/07/2023 22:51:21]Audios End
-[18/07/2023 22:51:22]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-14,04, -7,23)  ||   ArrowPos:  (-0,42, 3,51)
-[18/07/2023 22:51:22]Audios Start
-[18/07/2023 22:51:25]Audios End
-[18/07/2023 22:51:40]  ||  00:13  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-14,04, -7,23)  ||   ArrowPos:  (-5,11, 15,87)
-[18/07/2023 22:51:40]Audios Start
-[18/07/2023 22:51:43]Audios End
-[18/07/2023 22:51:44]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-14,04, -7,23)  ||   ArrowPos:  (-3,86, 16,70)
-[18/07/2023 22:51:44]Audios Start
-[18/07/2023 22:51:48]Audios End
-[18/07/2023 22:52:54]  ||  01:05  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,85, 7,26)  ||   ArrowPos:  (-11,97, 7,37)
-[18/07/2023 22:52:54]Audios Start
-[18/07/2023 22:52:57]Audios End
-[18/07/2023 22:52:58]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,85, 7,26)  ||   ArrowPos:  (-3,47, 7,53)
-[18/07/2023 22:52:58]Audios Start
-[18/07/2023 22:53:02]Audios End
-[18/07/2023 22:53:03]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,85, 7,26)  ||   ArrowPos:  (-4,84, 7,93)
-[18/07/2023 22:53:03]Audios Start
-[18/07/2023 22:53:07]Audios End
-[18/07/2023 22:53:08]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,85, 7,26)  ||   ArrowPos:  (-12,22, 7,53)
-[18/07/2023 22:53:08]Audios Start
-[18/07/2023 22:53:11]Audios End
-[18/07/2023 23:00:03]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-14,63, -6,20)  ||   ArrowPos:  (-18,59, -5,65)
-[18/07/2023 23:00:03]Audios Start
-[18/07/2023 23:00:07]Audios End
-[18/07/2023 23:00:08]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-14,63, -6,20)  ||   ArrowPos:  (-18,97, -5,31)
-[18/07/2023 23:00:08]Audios Start
-[18/07/2023 23:00:11]Audios End
-[18/07/2023 23:00:13]  ||  00:01  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-14,63, -6,20)  ||   ArrowPos:  (-17,47, -3,77)
-[18/07/2023 23:00:13]Audios Start
-[18/07/2023 23:00:17]Audios End
-[18/07/2023 23:01:36]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (2,15, 14,16)  ||   ArrowPos:  (7,31, 15,32)
-[18/07/2023 23:01:36]Audios Start
-[18/07/2023 23:01:40]Audios End
-[18/07/2023 23:01:41]  ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (2,15, 14,16)  ||   ArrowPos:  (-2,38, 16,04)
-[18/07/2023 23:01:41]Audios Start
-[18/07/2023 23:01:44]Audios End
-[18/07/2023 23:01:49]  ||  00:04  ||  User 0  ||  Condition 2  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (2,15, 14,16)  ||   ArrowPos:  (-3,75, 15,42)
-[18/07/2023 23:01:49]Audios Start
-[18/07/2023 23:01:52]Audios End
+[19/07/2023 23:54:57]A meta data file (.meta) exists but its asset 'Assets/LogFile.text' can't be found. When moving or deleting files outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.
+[19/07/2023 23:55:54]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-2,99, 20,66)  ||   ArrowPos:  (4,25, 15,67)
+[19/07/2023 23:56:07]  id:  2  ||   Train   ||  00:10  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-2,99, 20,66)  ||   ArrowPos:  (0,38, 12,78)
+[19/07/2023 23:56:16]  id:  3  ||   Train   ||  00:05  ||  User 0  ||  Condition 1  ||  Target Still  ||  1 Point  ||   TargetPos:  (-2,99, 20,66)  ||   ArrowPos:  (-1,68, 18,83)
+[19/07/2023 23:56:18]  id:  4  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  Ceiling Hit  ||   TargetPos:  (-2,99, 20,66)  ||   ArrowPos:  (-3,61, 23,35)
+[19/07/2023 23:56:21]  id:  5  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  Ceiling Hit  ||   TargetPos:  (-2,99, 20,66)  ||   ArrowPos:  (-2,83, 23,35)
+[19/07/2023 23:58:27]change
+[19/07/2023 23:58:27]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  1 Point  ||   TargetPos:  (-13,47, -2,91)  ||   ArrowPos:  (-11,07, -2,60)
+[19/07/2023 23:58:31]  id:  2  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (1,80, -10,66)  ||   ArrowPos:  (-1,91, -8,47)
+[19/07/2023 23:59:10]change
+[19/07/2023 23:59:10]  id:  3  ||   Train   ||  00:36  ||  User 0  ||  Condition 3  ||  Target Still and Changes On Hit  ||  1 Point  ||   TargetPos:  (1,80, -10,66)  ||   ArrowPos:  (3,93, -10,90)
+[20/07/2023 00:05:30]  id:  11  ||   Train   ||  00:00  ||  User 0  ||  Condition 3  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-5,99, 3,62)  ||   ArrowPos:  (0,79, 5,80)
+[20/07/2023 00:05:34]  id:  12  ||   Train   ||  00:01  ||  User 0  ||  Condition 3  ||  Target Still and Changes On Hit  ||  RightWall Hit  ||   TargetPos:  (-5,99, 3,62)  ||   ArrowPos:  (-31,33, 3,51)
+[20/07/2023 00:05:37]  id:  13  ||   Train   ||  00:00  ||  User 0  ||  Condition 3  ||  Target Still and Changes On Hit  ||  5 Points  ||   TargetPos:  (-5,99, 3,62)  ||   ArrowPos:  (-5,89, 4,02)
+[20/07/2023 00:05:42]  id:  14  ||   Train   ||  00:00  ||  User 0  ||  Condition 3  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (8,07, -3,65)  ||   ArrowPos:  (-2,18, 1,31)
+[20/07/2023 00:05:45]  id:  15  ||   Train   ||  00:00  ||  User 0  ||  Condition 3  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (8,07, -3,65)  ||   ArrowPos:  (-2,00, 1,56)
+[20/07/2023 00:05:48]  id:  16  ||   Train   ||  00:00  ||  User 0  ||  Condition 3  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (8,07, -3,65)  ||   ArrowPos:  (-1,73, 1,56)
+[20/07/2023 00:05:51]  id:  17  ||   Train   ||  00:00  ||  User 0  ||  Condition 3  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (8,07, -3,65)  ||   ArrowPos:  (-1,78, 0,91)
+[20/07/2023 00:05:54]  id:  18  ||   Train   ||  00:00  ||  User 0  ||  Condition 3  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (8,07, -3,65)  ||   ArrowPos:  (-1,33, 0,97)
+[20/07/2023 00:06:38]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-11,24, 17,99)  ||   ArrowPos:  (-2,31, 19,12)
+[20/07/2023 00:07:27]  id:  2  ||   Train   ||  00:46  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-11,24, 17,99)  ||   ArrowPos:  (8,85, 13,82)
+[20/07/2023 00:07:32]  id:  3  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-11,24, 17,99)  ||   ArrowPos:  (10,41, 12,11)
+[20/07/2023 00:11:57]Invalid interaction profile '/interaction_profiles/htc/vive_controller' for device 'HTC Vive Controller OpenXR'.
+[20/07/2023 00:11:59]Only one shutdown or restart can be executed at a time
+[20/07/2023 00:11:59]Only one shutdown or restart can be executed at a time
+[20/07/2023 00:12:03]Only one shutdown or restart can be executed at a time
+[20/07/2023 00:12:07]Only one shutdown or restart can be executed at a time
+[20/07/2023 00:12:10]Only one shutdown or restart can be executed at a time
+[20/07/2023 00:12:13]Only one shutdown or restart can be executed at a time
+[20/07/2023 00:12:13]Only one shutdown or restart can be executed at a time
+[20/07/2023 00:12:19]Only one shutdown or restart can be executed at a time
+[20/07/2023 00:16:08]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-0,75, -9,46)  ||   ArrowPos:  (-12,20, 1,65)
+[20/07/2023 00:16:11]  id:  2  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-0,75, -9,46)  ||   ArrowPos:  (-7,37, -3,46)
+[20/07/2023 00:16:14]  id:  3  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-0,75, -9,46)  ||   ArrowPos:  (-7,60, -4,22)
+[20/07/2023 00:16:18]  id:  4  ||   Train   ||  00:01  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-0,75, -9,46)  ||   ArrowPos:  (-8,06, -5,25)
+[20/07/2023 00:16:21]  id:  5  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-0,75, -9,46)  ||   ArrowPos:  (-7,68, -4,71)
+[20/07/2023 00:16:27]  id:  6  ||   Train   ||  00:04  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (5,02, -4,64)  ||   ArrowPos:  (-1,44, -2,08)
+[20/07/2023 00:16:30]  id:  7  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (5,02, -4,64)  ||   ArrowPos:  (-1,72, -2,38)
+[20/07/2023 00:16:33]  id:  8  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (5,02, -4,64)  ||   ArrowPos:  (-1,16, -1,78)
+[20/07/2023 00:16:35]  id:  9  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (5,02, -4,64)  ||   ArrowPos:  (-1,22, -1,59)
+[20/07/2023 00:16:38]  id:  10  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (5,02, -4,64)  ||   ArrowPos:  (-1,50, -1,29)
+[20/07/2023 00:18:06]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-2,82, 1,17)  ||   ArrowPos:  (-0,05, 1,38)
+[20/07/2023 00:18:34]  id:  2  ||   Train   ||  00:25  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  4 Points  ||   TargetPos:  (-2,82, 1,17)  ||   ArrowPos:  (-2,39, 0,64)
+[20/07/2023 00:19:36]  id:  3  ||   Train   ||  00:52  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  2 Points  ||   TargetPos:  (-7,45, -4,44)  ||   ArrowPos:  (-5,65, -3,93)
+[20/07/2023 00:19:41]  id:  4  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (3,75, -1,70)  ||   ArrowPos:  (-6,71, 3,56)
+[20/07/2023 00:19:45]  id:  5  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (3,75, -1,70)  ||   ArrowPos:  (-4,48, 2,52)
+[20/07/2023 00:19:48]  id:  6  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (3,75, -1,70)  ||   ArrowPos:  (-4,32, 2,36)
+[20/07/2023 00:19:52]  id:  7  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (3,75, -1,70)  ||   ArrowPos:  (-4,39, 1,51)
+[20/07/2023 00:19:55]  id:  8  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (3,75, -1,70)  ||   ArrowPos:  (-5,35, 8,01)
+[20/07/2023 00:20:00]  id:  9  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (2,06, 1,56)  ||   ArrowPos:  (-3,05, 1,44)
+[20/07/2023 00:20:04]  id:  10  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (2,06, 1,56)  ||   ArrowPos:  (-2,68, 1,24)
+[20/07/2023 00:20:07]  id:  11  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (2,06, 1,56)  ||   ArrowPos:  (10,45, -4,52)
+[20/07/2023 00:20:10]  id:  12  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (2,06, 1,56)  ||   ArrowPos:  (10,83, -4,44)
+[20/07/2023 00:20:13]  id:  13  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (2,06, 1,56)  ||   ArrowPos:  (11,02, -4,30)
+[20/07/2023 00:22:23]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,71, -6,51)  ||   ArrowPos:  (-2,37, -5,97)
+[20/07/2023 00:22:26]  id:  2  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,71, -6,51)  ||   ArrowPos:  (1,47, -6,04)
+[20/07/2023 00:22:28]  id:  3  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,71, -6,51)  ||   ArrowPos:  (1,71, -5,62)
+[20/07/2023 00:22:31]  id:  4  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,71, -6,51)  ||   ArrowPos:  (2,19, -5,74)
+[20/07/2023 00:22:34]  id:  5  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,71, -6,51)  ||   ArrowPos:  (2,51, -5,64)
+[20/07/2023 00:25:40]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-0,94, 16,99)  ||   ArrowPos:  (-5,81, 11,13)
+[20/07/2023 00:25:48]change
+[20/07/2023 00:25:48]  id:  2  ||   Train   ||  00:05  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  1 Point  ||   TargetPos:  (-0,94, 16,99)  ||   ArrowPos:  (-3,32, 17,17)
+[20/07/2023 00:25:52]  id:  3  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-15,14, 0,73)  ||   ArrowPos:  (-11,33, 1,06)
+[20/07/2023 00:25:57]  id:  4  ||   Train   ||  00:02  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-15,14, 0,73)  ||   ArrowPos:  (-18,93, 0,32)
+[20/07/2023 00:29:24]Assets\_Scripts\RightTargetTrigger.cs(18,14): warning CS8321: The local function 'Update' is declared but never used
+[20/07/2023 00:29:24]Assets\_Scripts\KeyControllers.cs(66,18): warning CS0414: The field 'KeyControllers.xButtonEnabled' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\ActionReplayArrow.cs(40,18): warning CS0414: The field 'ActionReplayArrow.changePerspectiveInASec' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\ActionReplayArrow.cs(41,17): warning CS0414: The field 'ActionReplayArrow.countChangePerspective' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\ActionReplayArrow.cs(12,18): warning CS0414: The field 'ActionReplayArrow.endReplayRecordVar' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\KeyControllers.cs(266,18): warning CS0414: The field 'KeyControllers.firstTimeFlag' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\KeyControllers.cs(44,18): warning CS0414: The field 'KeyControllers.buttonAEnabled' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\VerticallityAidString.cs(42,18): warning CS0414: The field 'VerticallityAidString.beepFlag' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\KeyControllers.cs(47,18): warning CS0414: The field 'KeyControllers.buttonYEnabled' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\KeyControllers.cs(45,18): warning CS0414: The field 'KeyControllers.buttonBEnabled' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\ParameterManager.cs(61,18): warning CS0414: The field 'ParameterManager.previousSpotterPointsAid' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\BowStringController.cs(28,19): warning CS0414: The field 'BowStringController.stringSoundThreshold' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\KeyControllers.cs(46,18): warning CS0414: The field 'KeyControllers.buttonXEnabled' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\StickingArrowToSurface.cs(44,17): warning CS0414: The field 'StickingArrowToSurface.currentSourceIndex' is assigned but its value is never used
+[20/07/2023 00:29:24]Assets\_Scripts\VerticallityAidString.cs(43,18): warning CS0414: The field 'VerticallityAidString.otherWallsBeep' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\RightTargetTrigger.cs(18,14): warning CS8321: The local function 'Update' is declared but never used
+[20/07/2023 00:30:13]Assets\_Scripts\ActionReplayArrow.cs(40,18): warning CS0414: The field 'ActionReplayArrow.changePerspectiveInASec' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\KeyControllers.cs(266,18): warning CS0414: The field 'KeyControllers.firstTimeFlag' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\ParameterManager.cs(61,18): warning CS0414: The field 'ParameterManager.previousSpotterPointsAid' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\KeyControllers.cs(46,18): warning CS0414: The field 'KeyControllers.buttonXEnabled' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\KeyControllers.cs(66,18): warning CS0414: The field 'KeyControllers.xButtonEnabled' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\VerticallityAidString.cs(43,18): warning CS0414: The field 'VerticallityAidString.otherWallsBeep' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\BowStringController.cs(28,19): warning CS0414: The field 'BowStringController.stringSoundThreshold' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\KeyControllers.cs(44,18): warning CS0414: The field 'KeyControllers.buttonAEnabled' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\ActionReplayArrow.cs(12,18): warning CS0414: The field 'ActionReplayArrow.endReplayRecordVar' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\KeyControllers.cs(45,18): warning CS0414: The field 'KeyControllers.buttonBEnabled' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\KeyControllers.cs(47,18): warning CS0414: The field 'KeyControllers.buttonYEnabled' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\VerticallityAidString.cs(42,18): warning CS0414: The field 'VerticallityAidString.beepFlag' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\ActionReplayArrow.cs(41,17): warning CS0414: The field 'ActionReplayArrow.countChangePerspective' is assigned but its value is never used
+[20/07/2023 00:30:13]Assets\_Scripts\StickingArrowToSurface.cs(44,17): warning CS0414: The field 'StickingArrowToSurface.currentSourceIndex' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\RightTargetTrigger.cs(18,14): warning CS8321: The local function 'Update' is declared but never used
+[20/07/2023 00:30:37]Assets\_Scripts\BowStringController.cs(28,19): warning CS0414: The field 'BowStringController.stringSoundThreshold' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\KeyControllers.cs(266,18): warning CS0414: The field 'KeyControllers.firstTimeFlag' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\ActionReplayArrow.cs(12,18): warning CS0414: The field 'ActionReplayArrow.endReplayRecordVar' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\ActionReplayArrow.cs(40,18): warning CS0414: The field 'ActionReplayArrow.changePerspectiveInASec' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\KeyControllers.cs(47,18): warning CS0414: The field 'KeyControllers.buttonYEnabled' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\KeyControllers.cs(46,18): warning CS0414: The field 'KeyControllers.buttonXEnabled' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\ActionReplayArrow.cs(41,17): warning CS0414: The field 'ActionReplayArrow.countChangePerspective' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\StickingArrowToSurface.cs(44,17): warning CS0414: The field 'StickingArrowToSurface.currentSourceIndex' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\VerticallityAidString.cs(42,18): warning CS0414: The field 'VerticallityAidString.beepFlag' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\KeyControllers.cs(45,18): warning CS0414: The field 'KeyControllers.buttonBEnabled' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\KeyControllers.cs(66,18): warning CS0414: The field 'KeyControllers.xButtonEnabled' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\VerticallityAidString.cs(43,18): warning CS0414: The field 'VerticallityAidString.otherWallsBeep' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\KeyControllers.cs(44,18): warning CS0414: The field 'KeyControllers.buttonAEnabled' is assigned but its value is never used
+[20/07/2023 00:30:37]Assets\_Scripts\ParameterManager.cs(61,18): warning CS0414: The field 'ParameterManager.previousSpotterPointsAid' is assigned but its value is never used
+[20/07/2023 00:31:31]Assets\_Scripts\RightTargetTrigger.cs(18,14): warning CS8321: The local function 'Update' is declared but never used
+[20/07/2023 00:31:32]Assets\_Scripts\KeyControllers.cs(66,18): warning CS0414: The field 'KeyControllers.xButtonEnabled' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\BowStringController.cs(28,19): warning CS0414: The field 'BowStringController.stringSoundThreshold' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\ActionReplayArrow.cs(40,18): warning CS0414: The field 'ActionReplayArrow.changePerspectiveInASec' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\KeyControllers.cs(47,18): warning CS0414: The field 'KeyControllers.buttonYEnabled' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\ParameterManager.cs(61,18): warning CS0414: The field 'ParameterManager.previousSpotterPointsAid' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\ActionReplayArrow.cs(41,17): warning CS0414: The field 'ActionReplayArrow.countChangePerspective' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\KeyControllers.cs(270,18): warning CS0414: The field 'KeyControllers.firstTimeFlag' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\StickingArrowToSurface.cs(44,17): warning CS0414: The field 'StickingArrowToSurface.currentSourceIndex' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\VerticallityAidString.cs(42,18): warning CS0414: The field 'VerticallityAidString.beepFlag' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\KeyControllers.cs(45,18): warning CS0414: The field 'KeyControllers.buttonBEnabled' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\ActionReplayArrow.cs(12,18): warning CS0414: The field 'ActionReplayArrow.endReplayRecordVar' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\KeyControllers.cs(44,18): warning CS0414: The field 'KeyControllers.buttonAEnabled' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\KeyControllers.cs(46,18): warning CS0414: The field 'KeyControllers.buttonXEnabled' is assigned but its value is never used
+[20/07/2023 00:31:32]Assets\_Scripts\VerticallityAidString.cs(43,18): warning CS0414: The field 'VerticallityAidString.otherWallsBeep' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\RightTargetTrigger.cs(18,14): warning CS8321: The local function 'Update' is declared but never used
+[20/07/2023 00:31:53]Assets\_Scripts\BowStringController.cs(28,19): warning CS0414: The field 'BowStringController.stringSoundThreshold' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\KeyControllers.cs(270,18): warning CS0414: The field 'KeyControllers.firstTimeFlag' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\ParameterManager.cs(64,18): warning CS0414: The field 'ParameterManager.previousSpotterPointsAid' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\ActionReplayArrow.cs(41,17): warning CS0414: The field 'ActionReplayArrow.countChangePerspective' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\VerticallityAidString.cs(43,18): warning CS0414: The field 'VerticallityAidString.otherWallsBeep' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\KeyControllers.cs(46,18): warning CS0414: The field 'KeyControllers.buttonXEnabled' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\KeyControllers.cs(66,18): warning CS0414: The field 'KeyControllers.xButtonEnabled' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\KeyControllers.cs(44,18): warning CS0414: The field 'KeyControllers.buttonAEnabled' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\ActionReplayArrow.cs(40,18): warning CS0414: The field 'ActionReplayArrow.changePerspectiveInASec' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\StickingArrowToSurface.cs(44,17): warning CS0414: The field 'StickingArrowToSurface.currentSourceIndex' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\VerticallityAidString.cs(42,18): warning CS0414: The field 'VerticallityAidString.beepFlag' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\KeyControllers.cs(45,18): warning CS0414: The field 'KeyControllers.buttonBEnabled' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\ActionReplayArrow.cs(12,18): warning CS0414: The field 'ActionReplayArrow.endReplayRecordVar' is assigned but its value is never used
+[20/07/2023 00:31:53]Assets\_Scripts\KeyControllers.cs(47,18): warning CS0414: The field 'KeyControllers.buttonYEnabled' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\RightTargetTrigger.cs(18,14): warning CS8321: The local function 'Update' is declared but never used
+[20/07/2023 00:32:09]Assets\_Scripts\ActionReplayArrow.cs(41,17): warning CS0414: The field 'ActionReplayArrow.countChangePerspective' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\KeyControllers.cs(47,18): warning CS0414: The field 'KeyControllers.buttonYEnabled' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\BowStringController.cs(28,19): warning CS0414: The field 'BowStringController.stringSoundThreshold' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\ParameterManager.cs(64,18): warning CS0414: The field 'ParameterManager.previousSpotterPointsAid' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\KeyControllers.cs(46,18): warning CS0414: The field 'KeyControllers.buttonXEnabled' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\ActionReplayArrow.cs(40,18): warning CS0414: The field 'ActionReplayArrow.changePerspectiveInASec' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\KeyControllers.cs(45,18): warning CS0414: The field 'KeyControllers.buttonBEnabled' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\KeyControllers.cs(66,18): warning CS0414: The field 'KeyControllers.xButtonEnabled' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\KeyControllers.cs(270,18): warning CS0414: The field 'KeyControllers.firstTimeFlag' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\VerticallityAidString.cs(43,18): warning CS0414: The field 'VerticallityAidString.otherWallsBeep' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\StickingArrowToSurface.cs(44,17): warning CS0414: The field 'StickingArrowToSurface.currentSourceIndex' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\ActionReplayArrow.cs(12,18): warning CS0414: The field 'ActionReplayArrow.endReplayRecordVar' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\VerticallityAidString.cs(42,18): warning CS0414: The field 'VerticallityAidString.beepFlag' is assigned but its value is never used
+[20/07/2023 00:32:09]Assets\_Scripts\KeyControllers.cs(44,18): warning CS0414: The field 'KeyControllers.buttonAEnabled' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\RightTargetTrigger.cs(18,14): warning CS8321: The local function 'Update' is declared but never used
+[20/07/2023 00:32:33]Assets\_Scripts\StickingArrowToSurface.cs(44,17): warning CS0414: The field 'StickingArrowToSurface.currentSourceIndex' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\KeyControllers.cs(66,18): warning CS0414: The field 'KeyControllers.xButtonEnabled' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\ActionReplayArrow.cs(41,17): warning CS0414: The field 'ActionReplayArrow.countChangePerspective' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\VerticallityAidString.cs(43,18): warning CS0414: The field 'VerticallityAidString.otherWallsBeep' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\ActionReplayArrow.cs(40,18): warning CS0414: The field 'ActionReplayArrow.changePerspectiveInASec' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\KeyControllers.cs(270,18): warning CS0414: The field 'KeyControllers.firstTimeFlag' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\KeyControllers.cs(46,18): warning CS0414: The field 'KeyControllers.buttonXEnabled' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\KeyControllers.cs(44,18): warning CS0414: The field 'KeyControllers.buttonAEnabled' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\KeyControllers.cs(45,18): warning CS0414: The field 'KeyControllers.buttonBEnabled' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\ParameterManager.cs(64,18): warning CS0414: The field 'ParameterManager.previousSpotterPointsAid' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\BowStringController.cs(28,19): warning CS0414: The field 'BowStringController.stringSoundThreshold' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\VerticallityAidString.cs(42,18): warning CS0414: The field 'VerticallityAidString.beepFlag' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\KeyControllers.cs(47,18): warning CS0414: The field 'KeyControllers.buttonYEnabled' is assigned but its value is never used
+[20/07/2023 00:32:33]Assets\_Scripts\ActionReplayArrow.cs(12,18): warning CS0414: The field 'ActionReplayArrow.endReplayRecordVar' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\RightTargetTrigger.cs(18,14): warning CS8321: The local function 'Update' is declared but never used
+[20/07/2023 00:32:48]Assets\_Scripts\VerticallityAidString.cs(42,18): warning CS0414: The field 'VerticallityAidString.beepFlag' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\BowStringController.cs(28,19): warning CS0414: The field 'BowStringController.stringSoundThreshold' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\ActionReplayArrow.cs(40,18): warning CS0414: The field 'ActionReplayArrow.changePerspectiveInASec' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\KeyControllers.cs(44,18): warning CS0414: The field 'KeyControllers.buttonAEnabled' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\ActionReplayArrow.cs(41,17): warning CS0414: The field 'ActionReplayArrow.countChangePerspective' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\ParameterManager.cs(64,18): warning CS0414: The field 'ParameterManager.previousSpotterPointsAid' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\ActionReplayArrow.cs(12,18): warning CS0414: The field 'ActionReplayArrow.endReplayRecordVar' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\VerticallityAidString.cs(43,18): warning CS0414: The field 'VerticallityAidString.otherWallsBeep' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\KeyControllers.cs(66,18): warning CS0414: The field 'KeyControllers.xButtonEnabled' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\KeyControllers.cs(46,18): warning CS0414: The field 'KeyControllers.buttonXEnabled' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\KeyControllers.cs(45,18): warning CS0414: The field 'KeyControllers.buttonBEnabled' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\KeyControllers.cs(47,18): warning CS0414: The field 'KeyControllers.buttonYEnabled' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\KeyControllers.cs(270,18): warning CS0414: The field 'KeyControllers.firstTimeFlag' is assigned but its value is never used
+[20/07/2023 00:32:48]Assets\_Scripts\StickingArrowToSurface.cs(44,17): warning CS0414: The field 'StickingArrowToSurface.currentSourceIndex' is assigned but its value is never used
+[20/07/2023 00:33:44]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  TargetWall Hit  ||   TargetPos:  (-7,08, -6,03)  ||   ArrowPos:  (1,97, -5,57)
+[20/07/2023 00:33:47]  id:  2  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still  ||  3 Points  ||   TargetPos:  (-7,08, -6,03)  ||   ArrowPos:  (-6,07, -5,58)
+[20/07/2023 00:33:51]  id:  3  ||   Train   ||  00:01  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-7,08, -6,03)  ||   ArrowPos:  (-3,72, -5,94)
+[20/07/2023 00:34:10]  id:  4  ||   Train   ||  00:16  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-7,08, -6,03)  ||   ArrowPos:  (-4,42, -5,61)
+[20/07/2023 00:34:14]  id:  5  ||   Train   ||  00:01  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-7,08, -6,03)  ||   ArrowPos:  (-4,38, -6,51)
+[20/07/2023 00:34:17]  id:  6  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-7,08, -6,03)  ||   ArrowPos:  (-10,23, -6,34)
+[20/07/2023 00:34:42]  id:  7  ||   Train   ||  00:22  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-7,08, -6,03)  ||   ArrowPos:  (-3,48, -4,70)
+[20/07/2023 00:34:53]  id:  8  ||   Train   ||  00:07  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (9,55, 4,32)  ||   ArrowPos:  (5,27, 4,56)
+[20/07/2023 00:44:26]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,65, 3,93)  ||   ArrowPos:  (-7,65, 3,92)
+[20/07/2023 00:44:29]  id:  2  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,65, 3,93)  ||   ArrowPos:  (-1,66, 4,39)
+[20/07/2023 00:44:31]  id:  3  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,65, 3,93)  ||   ArrowPos:  (-8,97, 3,99)
+[20/07/2023 00:44:35]  id:  4  ||   Train   ||  00:00  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,65, 3,93)  ||   ArrowPos:  (-1,13, 7,18)
+[20/07/2023 00:45:13]  id:  5  ||   Train   ||  00:21  ||  User 0  ||  Condition 2  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,65, 3,93)  ||   ArrowPos:  (-8,12, 0,31)

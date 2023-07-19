@@ -107,9 +107,17 @@ public class KeyControllers : MonoBehaviour
 
     private CenterTarget centerScript;
 
+    private SpotterTalkingCheck spotterManager;
+
+    private ParameterManager parameterManager;
+
     void Start()
     {
         //listener = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
+
+        parameterManager = GameObject.FindObjectOfType<ParameterManager>();
+
+        spotterManager = GameObject.FindObjectOfType<SpotterTalkingCheck>();
 
         target = GameObject.FindObjectOfType<MainTarget>();
         targetObject = GameObject.FindObjectOfType<TargetObject>();
@@ -131,8 +139,6 @@ public class KeyControllers : MonoBehaviour
 
         reloadCrossbow();
 
-        
-        
         //HAPTIC PURPOSES
     }   
 
@@ -173,7 +179,7 @@ public class KeyControllers : MonoBehaviour
         
         if (target != null)
         {
-            if (buttonShootCrossbow == 1 && readyToShoot == true && controller.getIsInFirstPerspective() == true && controller.getIsTalking() == false)
+            if (buttonShootCrossbow == 1 && readyToShoot == true && controller.getIsInFirstPerspective() == true && controller.getIsTalking() == false && parameterManager.getCanShoot() == true)
             {
                 if (!bowStringController.stringPullingSound())
                 {

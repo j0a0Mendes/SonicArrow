@@ -50,6 +50,8 @@ public class BowStringController : MonoBehaviour
 
     private TimeManager timeManager;
 
+    private SpotterTalkingCheck spotterManager;
+
     [SerializeField]
     private float zAxisPull;
 
@@ -93,6 +95,7 @@ public class BowStringController : MonoBehaviour
 
     private void Start()
     {
+        spotterManager = GameObject.FindObjectOfType<SpotterTalkingCheck>();
         targetObject = GameObject.FindObjectOfType<TargetObject>();
         keyControllersScript = GameObject.FindObjectOfType<KeyControllers>();
 

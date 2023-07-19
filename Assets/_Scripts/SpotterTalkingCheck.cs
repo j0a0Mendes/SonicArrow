@@ -9,7 +9,11 @@ public class SpotterTalkingCheck : MonoBehaviour
 
     private List<AudioSource> allAudioSources;
 
+    private List<AudioSource> audioSourcesSecundary;
+
     private TimeManager timeManager;
+
+    private bool isPlaying;
 
     private void Start()
     {
@@ -18,6 +22,8 @@ public class SpotterTalkingCheck : MonoBehaviour
         timeManager = GameObject.FindObjectOfType<TimeManager>();
 
         allAudioSources = new List<AudioSource>();
+
+        audioSourcesSecundary = new List<AudioSource>();
 
         AudioSource a = GameObject.Find("Timeout").GetComponent<AudioSource>();
         allAudioSources.Add(a);
@@ -69,6 +75,17 @@ public class SpotterTalkingCheck : MonoBehaviour
 
         AudioSource q = GameObject.Find("1_Point").GetComponent<AudioSource>();
         allAudioSources.Add(q);
+
+        /////////////////////////////////////////
+
+        AudioSource r = GameObject.Find("Hi_Im_Tom").GetComponent<AudioSource>();
+        audioSourcesSecundary.Add(r);
+
+        AudioSource s = GameObject.Find("Timeout").GetComponent<AudioSource>();
+        audioSourcesSecundary.Add(s);
+
+        //AudioSource t = GameObject.Find("").GetComponent<AudioSource>();
+        //audioSourcesSecundary.Add(t);
     }
 
     public void FixedUpdate()
@@ -83,6 +100,8 @@ public class SpotterTalkingCheck : MonoBehaviour
                 timeManager.StartTimer();
             }
         }
+
+        isPlaying = CheckSecondaryAudios();
     }
 
     public bool CheckForPlayingAudioSources()
@@ -96,5 +115,23 @@ public class SpotterTalkingCheck : MonoBehaviour
         }
 
         return false;
+    }
+
+    public bool CheckSecondaryAudios()
+    {
+        foreach (AudioSource audioSource in audioSourcesSecundary)
+        {
+            if (audioSource.isPlaying)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public bool getPlaying()
+    {
+        return isPlaying;
     }
 }

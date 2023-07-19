@@ -418,24 +418,33 @@ public class TargetObject : MonoBehaviour
         {
             if (aimY >= 21)
             {
-                targetPitch = 0.1f;
+                targetPitch = 2f;
             }
             else
             {
                 float proportion = (aimY - targetY) / (21 - targetY);
-                targetPitch = 1 - proportion;
+                targetPitch = 1 + proportion;
             }
         }
         else
         {
             if (aimY <= -12)
             {
-                targetPitch = 0.1f;
+                targetPitch = 0.4f;
             }
             else
             {
                 float proportion = (aimY - targetY) / (-12 - targetY);
-                targetPitch = 1 - proportion;
+                if((1 - proportion) >= 0.4)
+                {
+                    targetPitch = 1 - proportion;
+                }
+                else
+                {
+                    targetPitch = 0.4f;
+                }
+                
+
             }
         }
        

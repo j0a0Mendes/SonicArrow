@@ -16,23 +16,6 @@ public class WhiteNoiseAssist : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    /*void FixedUpdate()
-    {
-        inputNumber = transform.position.y;
-
-        //Debug.Log(inputNumber);
-
-        if(transform.position.y < -15.4f)
-        {
-            inputNumber = -15.4f;
-        }else if(transform.position.y > 25.4f)
-        {
-            inputNumber = 25.4f;
-        }
-
-        whiteNoiseScript.changePitch(getWhiteNoisePitch());
-    }*/
 
     void FixedUpdate()
     {

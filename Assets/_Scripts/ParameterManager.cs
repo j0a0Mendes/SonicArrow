@@ -12,6 +12,9 @@ public class ParameterManager : MonoBehaviour
     [SerializeField]
     public int userID = 0;
 
+    [SerializeField]
+    public bool canShoot;
+
     private string pointsLabel;
 
     private string targetPos;
@@ -159,7 +162,9 @@ public class ParameterManager : MonoBehaviour
         secondCondition = false;
         thirdCondition = false;
 
-        if (activateConditions)
+        canShoot = true;
+
+        /*if (activateConditions)
         {
             if (firstCondition)
             {
@@ -181,7 +186,7 @@ public class ParameterManager : MonoBehaviour
         {
             GameObject intro = GameObject.Find("Hi_Im_Tom");
             intro.GetComponent<AudioSource>().Play();
-        }
+        }*/
 
         clearParameters();
         secondCondition = false;
@@ -206,6 +211,11 @@ public class ParameterManager : MonoBehaviour
         spotterPointsAid = true;
         spotterQuadrantAid = false;
 
+    }
+
+    public bool getCanShoot()
+    {
+        return canShoot;
     }
 
     private void OnValidate()

@@ -14,7 +14,11 @@ public class LogManager : MonoBehaviour
 
     private TimeManager timeManager;
 
-    
+    [SerializeField]
+    private int counter;
+
+    [SerializeField]
+    private bool isTrain;
 
     private void Awake()
     {
@@ -49,12 +53,25 @@ public class LogManager : MonoBehaviour
 
     public void Log(string userID, string conditionNumber, string targetMovement, string points, string targetCoords, string arrowCoords)
     {
+        counter += 1;
         string bars = " || ";
+        string idLabel = " id: ";
         string targetLabel = " TargetPos: ";
         string arrowLabel = " ArrowPos: ";
 
+        string isTraining = "";
+
+        if(isTrain)
+        {
+            isTraining = " Train ";
+        }
+        else
+        {
+            isTraining = " Not Train ";
+        }
+
         string timeTook = timeManager.GetCurrentTimeAndReset();
-        string logMessage = $" {bars} {timeTook} {bars} {userID} {bars} {conditionNumber} {bars} {targetMovement} {bars} {points} {bars} {targetLabel} {targetCoords} {bars} {arrowLabel} {arrowCoords}";
+        string logMessage = $" {idLabel} {counter} {bars} {isTraining} {bars} {timeTook} {bars} {userID} {bars} {conditionNumber} {bars} {targetMovement} {bars} {points} {bars} {targetLabel} {targetCoords} {bars} {arrowLabel} {arrowCoords}";
         Debug.Log(logMessage);
         writer.WriteLine(logMessage);
         writer.Flush();

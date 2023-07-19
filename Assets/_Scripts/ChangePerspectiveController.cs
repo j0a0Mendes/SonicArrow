@@ -116,7 +116,7 @@ public class ChangePerspectiveController : MonoBehaviour
     public void addShotWithoutHit()
     {
         shotsWithoutHit += 1;
-        if (shotsWithoutHit > 5)
+        if (shotsWithoutHit >= 5)
         {
             changeTarget = true;
         }
