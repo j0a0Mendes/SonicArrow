@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CenterTarget : MonoBehaviour
 {
-    private bool flip;
+    [SerializeField]
+    public bool flip;
     // Start is called before the first frame update
     void Start()
     {

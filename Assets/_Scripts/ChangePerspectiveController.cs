@@ -173,7 +173,7 @@ public class ChangePerspectiveController : MonoBehaviour
                 modeSelected= 0;
             }
             else if(parameterManager.getChangeOfPerspectiveOnReplay()) {
-                modeSelected= 1;
+                modeSelected = 1;
             }
         }
         else
@@ -182,7 +182,7 @@ public class ChangePerspectiveController : MonoBehaviour
         }
 
         //bowStringController.setModeSelected(modeSelected);
-        bowStringController.setModeSelected(1);
+        bowStringController.setModeSelected(modeSelected);
 
         if (changePerspectiveTrigger && firstPerspective)
         {

@@ -133,6 +133,7 @@
     <Compile Include="Assets\_Scripts\ColisionDetection.cs" />
     <Compile Include="Assets\_Scripts\ParameterManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\_Scripts\AudioListenerTarget.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\_Scripts\VerticallityAidString.cs" />
     <Compile Include="Assets\_Scripts\ActionReplay.cs" />

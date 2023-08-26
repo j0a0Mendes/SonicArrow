@@ -19,6 +19,12 @@ public class TimeManager : MonoBehaviour
     [SerializeField]
     public bool resetTimer;
 
+
+    private void Start()
+    {
+        StartTimer();
+    }
+
     public void FixedUpdate()
     {
         if (isRunning)

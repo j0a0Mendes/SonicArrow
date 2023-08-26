@@ -10,7 +10,7 @@ public class ParameterManager : MonoBehaviour
     private ChangePerspectiveController controller;
 
     [SerializeField]
-    public int userID = 0;
+    public int userID;
 
     [SerializeField]
     public bool canShoot;
@@ -133,7 +133,7 @@ public class ParameterManager : MonoBehaviour
     //AudioListener position
     private AudioListener listenerTarget;
 
-    private AudioListener listenerArrowTarget;
+    //private AudioListener listenerArrowTarget;
 
     private AudioListener listenerUser;
 
@@ -151,7 +151,7 @@ public class ParameterManager : MonoBehaviour
 
         listenerUser = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
         listenerTarget = centerListener.GetComponent<AudioListener>();
-        listenerArrowTarget = centerTarget.GetComponent<AudioListener>();
+        //listenerArrowTarget = centerTarget.GetComponent<AudioListener>();
 
         logManager = GameObject.FindObjectOfType<LogManager>().GetComponent<LogManager>();
 
@@ -648,7 +648,7 @@ public class ParameterManager : MonoBehaviour
         //AUDIOLISTENER
         if (targetSoundCrossbowAim)
         {
-            if (controller.getIsInFirstPerspective())
+            /*if (controller.getIsInFirstPerspective())
             {
                 listenerTarget.enabled = true;      //AIMPOS
                 listenerUser.enabled = false;
@@ -659,15 +659,17 @@ public class ParameterManager : MonoBehaviour
                 listenerTarget.enabled = false;      //AIMPOS
                 listenerUser.enabled = false;
                 listenerArrowTarget.enabled = true;
-            }
-            
-            
+            }*/
+
+            listenerTarget.enabled = true;      //AIMPOS
+            listenerUser.enabled = false;
+            //listenerArrowTarget.enabled = false;
 
         }
         else if (targetSoundUserPos)
         {
             listenerTarget.enabled = false;     //USERPOS
-            listenerArrowTarget.enabled = false;
+            //listenerArrowTarget.enabled = false;
             listenerUser.enabled = true;
         }
 

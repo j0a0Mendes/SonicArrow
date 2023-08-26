@@ -211,11 +211,11 @@ public class BowStringController : MonoBehaviour
 
 
 
-        if (modeSelected == 0)
+        /*if (modeSelected == 0)
         {
             controller.enableChange();
             controller.changePerspective();
-        }
+        }*/
 
 
         alreadyShot = true;

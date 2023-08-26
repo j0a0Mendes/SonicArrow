@@ -111,6 +111,7 @@ public class StickingArrowToSurface : MonoBehaviour
         {
             controller.canShootAgain();
         }
+
         keyControllers.enableButtonX();
         modeSelected = controller.getModeSelected();
         //Debug.Log(modeSelected);
@@ -576,9 +577,9 @@ public class StickingArrowToSurface : MonoBehaviour
         
 
         //REPLAY PORPUSE
-        actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
+        //actionReplayArrow = GameObject.FindObjectOfType<ActionReplayArrow>();
 
-        actionReplayArrow.alreadyHitTrigger();
+        //actionReplayArrow.alreadyHitTrigger();
 
         //keyControllers.enableButtonX();
 
@@ -592,10 +593,10 @@ public class StickingArrowToSurface : MonoBehaviour
         //keyControllers.enableButtonA();
 
         //CHANGE PERSPECTIVEEE (REMOVE TO GET ORIGINAL VERSION)
-        if (modeSelected == 0)
+        /**if (modeSelected == 0)
         {
             changePerspectiveCounterTrigger = true;
-        }
+        }*/
 
         rb.isKinematic = true;
         myCollider.isTrigger = true;
