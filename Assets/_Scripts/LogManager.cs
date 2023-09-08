@@ -58,7 +58,7 @@ public class LogManager : MonoBehaviour
         string idLabel = " id: ";
         string targetLabel = " TargetPos: ";
         string arrowLabel = " ArrowPos: ";
-
+   
         string isTraining = "";
 
         if(isTrain)
@@ -71,7 +71,20 @@ public class LogManager : MonoBehaviour
         }
 
         string timeTook = timeManager.GetCurrentTimeAndReset();
-        string logMessage = $" {idLabel} {counter} {bars} {isTraining} {bars} {timeTook} {bars} {userID} {bars} {conditionNumber} {bars} {targetMovement} {bars} {points} {bars} {targetLabel} {targetCoords} {bars} {arrowLabel} {arrowCoords}";
+        string logMessage = $" {idLabel} {counter} {bars} {isTraining} {bars} {timeTook} {bars} {userID} {bars} {conditionNumber} {bars} {targetMovement} {bars} {points} {bars} {targetLabel} {targetCoords} {bars} {arrowLabel} {arrowCoords} {bars}";
+        Debug.Log(logMessage);
+        writer.WriteLine(logMessage);
+        writer.Flush();
+    }
+
+    public void LogButtonPress(string label)
+    {
+        string start = "(((((( ";
+        string finish = " ))))))";
+        string mid = " pressed";
+        string secondsLabel = " seconds";
+
+        string logMessage = $" {start} {label} {mid} {secondsLabel} {finish} ";
         Debug.Log(logMessage);
         writer.WriteLine(logMessage);
         writer.Flush();

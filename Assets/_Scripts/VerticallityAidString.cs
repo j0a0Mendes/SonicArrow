@@ -156,7 +156,7 @@ public class VerticallityAidString : MonoBehaviour
     {
         float distance = Vector3.Distance(new Vector3(aX, aY, aZ), new Vector3(bX, bY, bZ));
 
-        if (distance <= 0f)
+        if (distance <= 0.5f)
         {
             return 15;
         }
@@ -169,6 +169,11 @@ public class VerticallityAidString : MonoBehaviour
             // Calculate the beep frequency within the range of 20 to 50
             float scaleFactor = 30f / 10f; // This value adjusts the range (50 - 20 = 30)
             int result = 20 + Mathf.RoundToInt(distance * scaleFactor);
+
+            if(distance <= 0.3f)
+            {
+                result -= 3;
+            }
             return result;
         }
     }

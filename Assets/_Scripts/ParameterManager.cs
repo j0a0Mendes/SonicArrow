@@ -158,9 +158,9 @@ public class ParameterManager : MonoBehaviour
         //listener = FindObjectOfType<AudioListener>();
 
         //PROTOTYPE REASONS, FORCE LOAD CONDITION
-        firstCondition = true;
-        secondCondition = false;
-        thirdCondition = false;
+        //firstCondition = true;
+        //secondCondition = false;
+        //thirdCondition = false;
 
         canShoot = true;
 
@@ -188,7 +188,7 @@ public class ParameterManager : MonoBehaviour
             intro.GetComponent<AudioSource>().Play();
         }*/
 
-        clearParameters();
+        /*clearParameters();
         secondCondition = false;
         previousSecondCondition = false;
         thirdCondition = false;
@@ -209,7 +209,7 @@ public class ParameterManager : MonoBehaviour
         changeOfPerspectiveInstant = true;
         spotterTalking = true;
         spotterPointsAid = true;
-        spotterQuadrantAid = false;
+        spotterQuadrantAid = false;*/
 
     }
 

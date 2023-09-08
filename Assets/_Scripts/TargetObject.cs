@@ -416,6 +416,59 @@ public class TargetObject : MonoBehaviour
         }
         else if (aimY > targetY)
         {
+            if (aimY >= targetY + 20)
+            {
+                targetPitch = 2f;
+            }
+            else
+            {
+                float proportion = (aimY - targetY) / (targetY + 20 - targetY);
+                targetPitch = 1 + proportion;
+            }
+        }
+        else
+        {
+            if (aimY <= targetY - 20)
+            {
+                targetPitch = 0.4f;
+            }
+            else
+            {
+                float proportion = (aimY - targetY) / (targetY - 20 - targetY);
+                if((1 - proportion) >= 0.4)
+                {
+                    targetPitch = 1 - proportion;
+                }
+                else
+                {
+                    targetPitch = 0.4f;
+                }
+                
+
+            }
+        }
+       
+        if(targetPitch < 0.1f)
+        {
+            targetPitch= 0.1f;
+        }
+        targetSoundObj.GetComponent<AudioSource>().pitch = targetPitch;
+        audioListenerBall.GetComponent<AudioSource>().pitch = targetPitch;
+
+        audioListenerBall.GetComponent<AudioSource>().pitch = targetPitch;
+    }
+
+    /*void targetPitch(float aimY)
+    {
+        targetY = transform.position.y;
+        float targetPitch = 0.0f;
+
+        if (aimY == targetY)
+        {
+            targetPitch = 1;
+        }
+        else if (aimY > targetY)
+        {
             if (aimY >= 21)
             {
                 targetPitch = 2f;
@@ -456,6 +509,33 @@ public class TargetObject : MonoBehaviour
         audioListenerBall.GetComponent<AudioSource>().pitch = targetPitch;
 
         audioListenerBall.GetComponent<AudioSource>().pitch = targetPitch;
-    }
-    
+    }*/
+
+    /*void targetPitch(float aimY)
+    {
+        targetY = transform.position.y;
+
+        // Define boundary values
+        float upperBoundary = 21.0f;
+        float lowerBoundary = -12.0f;
+
+        //UNCOMENT TO UPDATE
+        //float upperBoundary = targetY + 15;
+        //float lowerBoundary = targetY - 15;
+
+        // Define pitch ranges
+        float minPitch = 0.1f;
+        float maxPitch = 2.0f;
+
+        // Calculate the proportion
+        float proportion = Mathf.Clamp01((aimY - targetY) / (aimY > targetY ? upperBoundary : lowerBoundary - targetY));
+
+        // Calculate the target pitch based on the proportion and pitch ranges
+        float targetPitch = Mathf.Lerp(minPitch, maxPitch, proportion);
+
+        // Update the pitch for both audio sources
+        targetSoundObj.GetComponent<AudioSource>().pitch = targetPitch;
+        audioListenerBall.GetComponent<AudioSource>().pitch = targetPitch;
+    }*/
+
 }
