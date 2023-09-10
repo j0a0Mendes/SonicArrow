@@ -217,6 +217,11 @@ public class ChangePerspectiveController : MonoBehaviour
         }
     }
 
+    public void ResetMissedShots()
+    {
+        shotsWithoutHit = 0;
+    }
+
     public void SwitchAudioListeners(bool enableListenerUser)
     {
         listenerUser.enabled = enableListenerUser;

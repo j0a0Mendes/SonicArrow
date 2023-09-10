@@ -89,4 +89,9 @@ public class LogManager : MonoBehaviour
         writer.WriteLine(logMessage);
         writer.Flush();
     }
+
+    public void isTraining(bool val)
+    {
+        isTrain = val;
+    }
 }

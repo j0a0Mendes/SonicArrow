@@ -52,10 +52,14 @@ public class StickingArrowToSurface : MonoBehaviour
     //PARAMETER MANAGEMENT 
     private ParameterManager parameterManager;
 
+    private SessionManager sessionManager;
+
     [SerializeField]
     public int shotWithoutHit = 0;
 
+    public bool endPhaseFlag;
 
+    private AudioSource endPhaseSound;
 
     private void Start()
     {
@@ -74,6 +78,10 @@ public class StickingArrowToSurface : MonoBehaviour
         bowStringController = GameObject.FindObjectOfType<BowStringController>();
 
         parameterManager = GameObject.FindObjectOfType<ParameterManager>();
+
+        sessionManager = GameObject.FindObjectOfType<SessionManager>();
+
+        endPhaseSound = GameObject.Find("EndPhase").GetComponent<AudioSource>();
 
     }
 
@@ -102,6 +110,8 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        sessionManager.addShotNumber();
+
         target.activateCanMove();
         controller.setIsTalking(true);
 
@@ -251,6 +261,7 @@ public class StickingArrowToSurface : MonoBehaviour
             parameterManager.updatePoints("5 Points");
             //Debug.Log("5 POINTS!!!");
             controller.addPoints(5);
+            sessionManager.addPoints(5);
         }
         else if (collidedWith == "TargetSecondRegion")
         {
@@ -327,6 +338,7 @@ public class StickingArrowToSurface : MonoBehaviour
             parameterManager.updatePoints("4 Points");
             //Debug.Log("4 POINTS");
             controller.addPoints(4);
+            sessionManager.addPoints(4);
         }
         else if (collidedWith == "TargetThirdRegion")
         {
@@ -403,6 +415,7 @@ public class StickingArrowToSurface : MonoBehaviour
             parameterManager.updatePoints("3 Points");
             //Debug.Log("3 POINTS");
             controller.addPoints(3);
+            sessionManager.addPoints(3);
         }
         else if (collidedWith == "TargetForthRegion")
         {
@@ -478,6 +491,7 @@ public class StickingArrowToSurface : MonoBehaviour
             parameterManager.updatePoints("2 Points");
             //Debug.Log("2 POINTS");
             controller.addPoints(2);
+            sessionManager.addPoints(2);
         }
         else if (collidedWith == "TargetFifthRegion")
         {
@@ -555,6 +569,7 @@ public class StickingArrowToSurface : MonoBehaviour
             parameterManager.updatePoints("1 Point");
             //Debug.Log("1 POINT");
             controller.addPoints(1);
+            sessionManager.addPoints(1);
         }
 
         if (controller.getChangeTarget())
@@ -568,6 +583,12 @@ public class StickingArrowToSurface : MonoBehaviour
         parameterManager.makeLog();
 
         windNavigatingSound.Stop();
+
+        if (endPhaseFlag)
+        {
+            endPhaseFlag = false;
+            audioList.Add(endPhaseSound);
+        }
 
         if (!isPlaying)
         {
@@ -629,6 +650,8 @@ public class StickingArrowToSurface : MonoBehaviour
         //MAYBE?---------------------------------
         //Destroy(gameObject);
 
+        
+
     }
 
     private void FixedUpdate()
@@ -676,4 +699,8 @@ public class StickingArrowToSurface : MonoBehaviour
         
     }
 
+    public void activateEndPhaseFlag()
+    {
+        endPhaseFlag = true;
+    }
 }

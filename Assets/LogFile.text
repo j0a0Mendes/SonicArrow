@@ -107,3 +107,150 @@
 [08/09/2023 19:24:13]  id:  10  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  4 Points  ||   TargetPos:  (16,39, -1,13)  ||   ArrowPos:  (16,57, -0,59)  || 
 [08/09/2023 19:24:19]  id:  11  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  4 Points  ||   TargetPos:  (16,03, 5,75)  ||   ArrowPos:  (16,15, 6,33)  || 
 [08/09/2023 19:24:27]  id:  12  ||   Train   ||  00:03  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  5 Points  ||   TargetPos:  (-16,81, -5,81)  ||   ArrowPos:  (-16,46, -5,83)  || 
+[10/09/2023 10:33:30]Start of Phase
+[10/09/2023 10:38:34]End of Phase
+[10/09/2023 10:41:44]Start of Phase
+[10/09/2023 15:51:45]----------START OF PHASE----------
+[10/09/2023 15:53:26]----------START OF PHASE----------
+[10/09/2023 15:56:30]----------START OF PHASE----------
+[10/09/2023 22:38:29]Call to DeinitializeLoader without an initialized manager.Please make sure wait for initialization to complete before calling this API.
+[10/09/2023 22:38:32]Please make sure the device is connected. Will try to restart xr periodically.
+[10/09/2023 22:38:32]Call to StartSubsystems without an initialized manager.Please make sure wait for initialization to complete before calling this API.
+[10/09/2023 22:38:32]Failure to restart OpenXRLoader after shutdown.
+[10/09/2023 22:40:17]Call to DeinitializeLoader without an initialized manager.Please make sure wait for initialization to complete before calling this API.
+[10/09/2023 22:40:20]Please make sure the device is connected. Will try to restart xr periodically.
+[10/09/2023 22:40:20]Call to StartSubsystems without an initialized manager.Please make sure wait for initialization to complete before calling this API.
+[10/09/2023 22:40:20]Failure to restart OpenXRLoader after shutdown.
+[10/09/2023 22:46:19]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  4 Points  ||   TargetPos:  (5,12, 6,33)  ||   ArrowPos:  (4,31, 6,09)  || 
+[10/09/2023 22:46:29]----------START OF PHASE----------
+[10/09/2023 22:46:42]  id:  2  ||   Train   ||  00:08  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-26,55, 5,12)  ||   ArrowPos:  (1,22, 8,06)  || 
+[10/09/2023 22:46:45]  id:  3  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-26,55, 5,12)  ||   ArrowPos:  (3,84, 1,32)  || 
+[10/09/2023 22:48:30]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-12,32, -0,58)  ||   ArrowPos:  (8,89, 5,89)  || 
+[10/09/2023 22:48:35]  id:  2  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-12,32, -0,58)  ||   ArrowPos:  (3,94, 11,91)  || 
+[10/09/2023 22:48:39]----------START OF PHASE----------
+[10/09/2023 22:48:46]  id:  3  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-12,32, -0,58)  ||   ArrowPos:  (5,87, -1,46)  || 
+[10/09/2023 22:48:50]  id:  4  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-12,32, -0,58)  ||   ArrowPos:  (5,68, -0,20)  || 
+[10/09/2023 22:48:54]  id:  5  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-12,32, -0,58)  ||   ArrowPos:  (9,16, -0,92)  || 
+[10/09/2023 22:54:47]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (0,02, 5,62)  ||   ArrowPos:  (-5,90, 6,37)  || 
+[10/09/2023 22:54:50]  id:  2  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (0,02, 5,62)  ||   ArrowPos:  (-0,70, -2,44)  || 
+[10/09/2023 22:54:53]  id:  3  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (0,02, 5,62)  ||   ArrowPos:  (5,33, 5,74)  || 
+[10/09/2023 22:54:58]change
+[10/09/2023 22:54:58]  id:  4  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  1 Point  ||   TargetPos:  (0,02, 5,62)  ||   ArrowPos:  (2,21, 5,45)  || 
+[10/09/2023 22:55:02]  id:  5  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-5,02, -8,32)  ||   ArrowPos:  (-2,01, -8,28)  || 
+[10/09/2023 22:55:06]  id:  6  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-5,02, -8,32)  ||   ArrowPos:  (-8,69, -8,66)  || 
+[10/09/2023 22:55:11]  id:  7  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-5,02, -8,32)  ||   ArrowPos:  (-22,02, -2,20)  || 
+[10/09/2023 22:55:16]  id:  8  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-5,02, -8,32)  ||   ArrowPos:  (-13,03, -0,92)  || 
+[10/09/2023 22:55:21]  id:  9  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-5,02, -8,32)  ||   ArrowPos:  (4,54, 9,48)  || 
+[10/09/2023 22:55:28]  id:  10  ||   Train   ||  00:04  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,16, -5,58)  ||   ArrowPos:  (10,35, -8,30)  || 
+[10/09/2023 22:55:38]  id:  11  ||   Train   ||  00:06  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,16, -5,58)  ||   ArrowPos:  (8,91, 0,86)  || 
+[10/09/2023 22:55:59]  id:  12  ||   Train   ||  00:18  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,16, -5,58)  ||   ArrowPos:  (9,43, 0,88)  || 
+[10/09/2023 22:56:07]  id:  13  ||   Train   ||  00:05  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,16, -5,58)  ||   ArrowPos:  (9,39, 1,02)  || 
+[10/09/2023 22:56:17]  id:  14  ||   Train   ||  00:07  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,16, -5,58)  ||   ArrowPos:  (-2,88, -12,33)  || 
+[10/09/2023 22:56:22]  id:  15  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  LeftWall Hit  ||   TargetPos:  (-6,74, -7,90)  ||   ArrowPos:  (20,38, 7,59)  || 
+[10/09/2023 22:56:25]  id:  16  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  LeftWall Hit  ||   TargetPos:  (-6,74, -7,90)  ||   ArrowPos:  (20,42, 3,59)  || 
+[10/09/2023 22:56:28]  id:  17  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-6,74, -7,90)  ||   ArrowPos:  (14,68, -4,12)  || 
+[10/09/2023 22:56:31]  id:  18  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-6,74, -7,90)  ||   ArrowPos:  (16,29, -4,91)  || 
+[10/09/2023 22:56:33]  id:  19  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-6,74, -7,90)  ||   ArrowPos:  (15,21, -4,61)  || 
+[10/09/2023 22:56:38]  id:  20  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,03, -0,31)  ||   ArrowPos:  (8,60, 19,85)  || 
+[10/09/2023 22:56:41]  id:  21  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,03, -0,31)  ||   ArrowPos:  (-5,67, 7,13)  || 
+[10/09/2023 22:56:45]  id:  22  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,03, -0,31)  ||   ArrowPos:  (-2,53, 8,65)  || 
+[10/09/2023 22:56:48]  id:  23  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,03, -0,31)  ||   ArrowPos:  (-2,69, 9,17)  || 
+[10/09/2023 22:57:00]----------START OF PHASE----------
+[10/09/2023 22:57:06]  id:  24  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,03, -0,31)  ||   ArrowPos:  (6,18, 1,90)  || 
+[10/09/2023 22:57:09]  id:  25  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,03, -0,31)  ||   ArrowPos:  (-2,71, 2,45)  || 
+[10/09/2023 22:57:12]  id:  26  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,03, -0,31)  ||   ArrowPos:  (-1,95, 3,16)  || 
+[10/09/2023 22:57:17]  id:  27  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,03, -0,31)  ||   ArrowPos:  (-15,18, 1,23)  || 
+[10/09/2023 22:57:24]  id:  28  ||   Train   ||  00:04  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,03, -0,31)  ||   ArrowPos:  (-23,83, 2,93)  || 
+[10/09/2023 22:57:33]change
+[10/09/2023 22:57:33]  id:  29  ||   Train   ||  00:06  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  1 Point  ||   TargetPos:  (2,14, -1,80)  ||   ArrowPos:  (1,12, 0,41)  || 
+[10/09/2023 22:57:39]  id:  30  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-11,20, 16,26)  ||   ArrowPos:  (-21,61, 16,69)  || 
+[10/09/2023 22:57:43]  id:  31  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-11,20, 16,26)  ||   ArrowPos:  (-4,29, 12,17)  || 
+[10/09/2023 22:57:45]  id:  32  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-11,20, 16,26)  ||   ArrowPos:  (-4,68, 14,86)  || 
+[10/09/2023 22:57:48]  id:  33  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-11,20, 16,26)  ||   ArrowPos:  (-3,71, 15,04)  || 
+[10/09/2023 22:57:51]  id:  34  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-11,20, 16,26)  ||   ArrowPos:  (-3,94, 17,55)  || 
+[10/09/2023 22:57:54]  id:  35  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  2 Points  ||   TargetPos:  (-9,03, -10,28)  ||   ArrowPos:  (-7,57, -8,94)  || 
+[10/09/2023 22:57:59]  id:  36  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  5 Points  ||   TargetPos:  (6,86, 2,00)  ||   ArrowPos:  (6,65, 1,55)  || 
+[10/09/2023 22:58:04]  id:  37  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  5 Points  ||   TargetPos:  (13,42, -3,04)  ||   ArrowPos:  (13,54, -2,56)  || 
+[10/09/2023 22:58:09]change
+[10/09/2023 22:58:09]  id:  38  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  1 Point  ||   TargetPos:  (-19,77, -11,02)  ||   ArrowPos:  (-17,68, -10,74)  || 
+[10/09/2023 22:58:09]----------END OF PHASE----------
+[10/09/2023 22:58:09] PHASE STATS|| Points made: 14 || Targets tried: 5
+[10/09/2023 22:58:37]----------END OF PHASE----------
+[10/09/2023 22:58:37] PHASE STATS|| Points made: 14 || Targets tried: 5
+[10/09/2023 22:58:41]----------END OF PHASE----------
+[10/09/2023 22:58:41] PHASE STATS|| Points made: 14 || Targets tried: 5
+[10/09/2023 22:58:43]----------END OF PHASE----------
+[10/09/2023 22:58:43] PHASE STATS|| Points made: 14 || Targets tried: 5
+[10/09/2023 22:58:45]----------END OF PHASE----------
+[10/09/2023 22:58:45] PHASE STATS|| Points made: 14 || Targets tried: 5
+[10/09/2023 22:58:46]----------END OF PHASE----------
+[10/09/2023 22:58:46] PHASE STATS|| Points made: 14 || Targets tried: 5
+[10/09/2023 22:58:51]----------END OF PHASE----------
+[10/09/2023 22:58:51] PHASE STATS|| Points made: 14 || Targets tried: 5
+[10/09/2023 23:03:13]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,12, 11,07)  ||   ArrowPos:  (-21,31, 10,01)  || 
+[10/09/2023 23:03:17]  id:  2  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,12, 11,07)  ||   ArrowPos:  (-17,91, 11,10)  || 
+[10/09/2023 23:03:20]  id:  3  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,12, 11,07)  ||   ArrowPos:  (-16,22, 12,30)  || 
+[10/09/2023 23:03:26]  id:  4  ||   Train   ||  00:03  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,12, 11,07)  ||   ArrowPos:  (8,90, 13,85)  || 
+[10/09/2023 23:03:34]  id:  5  ||   Train   ||  00:05  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-4,12, 11,07)  ||   ArrowPos:  (-7,76, 11,95)  || 
+[10/09/2023 23:03:42]  id:  6  ||   Train   ||  00:04  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-10,13, 10,63)  ||   ArrowPos:  (-4,45, 10,34)  || 
+[10/09/2023 23:03:47]  id:  7  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-10,13, 10,63)  ||   ArrowPos:  (-15,28, 11,34)  || 
+[10/09/2023 23:03:55]  id:  8  ||   Train   ||  00:05  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-10,13, 10,63)  ||   ArrowPos:  (-17,19, 10,29)  || 
+[10/09/2023 23:03:59]  id:  9  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-10,13, 10,63)  ||   ArrowPos:  (-3,92, 18,24)  || 
+[10/09/2023 23:04:03]  id:  10  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-10,13, 10,63)  ||   ArrowPos:  (-4,19, 10,47)  || 
+[10/09/2023 23:05:12]  id:  11  ||   Train   ||  00:26  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-5,43, -9,66)  ||   ArrowPos:  (-15,66, 5,41)  || 
+[10/09/2023 23:05:16]  id:  12  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-5,43, -9,66)  ||   ArrowPos:  (-12,02, 3,57)  || 
+[10/09/2023 23:05:24]  id:  13  ||   Train   ||  00:05  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-5,43, -9,66)  ||   ArrowPos:  (-12,08, 6,85)  || 
+[10/09/2023 23:06:41]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-6,90, -0,53)  ||   ArrowPos:  (1,86, 10,49)  || 
+[10/09/2023 23:06:45]  id:  2  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-6,90, -0,53)  ||   ArrowPos:  (-14,95, 8,49)  || 
+[10/09/2023 23:06:48]  id:  3  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-6,90, -0,53)  ||   ArrowPos:  (-14,53, 3,50)  || 
+[10/09/2023 23:06:52]  id:  4  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  LeftWall Hit  ||   TargetPos:  (-6,90, -0,53)  ||   ArrowPos:  (19,95, 17,75)  || 
+[10/09/2023 23:06:56]  id:  5  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-6,90, -0,53)  ||   ArrowPos:  (-23,41, 10,12)  || 
+[10/09/2023 23:07:04]  id:  6  ||   Train   ||  00:05  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-2,83, 3,99)  ||   ArrowPos:  (-15,73, 12,59)  || 
+[10/09/2023 23:07:20]----------START OF PHASE----------
+[10/09/2023 23:07:28]  id:  7  ||   Train   ||  00:03  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-2,83, 3,99)  ||   ArrowPos:  (-16,23, 9,45)  || 
+[10/09/2023 23:07:33]  id:  8  ||   Train   ||  00:02  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-2,83, 3,99)  ||   ArrowPos:  (-7,31, 5,76)  || 
+[10/09/2023 23:07:39]  id:  9  ||   Train   ||  00:03  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-2,83, 3,99)  ||   ArrowPos:  (-9,44, 4,26)  || 
+[10/09/2023 23:07:47]  id:  10  ||   Train   ||  00:04  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-2,83, 3,99)  ||   ArrowPos:  (6,69, 8,11)  || 
+[10/09/2023 23:07:49]  id:  11  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  Ceiling Hit  ||   TargetPos:  (-2,83, 3,99)  ||   ArrowPos:  (6,30, 23,35)  || 
+[10/09/2023 23:07:54]  id:  12  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-16,51, 17,08)  ||   ArrowPos:  (-18,61, 9,35)  || 
+[10/09/2023 23:07:57]  id:  13  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-16,51, 17,08)  ||   ArrowPos:  (-18,46, 10,28)  || 
+[10/09/2023 23:08:00]  id:  14  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-16,51, 17,08)  ||   ArrowPos:  (-17,13, 12,76)  || 
+[10/09/2023 23:08:02]  id:  15  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-16,51, 17,08)  ||   ArrowPos:  (-17,60, 12,50)  || 
+[10/09/2023 23:08:05]  id:  16  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-16,51, 17,08)  ||   ArrowPos:  (-18,30, 13,21)  || 
+[10/09/2023 23:08:08]  id:  17  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  5 Points  ||   TargetPos:  (15,66, 15,79)  ||   ArrowPos:  (15,53, 15,55)  || 
+[10/09/2023 23:08:12]  id:  18  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  4 Points  ||   TargetPos:  (-8,53, 15,68)  ||   ArrowPos:  (-8,12, 16,35)  || 
+[10/09/2023 23:08:17]  id:  19  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  3 Points  ||   TargetPos:  (13,99, 19,32)  ||   ArrowPos:  (13,06, 18,40)  || 
+[10/09/2023 23:08:22]  id:  20  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  3 Points  ||   TargetPos:  (-3,04, 9,48)  ||   ArrowPos:  (-3,74, 8,59)  || 
+[10/09/2023 23:08:26]  id:  21  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-26,77, -10,70)  ||   ArrowPos:  (-12,37, 11,65)  || 
+[10/09/2023 23:08:26]----------END OF PHASE----------
+[10/09/2023 23:08:26] PHASE STATS|| Points made: 15 || Targets tried: 4
+[10/09/2023 23:08:31]  id:  22  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-26,77, -10,70)  ||   ArrowPos:  (-19,77, 3,04)  || 
+[10/09/2023 23:14:40]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (2,31, -7,87)  ||   ArrowPos:  (-1,91, -6,78)  || 
+[10/09/2023 23:14:43]  id:  2  ||   Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (2,31, -7,87)  ||   ArrowPos:  (-0,07, -9,94)  || 
+[10/09/2023 23:14:47]  id:  3  ||   Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (2,31, -7,87)  ||   ArrowPos:  (11,68, -8,75)  || 
+[10/09/2023 23:14:56]change
+[10/09/2023 23:14:56]  id:  4  ||   Train   ||  00:06  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  1 Point  ||   TargetPos:  (2,31, -7,87)  ||   ArrowPos:  (3,70, -9,70)  || 
+[10/09/2023 23:15:09]  id:  5  ||   Train   ||  00:08  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  2 Points  ||   TargetPos:  (4,00, 14,43)  ||   ArrowPos:  (3,18, 12,68)  || 
+[10/09/2023 23:15:22]----------START OF PHASE----------
+[10/09/2023 23:15:28]  id:  6  ||   Not Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,81, 3,35)  ||   ArrowPos:  (-7,03, 8,96)  || 
+[10/09/2023 23:15:31]  id:  7  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  RightWall Hit  ||   TargetPos:  (-23,81, 3,35)  ||   ArrowPos:  (-31,31, 19,87)  || 
+[10/09/2023 23:15:34]  id:  8  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,81, 3,35)  ||   ArrowPos:  (-3,45, 2,93)  || 
+[10/09/2023 23:15:37]  id:  9  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,81, 3,35)  ||   ArrowPos:  (-7,42, 3,70)  || 
+[10/09/2023 23:15:40]  id:  10  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-23,81, 3,35)  ||   ArrowPos:  (-10,45, 3,47)  || 
+[10/09/2023 23:15:43]  id:  11  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-24,92, 9,41)  ||   ArrowPos:  (-10,18, 2,95)  || 
+[10/09/2023 23:15:45]  id:  12  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-24,92, 9,41)  ||   ArrowPos:  (-9,99, 2,84)  || 
+[10/09/2023 23:15:48]  id:  13  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-24,92, 9,41)  ||   ArrowPos:  (-10,41, 2,55)  || 
+[10/09/2023 23:15:51]  id:  14  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-24,92, 9,41)  ||   ArrowPos:  (-10,04, 2,81)  || 
+[10/09/2023 23:15:54]  id:  15  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-24,92, 9,41)  ||   ArrowPos:  (-16,28, 5,36)  || 
+[10/09/2023 23:15:57]  id:  16  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-11,98, 8,69)  ||   ArrowPos:  (-11,28, -1,98)  || 
+[10/09/2023 23:16:00]  id:  17  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-11,98, 8,69)  ||   ArrowPos:  (-11,17, -0,57)  || 
+[10/09/2023 23:16:03]  id:  18  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-11,98, 8,69)  ||   ArrowPos:  (-14,50, 1,05)  || 
+[10/09/2023 23:16:06]  id:  19  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-11,98, 8,69)  ||   ArrowPos:  (-4,62, 0,86)  || 
+[10/09/2023 23:16:09]  id:  20  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-11,98, 8,69)  ||   ArrowPos:  (-3,87, 1,59)  || 
+[10/09/2023 23:16:09]----------END OF PHASE----------
+[10/09/2023 23:16:09] PHASE STATS|| Points made: 0 || Targets tried: 0
+[10/09/2023 23:16:14]----------START OF PHASE----------
+[10/09/2023 23:16:20]  id:  21  ||   Not Train   ||  00:01  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-16,27, 8,91)  ||   ArrowPos:  (-10,37, 5,18)  || 
+[10/09/2023 23:16:23]  id:  22  ||   Not Train   ||  00:00  ||  User 0  ||  Condition 1  ||  Target Still and Changes On Hit  ||  TargetWall Hit  ||   TargetPos:  (-16,27, 8,91)  ||   ArrowPos:  (-9,95, 8,15)  || 
+[10/09/2023 23:57:24]  id:  1  ||   Train   ||  00:00  ||  User 0  ||  Condition 3  ||  Target Still and Changes On Hit  ||  4 Points  ||   TargetPos:  (-12,04, 0,38)  ||   ArrowPos:  (-11,41, 0,61)  || 
+[10/09/2023 23:57:52]  id:  2  ||   Train   ||  00:23  ||  User 0  ||  Condition 3  ||  Target Still and Changes On Hit  ||  5 Points  ||   TargetPos:  (-5,00, 6,80)  ||   ArrowPos:  (-4,82, 6,73)  || 

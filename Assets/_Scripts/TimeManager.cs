@@ -22,7 +22,7 @@ public class TimeManager : MonoBehaviour
 
     private void Start()
     {
-        StartTimer();
+        //StartTimer();
     }
 
     public void FixedUpdate()

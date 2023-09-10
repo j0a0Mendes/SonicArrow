@@ -173,6 +173,9 @@ public class VerticallityAidString : MonoBehaviour
             if(distance <= 0.3f)
             {
                 result -= 3;
+            }else if (distance <= 4)
+            {
+                result -= 2;
             }
             return result;
         }
