@@ -112,6 +112,8 @@ public class StickingArrowToSurface : MonoBehaviour
     {
         sessionManager.addShotNumber();
 
+        //bool endSessionFlag = sessionManager.getEndPhaseFlag();
+
         target.activateCanMove();
         controller.setIsTalking(true);
 
@@ -584,12 +586,12 @@ public class StickingArrowToSurface : MonoBehaviour
 
         windNavigatingSound.Stop();
 
-        if (endPhaseFlag)
+        /*if (endSessionFlag)
         {
-            endPhaseFlag = false;
+            Debug.Log("FLAGG");
             audioList.Add(endPhaseSound);
-        }
-
+        }*/
+        
         if (!isPlaying)
         {
             StartCoroutine(PlayAllAudioSources());

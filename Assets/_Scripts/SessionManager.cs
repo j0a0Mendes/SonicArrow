@@ -91,13 +91,14 @@ public class SessionManager : MonoBehaviour
             if(timer == 0)
             {
                 Debug.Log("----------START OF PHASE----------");
-                
+                playEndPhaseAudioFlag = false;
                 controller.resetShotWithoutHit();
                 startPhaseSound.Play();
                 logManager.isTraining(false);
                 pointsMade = 0;
                 shotsDone = 0;
                 targetsHad = 0;
+
             }
 
             if(timer > 4 & flag)
@@ -167,6 +168,12 @@ public class SessionManager : MonoBehaviour
 
     public bool getEndPhaseFlag()
     {
+        if (playEndPhaseAudioFlag)
+        {
+            playEndPhaseAudioFlag = false;
+            return true;
+        }
+
         return playEndPhaseAudioFlag;
     }
 

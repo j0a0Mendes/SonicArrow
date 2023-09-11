@@ -80,7 +80,11 @@ public class ChangePerspectiveController : MonoBehaviour
 
     public bool isTalking;
 
-    
+    private bool endFlag;
+
+    private SessionManager sessionManager;
+
+    private AudioSource endPhaseSound;
 
     void Start()
     {
@@ -101,6 +105,9 @@ public class ChangePerspectiveController : MonoBehaviour
         //AudioListeners
         centerUserAudioListener = centerUserPos.GetComponent<AudioListener>();
         listenerUser = cameraUser.GetComponent<AudioListener>(); // Get the AudioListener component
+        sessionManager = GameObject.FindObjectOfType<SessionManager>();
+
+        endPhaseSound = GameObject.Find("EndPhase").GetComponent<AudioSource>();
     }
 
     public bool getIsTalking()
@@ -163,6 +170,22 @@ public class ChangePerspectiveController : MonoBehaviour
                 //Debug.Log("Change condition");
             }    
         }*/
+
+        bool endPhaseFlag = sessionManager.getEndPhaseFlag();
+
+        if(endPhaseFlag)
+        {
+            endFlag = true;
+        }
+
+        if(endFlag)
+        {
+            if(isTalking != true)
+            {
+                endFlag = false;
+                endPhaseSound.Play();
+            }
+        }
 
         updateParameters();
 

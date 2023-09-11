@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 
 public class KeyControllers : MonoBehaviour
@@ -116,6 +117,10 @@ public class KeyControllers : MonoBehaviour
 
     private SessionManager sessionManager;
 
+    private float helpButtonCounter;
+    private bool isHelping;
+
+
     void Start()
     {
         //listener = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
@@ -224,6 +229,13 @@ public class KeyControllers : MonoBehaviour
 
                 if (buttonXTriggered == 1)
                 {
+                    if(isHelping != true)
+                    {
+                        isHelping = true;
+                    }
+
+                    helpButtonCounter += Time.fixedDeltaTime;
+
                     //Debug.Log("X PRESSED");
                     if (canPlayTargetSound == true)
                     {
@@ -239,6 +251,12 @@ public class KeyControllers : MonoBehaviour
                 }
                 else
                 {
+                    if (isHelping)
+                    {
+                        Debug.Log("HELP BUTTON PRESSED FOR " + GetCurrentTimeAndReset(helpButtonCounter).ToString());
+                        isHelping = false;
+                    }
+                    
                     playPropperSoundAim = false;
                     playPropperSoundTarget = false;
                 }
@@ -279,6 +297,13 @@ public class KeyControllers : MonoBehaviour
              
                 if (buttonATriggered == 1)
                 {
+                    if (isHelping != true)
+                    {
+                        isHelping = true;
+                    }
+
+                    helpButtonCounter += Time.fixedDeltaTime;
+
                     //Debug.Log("A PRESSED");
                     if (canPlayTargetSound == true)
                     {
@@ -294,6 +319,12 @@ public class KeyControllers : MonoBehaviour
                 }
                 else
                 {
+                    if (isHelping)
+                    {
+                        Debug.Log("HELP BUTTON PRESSED FOR " + GetCurrentTimeAndReset(helpButtonCounter).ToString());
+                        isHelping = false;
+                    }
+
                     playPropperSoundAim = false;
                     playPropperSoundTarget = false;
                 }
@@ -301,6 +332,14 @@ public class KeyControllers : MonoBehaviour
         }   
     }
 
+    public string GetCurrentTimeAndReset(float counter)
+    {
+        int minutes = Mathf.FloorToInt(counter / 60f);
+        int seconds = Mathf.FloorToInt(counter % 60f);
+        int milliseconds = Mathf.FloorToInt((counter * 1000f) % 1000f);
+        helpButtonCounter = 0f;
+        return string.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, milliseconds);
+    }
     public void activateCanPlayTargetSound(){
         canPlayTargetSound = true;
     }
