@@ -58,6 +58,12 @@ public class SessionManager : MonoBehaviour
 
     private LogManager logManager;
 
+    [SerializeField]
+    public GameObject bowEvilRight; // Drag the "Bow_Evil" object here in the Unity Inspector
+
+    [SerializeField]
+    public GameObject bowEvilLeft;  // Drag the "Bow_Evil_Left" object here in the Unity Inspector
+
     void Start()
     {
         isTraining = true;
@@ -164,4 +170,8 @@ public class SessionManager : MonoBehaviour
         return playEndPhaseAudioFlag;
     }
 
+    public bool getIsRightHanded()
+    {
+        return isRightHanded;
+    }
 }

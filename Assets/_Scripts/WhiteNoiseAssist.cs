@@ -13,7 +13,6 @@ public class WhiteNoiseAssist : MonoBehaviour
     void Start()
     {
         whiteNoiseScript = whiteNoiseSpotter.GetComponent<WhiteNoiseSpotter>();
-
     }
 
 

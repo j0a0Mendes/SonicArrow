@@ -607,8 +607,15 @@ public class StickingArrowToSurface : MonoBehaviour
 
         if (keyControllersRight != null)
         {
-            //Debug.Log("A ENABLED");
-            keyControllersRight.enableButtonA();
+            if (sessionManager.getIsRightHanded())
+            {
+                //Debug.Log("A ENABLED");
+                keyControllersRight.enableButtonA();
+            }
+            else
+            {
+                keyControllers.enableButtonA();
+            }
         }
 
         //keyControllers.enableButtonA();
@@ -644,9 +651,18 @@ public class StickingArrowToSurface : MonoBehaviour
         }
 
         //MAYBE?---------------------------------
-        keyControllersRight.activateCanPlayTargetSound();
-        keyControllersRight.readyToShootTrue();
-        keyControllersRight.reloadCrossbow();
+        if (sessionManager.getIsRightHanded())
+        {
+            keyControllersRight.activateCanPlayTargetSound();
+            keyControllersRight.readyToShootTrue();
+            keyControllersRight.reloadCrossbow();
+        }
+        else
+        {
+            keyControllers.activateCanPlayTargetSound();
+            keyControllers.readyToShootTrue();
+            keyControllers.reloadCrossbow();
+        }
         //MAYBE?---------------------------------
         //Destroy(gameObject);
 

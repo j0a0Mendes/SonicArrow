@@ -38,6 +38,9 @@ public class KeyControllers : MonoBehaviour
     public InputActionProperty shootCrossbowButton;   //shoot the crossbow
 
     [SerializeField]
+    public InputActionProperty shootCrossbowButtonLeft;   //shoot the crossbow
+
+    [SerializeField]
     public GameObject ballPointer;
 
     //MANAGE WHEN YOU CAN PRESS KEYS
@@ -111,9 +114,12 @@ public class KeyControllers : MonoBehaviour
 
     private ParameterManager parameterManager;
 
+    private SessionManager sessionManager;
+
     void Start()
     {
         //listener = Camera.main.GetComponent<AudioListener>(); // Get the AudioListener component
+        sessionManager = GameObject.FindObjectOfType<SessionManager>();
 
         parameterManager = GameObject.FindObjectOfType<ParameterManager>();
 
@@ -131,6 +137,7 @@ public class KeyControllers : MonoBehaviour
         keyControllersrLeft = LeftHand.GetComponent<KeyControllers>();
 
         //REPLAY BUTTON
+
         xButtonEnabled = true;
         buttonAEnabled = false;
         buttonBEnabled = false;
@@ -144,7 +151,7 @@ public class KeyControllers : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (vibrate)
         {
@@ -175,81 +182,121 @@ public class KeyControllers : MonoBehaviour
         //button shoot from the right controller
         float buttonShootCrossbow = shootCrossbowButton.action.ReadValue<float>();
 
+        //button shoot from the right controller
+        float buttonShootCrossbowLeft = shootCrossbowButtonLeft.action.ReadValue<float>();
+
         //controller.getInFirstPerspective();
-        
+
         if (target != null)
         {
-            if (buttonShootCrossbow == 1 && readyToShoot == true && controller.getIsInFirstPerspective() == true && controller.getIsTalking() == false && parameterManager.getCanShoot() == true)
+            if (sessionManager.getIsRightHanded())
             {
-                if (!bowStringController.stringPullingSound())
+                if (buttonShootCrossbow == 1 && readyToShoot == true && controller.getIsInFirstPerspective() == true && controller.getIsTalking() == false && parameterManager.getCanShoot() == true)
                 {
-                    canPlayTargetSound = false;
-                    readyToShoot = false;
-                    targetObject.deactivateCanMove();
-                    bowStringController.shootCrossBow();       //CROSSBOW SHOT
-                    //centerTarget.transform.rotation *= Quaternion.Euler(0f, 90f, 0f);
-                    
-                   
+                    if (!bowStringController.stringPullingSound())
+                    {
+                        canPlayTargetSound = false;
+                        readyToShoot = false;
+                        targetObject.deactivateCanMove();
+                        bowStringController.shootCrossBow();      
+                    }
+                    //Debug.Log("CROSSBOW SHOT");
                 }
-                //Debug.Log("CROSSBOW SHOT");
-            }
 
-            if (buttonATriggered == 1)
-            {
-                if (controller.getTargetSound()) 
+                if (buttonATriggered == 1)
                 {
-                    if (controller.getInFirstPerspective() && canPlayTargetSound == true)
+                    if (controller.getTargetSound())
                     {
-                        playTargetSound = true;
-                    }
-                    else
-                    {
-                        playTargetSound = false;
-                    }
-                }
-            }
-            else
-            {
-                playTargetSound = false;
-            }
-
-            if(buttonLoadCrossbow == 1)
-            {
-                rightConditionTrigger = true;
-            }
-            else
-            {
-                rightConditionTrigger = false;
-            }
-
-            if (buttonLeftGrip == 1)
-            {
-                leftConditionTrigger = true;
-            }
-            else
-            {
-                leftConditionTrigger = false;
-            }
-
-
-            if (buttonXTriggered == 1)
-            {
-                //Debug.Log("X PRESSED");
-                if (canPlayTargetSound == true)
-                {
-                    if (controller.getFirstCondition() | controller.getThirdCondition())
-                    {
-                        playPropperSoundTarget = true;
-                    }
-                    else if(controller.getSecondCondition()){
-                        playPropperSoundAim = true;
+                        if (controller.getInFirstPerspective() && canPlayTargetSound == true)
+                        {
+                            playTargetSound = true;
+                        }
+                        else
+                        {
+                            playTargetSound = false;
+                        }
                     }
                 }
-            }
-            else
+                else
+                {
+                    playTargetSound = false;
+                }
+
+                if (buttonXTriggered == 1)
+                {
+                    //Debug.Log("X PRESSED");
+                    if (canPlayTargetSound == true)
+                    {
+                        if (controller.getFirstCondition() | controller.getThirdCondition())
+                        {
+                            playPropperSoundTarget = true;
+                        }
+                        else if (controller.getSecondCondition())
+                        {
+                            playPropperSoundAim = true;
+                        }
+                    }
+                }
+                else
+                {
+                    playPropperSoundAim = false;
+                    playPropperSoundTarget = false;
+                }
+            } else
             {
-                playPropperSoundAim = false;
-                playPropperSoundTarget = false;
+                if (buttonShootCrossbowLeft == 1 && readyToShoot == true && controller.getIsInFirstPerspective() == true && controller.getIsTalking() == false && parameterManager.getCanShoot() == true)
+                {
+                    if (!bowStringController.stringPullingSound())
+                    {
+                        canPlayTargetSound = false;
+                        readyToShoot = false;
+                        targetObject.deactivateCanMove();
+                        bowStringController.shootCrossBow();   
+                    }
+                    //Debug.Log("CROSSBOW SHOT");
+                }
+
+                if (buttonXTriggered == 1)
+                {
+                    //Debug.Log("X PRESSED");
+                    if (controller.getTargetSound())
+                    {
+                        if (controller.getInFirstPerspective() && canPlayTargetSound == true)
+                        {
+                            playTargetSound = true;
+                        }
+                        else
+                        {
+                            playTargetSound = false;
+                        }
+                    }
+                }
+                else
+                {
+                    playTargetSound = false;
+                }
+
+             
+                if (buttonATriggered == 1)
+                {
+                    //Debug.Log("A PRESSED");
+                    if (canPlayTargetSound == true)
+                    {
+                        if (controller.getFirstCondition() | controller.getThirdCondition())
+                        {
+                            playPropperSoundTarget = true;
+                        }
+                        else if (controller.getSecondCondition())
+                        {
+                            playPropperSoundAim = true;
+                        }
+                    }
+                }
+                else
+                {
+                    playPropperSoundAim = false;
+                    playPropperSoundTarget = false;
+                }
             }
         }   
     }
@@ -288,14 +335,31 @@ public class KeyControllers : MonoBehaviour
 
     public void enableButtonA()
     {
-        buttonAEnabled = true;
+
+        //buttonAEnabled = true;
         //controller.enableChange();
+        if (sessionManager.getIsRightHanded())
+        {
+            buttonAEnabled = true;
+        }
+        else
+        {
+            buttonXEnabled = true;
+        }
     }
 
     public void disableButtonA()
     {
-        buttonAEnabled = false;
+        
         //Debug.Log("Button A Disabled");
+        if (sessionManager.getIsRightHanded())
+        {
+            buttonAEnabled = false;
+        }
+        else
+        {
+            buttonXEnabled = false;
+        }
     }
 
     public void enableButtonB()
@@ -310,12 +374,29 @@ public class KeyControllers : MonoBehaviour
 
     public void enableButtonX()
     {
-        buttonXEnabled = true;
+        if (sessionManager.getIsRightHanded())
+        {
+            buttonXEnabled = true;
+        }
+        else
+        {
+            buttonAEnabled = true;
+        }
+        
     }
 
     public void disableButtonX()
     {
-        buttonXEnabled = false;
+        
+        if (sessionManager.getIsRightHanded())
+        {
+            buttonXEnabled = false;
+        }
+        else
+        {
+            buttonAEnabled = false;
+        }
+
     }
 
     public void enableButtonY()

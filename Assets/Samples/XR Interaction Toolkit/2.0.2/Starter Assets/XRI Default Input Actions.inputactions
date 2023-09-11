@@ -314,6 +314,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ShootCrossbowLeft",
+                    "type": "Button",
+                    "id": "2c994a51-4494-42c7-a4ee-09ccb2ca295a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TargetTriggerLeft",
+                    "type": "Button",
+                    "id": "f5700245-3837-4d55-a19d-4120ae2c27c8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -534,6 +552,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "LeftGrip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03792799-c99d-4a82-873c-ad36674bbed8",
+                    "path": "<XRController>{LeftHand}/triggerButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootCrossbowLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa1b4478-3b86-43d1-8d86-9781121c7dec",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TargetTriggerLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

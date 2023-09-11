@@ -68,11 +68,20 @@ public class TimeManager : MonoBehaviour
         counter = 0f;
     }
 
-    public string GetCurrentTimeAndReset()
+    /*public string GetCurrentTimeAndReset()
     {
         int minutes = Mathf.FloorToInt(counter / 60f);
         int seconds = Mathf.FloorToInt(counter % 60f);
         counter = 0f;
         return string.Format("{0:00}:{1:00}", minutes, seconds);
+    }*/
+
+    public string GetCurrentTimeAndReset()
+    {
+        int minutes = Mathf.FloorToInt(counter / 60f);
+        int seconds = Mathf.FloorToInt(counter % 60f);
+        int milliseconds = Mathf.FloorToInt((counter * 1000f) % 1000f);
+        counter = 0f;
+        return string.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, milliseconds);
     }
 }

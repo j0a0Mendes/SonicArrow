@@ -75,6 +75,9 @@ public class BowStringController : MonoBehaviour
     [SerializeField]
     public GameObject rightHand;
 
+    [SerializeField]
+    public GameObject leftHand;
+
     [Range(0, 1)]
     public float intensity;
 
@@ -88,9 +91,12 @@ public class BowStringController : MonoBehaviour
     [SerializeField]
     public GameObject centerTarget;
 
+    private SessionManager sessionManager;
+
     private void Awake()
     {
         interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
+
     }
 
     private void Start()
@@ -98,6 +104,8 @@ public class BowStringController : MonoBehaviour
         spotterManager = GameObject.FindObjectOfType<SpotterTalkingCheck>();
         targetObject = GameObject.FindObjectOfType<TargetObject>();
         keyControllersScript = GameObject.FindObjectOfType<KeyControllers>();
+
+        sessionManager = GameObject.FindObjectOfType<SessionManager>();
 
         //Get key controllers
         rightHandObj = GameObject.FindGameObjectWithTag("RightHand");
@@ -114,18 +122,42 @@ public class BowStringController : MonoBehaviour
 
         zAxisPull = 1;
 
-        if (!positioned & rightHand != null)
+        if (sessionManager.getIsRightHanded())
         {
-            Transform rightHandTransform = rightHand.transform;
-            Vector3 currentPosition = rightHandTransform.position;
-            Vector3 crossbowAdjustment = new Vector3(-0.046f, 0.026f, 0.436f);
-            Vector3 minorAdjust = new Vector3(0.7f, 0.1f, -0.5f);
+            if (!positioned & rightHand != null)
+            {
+                Transform rightHandTransform = rightHand.transform;
+                Vector3 currentPosition = rightHandTransform.position;
+                Vector3 crossbowAdjustment = new Vector3(-0.046f, 0.026f, 0.436f);
+                Vector3 minorAdjust = new Vector3(0.7f, 0.1f, -0.5f);
 
-            transform.position = currentPosition + crossbowAdjustment + minorAdjust;
-            transform.rotation = Quaternion.Euler(357.147f, 3f, 6f);
+                transform.position = currentPosition + crossbowAdjustment + minorAdjust;
+                transform.rotation = Quaternion.Euler(357.147f, 3f, 6f);
 
-            positioned = true;
+                positioned = true;
+            }
         }
+        else
+        {
+            if (!positioned & leftHand != null)
+            {
+                Transform leftHandTransform = leftHand.transform;
+                Vector3 currentPosition = leftHandTransform.position;
+                Vector3 crossbowAdjustment = new Vector3(-0.046f, 0.026f, 0.436f);
+                Vector3 minorAdjust = new Vector3(0.7f, 0.1f, -0.5f);
+                Vector3 minorAdjustTwo = new Vector3(-0.3f, 0f, 0f);
+
+                //Debug.Log("Left");
+                transform.position = currentPosition + crossbowAdjustment + minorAdjust + minorAdjustTwo;
+                
+                Vector3 desiredRotation = new Vector3(-7.48f, 197.589f, -181.8f);
+                transform.eulerAngles = desiredRotation;
+
+
+                positioned = true;
+            }
+        }
+
 
         prepareCrossBow();
 
@@ -158,7 +190,7 @@ public class BowStringController : MonoBehaviour
             {
                 //Debug.Log(audioSource.isPlaying);
 
-                timeManager.StopTimer();
+                //timeManager.StopTimer();
 
                 stringPulled = false;
                 ResetBowString();

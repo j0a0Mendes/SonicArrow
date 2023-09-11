@@ -70,6 +70,9 @@ public class TargetObject : MonoBehaviour
     [SerializeField]
     public GameObject audioListenerBall;
 
+    [SerializeField]
+    public GameObject audioListenerBallLeft;
+
     private bool canMove;
 
     private int flagMovement = 1;
@@ -79,6 +82,8 @@ public class TargetObject : MonoBehaviour
     [SerializeField]
     public bool relocateTargetVar;
 
+    private SessionManager sessionManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -86,7 +91,10 @@ public class TargetObject : MonoBehaviour
         canMove = true;
         wallSystemPos = 1;
         parameterManager = GameObject.FindObjectOfType<ParameterManager>();
+
+        sessionManager = GameObject.FindObjectOfType<SessionManager>();
     }
+
 
     private void Awake()
     {
@@ -112,7 +120,14 @@ public class TargetObject : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        targetPitch(audioListenerBall.transform.position.y);
+        if (sessionManager.getIsRightHanded())
+        {
+            targetPitch(audioListenerBall.transform.position.y);
+        }
+        else
+        {
+            targetPitch(audioListenerBallLeft.transform.position.y);
+        }
 
         //Target Movement
         if (parameterManager.getTargetMoving() && canMove == true)

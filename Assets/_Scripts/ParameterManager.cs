@@ -145,6 +145,7 @@ public class ParameterManager : MonoBehaviour
 
     private LogManager logManager;
 
+
     private void Start()
     {
         controller = GameObject.FindObjectOfType<ChangePerspectiveController>();

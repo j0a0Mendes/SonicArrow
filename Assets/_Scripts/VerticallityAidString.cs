@@ -23,9 +23,6 @@ public class VerticallityAidString : MonoBehaviour
     private ChangePerspectiveController controller;
 
     [SerializeField]
-    public GameObject ballPrefab;
-
-    [SerializeField]
     public GameObject ballPointer;
 
     [SerializeField]

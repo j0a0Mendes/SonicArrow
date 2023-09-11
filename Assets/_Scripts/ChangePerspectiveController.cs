@@ -151,7 +151,7 @@ public class ChangePerspectiveController : MonoBehaviour
     void FixedUpdate() {
         conditionChangeCount++;
 
-        if(keyControllersrLeft.getLeftConditionTrigger() == true && keyControllersrRight.getRightConditionTrigger() == true)
+        /**if(keyControllersrLeft.getLeftConditionTrigger() == true && keyControllersrRight.getRightConditionTrigger() == true)
         {
             //Debug.Log(conditionChangeCount);
             if(conditionChangeCount >= 25)
@@ -162,7 +162,7 @@ public class ChangePerspectiveController : MonoBehaviour
 
                 //Debug.Log("Change condition");
             }    
-        }
+        }*/
 
         updateParameters();
 
@@ -181,7 +181,6 @@ public class ChangePerspectiveController : MonoBehaviour
             modeSelected = 1;
         }
 
-        //bowStringController.setModeSelected(modeSelected);
         bowStringController.setModeSelected(modeSelected);
 
         if (changePerspectiveTrigger && firstPerspective)
@@ -194,14 +193,10 @@ public class ChangePerspectiveController : MonoBehaviour
             
             changePerspectiveTrigger = false;
             
-            //xrorigin.position = new Vector3(-41.893f, 0.082f, -4.4f);
-          
             bowStringController.canShootAgain();
 
             numberOfShots += 1;
             firstPerspective = true;
-
-            //xrorigin.rotation *= Quaternion.Euler(0f, 180f, 0f);
         }
 
         if (changePerspectiveInASec)
@@ -268,6 +263,7 @@ public class ChangePerspectiveController : MonoBehaviour
 
     public void enableButtonA()
     {
+        
         keyControllersrRight.enableButtonA();
     }
 
