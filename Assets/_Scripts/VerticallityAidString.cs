@@ -153,9 +153,9 @@ public class VerticallityAidString : MonoBehaviour
     {
         float distance = Vector3.Distance(new Vector3(aX, aY, aZ), new Vector3(bX, bY, bZ));
 
-        if (distance <= 0.5f)
+        if (distance <= 0.3f)
         {
-            return 15;
+            return 14;
         }
         else if (distance >= 10f)
         {
@@ -167,13 +167,15 @@ public class VerticallityAidString : MonoBehaviour
             float scaleFactor = 30f / 10f; // This value adjusts the range (50 - 20 = 30)
             int result = 20 + Mathf.RoundToInt(distance * scaleFactor);
 
-            if(distance <= 0.3f)
+            if (distance <= 2.47)
             {
-                result -= 3;
-            }else if (distance <= 4)
-            {
-                result -= 2;
+                result -= 4;
             }
+            else
+            {
+                result += 3;
+            }
+
             return result;
         }
     }
